@@ -14,3 +14,5 @@ title: Mike Gifford
 description: Personal landing page
 show_downloads: false
 theme: jekyll-theme-minimal
+include: [".well-known"]
+
