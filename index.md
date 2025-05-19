@@ -23,6 +23,6 @@ I try to keep my [CivicActions biography here](https://docs.google.com/document/
 
 # Photo
 
-Photos were taken at [State of Open Con 25(https://stateofopencon.com/). I am wearing a CivicActions jacket and T-Shirt.
+Photos were taken at the [State of Open Con 25](https://stateofopencon.com/). I am wearing a CivicActions jacket and T-Shirt.
 Photographer: [Tiana Lea](https://www.linkedin.com/in/tiana-lea-6778b3145/). 
 
