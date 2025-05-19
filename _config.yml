@@ -8,9 +8,8 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-# theme: minimnal
 title: Mike Gifford
-# logo: /assets/img/logo.png
+logo: /media/Open_UK_SOOC250460.jpg
 description: Personal landing page
 show_downloads: false
 theme: jekyll-theme-minimal
