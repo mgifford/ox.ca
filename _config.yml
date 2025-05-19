@@ -8,4 +8,9 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-theme: minimnal
+# theme: minimnal
+title: Mike Gifford
+# logo: /assets/img/logo.png
+description: Personal landing page
+show_downloads: false
+theme: jekyll-theme-minimal
