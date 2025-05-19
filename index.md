@@ -8,7 +8,3 @@ Landing page for Mike Gifford.
 - Flickr: https://www.flickr.com/photos/mgifford/
 - GitHub: https://github.com/mgifford
 
-
-```
-The final element.
-```
