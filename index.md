@@ -16,6 +16,7 @@ I've also got content up on:
 
 - [Flickr: @mgifford](https://www.flickr.com/photos/mgifford/)
 - [GitHub: @mgifford](https://github.com/mgifford)
+- [Wikipedia: @mgifford](https://en.wikipedia.org/wiki/User:Mgifford)
 
 ## My Biography
 
