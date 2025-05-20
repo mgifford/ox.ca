@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 5px;
+    margin-inline-end: 5px;
+    unicode-bidi: isolate;
+}
