@@ -17,14 +17,11 @@
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 <figure>
-  
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Mike Gifford" />
-        {% endif %}
-<figcaption>
-Photos were taken at the <a href="https://stateofopencon.com/">State of Open Con 25</a>. I am wearing a CivicActions jacket and T-Shirt.
-Photographer: <a href="https://www.linkedin.com/in/tiana-lea-6778b3145/">Tiana Lea</a>. 
-</figcaption>
+{% if site.logo %}
+  <img src="{{site.logo | relative_url}}" alt="Mike Gifford" />
+{% endif %}
+<figcaption>Photos were taken at the <a href="https://stateofopencon.com/">State of Open Con 25</a>. I am wearing a CivicActions jacket and T-Shirt.
+Photographer: <a href="https://www.linkedin.com/in/tiana-lea-6778b3145/">Tiana Lea</a>.</figcaption>
 </figure>
         
         {% if site.github.is_project_page %}
