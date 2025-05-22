@@ -20,7 +20,7 @@ theme: jekyll-theme-minimal
 url: https://ox.ca
 include:
   - ".well-known"
-  - robots.txt
+  - robots.txt.liquid
   - carbon.txt
 plugins:
   - jekyll-sitemap
