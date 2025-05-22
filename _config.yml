@@ -10,8 +10,17 @@ kramdown:
   syntax_highlighter: rouge
 title: Mike Gifford
 logo: /media/Open_UK_SOOC250460.jpg
-description: Personal landing page
+description: Accessibility & Open Web advocate. W3C Expert. CivicActions Lead.
+author: Mike Gifford
+twitter_username: mgifford
+github_username: mgifford
+linkedin_username: mgifford
 show_downloads: false
 theme: jekyll-theme-minimal
-include: [".well-known"]
-
+url: https://ox.ca
+include:
+  - ".well-known"
+  - robots.txt
+  - carbon.txt
+plugins:
+  - jekyll-sitemap

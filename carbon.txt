@@ -1,0 +1,23 @@
+## This is the carbon.txt file for ox.ca
+#
+# Learn more about carbon.txt
+# https://www.thegreenwebfoundation.org/tools/carbon-txt/
+# https://carbontxt.org/
+
+# Check how your energy is generated
+# https://www.epa.gov/egrid/power-profiler
+# https://app.electricitymaps.com/
+# https://www.carbonbrief.org/mapped-how-the-us-generates-electricity/
+
+
+[org]
+disclosures = [
+  { doc_type = "web-page", url = "https://ox.ca", domain = "ox.ca" }
+]
+
+[upstream]
+services = [
+  { domain = "pages.github.com", service_type = "static-hosting" },
+  { domain = "cloudflare.com", service_type = "cdn" },
+  { domain = "fastly.com", service_type = "cdn" }
+]
