@@ -3,20 +3,83 @@
 
 @import "{{ site.theme }}";
 
-figure {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 5px;
-    margin-inline-end: 5px;
-    unicode-bidi: isolate;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  max-width: 740px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+section {
+  margin-bottom: 2rem;
 }
 
 a {
-    color: #267CB9;
-    text-decoration: underline;
+  color: #267CB9;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+a:hover {
+  color: #004E8A;
+  font-weight: bold;
 }
 
 a small {
-    color: #717171;
+  color: #717171;
+}
+
+figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
+  unicode-bidi: isolate;
+}
+
+:root[data-theme='dark'] {
+  background-color: #111;
+  color: #eee;
+}
+:root[data-theme='dark'] a {
+  color: #81d4fa;
+}
+
+ul {
+  padding-left: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+ul li {
+  margin-bottom: 0.3em;
+}
+
+ul.icon-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+
+ul.icon-links li {
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+ul.icon-links li i {
+  width: 1.2em;
+  margin-right: 0.5em;
+  color: #666;
 }
