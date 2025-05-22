@@ -1,0 +1,28 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+.VolumeIcon.icns
+.Spotlight-V100
+.Trashes
+._*
+
+# Ruby & Bundler
+*.gem
+.bundle/
+vendor/
+Gemfile.lock
+
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*~
