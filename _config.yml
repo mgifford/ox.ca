@@ -9,7 +9,7 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 title: Mike Gifford
-logo: /media/Open_UK_SOOC250460.jpg
+logo: /media/Open_UK_SOOC250460_small.jpg
 description: Personal landing page
 show_downloads: false
 theme: jekyll-theme-minimal
