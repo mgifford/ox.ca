@@ -41,16 +41,14 @@ a small {
     color: #717171;
 }
 
+a:hover, a:focus {
+  color: #006699;
+}
+
 /* Target common interactive elements */
 a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
 [tabindex]:focus {
-  /* Remove default outline first */
   outline: none;
-  /* Apply a visible box-shadow instead */
   box-shadow: 0 0 0 4px #ffdd00; /* Bright yellow shadow */
   /* Add an outline-offset if you want space between the element and the shadow */
   /* outline-offset: 2px; */
@@ -58,14 +56,8 @@ textarea:focus,
 
 /* Use :focus-visible for more intelligent focus indication */
 a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
 [tabindex]:focus-visible {
-  /* Remove default outline first */
   outline: none;
-  /* Apply a visible box-shadow instead */
   box-shadow: 0 0 0 4px #ffdd00; /* Bright yellow shadow */
   /* Add an outline-offset if you want space between the element and the shadow */
   /* outline-offset: 2px; */
