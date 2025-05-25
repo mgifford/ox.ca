@@ -42,23 +42,21 @@ a small {
 a:hover, a:focus {
   color: #006699;
   font-weight: normal;
+  border-bottom: 4px solid #90EE90;
   transition: color 0.2s ease-in-out;
 }
 
-/* Target common interactive elements */
 a:focus,
 [tabindex]:focus {
   outline: none;
-  box-shadow: 0 0 0 4px #e4ffd2;
+  box-shadow: 0 0 0 4px #90EE90;
   /* Add an outline-offset if you want space between the element and the shadow */
   /* outline-offset: 2px; */
 }
-
-/* Use :focus-visible for more intelligent focus indication */
 a:focus-visible,
 [tabindex]:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 4px #e4ffd2;
+  box-shadow: 0 0 0 4px #90EE90;
   /* Add an outline-offset if you want space between the element and the shadow */
   /* outline-offset: 2px; */
 }
