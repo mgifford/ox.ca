@@ -32,17 +32,17 @@ img {
 
 a {
     color: #267CB9;
-    font-weight: normal;
     text-decoration: underline;
 }
 
 a small {
-    font-weight: normal;
     color: #717171;
 }
 
 a:hover, a:focus {
   color: #006699;
+  font-weight: normal;
+  transition: color 0.2s ease-in-out;
 }
 
 /* Target common interactive elements */
