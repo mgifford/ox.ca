@@ -49,7 +49,7 @@ a:hover, a:focus {
 a:focus,
 [tabindex]:focus {
   outline: none;
-  box-shadow: 0 0 0 4px #ffdd00; /* Bright yellow shadow */
+  box-shadow: 0 0 0 4px #e4ffd2;
   /* Add an outline-offset if you want space between the element and the shadow */
   /* outline-offset: 2px; */
 }
@@ -58,7 +58,7 @@ a:focus,
 a:focus-visible,
 [tabindex]:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 4px #ffdd00; /* Bright yellow shadow */
+  box-shadow: 0 0 0 4px #e4ffd2;
   /* Add an outline-offset if you want space between the element and the shadow */
   /* outline-offset: 2px; */
 }
