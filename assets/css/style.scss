@@ -12,15 +12,6 @@ figure {
     unicode-bidi: isolate;
 }
 
-a {
-    color: #267CB9;
-    text-decoration: underline;
-}
-
-a small {
-    color: #717171;
-}
-
 li {
   margin-bottom: 3px;
 }
@@ -37,4 +28,43 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* or contain */
+}
+
+a {
+    color: #267CB9;
+    text-decoration: underline;
+}
+
+a small {
+    color: #717171;
+}
+
+/* Target common interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+  /* Remove default outline first */
+  outline: none;
+  /* Apply a visible box-shadow instead */
+  box-shadow: 0 0 0 4px #ffdd00; /* Bright yellow shadow */
+  /* Add an outline-offset if you want space between the element and the shadow */
+  /* outline-offset: 2px; */
+}
+
+/* Use :focus-visible for more intelligent focus indication */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  /* Remove default outline first */
+  outline: none;
+  /* Apply a visible box-shadow instead */
+  box-shadow: 0 0 0 4px #ffdd00; /* Bright yellow shadow */
+  /* Add an outline-offset if you want space between the element and the shadow */
+  /* outline-offset: 2px; */
 }
