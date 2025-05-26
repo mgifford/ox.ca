@@ -3,6 +3,13 @@
 
 @import "{{ site.theme }}";
 
+@font-face {
+    font-family: 'Sen-Regular';
+    src: url('/assets/fonts/Sen-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 figure {
     display: block;
     margin-block-start: 1em;
