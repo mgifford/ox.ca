@@ -6,8 +6,8 @@
 @font-face {
     font-family: 'Sen-Regular';
     src: url('/assets/fonts/Sen-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 800;
+    font-style: bold;
     font-display: swap;
 }
 
@@ -25,12 +25,12 @@ li {
 }
 
 body {
-  font-family: "Sen-Regular", Arial, sans-serif;
-  font: 15px / 1.6 "Sen-Regular", Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  font: 15px / 1.6 Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: "Sen-Regular", "Arial Black", Gadget, sans-serif;
 }
 
 img {
