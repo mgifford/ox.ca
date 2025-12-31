@@ -1,6 +1,6 @@
 lsi: false
 safe: true
-source: /
+source: .
 incremental: false
 highlighter: rouge
 gist:
@@ -14,4 +14,5 @@ description: Personal landing page
 show_downloads: false
 theme: jekyll-theme-minimal
 include: [".well-known"]
+exclude: ["presentations"]
 site.lang: en-ca

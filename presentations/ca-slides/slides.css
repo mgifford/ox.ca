@@ -66,6 +66,7 @@ html, .lightmode {
   --slide-text-shadow: none;
   --cover-bg: #F0F0F0;
   --cover-event-fg: #73B3E7;
+  --cover-image: url("cover-light.svg");
   --final-bg: #ffffff;
   --slide-number-fg: #162E51;
   --comment-bg: #171717;
@@ -81,6 +82,8 @@ html, .lightmode {
   --table-striped-bg: #F0F0F0;
   --link-fg: #005EA2;
   --visited-fg: #1A4480;
+  --note-bg: #eef2f6;
+  --note-border: #c7d1dc;
   --can-invert-filter: none;
   --h1-h2-fg: #162E51;
   --brand-logo: url("assets/CA-Full-Logo-Red.svg");
@@ -99,6 +102,7 @@ html, .lightmode {
     --slide-text-shadow: none;
     --cover-bg: #1A4480;
     --cover-event-fg: #FFBC78;
+    --cover-image: url("cover-dark.svg");
     --final-bg: #171717;
     --slide-number-fg: #f0f0f0;
     --comment-bg: #111111;
@@ -114,6 +118,8 @@ html, .lightmode {
     --table-striped-bg: #2a2a2a;
     --link-fg: #73B3E7;
     --visited-fg: #FFBC78;
+    --note-bg: #222933;
+    --note-border: #3a4452;
     --can-invert-filter: invert(1);
     --h1-h2-fg: #ffffff;
     --brand-logo: url("assets/CA-Full-Logo-Red.svg");
@@ -137,6 +143,7 @@ html, .lightmode {
   --slide-text-shadow: none;
   --cover-bg: #1A4480;
   --cover-event-fg: #FFBC78;
+  --cover-image: url("cover-dark.svg");
   --final-bg: #171717;
   --slide-number-fg: #f0f0f0;
   --comment-bg: #111111;
@@ -202,17 +209,26 @@ h4 {font-size: 1.2em; margin: 0.5em 0}
   background-image: url("slide-light.svg");
   background-size: cover;
   background-position: center}
+.lightmode .slide {background-image: url("slide-light.svg")}
+@media (prefers-color-scheme: dark) {
+  .slide {background-image: url("slide-dark.svg")}
+}
+.darkmode .slide {background-image: url("slide-dark.svg")}
 .slide.textfit, .textfit .slide {height: 23em /*= N */}
 .clear .slide:not(.cover), .slide:not(.cover).clear {background-image: none}
 .slide:target {outline: lime solid 0.5em; outline-offset: 1em}
 .slide h3 a {color: inherit}
 .slide :link {color: var(--link-fg)}
 .slide :visited {color: var(--visited-fg)}
-.slide::after {content: ""; position: absolute; top: 0.9em; left: 0.8em;
+.slide.cover::after {content: ""; position: absolute; top: 1.5em; left: 1.7em;
+  width: 32em; height: 7.2em; background-image: var(--brand-logo);
+  background-repeat: no-repeat; background-size: contain;
+  background-position: left top; pointer-events: none; opacity: 0.95; filter: none}
+.slide.final::after {content: ""; position: absolute; top: 0.9em; left: 0.8em;
   width: 7.2em; height: 1.8em; background-image: var(--brand-logo);
   background-repeat: no-repeat; background-size: contain;
-  background-position: left top; pointer-events: none; opacity: 0.95}
-.slide.brand-mark::after {width: 2.4em; height: 2.4em;
+  background-position: left top; pointer-events: none; opacity: 0.95; filter: none}
+.slide.cover.brand-mark::after, .slide.final.brand-mark::after {width: 2.4em; height: 2.4em;
   background-image: var(--brand-mark)}
 .slide .ca-footer {position: absolute; left: 3.7em; right: 2em; bottom: 0.6em;
   display: flex; align-items: center; gap: 0.6em; font-size: 0.9em;
@@ -220,7 +236,8 @@ h4 {font-size: 1.2em; margin: 0.5em 0}
 .slide .ca-footer .ca-footer-logo {width: 1.6em; height: 1.6em;
   background-image: var(--brand-mark); background-repeat: no-repeat;
   background-size: contain; background-position: center; flex: 0 0 1.6em;
-  filter: var(--can-invert-filter)}
+  filter: none}
+.slide.cover .ca-footer .ca-footer-text {display: none}
 .slide .ca-footer .ca-footer-text {flex: 1 1 auto; white-space: nowrap;
   overflow: hidden; text-overflow: ellipsis}
 
@@ -287,23 +304,50 @@ ul.with-icons > li > *:first-child {display: inline-block;
   width: 50.136% /*= ((N - t - b) + r)/w */}
 
 /* Cover pages */
-.slide.cover {padding: 10.5em 3.7em /*= l */ 1em /*= b */ 3.7em /*= l */;
+.slide.cover {padding: 4em 3.7em 3em 3.7em;
   background: var(--cover-bg);
-  background-image: url("cover-light.svg");
+  background-image: var(--cover-image);
   background-size: cover;
-  background-position: center}
-.slide.cover h1 {}
-.slide.cover address {}
-.slide.cover p.event {line-height: 1.3; color: var(--cover-event-fg);
-  text-align: center; font-size: 0.8em; font-weight: bold; text-shadow: none;
-  position: absolute; top: 5.9em; right: 1em}
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start}
+.slide.cover .brand-mark {position: absolute; top: 1.5em; left: 3.7em; font-weight: 700; font-size: 1.1em; color: #e03c31; letter-spacing: 0.02em}
+.slide.cover .title-band {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em; margin: 14.5em -2em 0.5em -2em}
+.slide.cover .title-band h1 {color: inherit; margin: 0}
+.slide.cover h1 {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em;
+  margin: 0 -2em 0.5em -2em; text-shadow: none}
+.slide.cover h2 {font-size: 1.3em; color: var(--slide-fg); font-style: italic;
+  margin: 0 0 auto 0; font-weight: 400; line-height: 1.3}
+.slide.cover .deck-subtitle {font-size: 1.2em; color: var(--slide-fg); font-style: italic;
+  margin: 0 0 1.5em 0; font-weight: 400; line-height: 1.35}
+.slide.cover address {color: var(--slide-fg); font-size: 1.2em; font-style: normal;
+  margin: 1.5em 0 0.5em 0; text-align: right}
+.slide.cover p.event, .slide.cover .deck-event {line-height: 1.4; color: var(--slide-fg);
+  font-size: 0.95em; margin: 0; text-align: right}
 .slide.cover p::first-line {color: transparent}
+.slide.cover .ca-footer {display: flex}
 
 /* Last page */
 .slide.final {background: var(--final-bg)}
 
 /* Notes in a smaller font */
-.slide .note {font-size: 70%}
+.slide .note, .slide .notes {
+  font-size: 70%;
+  background: var(--note-bg);
+  border: 1px solid var(--note-border);
+  border-radius: 8px;
+  padding: 0.75em 0.9em;
+  margin-top: 0.8em;
+  color: var(--slide-fg);
+  display: block;
+}
+.slidemode .notes {display: none !important}
+.slide.cover .note, .slide.cover .notes {
+  background: var(--note-bg);
+  border-color: var(--note-border);
+  color: var(--slide-fg);
+}
 
 /* Miscellaneous styles */
 .num {font-variant-numeric: oldstyle-nums tabular-nums diagonal-fractions}

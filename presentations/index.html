@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Presentations by Mike Gifford</title>
   <style>
-   :root {
-    color-scheme: light dark;
+   :root, body.lightmode {
+    color-scheme: only light dark;
     --bg: #f5f7fa;
     --fg: #0f1f2f;
     --card: #ffffff;
@@ -14,11 +14,25 @@
     --muted: #45525f;
    }
    @media (prefers-color-scheme: dark) {
-    :root {--bg: #0f1f2f; --fg: #e6e9ed; --card: #172a3a; --accent: #73B3E7; --muted: #9fb2c7;}
+    :root {
+     --bg: #0f1f2f;
+     --fg: #e6e9ed;
+     --card: #172a3a;
+     --accent: #73B3E7;
+     --muted: #9fb2c7;
+    }
    }
+   body.darkmode {
+    --bg: #0f1f2f;
+    --fg: #e6e9ed;
+    --card: #172a3a;
+    --accent: #73B3E7;
+    --muted: #9fb2c7;
+   }
+   body, .has-darkmode {--has-darkmode: 1;}
    body {margin: 0; font-family: "Public Sans", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
      background: var(--bg); color: var(--fg); line-height: 1.6; padding: 2rem 1.5rem 3rem;}
-   header {max-width: 960px; margin: 0 auto 1.5rem;}
+  header {max-width: 960px; margin: 0 auto 1.5rem; position: relative;}
    h1 {margin: 0 0 0.3rem 0; font-size: 1.75rem;}
    p.lead {margin: 0; color: var(--muted);}
    main {max-width: 960px; margin: 0 auto; display: grid; gap: 1rem;}
@@ -28,24 +42,66 @@
    .card a {color: var(--accent); text-decoration: none; font-weight: 700;}
    .card a:focus-visible {outline: 3px solid var(--accent); outline-offset: 2px;}
    .meta {color: var(--muted); font-size: 0.95rem; margin: 0.1rem 0 0.4rem;}
-   footer {max-width: 960px; margin: 2rem auto 0; color: var(--muted); font-size: 0.95rem;}
+  footer {max-width: 960px; margin: 2rem auto 0; color: var(--muted); font-size: 0.95rem;}
+  .theme-switcher {position: absolute; top: -0.5rem; right: 0; display: inline-flex; gap: 0.4rem; background: var(--card); padding: 0.25rem 0.35rem; border-radius: 999px; box-shadow: 0 6px 16px rgba(0,0,0,0.08);}
+  .theme-switcher button {border: 1px solid transparent; background: none; color: var(--fg); font: inherit; padding: 0.35rem 0.65rem; border-radius: 999px; cursor: pointer;}
+  .theme-switcher button:focus-visible {outline: 2px solid var(--accent); outline-offset: 2px;}
+  .theme-switcher button[aria-pressed="true"] {border-color: var(--accent); color: var(--accent); font-weight: 700;}
   </style>
  </head>
  <body>
   <header>
    <h1>Presentations</h1>
    <p class="lead">CivicActions-aligned slide decks (CC BY-SA 4.0). Launch a deck to enter slide mode.</p>
+    <div class="theme-switcher" role="group" aria-label="Theme preference">
+     <button type="button" data-theme="system" aria-pressed="true">System</button>
+     <button type="button" data-theme="light" aria-pressed="false">Light</button>
+     <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+    </div>
   </header>
   <main id="deck-list" aria-live="polite"></main>
   <footer>
    <p>Content licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>. Source on GitHub: <a href="https://github.com/mgifford/presentation-a11y-eaa-drupalgov-eu26">presentation-a11y-eaa-drupalgov-eu26</a>.</p>
   </footer>
   <script>
-   const decks = [
+   const themeKey = "deck-theme";
+   const themeButtons = () => Array.from(document.querySelectorAll('.theme-switcher button'));
+
+   function applyTheme(choice) {
+    document.body.classList.remove('darkmode', 'lightmode');
+    if (choice === 'dark') document.body.classList.add('darkmode');
+    if (choice === 'light') document.body.classList.add('lightmode');
+    themeButtons().forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.theme === choice ? 'true' : 'false'));
+   }
+
+   function initTheme() {
+    const stored = localStorage.getItem(themeKey) || 'system';
+    applyTheme(stored);
+    themeButtons().forEach(btn => btn.addEventListener('click', () => {
+      const choice = btn.dataset.theme;
+      localStorage.setItem(themeKey, choice);
+      applyTheme(choice);
+    }));
+    if (window.matchMedia) {
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+      mq.addEventListener('change', () => {
+        if ((localStorage.getItem(themeKey) || 'system') === 'system') applyTheme('system');
+      });
+    }
+   }
+
+  initTheme();
+
+  const decks = [
     {
      title: "ATAG + Local AI (FOSDEM 2026)",
      file: "atag-fosdem26.html",
      description: "Conflict/hero/twist arc: ATAG Part B, local SLMs, WCAG-EM automation."
+    },
+    {
+     title: "Adding W3C ARRM to Improve A11y (OSS EU 2025)",
+     file: "arrm-oss-eu25.html",
+     description: "Applying the Accessible Roles and Responsibilities Mapping to open source teams."
     },
     {
      title: "Procurement Is Fundraising for FLOSS (FOSDEM 2026)",
@@ -54,7 +110,7 @@
     },
     {
      title: "Accessible Sovereignty: Four Freedoms Need Inclusion",
-     file: "accessible-sovereignty.html",
+     file: "a11y-sovereignty-fosdem26.html",
      description: "Digital sovereignty through accessibility; forest vs machine metaphor; Four Freedoms mapped to A11y."
     }
    ];
