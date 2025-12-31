@@ -1,28 +1,28 @@
 /* Local fonts for CivicActions branding */
 @font-face {
   font-family: "Nunito";
-  src: url("../../assets/fonts/Nunito-Regular.ttf") format("truetype");
+  src: url("assets/fonts/Nunito-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../../assets/fonts/Nunito-Bold.ttf") format("truetype");
+  src: url("assets/fonts/Nunito-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Merriweather";
-  src: url("../../assets/fonts/Merriweather-Regular.ttf") format("truetype");
+  src: url("assets/fonts/Merriweather-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Merriweather";
-  src: url("../../assets/fonts/Merriweather-Bold.ttf") format("truetype");
+  src: url("assets/fonts/Merriweather-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
