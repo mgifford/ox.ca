@@ -220,7 +220,7 @@ h4 {font-size: 1.2em; margin: 0.5em 0}
 .slide h3 a {color: inherit}
 .slide :link {color: var(--link-fg)}
 .slide :visited {color: var(--visited-fg)}
-.slide.cover::after {content: ""; position: absolute; top: 0.5em; left: 1.7em;
+.slide.cover::after {content: ""; position: absolute; top: -1em; left: 1.7em;
   width: 32em; height: 7.2em; background-image: var(--brand-logo);
   background-repeat: no-repeat; background-size: contain;
   background-position: left top; pointer-events: none; opacity: 0.95; filter: none}
@@ -313,7 +313,7 @@ ul.with-icons > li > *:first-child {display: inline-block;
   flex-direction: column;
   justify-content: flex-start}
 .slide.cover .brand-mark {position: absolute; top: 1.5em; left: 3.7em; font-weight: 700; font-size: 1.1em; color: #e03c31; letter-spacing: 0.02em}
-.slide.cover .title-band {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em; margin: 15.5em -2em 0.5em -2em}
+.slide.cover .title-band {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em; margin: 10em -2em 0.5em -2em}
 .slide.cover .title-band h1 {color: inherit; margin: 0}
 .slide.cover h1 {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em;
   margin: 0 -2em 0.5em -2em; text-shadow: none}
