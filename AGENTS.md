@@ -5,6 +5,7 @@ Guardrails for keeping the ox.ca landing page clear, accurate, and accessible.
 ## Scope
 - Applies to the root site content (index, media references, and shortlinks). For decks, follow presentations/AGENTS.md instead.
 - Keep paths stable; use redirects for convenience rather than moving content.
+- When updating presentations, edit source files in /presentations/ only; never edit generated output in /_site/.
 
 ## Voice and intent
 - Write in the first person, welcoming, and purpose-driven; keep paragraphs concise.
