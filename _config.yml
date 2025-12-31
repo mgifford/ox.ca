@@ -14,5 +14,5 @@ description: Personal landing page
 show_downloads: false
 theme: jekyll-theme-minimal
 include: [".well-known"]
-exclude: ["presentations"]
+exclude: ["presentations", "AGENTS.md"]
 site.lang: en-ca
