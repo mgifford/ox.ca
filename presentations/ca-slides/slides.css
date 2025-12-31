@@ -313,7 +313,7 @@ ul.with-icons > li > *:first-child {display: inline-block;
   flex-direction: column;
   justify-content: flex-start}
 .slide.cover .brand-mark {position: absolute; top: 1.5em; left: 3.7em; font-weight: 700; font-size: 1.1em; color: #e03c31; letter-spacing: 0.02em}
-.slide.cover .title-band {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em; margin: 10em -2em 0.5em -2em}
+.slide.cover .title-band {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em; margin: 13em -2em 0.5em -2em}
 .slide.cover .title-band h1 {color: inherit; margin: 0}
 .slide.cover h1 {background: #0f2f59; color: #ffffff; padding: 0.7em 1em 0.85em;
   margin: 0 -2em 0.5em -2em; text-shadow: none}
