@@ -1,0 +1,9 @@
+# Jekyll build output
+_site/
+
+# Local bundler files
+Gemfile
+Gemfile.lock
+
+# macOS metadata
+.DS_Store
