@@ -19,6 +19,7 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Use clear, descriptive link text; avoid "click here." Include `alt` text when adding images/QRs.
 - Avoid jargon without context; prefer plain language nudges inline.
 - No hidden notes: use `<section class="comment">` for all speaker guidance.
+- Only one notes block per slide: keep a single `class="note"`/`class="notes"` element in each slide section.
 - Preserve ASCII unless adding required Unicode already in use.
 
 ## Tone & Narrative
