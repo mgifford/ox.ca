@@ -1,0 +1,23 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F0F0F0"/>
+  
+  <!-- Top border with texture -->
+  <defs>
+    <pattern id="topPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#162E51"/>
+      <circle cx="10" cy="10" r="1" fill="#1A4480" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="8" fill="url(#topPattern)"/>
+  
+  <!-- Left accent border -->
+  <rect x="0" y="8" width="6" height="442" fill="#D83933"/>
+  
+  <!-- Subtle corner accent -->
+  <polygon points="0,450 6,450 6,442 20,442 20,436 0,436" fill="#FA9441"/>
+  
+  <!-- Bottom accent stripe -->
+  <rect x="6" y="442" width="794" height="2" fill="#73B3E7" opacity="0.6"/>
+  <rect x="6" y="444" width="794" height="6" fill="#162E51"/>
+</svg>

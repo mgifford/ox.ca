@@ -1,0 +1,21 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#171717"/>
+  
+  <!-- Top border stripe -->
+  <rect width="800" height="4" fill="#73B3E7"/>
+  
+  <!-- Left accent -->
+  <rect x="0" y="4" width="4" height="446" fill="#73B3E7" opacity="0.25"/>
+  
+  <!-- Bottom corner accent -->
+  <defs>
+    <pattern id="bottomPatternDark" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.8" fill="#FFBC78" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="430" width="80" height="20" fill="url(#bottomPatternDark)"/>
+  
+  <!-- Subtle right accent -->
+  <rect x="796" y="4" width="4" height="446" fill="#005EA2" opacity="0.2"/>
+</svg>

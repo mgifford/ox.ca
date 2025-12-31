@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Sovereignty — Audit Handout</title>
+  <style>
+   :root {color-scheme: light; --bg: #fff; --fg: #111; --border: #000; --muted: #333;}
+   * {box-sizing: border-box;}
+   body {margin: 1rem auto; max-width: 960px; font-family: "Public Sans", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif; line-height: 1.4; color: var(--fg); background: var(--bg);}
+   h1, h2, h3 {margin: 0 0 0.4rem; font-weight: 700;}
+   p {margin: 0 0 0.5rem;}
+   table {width: 100%; border-collapse: collapse; margin: 0.4rem 0 0.8rem;}
+   th, td {border: 1px solid var(--border); padding: 0.35rem 0.45rem; text-align: left;}
+   th {background: #f5f5f5;}
+   .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;}
+   .card {border: 1px solid var(--border); padding: 0.8rem 1rem; border-radius: 4px; background: #fff;}
+   .muted {color: var(--muted); font-size: 0.95rem;}
+   @media print {
+    body {margin: 0.5in auto;}
+    a {color: inherit; text-decoration: underline;}
+   }
+  </style>
+ </head>
+ <body>
+  <h1>Accessible Sovereignty — Audit Handout</h1>
+  <p class="muted">CC BY-SA 4.0 · Link to slides and repo via QR (placeholder).</p>
+
+  <section aria-labelledby="fsf-map" class="card">
+   <h2 id="fsf-map">FSF ↔ A11y Mapping</h2>
+   <table aria-label="Mapping Four Freedoms to accessibility obligations">
+    <thead>
+     <tr><th scope="col">Freedom</th><th scope="col">Accessibility Requirement</th></tr>
+    </thead>
+    <tbody>
+     <tr><td>Freedom 0</td><td>Screen reader operability and keyboard support</td></tr>
+     <tr><td>Freedom 1</td><td>Semantic, perceivable documentation</td></tr>
+     <tr><td>Freedom 2</td><td>Accessible forges and distribution channels</td></tr>
+     <tr><td>Freedom 3</td><td>Inclusive contribution pipelines and reviews</td></tr>
+    </tbody>
+   </table>
+  </section>
+
+  <div class="grid">
+   <section aria-labelledby="species" class="card">
+    <h2 id="species">Species Robustness Scorecard (1–10)</h2>
+    <table aria-label="Robustness scorecard">
+     <thead>
+      <tr><th scope="col">Species</th><th scope="col">Score (1–10)</th></tr>
+     </thead>
+     <tbody>
+      <tr><td>Maintainers (deep roots)</td><td>__</td></tr>
+      <tr><td>Lived-experience contributors (mycelial connectors)</td><td>__</td></tr>
+      <tr><td>Service firms (connective tissue)</td><td>__</td></tr>
+      <tr><td>Policy-makers (forest rangers)</td><td>__</td></tr>
+      <tr><td>Investors (catalytic nutrients)</td><td>__</td></tr>
+      <tr><td>Sustainability advocates (sunlight)</td><td>__</td></tr>
+     </tbody>
+    </table>
+   </section>
+
+   <section aria-labelledby="resources" class="card">
+    <h2 id="resources">Critical Resources</h2>
+    <ul>
+     <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/arrm/">W3C ARRM Framework</a></li>
+     <li><a href="https://www.lflegal.com/2012/05/digital-accessibility-ethics/">Digital Accessibility Ethics (LF Legal)</a></li>
+     <li><a href="https://accessibility.day/">GAAD Pledge</a></li>
+     <li><a href="https://www.drupal.org/about/accessibility">Drupal Accessibility Gates</a> / <a href="https://make.wordpress.org/accessibility/">WordPress Accessibility</a></li>
+     <li>QR: link to slides + repo (placeholder)</li>
+    </ul>
+   </section>
+  </div>
+ </body>
+</html>
