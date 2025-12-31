@@ -1,5 +1,32 @@
-/* Import Google Fonts for CivicActions branding */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+/* Local fonts for CivicActions branding */
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../../assets/fonts/Merriweather-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../../assets/fonts/Merriweather-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Style for the slides for TPAC 2025, to be used together with the
    Shower script or the b6+ script. For usage instructions, see
