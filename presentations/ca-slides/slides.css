@@ -1183,3 +1183,28 @@ body, .has-darkmode {--has-darkmode: 1}
   html {font-size: 7.2636mm /*= 297 / w */}
   @page {size: 297mm 167.06mm /*= 297 / A */}
 }
+
+
+/* ========================================
+   Responsive text scaling support
+   ======================================== */
+
+.slide {
+  padding-bottom: 5rem; /* Reserve space for footer/progress */
+  box-sizing: border-box;
+}
+
+/* Cover and final slides maintain original spacing */
+.slide.cover,
+.slide.final {
+  padding-bottom: 0;
+}
+
+/* Ensure footer elements don't overlap content */
+.progress,
+.clock {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
