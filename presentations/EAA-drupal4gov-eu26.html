@@ -27,7 +27,7 @@
 
 
   <!-- Slide 2 -->
-  <section class="slide" id="eaa-floor">
+  <section class="slide" id="wad-foundation">
    <h2>Accessibility in the EU</h2>
    <ul>
     <li>Government lead the way with the Web Accessibility Directive (WAD).</li>
@@ -43,15 +43,17 @@
 
   <!-- Slide 3 -->
   <section class="slide" id="eaa-floor">
-   <h2>The European Accessibility Act (EAA) & All Things Digital</h2>
+   <h2>The European Accessibility Act (EAA) &amp; All Things Digital</h2>
    <ul>
     <li>EAA (Directive 2019/882) extends beyond public sector; it covers services and products</li>
-    <li>Fines now reach up to €1,000,000 in some member states.</li>
+    <li><strong>June 28, 2025</strong>: Enforcement began; 27 member states = 27 different implementations</li>
+    <li>Fines now reach up to €1,000,000 in some member states; market surveillance authorities monitor compliance</li>
+    <li>Microenterprises (&lt;10 employees, &lt;€2M turnover) may be exempt in some jurisdictions</li>
     <li>EN 301 549: If your Drupal site sells a ticket but your help desk is inaccessible, you fail</li>
    </ul>
 
     <p class="note">
-      EAA (Directive (EU) 2019/882) shifts accessibility from a public-sector obligation (WAD) to a market-wide requirement covering digital services and consumer-facing products. Scope includes e-commerce, transport ticketing, banking, e-books, audiovisual services, and associated support services. Enforcement is national but penalties are real; several member states have set administrative fines up to €1M, plus remediation orders and market withdrawal. EN 301 549 is the technical backbone: accessibility applies end-to-end across the service, not just the website UI. If a Drupal site meets WCAG but the ticketing flow, PDFs, call center, or chat support are inaccessible, the service is non-compliant. Position EAA as a legal floor, not a maturity model; compliance requires service-wide design, procurement, and operations alignment. See: EAA Art. 1–4, Annex I; EN 301 549 §§4–6, 9–11; national transposition laws (e.g. DE BFSG, FR ordonnance 2023-859) — https://accessible-eu-centre.ec.europa.eu/content-corner/digital-library/en-3015492021-accessibility-requirements-ict-products-and-services_en
+      EAA (Directive (EU) 2019/882) shifts accessibility from a public-sector obligation (WAD) to a market-wide requirement covering digital services and consumer-facing products. Scope includes e-commerce, transport ticketing, banking, e-books, audiovisual services, and associated support services. June 28, 2025 marked the enforcement deadline; products and services placed on the market after this date must comply unless exempt. Enforcement is decentralized: each of the 27 EU member states has transposed the directive into national law with variations in penalties, exemptions, and enforcement priorities. Market surveillance authorities in each state have powers including inspections, compliance orders, fines up to €1M (in some states like Germany's BFSG), and product/service withdrawal. Microenterprise exemptions (&lt;10 employees, &lt;€2M annual turnover) exist in some national laws but vary; exempt organizations still face civil liability risk. Do not assume uniform enforcement across borders. EN 301 549 is the technical backbone: accessibility applies end-to-end across the service, not just the website UI. If a Drupal site meets WCAG but the ticketing flow, PDFs, call center, or chat support are inaccessible, the service is non-compliant. Position EAA as a legal floor, not a maturity model; compliance requires service-wide design, procurement, and operations alignment. See: EAA Art. 1–4, 25–32, Annex I; EN 301 549 §§4–6, 9–11; national transposition laws via https://accessible-eu-centre.ec.europa.eu
     </p>
   </section>
 
@@ -77,40 +79,47 @@
 
    <ul>
     <li>Accessible authentication (3.3.8 AA)</li>
-    <li>Consistent help (3.2.6 A</li>
+    <li>Consistent help (3.2.6 A)</li>
     <li>Target size minimum (2.5.8 AA)</li>
     <li>Focus not obscured (2.4.11 AA)</li>
    </ul>
-  <p class="note">•	Accessible authentication (3.3.8 AA)
-No cognitive function tests are required for login unless an accessible alternative or assistive mechanism is provided.
-https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum
-	•	Consistent help (3.2.6 A)<br/>
-Help mechanisms, when present across pages, must appear in a consistent location.
-https://www.w3.org/TR/WCAG22/#consistent-help
-	•	Target size minimum (2.5.8 AA)<br/>
-Pointer targets must be at least 24×24 CSS pixels, with defined exceptions.
-https://www.w3.org/TR/WCAG22/#target-size-minimum
-	•	Focus not obscured (2.4.11 AA)<br/>
-Keyboard focus must not be completely hidden by author-created content.
-https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum
-</p>
+  <p class="note">
+    •	Accessible authentication (3.3.8 AA): No cognitive function tests are required for login unless an accessible alternative or assistive mechanism is provided. https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum
+    •	Consistent help (3.2.6 A): Help mechanisms, when present across pages, must appear in a consistent location. https://www.w3.org/TR/WCAG22/#consistent-help
+    •	Target size minimum (2.5.8 AA): Pointer targets must be at least 24×24 CSS pixels, with defined exceptions. https://www.w3.org/TR/WCAG22/#target-size-minimum
+    •	Focus not obscured (2.4.11 AA): Keyboard focus must not be completely hidden by author-created content. https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum
+  </p>
   </section>
 
-
   <!-- Slide 6 -->
-  <section class="slide" id="lgd">
-   <h2>LocalGov Drupal — The Fellowship of the Code</h2>
+  <section class="slide" id="accessibility-statements">
+   <h2>Accessibility Statements — Legal Evidence, Not Marketing</h2>
    <ul>
-    <li>LGD targets WCAG 2.2 AA out of the box</li>
-    <li>Public good: shared patterns and governance reduce per-council risk</li>
-    <li>Example: Southwark PDF Importer turns inaccessible PDFs into accessible HTML for everyone</li>
+    <li>Mandatory for WAD (public sector) and EAA-covered services</li>
+    <li>Must document: conformance level (EN 301 549/WCAG 2.2 AA), test date, known issues, remediation timeline, feedback mechanism</li>
+    <li>Reviewed during enforcement audits and civil disputes</li>
+    <li>Drupal opportunity: standardized accessibility statement module or pattern</li>
    </ul>
    <p class="note">
-     Position LocalGov Drupal (LGD) as a practical response to regulatory pressure, not a niche CMS choice. With the European Accessibility Act (Directive (EU) 2019/882), accessibility is now a market requirement across digital services, including local government transactions and content. LGD’s WCAG 2.2 AA-by-default approach reduces compliance risk at the point of delivery — https://docs.localgovdrupal.org/accessibility/ — not retrofitted later. Shared governance, reusable patterns, and upstream accessibility fixes mean individual councils are not solving the same legal and technical problems in isolation. This is risk pooling in practice. The Southwark PDF Importer is a concrete example: instead of publishing inaccessible PDFs and relying on exemptions or alternative formats, content is transformed into accessible HTML for all users, improving compliance and usability simultaneously. Emphasize collaboration as a compliance multiplier: fewer bespoke fixes, faster upgrades, and shared remediation aligned with evolving standards like EN 301 549. See: https://localgovdrupal.org
-    </p>
+     Accessibility statements are mandatory under WAD Art. 7 for public sector bodies and required for EAA-covered private services. They are not marketing pages; they are legal evidence reviewed during market surveillance audits and referenced in civil complaints. Required elements per Commission Implementing Decision (EU) 2018/1523: the accessibility standard applied (typically EN 301 549 referencing WCAG 2.2 AA), test methodology and date, list of non-conformances with workarounds or alternatives, feedback mechanism for users to report issues, and link to the national enforcement procedure. Vague or outdated statements increase liability. Position this as both a compliance deliverable and a Drupal contribution opportunity: a standardized accessibility statement module for Drupal core or contrib, or a LocalGov Drupal pattern, could reduce duplication and improve consistency across councils and businesses. See: WAD Art. 7; EAA Annex I §III; Commission Implementing Decision (EU) 2018/1523 https://eur-lex.europa.eu/eli/dec_impl/2018/1523/oj; model accessibility statements https://www.w3.org/WAI/planning/statements/
+   </p>
   </section>
 
   <!-- Slide 7 -->
+  <section class="slide" id="lgd">
+   <h2>LocalGov Drupal — Collective Action on Accessibility</h2>
+   <ul>
+    <li>LGD targets WCAG 2.2 AA out of the box; shared patterns reduce per-council risk</li>
+    <li>Example: Southwark PDF Importer turns inaccessible PDFs into accessible HTML for everyone</li>
+    <li>Broader Drupal community: contribute accessibility fixes upstream to core and contrib modules</li>
+    <li>Shared governance means faster remediation aligned with evolving standards (EN 301 549, WCAG updates)</li>
+   </ul>
+   <p class="note">
+     Position LocalGov Drupal (LGD) as a model for collective action on accessibility under regulatory pressure. With the European Accessibility Act (Directive (EU) 2019/882), accessibility is a market requirement across digital services. LGD's WCAG 2.2 AA-by-default approach reduces compliance risk at delivery — https://docs.localgovdrupal.org/accessibility/ — not retrofitted later. Shared governance, reusable patterns, and upstream accessibility fixes mean councils and businesses are not solving the same legal and technical problems in isolation. This is risk pooling in practice. The Southwark PDF Importer is a concrete example: instead of publishing inaccessible PDFs, content is transformed into accessible HTML for all users. Extend this model to the broader Drupal community: accessibility fixes should land in Drupal core and widely-used contrib modules, not forks or custom code. Emphasize collaboration as a compliance multiplier: fewer bespoke fixes, faster upgrades, shared remediation aligned with EN 301 549 and WCAG evolution. Encourage agencies to contribute accessibility improvements upstream and participate in community governance. See: https://localgovdrupal.org; Drupal core accessibility issues https://www.drupal.org/project/issues/search/drupal?project_issue_followers=&status%5B%5D=Open&version%5B%5D=11.x&issue_tags_op=%3D&issue_tags=Accessibility
+   </p>
+  </section>
+
+  <!-- Slide 8 -->
   <section class="slide" id="procurement">
    <h2>EN 301 549 — The European Wrapper</h2>
    <ul>
@@ -120,11 +129,11 @@ https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum
    </ul>
    <p class="note">
      Frame EN 301 549 as the legal and procurement wrapper that turns WCAG into enforceable requirements. It is the harmonised European Standard underpinning the Web Accessibility Directive and the European Accessibility Act, and it is increasingly reused outside the EU as a WCAG-plus baseline, including by Canada and other jurisdictions aligning procurement language to service-wide accessibility. EN 301 549 does not replace WCAG; it incorporates WCAG for web content and extends beyond it to cover software, documents, hardware, support services, and operational requirements. Current versions align primarily to WCAG 2.1 AA, but ETSI has signalled that v4.1.x (expected 2026) will reference WCAG 2.2. Waiting creates predictable remediation debt. Clause 11.7 is a concrete example of why this matters: respecting user preferences is no longer optional polish but a normative requirement, covering system color schemes, reduced motion, contrast preferences, and other OS or browser-level settings. Position this slide for procurement and policy audiences: specify EN 301 549 in contracts, track WCAG 2.2 now, and avoid locking suppliers into outdated compliance targets. 
-    </p>
+   </p>
   </section>
 
 
-  <!-- Slide 8 -->
+  <!-- Slide 9 -->
   <section class="slide" id="ai">
    <h2>AI &amp; Accessibility — Friend or Foe?</h2>
    <ul>
@@ -138,36 +147,54 @@ https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum
   </section>
 
 
-  <!-- Slide 9 -->
+  <!-- Slide 10 -->
   <section class="slide" id="compliance-multiplier">
     <h2>Strategic Procurement (EN 301 549)</h2>
     <ul>
-     <li>Stop buying debt: require VPAT 2.4 (EU) evidence before award</li>
+     <li>Mandate accessibility statements as contractual deliverables with documented test evidence</li>
      <li>Mandate the LGD Pattern Library; no bespoke bugs on public money</li>
-     <li>Ask for upstream history, not just “we know accessibility.”</li>
+     <li>Ask for upstream history, not just "we know accessibility"</li>
+     <li>Disproportionate burden is a legal defense under WAD/EAA, but requires documentation and remediation plans — not a get-out clause</li>
     </ul>
     <p class="note">
-      Frame procurement as the primary leverage point for accessibility outcomes. EN 301 549 only works if it is enforced at contract award, not retroactively during delivery. Requiring a current VPAT 2.4 (EU edition) with evidence mapped to EN 301 549 clauses shifts risk back to suppliers and filters out accessibility debt before it enters the system. Stress that VPATs without test results, defect lists, or remediation history are marketing documents, not compliance artifacts. Mandating shared assets like the LocalGov Drupal Pattern Library prevents councils from paying repeatedly for the same accessibility bugs and anti-patterns. This is a public-money issue as much as a usability one. “Upstream history” means asking vendors where fixes land: in a fork, or in a maintained open-source project that others benefit from. Reward contributions, governance participation, and demonstrated maintenance over claims of expertise. Close with the takeaway for procurement and content teams: make accessibility contractual, standardize what can be shared, and measure suppliers by their track record, not their promises. See: EN 301 549 procurement use https://accessible-eu-centre.ec.europa.eu, VPAT 2.4 EU edition https://www.itic.org/policy/accessibility/vpat, LocalGov Drupal patterns https://patterns.localgovdrupal.org.
+      Frame procurement as the primary leverage point for accessibility outcomes. EN 301 549 only works if enforced at contract award, not retroactively. Accessibility statements must be contractual deliverables, not post-launch additions; require suppliers to deliver draft statements with test evidence as part of acceptance criteria. Mandating shared assets like the LocalGov Drupal Pattern Library prevents councils from paying repeatedly for the same accessibility bugs. "Upstream history" means asking vendors where fixes land: in a fork or in maintained open-source projects. Disproportionate burden (WAD Art. 5; EAA Recital 69) allows exemptions where compliance would impose an unreasonable organizational or financial burden, but it requires formal assessment, documentation, and a remediation timeline. In practice, disproportionate burden claims have been difficult to sustain (cf. US Section 508 undue burden precedent); they are not blanket exemptions. Include disproportionate burden assessment criteria in procurement for edge cases, but require evidence and plans. See: EN 301 549 procurement guidance https://accessible-eu-centre.ec.europa.eu; WAD Art. 5; EAA Recital 69; LocalGov Drupal patterns https://patterns.localgovdrupal.org
     </p>
   </section>
 
-
-  <!-- Slide 10 -->
-  <section class="slide" id="resources">
-   <h2>Resources</h2>
+  <!-- Slide 11 -->
+  <section class="slide" id="monday">
+   <h2>What to Do Monday — For Businesses Serving Europeans</h2>
    <ul>
-    <li><a href="https://www.drupal.org/association/blog/a-new-era-of-digital-accessibility-the-eaa-and-its-implications-for-drupal" >A New Era of Digital Accessibility: The EAA and Its Implications for Drupal</a></li>
-    <li><a href="https://www.etsi.org/human-factors-accessibility/en-301-549-v3-the-harmonized-european-standard-for-ict-accessibility">EN 301 549</a></li>
-    <li><a href="https://accessible.canada.ca/creating-accessibility-standards/canasc-en-301-5492024-accessibility-requirements-ict-products-and-services">CAN/ASC EN 301 549:2024</a></li>
-    <li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a></li>
-    <li><a href="https://localgovdrupal.org/">LocalGov Drupal</a></li>
-    <li><a href="https://www.drupal.org/community/governance/rfp">Drupal RFP Guide</a></li>
+    <li>Audit your digital services against WCAG 2.2 AA; document gaps and known issues</li>
+    <li>Draft or update your accessibility statement with conformance level, test date, and remediation timeline</li>
+    <li>Review procurement contracts: ensure suppliers provide accessibility statements and test evidence</li>
+    <li>Check your national EAA transposition law; enforcement varies by member state</li>
+    <li>If you're a microenterprise, verify exemption eligibility in your jurisdiction — but plan for civil liability risk</li>
    </ul>
-   <p class="note"></p>
+   <p class="note">
+     This slide provides concrete first steps for businesses serving European customers post-June 28, 2025 deadline. Start with an accessibility audit against WCAG 2.2 AA (the likely basis of EN 301 549 v4.x); automated tools (Lighthouse, axe, WAVE) catch syntax but require manual follow-up for experiential issues. Document all non-conformances and create a remediation plan. Draft or update your accessibility statement per Commission Implementing Decision (EU) 2018/1523; include conformance level, test methodology and date, list of known issues with workarounds, feedback mechanism, and link to national enforcement procedure. Review procurement and vendor contracts to ensure accessibility requirements are passed downstream; require suppliers to provide accessibility statements and documented test evidence as contractual deliverables. Check your national EAA transposition law via https://accessible-eu-centre.ec.europa.eu; enforcement priorities, penalties, and exemptions vary by member state. If you qualify as a microenterprise (&lt;10 employees, &lt;€2M turnover), verify exemption eligibility in your jurisdiction, but note that exemptions do not shield against civil liability or private lawsuits. Treat Monday actions as risk mitigation, not one-time compliance theater. See: WCAG 2.2 https://www.w3.org/TR/WCAG22/; Commission Implementing Decision (EU) 2018/1523; EAA national laws https://accessible-eu-centre.ec.europa.eu
+   </p>
   </section>
 
 
   <!-- Slide 12 -->
+  <section class="slide" id="resources">
+   <h2>Resources</h2>
+   <ul>
+    <li><a href="https://www.drupal.org/association/blog/a-new-era-of-digital-accessibility-the-eaa-and-its-implications-for-drupal">A New Era of Digital Accessibility: The EAA and Its Implications for Drupal</a></li>
+    <li><a href="https://www.etsi.org/human-factors-accessibility/en-301-549-v3-the-harmonized-european-standard-for-ict-accessibility">EN 301 549</a></li>
+    <li><a href="https://accessible.canada.ca/creating-accessibility-standards/canasc-en-301-5492024-accessibility-requirements-ict-products-and-services">CAN/ASC EN 301 549:2024</a></li>
+    <li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a></li>
+    <li><a href="https://accessible-eu-centre.ec.europa.eu">European Accessibility Centre — National EAA Transposition Laws</a></li>
+    <li><a href="https://eur-lex.europa.eu/eli/dec_impl/2018/1523/oj">Commission Implementing Decision (EU) 2018/1523 — Accessibility Statement Model</a></li>
+    <li><a href="https://localgovdrupal.org/">LocalGov Drupal</a></li>
+    <li><a href="https://www.drupal.org/community/governance/rfp">Drupal RFP Guide</a></li>
+   </ul>
+   <p class="note">Updated resources include link to European Accessibility Centre for national transposition laws and Commission Implementing Decision for accessibility statement requirements.</p>
+  </section>
+
+
+  <!-- Slide 13 -->
   <section class="slide final" id="questions">
    <h2>Questions</h2>
    <div class="next">
