@@ -3,10 +3,14 @@
 Authoring guidance for keeping the slide deck consistent, accessible, and on-message.
 
 ## Purpose
-- Maintain the FOSDEM 2026 deck voice: technical, urgent, empowering, open-source-forward.
+- Maintain the CivicActions deck voice: technical, urgent, empowering, open-source-forward.
 - Keep the conflict/hero/twist arc: cleanup vs authoring, villain = cognitive load, hero = ATAG Part B + local SLMs, twist = AI for WCAG-EM automation.
+- Additional arcs for the other three decks:
+    - **Operations cadence deck:** conflict = fragmented QA handoffs, villain = siloed governance, hero = shared SLM dashboards, twist = community-driven automation that previews compliance before formal reviews.
+    - **Platform rollout deck:** conflict = compliance backlog vs rapid feature work, villain = fear of audit-triggering surprises, hero = CivicActions + open-source tooling that codifies ATAG/WCAG guidance, twist = lightweight AI assistants that keep stakeholders aligned in real time.
+    - **Innovation lab deck:** conflict = experimentation vs enterprise confidence, villain = opaque assessments and manual scorecards, hero = transparent, open-source-ready ATAG Part B playbooks, twist = AI-powered WCAG-EM scaffolds that keep labs accountable without blocking discovery.
 
-## Slide Structure (b6+)
+## Slide Structure (template version b6+)
 - Slides use `<section class="slide">`; title slide uses `class="slide cover clear"`.
 - Speaker notes follow immediately with `<section class="comment">`.
 - Incremental bullets use `<ul class="emerge">` and `class="next"` where needed.
@@ -18,9 +22,10 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Keep headings in order (no skipped levels); one `h1` on the cover, `h2` per slide.
 - Use clear, descriptive link text; avoid "click here." Include `alt` text when adding images/QRs.
 - Avoid jargon without context; prefer plain language nudges inline.
-- No hidden notes: use `<section class="comment">` for all speaker guidance.
+- Spell out acronyms.
 - Only one notes block per slide: keep a single `class="note"`/`class="notes"` element in each slide section.
-- Preserve ASCII unless adding required Unicode already in use.
+- Ensure that everything is converted into Unicode and avoid HTML Entities that can cause problems.
+- Be consistent with use of "and" and "&" - default to "&" for space.
 
 ## Tone & Narrative
 - Voice: direct, community-focused, pragmatic. Call out procurement/privacy realities and open-source advantages.
@@ -45,12 +50,13 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - All color combinations meet WCAG 2.2 AA contrast requirements
 
 ## When Editing Slides
-- Keep slide count at 12 unless explicitly expanding; maintain IDs for linking.
+- Keep slide count relative to the length of the presentation; maintain IDs for linking.
 - Do not remove `shower fade-in duration=20 warn=5 hidemouse` on `<body>` unless timing changes are requested.
 - If adding demos or QR codes, include alt text and a short label. Use placeholders if the asset is not yet available.
+- There should be a Cover slide and a final Questions slide for each presentation. 
 
 ## External References
-- Core links: ATAG 2.0, WCAG-EM, W3C ATAG CG GitHub.
+- Core links: Should be in the notes or in a reference slide for each presentation.
 - If adding more references, prefer stable W3C or open GitHub sources; avoid proprietary gated links.
 
 ## Change Review Checklist
@@ -58,3 +64,7 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Accessibility: headings, alt text, link clarity, no color-only meaning.
 - Narrative alignment: conflict/villain/hero/twist/call preserved.
 - Timing: duration/warn classes intact; progress/clock elements present.
+
+## Scope to /presentations
+- Do not apply any changes from this to the parent directory. Keep it to within the /presentations folder
+- Each presentation should be able to run independently, assuming access to the /presentations/ca-slides folder
