@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # In Brief
 
 I'm passionate about sustainablility, accessibility and open. Planet, people and collaboration to make our lives better. I work at [CivicActions](https://civicactions.com/) as the Open Standards and Practices Lead. I'm a [W3C Invited Expert](https://www.w3.org/invited-experts/list/?initial=g) and play a leadership role in an [accessibilty community group](https://www.w3.org/community/arrm/) and a [web sustainability interest group](https://www.w3.org/groups/ig/sustainableweb/). 
