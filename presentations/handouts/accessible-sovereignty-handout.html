@@ -27,18 +27,43 @@
   <p class="muted">CC BY-SA 4.0 · Link to slides and repo via QR (placeholder).</p>
 
   <section aria-labelledby="fsf-map" class="card">
-   <h2 id="fsf-map">FSF ↔ A11y Mapping</h2>
-   <table aria-label="Mapping Four Freedoms to accessibility obligations">
-    <thead>
-     <tr><th scope="col">Freedom</th><th scope="col">Accessibility Requirement</th></tr>
-    </thead>
-    <tbody>
-     <tr><td>Freedom 0</td><td>Screen reader operability and keyboard support</td></tr>
-     <tr><td>Freedom 1</td><td>Semantic, perceivable documentation</td></tr>
-     <tr><td>Freedom 2</td><td>Accessible forges and distribution channels</td></tr>
-     <tr><td>Freedom 3</td><td>Inclusive contribution pipelines and reviews</td></tr>
-    </tbody>
-   </table>
+    <h2 id="fsf-map">FSF ↔ Accessibility Mapping</h2>
+    <table aria-label="Mapping Four Freedoms to accessibility barriers, actions, and ARRM role owners">
+     <thead>
+      <tr>
+        <th scope="col">FSF Freedom</th>
+        <th scope="col">Accessibility Barrier (the “bug”)</th>
+        <th scope="col">Ethical Action (the “patch”)</th>
+        <th scope="col">ARRM Role Owner</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+        <td>Freedom 0: Run the program as you wish</td>
+        <td>UI is a “black box” to assistive tech; keyboard-only users trapped in focus traps</td>
+        <td>Ensure functional parity: every core feature operable via keyboard and screen reader</td>
+        <td>Developers &amp; QA Testers</td>
+      </tr>
+      <tr>
+        <td>Freedom 1: Study and change it</td>
+        <td>Docs lack alt text; dev tools inaccessible; complex diagrams have no descriptions</td>
+        <td>Transparency &amp; education: publish accessible docs and “How to Contribute” guides in multiple formats</td>
+        <td>Technical Writers &amp; Maintainers</td>
+      </tr>
+      <tr>
+        <td>Freedom 2: Redistribute copies</td>
+        <td>Distribution platforms require inaccessible CAPTCHAs or mouse-only navigation</td>
+        <td>Inclusive infrastructure: choose tools (IDEs/forges) that maximize participation of disabled people</td>
+        <td>Project Leads &amp; OSPOs</td>
+      </tr>
+      <tr>
+        <td>Freedom 3: Distribute modified versions</td>
+        <td>Submission workflows (PRs/CLI) exclude those with motor or sensory disabilities</td>
+        <td>Collaborative stewardship: use the GAAD Pledge to prioritize accessibility as a commit gate</td>
+        <td>Maintainers &amp; Contributors</td>
+      </tr>
+     </tbody>
+    </table>
   </section>
 
   <div class="grid">

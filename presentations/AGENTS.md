@@ -17,6 +17,9 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Big pivot uses `<p class="shout">`.
 - Side-by-side content uses `<div class="columns">` with child blocks.
 - Keep `<div class="progress"></div>` and `<div class="clock"></div>` in place for timing.
+- Cover slide should include a subtitle, speaker line (name + affiliation), event line (venue + date/time with time zone), and a note block that lists the event URL(s), slide link, and the hook for the talk.
+- Keep the `aria-live` region that announces exit from slide mode; it supports screen reader users.
+- Include a Resources slide near the end and keep a final Questions slide with contact links and a QR placeholder when possible.
 
 ## Accessibility & Content Hygiene
 - Keep headings in order (no skipped levels); one `h1` on the cover, `h2` per slide.
@@ -24,8 +27,9 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Avoid jargon without context; prefer plain language nudges inline.
 - Spell out acronyms.
 - Only one notes block per slide: keep a single `class="note"`/`class="notes"` element in each slide section.
-- Ensure that everything is converted into Unicode and avoid HTML Entities that can cause problems.
+- Prefer literal characters; keep HTML entities only where required for HTML (`&`, `<`, `>`).
 - Be consistent with use of "and" and "&" - default to "&" for space.
+- In notes, include source URLs in full (https...) and keep citations readable without relying on link previews.
 
 ## Tone & Narrative
 - Voice: direct, community-focused, pragmatic. Call out procurement/privacy realities and open-source advantages.
@@ -35,7 +39,7 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 ## CivicActions Style Alignment
 - Follow the CivicActions writing style guide: use welcoming plain language, minimal jargon, and explain acronyms on first use. Reference: https://guidebook.civicactions.com/en/latest/about-this-guidebook/writing-style-guide/
 - Use American spelling by default.
-- Keep headings in sentence case (capitalize first word and proper nouns).
+- Use title case for slide headings to match the current deck style.
 - Bullets: no trailing periods unless the bullet is a full sentence; keep structure parallel and concise.
 - Write in second person when giving guidance; keep tone calm, confident, and people-first.
 
