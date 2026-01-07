@@ -373,11 +373,63 @@ ul.with-icons > li > *:first-child {display: inline-block;
 .slidemode .note, .slidemode .notes {display: none !important}
 .shower.full .note, .shower.full .notes {display: none !important}
 .shower.list .note, .shower.list .notes {display: block}
+.has-2nd-window .note, .has-2nd-window .notes {display: block !important}
 .slide.cover .note, .slide.cover .notes {
   background: var(--note-bg);
   border-color: var(--note-border);
   color: var(--slide-fg);
 }
+
+/* Deep-dive details, hidden until hovered/focused */
+.slide .details {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: min(28em, 28vw);
+  max-width: 32em;
+  max-height: 70vh;
+  padding: 2.8em 1em 1em;
+  background: var(--long-comment-bg);
+  color: var(--long-comment-fg);
+  border: 1px solid var(--note-border);
+  border-radius: 0.9em;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  font-size: 0.9em;
+  line-height: 1.5;
+  overflow: auto;
+  clip-path: inset(0 calc(100% - 2.6em) calc(100% - 2.6em) calc(100% - 2.6em));
+  transition: clip-path 0.16s ease, box-shadow 0.16s ease;
+  z-index: 6;
+}
+.slide .details::before {
+  content: "i";
+  position: absolute;
+  top: 0.35em;
+  right: 0.35em;
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: 999px;
+  background: var(--link-fg);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.slide .details:hover,
+.slide .details:focus-within,
+.slide .details:focus-visible {
+  clip-path: inset(0 0 0 0);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.3);
+}
+.slide .details:hover::before,
+.slide .details:focus-within::before,
+.slide .details:focus-visible::before {
+  background: var(--visited-fg);
+}
+.slidemode .details, .shower.full .details {display: none !important}
+.has-2nd-window .details {display: block !important}
 
 /* Miscellaneous styles */
 .num {font-variant-numeric: oldstyle-nums tabular-nums diagonal-fractions}
@@ -1137,6 +1189,10 @@ body, .has-darkmode {--has-darkmode: 1}
     margin: 2em 1em 2em 0; box-shadow: none}
   .slide ~ .comment::before {content: none}
   .slide summary::before {content: none}
+  .slide .details {position: static; clip-path: none; max-height: none;
+    padding: 0.75em 0.9em; margin-top: 0.6em; width: auto;
+    box-shadow: none; border: 0.2pt solid black}
+  .slide .details::before {display: none}
   .slide details {visibility: hidden}
   .slide summary {visibility: visible}
   [role=region][aria-live=assertive], .b6-ui, .clock, .fullclock {display: none}
