@@ -261,7 +261,7 @@ h4 {font-size: 1.2em; margin: 0.5em 0}
   background-image: var(--brand-mark)}
 .slide .ca-footer {position: absolute; left: 0; right: 0; bottom: 0.6em;
   padding: 0 1.5em; display: flex; align-items: center;
-  justify-content: center; gap: 0.6em; font-size: 0.9em;
+  justify-content: center; gap: 0.6em; font-size: 0.9rem;
   color: var(--footer-fg); letter-spacing: 0.03em; z-index: 1}
 .slide .ca-footer .ca-footer-logo {width: 1.6em; height: 1.6em;
   background-image: var(--brand-mark); background-repeat: no-repeat;
