@@ -31,3 +31,8 @@ Guardrails for keeping the ox.ca landing page clear, accurate, and accessible.
 - Links work and have context; alt text is present where needed.
 - Spelling and casing match the guidance; YAML front matter (if any) is valid.
 - Page renders cleanly on mobile and desktop; nothing breaks the minimal theme.
+
+## Slide augmentations and scripts
+- Keep custom behavior for the decks in separate scripts under /presentations/ca-slides so b6plus.js can be updated directly from https://www.w3.org/Talks/Tools/b6plus/ without merge conflict.
+- Load helpers like details-popovers.js after ca-slides/b6plus.js (and after auto-scale.js when that helper is used) so the global helpers (`_`, document structure) are available.
+- Document any additional helper scripts in this AGENTS file so the maintenance plan is clear for future updates.

@@ -257,8 +257,10 @@ h4 {font-size: 1.2em; margin: 0.5em 0}
   background-position: left top; pointer-events: none; opacity: 0.95; filter: none}
 .slide.cover.brand-mark::after, .slide.final.brand-mark::after {width: 2.4em; height: 2.4em;
   background-image: var(--brand-mark)}
-.slide .ca-footer {position: absolute; left: 3.7em; right: 2em; bottom: 0.6em;
+.slide .ca-footer {position: absolute; left: 50%; right: auto; bottom: 0.6em;
+  transform: translateX(-50%);
   display: flex; align-items: center; gap: 0.6em; font-size: 0.9em;
+  justify-content: center;
   color: var(--footer-fg); letter-spacing: 0.03em}
 .slide .ca-footer .ca-footer-logo {width: 1.6em; height: 1.6em;
   background-image: var(--brand-mark); background-repeat: no-repeat;
@@ -370,6 +372,11 @@ ul.with-icons > li > *:first-child {display: inline-block;
   color: var(--slide-fg);
   display: block;
 }
+.slide .notes {
+  position: relative;
+  padding-right: 3.6em;
+  padding-top: 1.1em;
+}
 .slidemode .note, .slidemode .notes {display: none !important}
 .shower.full .note, .shower.full .notes {display: none !important}
 .shower.list .note, .shower.list .notes {display: block}
@@ -398,8 +405,22 @@ ul.with-icons > li > *:first-child {display: inline-block;
   line-height: 1.5;
   overflow: auto;
   clip-path: inset(0 calc(100% - 2.6em) calc(100% - 2.6em) calc(100% - 2.6em));
-  transition: clip-path 0.16s ease, box-shadow 0.16s ease;
+  transition: clip-path 0.2s ease, opacity 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.5em);
   z-index: 6;
+}
+.slide .details.details-open,
+.slide .details:hover,
+.slide .details:focus-visible,
+.slide .details:focus-within {
+  clip-path: inset(0);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.3);
 }
 .slide .details::before {
   content: "i";
@@ -416,19 +437,58 @@ ul.with-icons > li > *:first-child {display: inline-block;
   font-weight: 700;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-}
-.slide .details:hover,
-.slide .details:focus-within,
-.slide .details:focus-visible {
-  clip-path: inset(0 0 0 0);
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease;
 }
 .slide .details:hover::before,
 .slide .details:focus-within::before,
 .slide .details:focus-visible::before {
   background: var(--visited-fg);
 }
-.slidemode .details, .shower.full .details {display: none !important}
+.slide .details.details-open::before {
+  opacity: 0;
+}
+.slide .details-trigger {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  min-width: 3.2em;
+  height: 2.4em;
+  border-radius: 999px;
+  border: none;
+  padding: 0 1em;
+  background: var(--link-fg);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+  z-index: 8;
+}
+.slide .details-trigger:hover,
+.slide .details-trigger:focus-visible {
+  background: var(--visited-fg);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.slide .details-trigger:focus-visible {
+  outline: 2px solid var(--link-fg);
+  outline-offset: 2px;
+}
+body.details-popovers-ready .slide .details::before {
+  display: none;
+}
+.slidemode .details,
+.slidemode .details-trigger,
+.shower.full .details,
+.shower.full .details-trigger {display: none !important}
 .has-2nd-window .details {display: block !important}
 
 /* Miscellaneous styles */
@@ -474,7 +534,8 @@ img.fit, video.fit {object-fit: contain}
 
 /* Slide number in lower left corner */
 .slide::before {content: counter(slide); position: absolute;
-  left: 0; width: 2.7em /*= L */; bottom: 1em /*= b */; text-shadow: none;
+  right: 0.5em; width: 2.7em /*= L */; bottom: 1em /*= b */; text-shadow: none;
+  left: auto;
   font-weight: bold;
   text-align: center; color: var(--slide-number-fg)}
 .slide.cover::before {}
