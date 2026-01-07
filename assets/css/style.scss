@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@use "{{ site.theme }}" as *;
 
 @font-face {
     font-family: 'Sen-Regular';

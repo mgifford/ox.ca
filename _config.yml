@@ -16,3 +16,7 @@ theme: jekyll-theme-minimal
 include: [".well-known"]
 exclude: ["AGENTS.md"]
 site.lang: en-ca
+
+# Dart Sass configuration to reduce deprecation noise from dependencies
+sass:
+  quiet_deps: true
