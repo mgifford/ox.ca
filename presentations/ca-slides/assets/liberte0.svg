@@ -1,145 +1,342 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1892" height="950" viewBox="0 0 1892 950" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-  <title id="t">The Four Freedoms reframed for accessibility (WCAG principles)</title>
-  <desc id="d">
-    A 2x2 poster showing Freedom 0 through Freedom 3 reframed as Perceivable, Operable, Understandable, and Robust.
-  </desc>
-  <defs>
-    <style>
-      :root{
-        --ink:#111111;
-        --grid:#111111;
-        --accent:#c25750; /* muted FSF-like red */
-        --bg:#ffffff;
-      }
-      .bg { fill: var(--bg); }
-      .frame { fill:none; stroke:var(--grid); stroke-width:4; }
-      .divider { stroke:var(--grid); stroke-width:3.2; }
-      .h1 { font: 900 56px/1.05 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--ink); letter-spacing:0.2px; }
-      .h2 { font: 900 46px/1.05 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--ink); letter-spacing:0.2px; }
-      .p  { font: 500 32px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--ink); }
-      .muted { fill:#222; }
-      .iconStroke { fill:none; stroke:var(--accent); stroke-width:18; stroke-linecap:round; stroke-linejoin:round; }
-      .iconFill { fill:var(--accent); }
-      .iconThin { fill:none; stroke:var(--accent); stroke-width:12; stroke-linecap:round; stroke-linejoin:round; }
-    </style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1892"
+   height="950"
+   viewBox="0 0 1892 950"
+   role="img"
+   aria-labelledby="t d"
+   version="1.1"
+   id="svg499"
+   sodipodi:docname="liberte0.svg"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview501"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.24842105"
+     inkscape:cx="972.13983"
+     inkscape:cy="517.26695"
+     inkscape:window-width="1992"
+     inkscape:window-height="727"
+     inkscape:window-x="212"
+     inkscape:window-y="435"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg499" />
+  <title
+     id="t">The Four Freedoms reframed for accessibility (WCAG principles)</title>
+  <desc
+     id="d">A 2x2 poster showing Freedom 0 through Freedom 3 reframed as Perceivable, Operable, Understandable, and Robust.</desc>
+  <defs
+     id="defs385">
+    <!-- Inkscape-safe: no CSS variables, no :root, fixed colors only -->
+    <style
+       type="text/css"
+       id="style381"><![CDATA[
+      .bg { fill:#ffffff; }
+      .frame { fill:none; stroke:#111111; stroke-width:4; }
+      .divider { stroke:#111111; stroke-width:3.2; }
+      .h1 { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight:900; font-size:56px; fill:#111111; letter-spacing:0.2px; }
+      .h2 { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight:900; font-size:46px; fill:#111111; letter-spacing:0.2px; }
+      .p  { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight:500; font-size:32px; fill:#111111; }
+      .muted { fill:#222222; }
 
+      .iconStroke { fill:none; stroke:#c25750; stroke-width:18; stroke-linecap:round; stroke-linejoin:round; }
+      .iconFill { fill:#c25750; }
+      .iconThin { fill:none; stroke:#c25750; stroke-width:12; stroke-linecap:round; stroke-linejoin:round; }
+    ]]></style>
     <!-- Heart path -->
-    <path id="heart" d="M 0,-30
-         C 0,-75 60,-90 90,-55
-         C 120,-20 100,25 60,55
-         C 30,75 10,90 0,100
-         C -10,90 -30,75 -60,55
-         C -100,25 -120,-20 -90,-55
-         C -60,-90 0,-75 0,-30 Z"/>
-
+    <path
+       id="heart"
+       d="M 0,-30          C 0,-75 60,-90 90,-55          C 120,-20 100,25 60,55          C 30,75 10,90 0,100          C -10,90 -30,75 -60,55          C -100,25 -120,-20 -90,-55          C -60,-90 0,-75 0,-30 Z" />
     <!-- Simple lightbulb path -->
-    <path id="bulb" d="M 0,-120
-         C 70,-120 120,-70 120,-5
-         C 120,50 90,80 55,105
-         C 45,112 40,125 40,140
-         L 40,155
-         C 40,170 25,182 10,182
-         L -10,182
-         C -25,182 -40,170 -40,155
-         L -40,140
-         C -40,125 -45,112 -55,105
-         C -90,80 -120,50 -120,-5
-         C -120,-70 -70,-120 0,-120 Z"/>
+    <path
+       id="bulb"
+       d="M 0,-120          C 70,-120 120,-70 120,-5          C 120,50 90,80 55,105          C 45,112 40,125 40,140          L 40,155          C 40,170 25,182 10,182          L -10,182          C -25,182 -40,170 -40,155          L -40,140          C -40,125 -45,112 -55,105          C -90,80 -120,50 -120,-5          C -120,-70 -70,-120 0,-120 Z" />
   </defs>
-
   <!-- Background -->
-  <rect class="bg" x="0" y="0" width="1892" height="950"/>
-
+  <rect
+     class="bg"
+     x="0"
+     y="0"
+     width="1892"
+     height="950"
+     id="rect387" />
   <!-- Outer frame and dividers -->
-  <rect class="frame" x="16" y="16" width="1860" height="918"/>
-  <line class="divider" x1="946" y1="16" x2="946" y2="934"/>
-  <line class="divider" x1="16" y1="475" x2="1876" y2="475"/>
-
+  <rect
+     class="frame"
+     x="16"
+     y="16"
+     width="1860"
+     height="918"
+     id="rect389" />
+  <line
+     class="divider"
+     x1="946"
+     y1="16"
+     x2="946"
+     y2="934"
+     id="line391" />
+  <line
+     class="divider"
+     x1="16"
+     y1="475"
+     x2="1876"
+     y2="475"
+     id="line393" />
   <!-- ========= TOP LEFT: Freedom 0 ========= -->
-  <g transform="translate(70,90)">
-    <text class="h1" x="0" y="0">
-      <tspan x="0" dy="0">FREEDOM 0:</tspan>
-      <tspan x="0" dy="64">PERCEIVABLE</tspan>
-    </text>
-    <text class="p" x="0" y="250">
-      <tspan x="0" dy="0">Use only exists if people can</tspan>
-      <tspan x="0" dy="42">perceive the interface.</tspan>
-    </text>
+  <g
+     transform="translate(70,90)"
+     id="g407">
+    <text
+       class="h1"
+       x="0"
+       y="0"
+       id="text399"><tspan
+         x="0"
+         dy="0"
+         id="tspan395">FREEDOM 0:</tspan><tspan
+         x="0"
+         dy="64"
+         id="tspan397">PERCEIVABLE</tspan></text>
+    <text
+       class="p"
+       x="0"
+       y="250"
+       id="text405"><tspan
+         x="0"
+         dy="0"
+         id="tspan401">Use only exists if people can</tspan><tspan
+         x="0"
+         dy="42"
+         id="tspan403">perceive the interface.</tspan></text>
   </g>
-
   <!-- Mouse icon (approximation) -->
-  <g transform="translate(760,160)">
-    <rect x="-70" y="-20" width="140" height="220" rx="55" class="iconStroke"/>
-    <line x1="0" y1="-10" x2="0" y2="95" class="iconThin"/>
-    <rect x="-14" y="35" width="28" height="55" rx="12" class="iconThin"/>
-    <path d="M 0,-20 C 0,-120 120,-120 120,-55" class="iconStroke"/>
+  <g
+     transform="translate(760,160)"
+     id="g417">
+    <rect
+       x="-70"
+       y="-20"
+       width="140"
+       height="220"
+       rx="55"
+       class="iconStroke"
+       id="rect409" />
+    <line
+       x1="0"
+       y1="-10"
+       x2="0"
+       y2="95"
+       class="iconThin"
+       id="line411" />
+    <rect
+       x="-14"
+       y="35"
+       width="28"
+       height="55"
+       rx="12"
+       class="iconThin"
+       id="rect413" />
+    <path
+       d="M 0,-20 C 0,-120 120,-120 120,-55"
+       class="iconStroke"
+       id="path415" />
   </g>
-
   <!-- ========= TOP RIGHT: Freedom 1 ========= -->
-  <g transform="translate(1016,90)">
-    <text class="h2" x="0" y="0">
-      <tspan x="0" dy="0">FREEDOM 1:</tspan>
-      <tspan x="0" dy="56">OPERABLE</tspan>
-      <tspan x="0" dy="56">STUDY/EDIT/IMPROVE</tspan>
-    </text>
-    <text class="p" x="0" y="270">
-      <tspan x="0" dy="0">You can’t meaningfully study or improve</tspan>
-      <tspan x="0" dy="42">what you can’t operate.</tspan>
-    </text>
+  <g
+     transform="translate(1016,90)"
+     id="g433">
+    <text
+       class="h2"
+       x="0"
+       y="0"
+       id="text425"><tspan
+         x="0"
+         dy="0"
+         id="tspan419">FREEDOM 1:</tspan><tspan
+         x="0"
+         dy="56"
+         id="tspan421">OPERABLE</tspan><tspan
+         x="0"
+         dy="56"
+         id="tspan423">STUDY/EDIT/IMPROVE</tspan></text>
+    <text
+       class="p"
+       x="0"
+       y="270"
+       id="text431"><tspan
+         x="0"
+         dy="0"
+         id="tspan427">You can’t meaningfully study or improve</tspan><tspan
+         x="0"
+         dy="42"
+         id="tspan429">what you can’t operate.</tspan></text>
   </g>
-
   <!-- Magnifier + bulb icons (approximation) -->
-  <g transform="translate(1520,150)">
-    <circle cx="-110" cy="30" r="85" class="iconStroke"/>
-    <line x1="-50" y1="95" x2="10" y2="155" class="iconStroke"/>
-    <g transform="translate(180,40) scale(0.75)">
-      <use href="#bulb" class="iconFill"/>
-      <rect x="-55" y="160" width="110" height="34" rx="12" class="iconFill"/>
-      <rect x="-45" y="200" width="90" height="28" rx="10" class="iconFill"/>
-    </g>
-  </g>
-
   <!-- ========= BOTTOM LEFT: Freedom 2 ========= -->
-  <g transform="translate(70,560)">
-    <text class="h1" x="0" y="0">
-      <tspan x="0" dy="0">FREEDOM 2:</tspan>
-      <tspan x="0" dy="64">UNDERSTANDABLE</tspan>
-      <tspan x="0" dy="64">REDISTRIBUTE</tspan>
-    </text>
-    <text class="p" x="0" y="270">
-      <tspan x="0" dy="0">Sharing only helps if others can</tspan>
-      <tspan x="0" dy="42">understand what you shared.</tspan>
-    </text>
+  <g
+     transform="translate(70,560)"
+     id="g463">
+    <text
+       class="h1"
+       x="0"
+       y="0"
+       id="text455"><tspan
+         x="0"
+         dy="0"
+         id="tspan449">FREEDOM 2:</tspan><tspan
+         x="0"
+         dy="64"
+         id="tspan451">UNDERSTANDABLE</tspan><tspan
+         x="0"
+         dy="64"
+         id="tspan453">REDISTRIBUTE</tspan></text>
+    <text
+       class="p"
+       x="0"
+       y="270"
+       id="text461"><tspan
+         x="0"
+         dy="0"
+         id="tspan457">Sharing only helps if others can</tspan><tspan
+         x="0"
+         dy="42"
+         id="tspan459">understand what you shared.</tspan></text>
   </g>
-
   <!-- Heart icon -->
-  <g transform="translate(760,690) scale(1.25)">
-    <use href="#heart" class="iconFill"/>
+  <g
+     transform="translate(760,690) scale(1.25)"
+     id="g467">
+    <use
+       xlink:href="#heart"
+       class="iconFill"
+       id="use465" />
   </g>
-
   <!-- ========= BOTTOM RIGHT: Freedom 3 ========= -->
-  <g transform="translate(1016,560)">
-    <text class="h1" x="0" y="0">
-      <tspan x="0" dy="0">FREEDOM 3:</tspan>
-      <tspan x="0" dy="64">ROBUST</tspan>
-      <tspan x="0" dy="64">MODIFY &amp; SHARE</tspan>
-    </text>
-    <text class="p" x="0" y="330">
-      <tspan x="0" dy="0">Modification refactors ideas so they</tspan>
-      <tspan x="0" dy="42">work across tools, users, and time.</tspan>
-    </text>
+  <g
+     transform="translate(1016,560)"
+     id="g483">
+    <text
+       class="h1"
+       x="0"
+       y="0"
+       id="text475"><tspan
+         x="0"
+         dy="0"
+         id="tspan469">FREEDOM 3:</tspan><tspan
+         x="0"
+         dy="64"
+         id="tspan471">ROBUST</tspan><tspan
+         x="0"
+         dy="64"
+         id="tspan473">MODIFY &amp; SHARE</tspan></text>
+    <text
+       class="p"
+       x="0"
+       y="330"
+       id="text481"><tspan
+         x="0"
+         dy="0"
+         id="tspan477">Modification refactors ideas so they</tspan><tspan
+         x="0"
+         dy="42"
+         id="tspan479">work across tools, users, and time.</tspan></text>
   </g>
-
   <!-- Heart + bulb icons -->
-  <g transform="translate(1495,690)">
-    <g transform="translate(-60,0) scale(1.25)">
-      <use href="#heart" class="iconFill"/>
+  <g
+     transform="matrix(1.25,0,0,1.25,1613.1519,664.34186)"
+     id="g246">
+    <use
+       xlink:href="#heart"
+       class="iconFill"
+       id="use244"
+       style="fill:#c25750" />
+  </g>
+  <g
+     transform="matrix(0.69902883,0,0,0.69902883,1766.571,638.52363)"
+     id="g254"
+     style="fill:#ffe680;stroke-width:1.11583">
+    <use
+       xlink:href="#bulb"
+       class="iconFill"
+       id="use248"
+       style="fill:#ffe680;stroke-width:1.11583" />
+    <rect
+       x="-55"
+       y="160"
+       width="110"
+       height="34"
+       rx="12"
+       class="iconFill"
+       id="rect250"
+       style="fill:#ffe680;stroke-width:1.11583" />
+    <rect
+       x="-45"
+       y="200"
+       width="90"
+       height="28"
+       rx="10"
+       class="iconFill"
+       id="rect252"
+       style="fill:#ffe680;stroke-width:1.11583" />
+  </g>
+  <g
+     transform="matrix(0.69902883,0,0,0.69902883,1718.856,191.70159)"
+     id="g254-4"
+     style="fill:#ffe680;stroke-width:1.11583">
+    <use
+       xlink:href="#bulb"
+       class="iconFill"
+       id="use248-8"
+       style="fill:#ffe680;stroke-width:1.11583" />
+    <rect
+       x="-55"
+       y="160"
+       width="110"
+       height="34"
+       rx="12"
+       class="iconFill"
+       id="rect250-3"
+       style="fill:#ffe680;stroke-width:1.11583" />
+    <rect
+       x="-45"
+       y="200"
+       width="90"
+       height="28"
+       rx="10"
+       class="iconFill"
+       id="rect252-9"
+       style="fill:#ffe680;stroke-width:1.11583" />
+  </g>
+  <g
+     id="g2729"
+     transform="translate(181.14407,16.101695)">
+    <g
+       id="g2724">
+      <circle
+         cx="1410"
+         cy="180"
+         r="85"
+         class="iconStroke"
+         id="circle435" />
     </g>
-    <g transform="translate(240,0) scale(0.78)">
-      <use href="#bulb" class="iconFill"/>
-      <rect x="-55" y="160" width="110" height="34" rx="12" class="iconFill"/>
-      <rect x="-45" y="200" width="90" height="28" rx="10" class="iconFill"/>
-    </g>
+    <line
+       x1="1470"
+       y1="245"
+       x2="1530"
+       y2="305"
+       class="iconStroke"
+       id="line437" />
   </g>
 </svg>

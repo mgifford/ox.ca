@@ -2,7 +2,7 @@
   "extends": ["html-validate:recommended"],
   "rules": {
     "no-raw-characters": "error",
-    "aria-unique-landmark": "error",
+    "unique-landmark": "error",
     "hidden-focusable": "error",
     "no-inline-style": "warn",
     "no-trailing-whitespace": "error"
