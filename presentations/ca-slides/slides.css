@@ -261,7 +261,7 @@ h4 {font-size: 1.2em; margin: 0.5em 0}
   background-image: var(--brand-mark)}
 .slide .ca-footer {position: absolute; left: 0; right: 0; bottom: 0.6em;
   padding: 0 1.5em; display: flex; align-items: center;
-  justify-content: center; gap: 0.6em; font-size: 0.9rem;
+  justify-content: center; gap: 0.6em; font-size: 0.9em;
   color: var(--footer-fg); letter-spacing: 0.03em; z-index: 1}
 .slide .ca-footer .ca-footer-logo {width: 1.6em; height: 1.6em;
   background-image: var(--brand-mark); background-repeat: no-repeat;
@@ -369,7 +369,7 @@ ul.with-icons > li > *:first-child {display: inline-block;
   background: var(--note-bg);
   border: 1px solid var(--note-border);
   border-radius: 8px;
-  padding: 0.75em 0.9em;
+  padding: 0.5em 0.5em;
   margin-top: 0.8em;
   color: var(--slide-fg);
   display: block;
@@ -377,8 +377,8 @@ ul.with-icons > li > *:first-child {display: inline-block;
 .shower.list .slide .note,
 .shower.list .slide .notes {
   position: absolute !important;
-  left: 30px;
-  right: 30px;
+  left: 0px;
+  right: 45px;
   bottom: 0;
   margin: 0;
   width: auto;
@@ -398,17 +398,17 @@ ul.with-icons > li > *:first-child {display: inline-block;
 .has-2nd-window .slide.active {position: relative}
 .has-2nd-window .slide.active .notes {
   position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 2.2em; /* clear footer and slide number */
+  left: 0px;
+  right: 45px;
+  /* bottom: 2.2em; clear footer and slide number */
   margin: 0;
   z-index: 2;
 }
 /* In single-slide view (not list or fullscreen), pin notes to bottom */
 .shower:not(.list):not(.full) .slide .notes {
   position: absolute !important;
-  left: 3.5em;
-  right: 4em;
+  left: 0px;
+  right: 45px;
   bottom: 0; /* flush to bottom border */
   margin: 0;
   width: auto;
@@ -543,7 +543,7 @@ body.offline .slide .notes .notes-offline-indicator::before {
 .slide .details-trigger {
   position: absolute;
   bottom: 0.5em;
-  right: 3.5em;
+  right: 0.5em;
   top: auto;
   min-width: 3.2em;
   height: 2.4em;
