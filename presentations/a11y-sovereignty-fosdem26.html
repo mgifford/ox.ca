@@ -12,13 +12,13 @@
     <script src="ca-slides/offline-indicator.js?v=20260108"></script>
     <script src="ca-slides/ui-metrics.js?v=20260108"></script>
   </head>
-  <body class="shower fade-in duration=20 warn=5 hidemouse">
-    <div class="progress"></div>
-    <div class="clock"></div>
-    <section aria-live="assertive" aria-label="Slide mode status">Leaving slide mode.</section>
-    <!-- Submitted proposal (for reference) -->
-    <!--
+
+
+  <!-- Submitted proposal (for reference) -->
+  <!--
   Proposal title: Accessible Sovereignty: Why the Four Freedoms Depend on Inclusion
+  Track: Community
+  Time: 25min
 
   Abstract: The four essential freedoms defined by the Free Software Foundation — freedom 0: the freedom to run the software; freedom 1: the freedom to study &amp; change it; freedom 2: the freedom to redistribute; freedom 3: the freedom to distribute modified versions — are widely cited as the foundation of free software. https://www.gnu.org/philosophy/free-sw.en.html#four-freedoms
 
@@ -48,14 +48,19 @@
   talk slug: Our freedoms depend on accessibility
   -->
 
+  <body class="shower fade-in duration=25 warn=5 hidemouse">
+    <div class="progress"></div>
+    <div class="clock"></div>
+    <section aria-live="assertive" aria-label="Slide mode status">Leaving slide mode.</section>
+
     <!-- Slide 1 -->
     <section class="slide cover clear" id="title" tabindex="-1" aria-label="Cover: Accessible Sovereignty">
       <h1>Accessible Sovereignty: Why the Four Freedoms Depend on Inclusion</h1>
       <h2>Sovereignty is a practice; accessibility is the power to exercise it.</h2>
       <address>Mike Gifford, CivicActions</address>
       <p class="event">FOSDEM 2026 | Digital Sovereignty Track <br>Date & Location TBD </p>
-      <aside class="notes">I’m here to talk about a 'bug' in the way we view freedom. </aside>
-      <aside class="details">Opening: Sovereignty is a discipline, not a product. So is inclusion. If you stop practicing, it atrophies. Inclusion operationalizes freedom. A legal right (the license) without functional power (accessibility) is an empty promise. Full submitted abstract is preserved in the comment above the cover slide.</aside>
+      <aside class="notes" aria-hidden="true">I’m here to talk about a 'bug' in the way we view freedom. </aside>
+      <aside class="details" aria-hidden="true">Opening: Sovereignty is a discipline, not a product. So is inclusion. If you stop practicing, it atrophies. Inclusion operationalizes freedom. A legal right (the license) without functional power (accessibility) is an empty promise. Full submitted abstract is preserved in the comment above the cover slide.</aside>
     </section>
 
     <!-- Slide 2 -->
@@ -69,8 +74,8 @@
         <li>If you cannot perceive/operate the tool, <strong>you are not sovereign</strong>
         </li>
       </ul>
-      <aside class="notes"></aside>
-      <aside class="details">Define digital sovereignty as the ability for people &amp; their communities to control &amp; adapt the digital tools, data &amp; infrastructure they rely on. You have no freedom without accessibility: “open without accessible” is exclusion — a library with the lights turned off vs a living, visible forest where everyone can use, study &amp; share. Pair governance with tooling: just as DejaCode keeps licensing honest, ship accessibility automation (e.g., axe) in CI/CD so freedom is testable, not aspirational.</aside>
+      <aside class="notes" aria-hidden="true"></aside>
+      <div class="details" hidden>Define digital sovereignty as the ability for people &amp; their communities to control &amp; adapt the digital tools, data &amp; infrastructure they rely on. You have no freedom without accessibility: “open without accessible” is exclusion — a library with the lights turned off vs a living, visible forest where everyone can use, study &amp; share. Pair governance with tooling: just as DejaCode keeps licensing honest, ship accessibility automation (e.g., axe) in CI/CD so freedom is testable, not aspirational.</div>
     </section>
 
     <!-- Slide 3 -->
@@ -85,8 +90,8 @@
         <li>Freedom 3 (Modify &amp Share): Refactor ideas &amp; becoming more <strong>robust</strong>
         </li>
       </ul>
-      <aside class="notes">Map 0–3 to POUR: P/O</aside>
-      <aside class="details">Freedom 2: forges must be navigable &amp; usable. Freedom 3: editors &amp; IDEs (VSCode, Vim, etc.) &amp; authoring platforms (ATAG 2.0). Cite FSF Four Freedoms: https://www.gnu.org/philosophy/free-sw.en.html#four-freedoms. If POUR breaks, the freedoms are theoretical.</aside>
+      <aside class="notes" aria-hidden="true">Map 0–3 to POUR: P/O</aside>
+      <div class="details" hidden>Freedom 2: forges must be navigable &amp; usable. Freedom 3: editors &amp; IDEs (VSCode, Vim, etc.) &amp; authoring platforms (ATAG 2.0). Cite FSF Four Freedoms: https://www.gnu.org/philosophy/free-sw.en.html#four-freedoms. If POUR breaks, the freedoms are theoretical.</div>
     </section>
 
     <!-- Slide 4 -->
@@ -99,8 +104,8 @@
         <li>Accessibility &amp; free software both expand choice over time</li>
         <li>Always build for variation &amp; resilience; preserve paths to maximum participation</li>
       </ul>
-      <aside class="notes"></aside>
-      <aside class="details">Frame accessibility as the practical foreground of sovereignty—functional power to exercise rights. Barriers to access existed long before FOSS; see historical inventions: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2005-06/accessibility/firstwave.html. Both accessibility &amp; free software ask us to think bigger than the present self, giving the future “me” more options. Use POUR as the operational lens that keeps freedoms real across contexts.</aside>
+      <aside class="notes" aria-hidden="true"></aside>
+      <aside class="details" aria-hidden="true">Frame accessibility as the practical foreground of sovereignty—functional power to exercise rights. Barriers to access existed long before FOSS; see historical inventions: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2005-06/accessibility/firstwave.html. Both accessibility &amp; free software ask us to think bigger than the present self, giving the future “me” more options. Use POUR as the operational lens that keeps freedoms real across contexts.</aside>
     </section>
 
     <!-- New slide
@@ -117,8 +122,8 @@
         <li>It benefits us all to build for a wider variation in ability</li>
         <li>Disability is innately human. We all have temporary &amp; situational barriers</li>
       </ul>
-      <aside class="notes">Show of hands: Is software freedom a human right?</aside>
-      <aside class="details">Replace the Machine/Mycelium metaphor with community reality. Microsoft Inclusive Design lens: permanent, temporary, situational barriers all need coverage. Accessibility is the same adaptability that lets FOSS communities riff &amp; personalize for today’s needs. Cite Microsoft Inclusive Design: https://www.microsoft.com/design/inclusive/. Everyone cycles through different ability states; building for variation protects future-you.</aside>
+      <aside class="notes" aria-hidden="true">Show of hands: Is software freedom a human right?</aside>
+      <aside class="details" aria-hidden="true">Replace the Machine/Mycelium metaphor with community reality. Microsoft Inclusive Design lens: permanent, temporary, situational barriers all need coverage. Accessibility is the same adaptability that lets FOSS communities riff &amp; personalize for today’s needs. Cite Microsoft Inclusive Design: https://www.microsoft.com/design/inclusive/. Everyone cycles through different ability states; building for variation protects future-you.</aside>
     </section>
 
     <!-- Slide 6 -->
@@ -133,8 +138,8 @@
           <strong>Book Announcement: </strong>Digital Accessibility Ethics — Disability Inclusion in All Things Tech
         </li>
       </ul>
-      <aside class="notes"></aside>
-      <aside class="details">These states rotate through a community. Building flexibility now protects the future-you &amp; keeps the Four Freedoms usable when circumstances change. https://www.routledge.com/Digital-Accessibility-Ethics-Disability-Inclusion-in-All-Things-Tech/Feingold-Gilbert-Fleet/p/book/9781041018681</aside>
+      <aside class="notes" aria-hidden="true"></aside>
+      <aside class="details" aria-hidden="true">These states rotate through a community. Building flexibility now protects the future-you &amp; keeps the Four Freedoms usable when circumstances change. https://www.routledge.com/Digital-Accessibility-Ethics-Disability-Inclusion-in-All-Things-Tech/Feingold-Gilbert-Fleet/p/book/9781041018681</aside>
     </section>
 
     <!-- Slide 7 -->
@@ -149,8 +154,8 @@
         <li>Organizational and Leadership Challenges</li>
         <li>Testing and Tooling Difficulties</li>
       </ul>
-      <aside class="notes"></aside>
-      <aside class="details"> GitHub commitments: https://accessibility.github.com/ &amp; https://github.blog/open-source/social-impact/our-pledge-to-help-improve-the-accessibility-of-open-source-software-at-scale/. Pair accessibility linting with SCA/license checks so pipelines guard freedom &amp; compliance together. Coference overview: https://github.com/orgs/open-source-accessibility/discussions/7 </aside>
+      <aside class="notes" aria-hidden="true"></aside>
+      <aside class="details" aria-hidden="true"> GitHub commitments: https://accessibility.github.com/ &amp; https://github.blog/open-source/social-impact/our-pledge-to-help-improve-the-accessibility-of-open-source-software-at-scale/. Pair accessibility linting with SCA/license checks so pipelines guard freedom &amp; compliance together. Coference overview: https://github.com/orgs/open-source-accessibility/discussions/7 </aside>
     </section>
 
     <!-- Slide 8 -->
@@ -162,9 +167,9 @@
         <li>Require accessibility checks in build workflows</li>
         <li>Assign an accessibility champion to keep the discipline funded, accountable &amp; reinforced by leadership</li>
       </ul>
-      <aside class="notes">Ground the abstract in community practice:</aside>
-      <aside class="details">
-      </aside>
+      <aside class="notes" aria-hidden="true">Ground the abstract in community practice:</aside>
+      <div class="details" hidden>
+      </div>
     </section>
 
     <!-- Slide 9 -->
@@ -176,8 +181,8 @@
         <li>Fix the gap: accessible editors, forges &amp; involve people with lived experience of disability</li>
         <li><a href="https://github.com/readme/guides/fix-accessibility-bugs">GitHub: Fix Accessibility Bugs</a></li>
       </ul>
-      <aside class="notes"></aside>
-      <aside class="details">Participation gates define who holds power. If you cannot use the tools or contribute, the Four Freedoms are hollow.</aside>
+      <aside class="notes" aria-hidden="true"></aside>
+      <div class="details" hidden>Participation gates define who holds power. If you cannot use the tools or contribute, the Four Freedoms are hollow.</div>
     </section>  
 
     <!-- Slide 10 -->
@@ -189,14 +194,14 @@
         <li>Accessible issue queues prove progress toward perfection</li>
         <li>Participation gates define who holds power. Make contribution pipelines inclusive.</li>
       </ul>
-      <aside class="notes">Link role-based actions in the <a href="https://ox.ca/presentations/handouts/">handout table</a> for accessibility accountability.</aside>
-      <aside class="details">
+      <aside class="notes" aria-hidden="true">Link role-based actions in the <a href="https://ox.ca/presentations/handouts/">handout table</a> for accessibility accountability.</aside>
+      <div class="details" hidden>
         POUR framework operationalizes the Four Freedoms in contribution workflows.
-      </aside>
+      </div>
     </section>
 
     <!-- Slide 11 -->
-    <section class="slide textfit" id="ethics-sustainability" aria-label="Accessibility & Sustainability">
+    <section class="slide textfit" id="ethics-sustainability" aria-label="Accessibility &amp; Sustainability">
       <h2>Accessibility &amp; Sustainability</h2>
       <br>We are in a climate crisis so do want to raise how climate relates to accessibility.
       <ul>
@@ -205,7 +210,7 @@
         <li>Transparency: do not hide barriers; report them publicly</li>
         <li>Web Sustainability Guidelines currently touches on both open &amp; accessibility</li>
       </ul>
-      <aside class="notes">Cite Digital Accessibility Ethics; align eco-efficiency with inclusion.</aside>
+      <aside class="notes" aria-hidden="true">Cite Digital Accessibility Ethics; align eco-efficiency with inclusion.</aside>
     </section>
 
     <!-- Slide 12 -->
@@ -217,8 +222,8 @@
         <li>Ship with accessibility mode enabled by default</li>
         <li>Require accessibility sign-off in PR templates</li>
       </ul>
-      <aside class="notes">Closing: Sovereignty and inclusion are practiced. </aside>
-      <aside class="details">Fund the roots, or the forest dies. End with action: money, policy, hiring. Inclusion is the practice that sustains freedom.</aside>
+      <aside class="notes" aria-hidden="true">Closing: Sovereignty and inclusion are practiced. </aside>
+      <aside class="details" aria-hidden="true">Fund the roots, or the forest dies. End with action: money, policy, hiring. Inclusion is the practice that sustains freedom.</aside>
     </section>
 
     <!-- Slide 13 -->

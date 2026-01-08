@@ -9,19 +9,44 @@
    <script src="ca-slides/b6plus.js"></script>
    <script src="ca-slides/auto-scale.js"></script>
  </head>
- <body class="shower fade-in duration=20 warn=5 hidemouse">
+
+  <!-- Submitted proposal (for reference) -->
+  <!--
+  Proposal title: We Need to Support Authors Better to Deliver Accessible Content
+  Track: Collaboration and content management
+  Time: 30min
+
+  Four years ago, the We4Authors initiative united several content management tools (mostly open source) to identify and document accessibility best practices in preparation for the European Accessibility Act. It was the most coordinated effort to help content authors produce accessible digital content at scale. Yet, despite the groundwork, only the recommendations have not been widely adopted. The Web Almanac confirms what many suspected: web accessibility has not meaningfully improved in preparation for the Act’s introduction. https://events.drupal.org/europe2020/sessions/top-cms-tools-are-working-together-build-more-inclusive-world.html
+
+  Much of this was built on or extending ideas in Authoring Tool Accessibility Guidelines (ATAG) 2.0. https://www.w3.org/TR/ATAG20/
+
+  Today, the context has changed.
+
+  Artificial Intelligence—especially small, local language models—offers a new opportunity to deliver accessibility guidance where it’s needed most: at the moment of authoring. CMSs can leverage open source AI to suggest accessible alternatives, improve media descriptions, and identify structural issues in real time—without sending user data to third parties or compromising privacy.
+
+  This talk will explore how we can:
+	•	Revisit the ATAG 2.0 & We4Authors guidance and align it with today’s AI capabilities. https://www.w3.org/WAI/standards-guidelines/atag/
+	•	Integrate small language models within CMS authoring environments.
+	•	Collaborate across open source communities building on the Open Web Alliance
+	•	Build shared datasets, APIs, and modules to improve author support and accessible defaults.
+
+  Accessibility progress requires shared effort, not just compliance checklists. Let’s use open collaboration and new tools to help every author publish content that works for everyone.
+
+  -->
+
+ <body class="shower fade-in duration=30 warn=5 hidemouse">
 
   <div class="progress"></div>
   <div class="clock"></div>
   <section aria-live="assertive" aria-label="Slide mode status">Leaving slide mode.</section>
 
   <!-- Slide 1 -->
-  <section class="slide cover clear" id="cover" aria-label="Cover: From ATAG 2.0 to Local AI & Automated WCAG-EM">
+  <section class="slide cover clear" id="cover" aria-label="Cover: From ATAG 2.0 to Local AI &amp; Automated WCAG-EM">
    <h1>We Need to Support Authors Better to Deliver Accessible Content</h1>
    <h2>From ATAG 2.0 to Local AI &amp; Automated WCAG-EM</h2>
    <address>Mike Gifford</address>
    <p class="event">FOSDEM 2026 | Collaboration and Content Management | Open Web Alliance</p>
-   <aside class="notes">Welcome everyone. Thanks to the Collaboration and Content Management track for centering this conversation on authors, not just auditors.</aside>
+  <aside class="notes" aria-hidden="true">Welcome everyone. Thanks to the Collaboration and Content Management track for centering this conversation on authors, not just auditors.</aside>
   </section>
 
   <!-- Slide 2 -->
@@ -33,11 +58,11 @@
     <li>Authors are SMEs, not accessibility experts</li>
     <li>The CMS interface is the filter. If the filter allows garbage, we get garbage</li>
    </ul>
-   <aside class="notes">Remediation costs more than prevention every single time. Reinforce the burn rate: every handoff and retrain cycle multiplies cost. Prevention is cheaper than cleanup.</aside>
+  <aside class="notes" aria-hidden="true">Remediation costs more than prevention every single time. Reinforce the burn rate: every handoff and retrain cycle multiplies cost. Prevention is cheaper than cleanup.</aside>
   </section>
 
   <!-- Slide 3 -->
-  <section class="slide" id="atag" aria-label="From ATAG 2.0 to Local AI & Automated WCAG-EM">
+  <section class="slide" id="atag" aria-label="ATAG: From ATAG 2.0 to Local AI &amp; Automated WCAG-EM">
    <h2>The Missing Standard: ATAG 2.0</h2>
    <div class="columns">
     <div>
@@ -49,7 +74,7 @@
      <p>The tool guides authors to produce accessible output.</p>
     </div>
    </div>
-    <aside class="notes">Part B is the most ignored W3C standard. We wrote the checklist but never shipped the software because static rules could not cover dynamic context. Stress the historical gap: we treated ATAG Part B as aspirational because we lacked contextual engines.</aside>
+    <aside class="notes" aria-hidden="true">Part B is the most ignored W3C standard. We wrote the checklist but never shipped the software because static rules could not cover dynamic context. Stress the historical gap: we treated ATAG Part B as aspirational because we lacked contextual engines.</aside>
   </section>
 
   <!-- Slide 4 -->
@@ -60,13 +85,13 @@
     <li>Static code turned into Clippy: annoying, context-blind, brittle</li>
     <li>It could not tell a layout table from a data table</li>
    </ul>
-   <aside class="notes">We hit the wall of what if/then statements can do. Call back to the pain of static linters: they either under-fire or over-fire. Authors tuned them out.</aside>
+  <aside class="notes" aria-hidden="true">We hit the wall of what if/then statements can do. Call back to the pain of static linters: they either under-fire or over-fire. Authors tuned them out.</aside>
   </section>
 
   <!-- Slide 5 -->
   <section class="slide" id="pivot" aria-label="Pivot">
    <h1 class="shout">Move from Gatekeeping to Guiding.</h1>
-   <aside class="notes">Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance.</aside>
+  <aside class="notes" aria-hidden="true">Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance.</aside>
   </section>
 
   <!-- Slide 6 -->
@@ -90,7 +115,7 @@
      </ul>
     </div>
    </div>
-    <aside class="notes">Emphasize the procurement reality: government and enterprise cannot ship drafts to remote AI. Local SLMs are our compliance path and our open-source advantage.</aside>
+    <aside class="notes" aria-hidden="true">Emphasize the procurement reality: government and enterprise cannot ship drafts to remote AI. Local SLMs are our compliance path and our open-source advantage.</aside>
   </section>
 
   <!-- Slide 7 -->
@@ -101,7 +126,7 @@
     <li>Plain language nudges: flag jargon and propose simpler synonyms to reduce cognitive load</li>
     <li>Structure hints: "You bolded this—did you mean H3?"</li>
    </ul>
-   <aside class="notes">Goal: lower cognitive load, not replace authors. Reiterate: keep authors in control. AI proposes, humans confirm.</aside>
+  <aside class="notes" aria-hidden="true">Goal: lower cognitive load, not replace authors. Reiterate: keep authors in control. AI proposes, humans confirm.</aside>
   </section>
 
   <!-- Slide 8 -->
@@ -110,7 +135,7 @@
 </h2>
    <p>ATAG is about writing, but WCAG-EM closes the loop on managing the site.</p>
    <p>The worst step: WCAG-EM Step 3 — select a representative sample. Humans hate doing this.</p>
-   <aside class="notes">Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork.</aside>
+  <aside class="notes" aria-hidden="true">Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork.</aside>
   </section>
 
   <!-- Slide 9 -->
@@ -123,7 +148,7 @@
     <li>Editorial ownership and workflow states</li>
    </ul>
    <p>The feature: auto-generate the WCAG-EM sample and keep it current.</p>
-   <aside class="notes">Turn the audit from a consulting contract into a dashboard widget. Highlight how automation de-risks audits: consistent sampling, faster retests, cheaper renewals.</aside>
+  <aside class="notes" aria-hidden="true">Turn the audit from a consulting contract into a dashboard widget. Highlight how automation de-risks audits: consistent sampling, faster retests, cheaper renewals.</aside>
   </section>
 
   <!-- Slide 10 -->
@@ -134,7 +159,7 @@
     <li>Focus: drafting Assisted Authoring guidance</li>
     <li>Goal: prevent AI from hallucinating accessibility metadata</li>
    </ul>
-   <aside class="notes">Join the GitHub discussions and shape the norms before platforms lock them in. Invite contributors by name if present; point them to repos and meeting cadence.</aside>
+  <aside class="notes" aria-hidden="true">Join the GitHub discussions and shape the norms before platforms lock them in. Invite contributors by name if present; point them to repos and meeting cadence.</aside>
   </section>
 
   <!-- Slide 11 -->
@@ -145,7 +170,7 @@
     <li>Contribute to the shared dataset for accessibility SLMs</li>
     <li>Ship a WCAG-EM module in your CMS</li>
    </ul>
-   <aside class="notes">Challenge the room: we either build the open stack now or live under proprietary audit bots.</aside>
+  <aside class="notes" aria-hidden="true">Challenge the room: we either build the open stack now or live under proprietary audit bots.</aside>
   </section>
 
   <!-- Slide 12 -->
@@ -157,11 +182,11 @@
     <li><a href="https://github.com/w3c/atag">W3C ATAG Community Group GitHub</a></li>
    </ul>
    <p>QR code placeholder for quick access.</p>
-   <aside class="notes">Encourage scanning the QR and committing to one action before leaving the room.</aside>
+  <aside class="notes" aria-hidden="true">Encourage scanning the QR and committing to one action before leaving the room.</aside>
   </section>
 
   <!-- Slide 13 -->
-  <section class="slide final" id="questions">
+  <section class="slide final" id="questions" aria-label="Questions and contact">
    <h2>Questions</h2>
    <div class="next">
     <div class="columns">
