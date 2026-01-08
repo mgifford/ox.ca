@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "html-validate": "^8.7.0"
+    "html-validate": "^8.7.0",
+    "pa11y-ci": "^6.0.0",
+    "pa11y": "^6.1.0",
+    "linkinator": "^3.7.0",
+    "cspell": "^6.8.0"
   },
   "scripts": {
-    "validate:html": "html-validate -c .htmlvalidate.json 'presentations/*.html'"
+    "validate:html": "html-validate -c .htmlvalidate.json 'presentations/**/*.html'",
+    "scan:accessibility": "pa11y-ci --config .pa11yci.json || true",
+    "check:links": "./scripts/check-links.sh || true",
+    "spell:md": "git ls-files \"**/*.md\" | xargs -r npx cspell || true",
+    "qa:all": "npm run validate:html && npm run scan:accessibility && npm run check:links && npm run spell:md"
   }
 }
