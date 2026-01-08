@@ -12,6 +12,14 @@ Guardrails for keeping the ox.ca landing page clear, accurate, and accessible.
 - Highlight accessibility, sustainability, and open-source values; avoid salesy language.
 - Prefer en-CA spelling; expand acronyms on first use.
 
+### Plain language (Orwell's 6 Rules)
+- Never use a metaphor, simile, or figure of speech you see often in print.
+- Never use a long word where a short one will do.
+- If you can cut a word out, always cut it out.
+- Never use the passive where you can use the active.
+- Never use a foreign phrase, scientific term, or jargon if an everyday equivalent exists.
+- Break any of these rules sooner than say anything outright barbarous.
+
 ## Accessibility and structure
 - One h1 on the page; nest headings in order with no skips.
 - Use descriptive link text with https URLs; provide alt text and note file types for non-HTML links.

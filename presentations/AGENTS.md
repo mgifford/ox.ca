@@ -36,6 +36,14 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Emphasize author support over gatekeeping; AI as guidance, not punishment.
 - Reinforce that sampling/compliance is automation-friendly science, not busywork.
 
+### Plain language (Orwell's 6 Rules)
+- Never use a metaphor, simile, or figure of speech you see often in print.
+- Never use a long word where a short one will do.
+- If you can cut a word out, always cut it out.
+- Never use the passive where you can use the active.
+- Never use a foreign phrase, scientific term, or jargon if an everyday equivalent exists.
+- Break any of these rules sooner than say anything outright barbarous.
+
 ## CivicActions Style Alignment
 - Follow the CivicActions writing style guide: use welcoming plain language, minimal jargon, and explain acronyms on first use. Reference: https://guidebook.civicactions.com/en/latest/about-this-guidebook/writing-style-guide/
 - Use American spelling by default.

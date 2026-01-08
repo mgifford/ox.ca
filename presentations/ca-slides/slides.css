@@ -407,8 +407,8 @@ ul.with-icons > li > *:first-child {display: inline-block;
 /* In single-slide view (not list or fullscreen), pin notes to bottom */
 .shower:not(.list):not(.full) .slide .notes {
   position: absolute !important;
-  left: 30px;
-  right: 30px;
+  left: 3.5em;
+  right: 4em;
   bottom: 0; /* flush to bottom border */
   margin: 0;
   width: auto;
@@ -543,7 +543,7 @@ body.offline .slide .notes .notes-offline-indicator::before {
 .slide .details-trigger {
   position: absolute;
   bottom: 0.5em;
-  right: 0.5em;
+  right: 3.5em;
   top: auto;
   min-width: 3.2em;
   height: 2.4em;
