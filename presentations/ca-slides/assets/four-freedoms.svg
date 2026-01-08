@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1892" height="950" viewBox="0 0 1892 950" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">The Four Freedoms (FSF) handout style</title>
+  <desc id="d">A 2x2 poster showing Freedom 0 through Freedom 3 with short descriptions and simple red icons.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --ink:#111111;
+        --grid:#111111;
+        --accent:#c25750; /* muted FSF-like red */
+        --bg:#ffffff;
+      }
+      .bg { fill: var(--bg); }
+      .frame { fill:none; stroke:var(--grid); stroke-width:4; }
+      .divider { stroke:var(--grid); stroke-width:3.2; }
+      .h1 { font: 900 56px/1.05 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--ink); letter-spacing:0.2px; }
+      .h2 { font: 900 46px/1.05 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--ink); letter-spacing:0.2px; }
+      .p  { font: 500 32px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--ink); }
+      .muted { fill:#222; }
+      .iconStroke { fill:none; stroke:var(--accent); stroke-width:18; stroke-linecap:round; stroke-linejoin:round; }
+      .iconFill { fill:var(--accent); }
+      .iconThin { fill:none; stroke:var(--accent); stroke-width:12; stroke-linecap:round; stroke-linejoin:round; }
+    </style>
+
+    <!-- Heart path -->
+    <path id="heart"
+      d="M 0,-30
+         C 0,-75 60,-90 90,-55
+         C 120,-20 100,25 60,55
+         C 30,75 10,90 0,100
+         C -10,90 -30,75 -60,55
+         C -100,25 -120,-20 -90,-55
+         C -60,-90 0,-75 0,-30 Z"/>
+
+    <!-- Simple lightbulb path -->
+    <path id="bulb"
+      d="M 0,-120
+         C 70,-120 120,-70 120,-5
+         C 120,50 90,80 55,105
+         C 45,112 40,125 40,140
+         L 40,155
+         C 40,170 25,182 10,182
+         L -10,182
+         C -25,182 -40,170 -40,155
+         L -40,140
+         C -40,125 -45,112 -55,105
+         C -90,80 -120,50 -120,-5
+         C -120,-70 -70,-120 0,-120 Z" />
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" x="0" y="0" width="1892" height="950"/>
+
+  <!-- Outer frame and dividers -->
+  <rect class="frame" x="16" y="16" width="1860" height="918"/>
+  <line class="divider" x1="946" y1="16" x2="946" y2="934"/>
+  <line class="divider" x1="16" y1="475" x2="1876" y2="475"/>
+
+  <!-- ========= TOP LEFT: Freedom 0 ========= -->
+  <g transform="translate(70,90)">
+    <text class="h1" x="0" y="0">
+      <tspan x="0" dy="0">FREEDOM 0:</tspan>
+      <tspan x="0" dy="64">USE</tspan>
+    </text>
+
+    <text class="p" x="0" y="250">
+      <tspan x="0" dy="0">Run the program as you wish,</tspan>
+      <tspan x="0" dy="42">for any purpose.</tspan>
+    </text>
+  </g>
+
+  <!-- Mouse icon (approximation) -->
+  <g transform="translate(760,160)">
+    <!-- body -->
+    <rect x="-70" y="-20" width="140" height="220" rx="55" class="iconStroke"/>
+    <!-- split -->
+    <line x1="0" y1="-10" x2="0" y2="95" class="iconThin"/>
+    <!-- wheel -->
+    <rect x="-14" y="35" width="28" height="55" rx="12" class="iconThin"/>
+    <!-- cord -->
+    <path d="M 0,-20 C 0,-120 120,-120 120,-55" class="iconStroke"/>
+  </g>
+
+  <!-- ========= TOP RIGHT: Freedom 1 ========= -->
+  <g transform="translate(1016,90)">
+    <text class="h2" x="0" y="0">
+      <tspan x="0" dy="0">FREEDOM 1:</tspan>
+      <tspan x="0" dy="56">STUDY AND</tspan>
+      <tspan x="0" dy="56">EDIT/IMPROVE</tspan>
+    </text>
+
+    <text class="p" x="0" y="270">
+      <tspan x="0" dy="0">Study how the program works, and change it so</tspan>
+      <tspan x="0" dy="42">that it does your computing as you wish. This</tspan>
+      <tspan x="0" dy="42">requires access to source code.</tspan>
+    </text>
+  </g>
+
+  <!-- Magnifier + bulb icons (approximation) -->
+  <g transform="translate(1520,150)">
+    <!-- magnifier -->
+    <circle cx="-110" cy="30" r="85" class="iconStroke"/>
+    <line x1="-50" y1="95" x2="10" y2="155" class="iconStroke"/>
+
+    <!-- bulb -->
+    <g transform="translate(180,40) scale(0.75)">
+      <use href="#bulb" class="iconFill"/>
+      <!-- base lines -->
+      <rect x="-55" y="160" width="110" height="34" rx="12" class="iconFill"/>
+      <rect x="-45" y="200" width="90" height="28" rx="10" class="iconFill"/>
+    </g>
+  </g>
+
+  <!-- ========= BOTTOM LEFT: Freedom 2 ========= -->
+  <g transform="translate(70,560)">
+    <text class="h1" x="0" y="0">
+      <tspan x="0" dy="0">FREEDOM 2:</tspan>
+      <tspan x="0" dy="64">SHARE COPIES</tspan>
+      <tspan x="0" dy="64">OF ORIGINAL</tspan>
+    </text>
+
+    <text class="p" x="0" y="270">
+      <tspan x="0" dy="0">Redistribute copies of the original</tspan>
+      <tspan x="0" dy="42">software program.</tspan>
+    </text>
+  </g>
+
+  <!-- Heart icon -->
+  <g transform="translate(760,690) scale(1.25)">
+    <use href="#heart" class="iconFill"/>
+  </g>
+
+  <!-- ========= BOTTOM RIGHT: Freedom 3 ========= -->
+  <g transform="translate(1016,560)">
+    <text class="h1" x="0" y="0">
+      <tspan x="0" dy="0">FREEDOM 3:</tspan>
+      <tspan x="0" dy="64">SHARE COPIES</tspan>
+      <tspan x="0" dy="64">OF YOUR</tspan>
+      <tspan x="0" dy="64">CHANGES</tspan>
+    </text>
+
+    <text class="p" x="0" y="330">
+      <tspan x="0" dy="0">Distribute copies of your modified versions to</tspan>
+      <tspan x="0" dy="42">others, so the entire community can benefit.</tspan>
+      <tspan x="0" dy="42">This also requires access to source code.</tspan>
+    </text>
+  </g>
+
+  <!-- Heart + bulb icons -->
+  <g transform="translate(1495,690)">
+    <g transform="translate(-60,0) scale(1.25)">
+      <use href="#heart" class="iconFill"/>
+    </g>
+    <g transform="translate(240,0) scale(0.78)">
+      <use href="#bulb" class="iconFill"/>
+      <rect x="-55" y="160" width="110" height="34" rx="12" class="iconFill"/>
+      <rect x="-45" y="200" width="90" height="28" rx="10" class="iconFill"/>
+    </g>
+  </g>
+
+</svg>
