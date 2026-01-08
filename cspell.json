@@ -1,0 +1,67 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "enableFiletypes": [
+    "markdown",
+    "mdx",
+    "html",
+    "css",
+    "scss",
+    "javascript",
+    "json",
+    "yaml",
+    "yml"
+  ],
+  "ignorePaths": [
+    "_site/**",
+    "node_modules/**",
+    ".git/**",
+    "presentations/ca-slides/**"
+  ],
+  "files": [
+    "**/*.{md,markdown,mdx,html,htm,css,scss,js,json,yml,yaml}"
+  ],
+  "words": [
+    "CivicActions",
+    "FOSDEM",
+    "WCAG",
+    "APCA",
+    "USWDS",
+    "ATAG",
+    "DejaCode",
+    "Synopsys",
+    "BlackDuck",
+    "Playwright",
+    "Pa11y",
+    "axe",
+    "axecore",
+    "Mastodon",
+    "Bluesky",
+    "LinkedIn",
+    "GitHub",
+    "jekyll",
+    "kramdown",
+    "oklch",
+    "subdued",
+    "perceivable",
+    "operable",
+    "EAA",
+    "Drupal4Gov",
+    "Deja",
+    "b6plus",
+    "mgifford",
+    "ox",
+    "arrm",
+    "SaaS"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "ox-project-terms",
+      "path": "./cspell/project-terms.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": [
+    "ox-project-terms"
+  ]
+}
