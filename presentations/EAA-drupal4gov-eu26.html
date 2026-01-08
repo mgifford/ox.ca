@@ -28,10 +28,10 @@
    <h2>Beyond the June 2025 Deadline: From Mandates to Masterclasses</h2>
    <address>Mike Gifford<br>CivicActions · Drupal Core Accessibility Maintainer</address>
    <p class="event">Drupal4Gov EU · January 29, 2026 · 17:15–17:35 CET · Brussels, Belgium</p>
-  <div class="notes" hidden>
+  <aside class="notes" hidden>
     20 minutes;
     </div>
-    <div class="details" hidden>
+    <aside class="details" hidden>
      Welcome everyone. Thanks to Drupal4Gov EU for the opportunity to speak. My name is Mike Gifford; I am CivicActions’ Director of Accessibility &amp; the Drupal Core Accessibility Maintainer. Today we will cover what the WAD &amp; EAA mean in practice, how Drupal helps you meet those requirements, and what to do next to stay ahead of evolving standards.<br>
      <br>
      Event: https://drupal4gov.eu/#agenda<br>
@@ -141,10 +141,10 @@
     <li>Drupal community: contribute a11y fixes upstream to Core &amp; contrib modules</li>
     <li>Shared governance means faster remediation aligned with evolving standards</li>
    </ul>
-    <aside class="notes" aria-hidden="true">
+    <div class="notes" hidden>
      Position LGD as “how public sector executes compliance at scale.” Shared patterns &amp; shared governance reduce duplication, reduce regressions &amp; speed up remediation. The Southwark PDF Importer is the right kind of innovation: shifting from PDF-first publishing to HTML-first, which is usually more accessible &amp; more maintainable. Tie it back to EN 301 549 service-wide thinking: content, templates, workflows &amp; support all matter. References: LGD accessibility target conformance (WCAG 2.2 AA) https://docs.localgovdrupal.org/accessibility/ ; Southwark PDF Importer write-up https://www.drupal.org/about/starshot/initiatives/ai/blog/from-hours-to-minutes-building-an-ai-powered-pdf-importer-for-local-government-for-localgov-drupal ; LGD main site https://localgovdrupal.org
-    </aside>
-      <div class="notes" hidden>
+    </div>
+      <aside class="notes" hidden>
        Position LGD as “how public sector executes compliance at scale.” Shared patterns &amp; shared governance reduce duplication, reduce regressions &amp; speed up remediation. The Southwark PDF Importer is the right kind of innovation: shifting from PDF-first publishing to HTML-first, which is usually more accessible &amp; more maintainable. Tie it back to EN 301 549 service-wide thinking: content, templates, workflows &amp; support all matter. References: LGD accessibility target conformance (WCAG 2.2 AA) https://docs.localgovdrupal.org/accessibility/ ; Southwark PDF Importer write-up https://www.drupal.org/about/starshot/initiatives/ai/blog/from-hours-to-minutes-building-an-ai-powered-pdf-importer-for-local-government-for-localgov-drupal ; LGD main site https://localgovdrupal.org
       </div>
   </section>
@@ -157,10 +157,10 @@
     <li>Today aligns to WCAG 2.1 AA; next revision is expected to reference WCAG 2.2 — Start migrating now!</li>
     <li>User preferences (Clause 11.7) will likely require respect for personalization (light/dark, reduced motion)</li>
    </ul>
-    <aside class="notes" aria-hidden="true">
+    <aside class="notes" hidden>
      Frame EN 301 549 as the procurement touchstone: it incorporates WCAG for web content &amp; extends beyond it to software, documents, support &amp; operational requirements. The reason to “start migrating now” is simple: if you hard-code WCAG 2.1 AA today, you are purchasing remediation debt the moment EN updates. Use clause-style thinking: user preferences (11.7) forces you to stop overriding OS/browser settings &amp; to design for reduced motion &amp; system color scheme preferences. To stay compliant over time, pair EN 301 549 (requirements) with EN 17161 (process &amp; management approach for continuing conformance). References: EN 301 549 library entry https://accessible-eu-centre.ec.europa.eu/content-corner/digital-library/en-3015492021-accessibility-requirements-ict-products-and-services_en ; WCAG 2.2 https://www.w3.org/TR/WCAG22/ ; EN 17161 entry https://accessible-eu-centre.ec.europa.eu/content-corner/digital-library/en-171612019-design-all-accessibility-following-design-all-approach-products-goods-and-services_en
-    </aside>
-      <div class="notes" hidden>
+    </div>
+      <aside class="notes" hidden>
        Frame EN 301 549 as the procurement touchstone: it incorporates WCAG for web content &amp; extends beyond it to software, documents, support &amp; operational requirements. The reason to “start migrating now” is simple: if you hard-code WCAG 2.1 AA today, you are purchasing remediation debt the moment EN updates. Use clause-style thinking: user preferences (11.7) forces you to stop overriding OS/browser settings &amp; to design for reduced motion &amp; system color scheme preferences. To stay compliant over time, pair EN 301 549 (requirements) with EN 17161 (process &amp; management approach for continuing conformance). References: EN 301 549 library entry https://accessible-eu-centre.ec.europa.eu/content-corner/digital-library/en-3015492021-accessibility-requirements-ict-products-and-services_en ; WCAG 2.2 https://www.w3.org/TR/WCAG22/ ; EN 17161 entry https://accessible-eu-centre.ec.europa.eu/content-corner/digital-library/en-171612019-design-all-accessibility-following-design-all-approach-products-goods-and-services_en
       </div>
   </section>
@@ -176,9 +176,9 @@
     <li>Keep data local; respect privacy &amp; procurement constraints</li>
     <li>Do manual testing AND testing with users with disabilities</li>
    </ul>
-    <aside class="notes" aria-hidden="true">
+    <aside class="notes" hidden>
      Frame AI as an accelerator for competent teams, not a compliance engine. Good uses: draft alt text (with human review), detect structural issues (headings/labels), assist with remediation triage. Bad uses: “AI will make it compliant.” AI does not experience confusion, vestibular issues, low vision, cognitive load, or the stress of a broken form. It will hallucinate plausible explanations &amp; confident nonsense. Keep the governance message blunt: treat AI as a data handling &amp; procurement decision. Prefer local or controlled deployments where possible; avoid leaking content, user data, or incident details. Caution hard on overlays &amp; “automated remediation” products that promise compliance. References: Web Almanac overlay/automation limits https://almanac.httparchive.org/en/2024/accessibility ; EU-facing commentary example https://www.fondazionelia.org/en/research-and-development/accessibility-overlays-are-not-the-solution-says-the-european-commission/
-    </aside>
+    </div>
   </section>
 
   <!-- Slide 11 -->
@@ -205,9 +205,9 @@
     <li>Update procurement: require EN 301 549 evidence, don't accept unsubstantiated claims</li>
     <li>Check national enforcement; do not assume uniformity in application</li>
    </ul>
-    <aside class="notes" aria-hidden="true">
+    <aside class="notes" hidden>
      Make this actionable. Step 1 is an audit, but the output is documentation: known issues + remediation plan. Step 2 is publishing: Annex V service accessibility information must be public &amp; accessible &amp; kept current. Step 3 is WAD hygiene where applicable: accessibility statement + feedback mechanism + enforcement link. Step 4 is procurement alignment: make suppliers show EN 301 549 evidence early. Step 5 is jurisdiction reality: enforcement is national. References: WCAG 2.2 https://www.w3.org/TR/WCAG22/ ; EAA https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng ; WAD model statement decision https://eur-lex.europa.eu/eli/dec_impl/2018/1523/oj/eng ; AccessibleEU hub https://accessible-eu-centre.ec.europa.eu ; human-readable EAA guide https://tetralogical.com/blog/2025/03/19/understanding-the-eaa/
-    </aside>
+    </div>
   </section>
 
   <!-- Slide 13 -->
@@ -222,10 +222,10 @@
     <li><a href="https://docs.localgovdrupal.org/accessibility/">LocalGov Drupal accessibility targets (WCAG 2.2 AA)</a></li>
     <li><a href="https://www.drupal.org/about/features/accessibility">Drupal accessibility (core/community)</a></li>
    </ul>
-    <aside class="notes" aria-hidden="true">
+    <aside class="notes" hidden>
      You can keep the legal links (EUR-Lex) for authority &amp; TetraLogical for readability. Everything else is implementation support.
      <br>Handout later: add product-side “economic operator” duties (EAA Articles 7–12) with a checklist format.
-    </aside>
+    </div>
   </section>
 
   <!-- Slide 14 -->
@@ -253,7 +253,7 @@
     </div>
     </div>
    </div>
-    <div class="notes" hidden></div>
+    <aside class="notes" hidden></aside>
   </section>
 
  </body>
