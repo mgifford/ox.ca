@@ -1,7 +1,15 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@use "{{ site.theme }}" as *;
+
+@font-face {
+    font-family: 'Sen-Regular';
+    src: url('/assets/fonts/Sen-Regular.woff2') format('woff2');
+    font-weight: 800;
+    font-style: bold;
+    font-display: swap;
+}
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,6 +29,25 @@ h1, h2, h3 {
 
 section {
   margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font: 15px / 1.6 Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Sen-Regular", "Arial Black", Gadget, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or contain */
 }
 
 a {
@@ -66,20 +93,27 @@ ul li {
   margin-bottom: 0.3em;
 }
 
-ul.icon-links {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.5em;
+a:hover, a:focus {
+  color: #006699;
+  font-weight: normal;
+  transition: color 0.2s ease-in-out;
 }
 
-ul.icon-links li {
-  margin-bottom: 0.5em;
-  display: flex;
-  align-items: center;
+a:hover {
+  border-bottom: 4px solid #90EE90;
 }
 
-ul.icon-links li i {
-  width: 1.2em;
-  margin-right: 0.5em;
-  color: #666;
+a:focus,
+[tabindex]:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #90EE90;
+  /* Add an outline-offset if you want space between the element and the shadow */
+  /* outline-offset: 2px; */
+}
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px #90EE90;
+  /* Add an outline-offset if you want space between the element and the shadow */
+  /* outline-offset: 2px; */
 }

@@ -1,0 +1,17 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#171717"/>
+  
+  <!-- Top border with texture -->
+  <defs>
+    <pattern id="topPatternDark" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#1A4480"/>
+      <circle cx="10" cy="10" r="1" fill="#73B3E7" opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="8" fill="url(#topPatternDark)"/>
+  
+  <!-- Left accent border removed -->
+  
+  <!-- Bottom accent stripe removed -->
+</svg>

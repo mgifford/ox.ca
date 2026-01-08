@@ -1,0 +1,57 @@
+{
+  "subject": "acct:mike@ox.ca",
+  "aliases": [
+    "https://mastodon.social/@mgifford",
+    "https://mastodon.social/users/mgifford"
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://mastodon.social/users/mgifford"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://mastodon.social/@mgifford"
+    }
+  ]
+}
+{
+  "subject": "acct:mike.gifford@ox.ca",
+  "aliases": [
+    "https://mastodon.social/@mgifford",
+    "https://mastodon.social/users/mgifford"
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://mastodon.social/users/mgifford"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://mastodon.social/@mgifford"
+    }
+  ]
+}
+{
+  "subject": "acct:mgifford@ox.ca",
+  "aliases": [
+    "https://mastodon.social/@mgifford",
+    "https://mastodon.social/users/mgifford"
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://mastodon.social/users/mgifford"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://mastodon.social/@mgifford"
+    }
+  ]
+}

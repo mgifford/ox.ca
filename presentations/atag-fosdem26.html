@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Support Authors for Accessible Content</title>
+   <link rel="stylesheet" href="ca-slides/slides.css">
+   <script src="ca-slides/b6plus.js"></script>
+   <script src="ca-slides/auto-scale.js"></script>
+ </head>
+ <body class="shower fade-in duration=20 warn=5 hidemouse">
+
+  <div class="progress"></div>
+  <div class="clock"></div>
+  <div role="region" aria-live="assertive">Leaving slide mode.</div>
+
+  <!-- Slide 1 -->
+  <section class="slide cover clear" id="cover">
+   <h1>We Need to Support Authors Better to Deliver Accessible Content</h1>
+   <h2>From ATAG 2.0 to Local AI &amp; Automated WCAG-EM</h2>
+   <address>Mike Gifford</address>
+   <p class="event">FOSDEM 2026 | Collaboration and Content Management | Open Web Alliance</p>
+   <aside class="notes">Welcome everyone. Thanks to the Collaboration and Content Management track for centering this conversation on authors, not just auditors.</aside>
+  </section>
+
+  <!-- Slide 2 -->
+  <section class="slide" id="problem">
+   <h2>The Definition of Insanity</h2>
+   <p>The Cycle of Failure:</p>
+   <ul class="emerge">
+    <li>We train authors &rarr; they leave &rarr; we retrain</li>
+    <li>Authors are SMEs, not accessibility experts</li>
+    <li>The CMS interface is the filter. If the filter allows garbage, we get garbage</li>
+   </ul>
+   <aside class="notes">Remediation costs more than prevention every single time. Reinforce the burn rate: every handoff and retrain cycle multiplies cost. Prevention is cheaper than cleanup.</aside>
+  </section>
+
+  <!-- Slide 3 -->
+  <section class="slide" id="atag">
+   <h2>The Missing Standard: ATAG 2.0</h2>
+   <div class="columns">
+    <div>
+     <h3>Part A: The Editor UI</h3>
+     <p>The authoring interface itself must be accessible.</p>
+    </div>
+    <div>
+     <h3>Part B: Support Accessible Content</h3>
+     <p>The tool guides authors to produce accessible output.</p>
+    </div>
+   </div>
+    <aside class="notes">Part B is the most ignored W3C standard. We wrote the checklist but never shipped the software because static rules could not cover dynamic context. Stress the historical gap: we treated ATAG Part B as aspirational because we lacked contextual engines.</aside>
+  </section>
+
+  <!-- Slide 4 -->
+  <section class="slide" id="we4authors">
+   <h2>The We4Authors Lesson</h2>
+   <ul>
+    <li>Drupal, Joomla, Plone, Umbraco aligned on defaults like compulsory alt text</li>
+    <li>Static code turned into Clippy: annoying, context-blind, brittle</li>
+    <li>It could not tell a layout table from a data table</li>
+   </ul>
+   <aside class="notes">We hit the wall of what if/then statements can do. Call back to the pain of static linters: they either under-fire or over-fire. Authors tuned them out.</aside>
+  </section>
+
+  <!-- Slide 5 -->
+  <section class="slide" id="pivot">
+   <h1 class="shout">Move from Gatekeeping to Guiding.</h1>
+   <aside class="notes">Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance.</aside>
+  </section>
+
+  <!-- Slide 6 -->
+  <section class="slide" id="architecture">
+   <h2>The Moment of Authoring</h2>
+   <div class="columns">
+    <div>
+     <p>Privacy-first AI pipeline:</p>
+     <ul class="emerge">
+      <li>Draft stays inside the CMS boundary</li>
+      <li>Inference happens via WebAssembly or a local service</li>
+      <li>No drafts leak to OpenAI or other third parties</li>
+     </ul>
+    </div>
+    <div>
+     <p>Local SLM stack:</p>
+     <ul>
+      <li>Bundled with the CMS for offline and regulated deployments</li>
+      <li>Optimized prompts for authoring context (field, template, role)</li>
+      <li>Deterministic fallbacks when the model cannot decide</li>
+     </ul>
+    </div>
+   </div>
+    <aside class="notes">Emphasize the procurement reality: government and enterprise cannot ship drafts to remote AI. Local SLMs are our compliance path and our open-source advantage.</aside>
+  </section>
+
+  <!-- Slide 7 -->
+  <section class="slide" id="atag3">
+   <h2>Practical ATAG 3.0 Moves</h2>
+   <ul class="emerge">
+    <li>Contextual alt text: AI suggests descriptions using image analysis plus page context</li>
+    <li>Plain language nudges: flag jargon and propose simpler synonyms to reduce cognitive load</li>
+    <li>Structure hints: "You bolded this—did you mean H3?"</li>
+   </ul>
+   <aside class="notes">Goal: lower cognitive load, not replace authors. Reiterate: keep authors in control. AI proposes, humans confirm.</aside>
+  </section>
+
+  <!-- Slide 8 -->
+  <section class="slide" id="wcagem">
+   <h2>Compliance is Science (WCAG-EM)
+</h2>
+   <p>ATAG is about writing, but WCAG-EM closes the loop on managing the site.</p>
+   <p>The worst step: WCAG-EM Step 3 — select a representative sample. Humans hate doing this.</p>
+   <aside class="notes">Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork.</aside>
+  </section>
+
+  <!-- Slide 9 -->
+  <section class="slide" id="sample">
+   <h2>The "Generate Sample" Button</h2>
+   <p>The CMS already knows:</p>
+   <ul>
+    <li>Active templates and content types</li>
+    <li>Traffic and engagement patterns</li>
+    <li>Editorial ownership and workflow states</li>
+   </ul>
+   <p>The feature: auto-generate the WCAG-EM sample and keep it current.</p>
+   <aside class="notes">Turn the audit from a consulting contract into a dashboard widget. Highlight how automation de-risks audits: consistent sampling, faster retests, cheaper renewals.</aside>
+  </section>
+
+  <!-- Slide 10 -->
+  <section class="slide" id="community">
+   <h2>Community Update (Dec 2025)</h2>
+   <ul class="emerge">
+    <li>W3C ATAG Community Group revitalized on Dec 05, 2025</li>
+    <li>Focus: drafting Assisted Authoring guidance</li>
+    <li>Goal: prevent AI from hallucinating accessibility metadata</li>
+   </ul>
+   <aside class="notes">Join the GitHub discussions and shape the norms before platforms lock them in. Invite contributors by name if present; point them to repos and meeting cadence.</aside>
+  </section>
+
+  <!-- Slide 11 -->
+  <section class="slide" id="cta">
+   <h2>The Open Web Alliance Mandate</h2>
+   <ul class="emerge">
+    <li>Join the W3C ATAG Community Group</li>
+    <li>Contribute to the shared dataset for accessibility SLMs</li>
+    <li>Ship a WCAG-EM module in your CMS</li>
+   </ul>
+   <aside class="notes">Challenge the room: we either build the open stack now or live under proprietary audit bots.</aside>
+  </section>
+
+  <!-- Slide 12 -->
+  <section class="slide" id="resources">
+   <h2>Resources</h2>
+   <ul>
+    <li><a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a></li>
+    <li><a href="https://www.w3.org/TR/WCAG-EM/">WCAG-EM</a></li>
+    <li><a href="https://github.com/w3c/atag">W3C ATAG Community Group GitHub</a></li>
+   </ul>
+   <p>QR code placeholder for quick access.</p>
+   <aside class="notes">Encourage scanning the QR and committing to one action before leaving the room.</aside>
+  </section>
+
+  <!-- Slide 13 -->
+  <section class="slide final" id="questions">
+   <h2>Questions</h2>
+   <div class="next">
+    <div class="columns">
+     <div>
+      <p><strong>Mike Gifford</strong><br>
+      <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a></p>
+      <p style="margin-top: 1em;">
+       <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
+       <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
+       <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
+      </p>
+      <p style="margin-top: 1em; font-size: 1.1em;">
+       <a href="https://ox.ca">https://ox.ca</a>
+      </p>
+     </div>
+     <div style="text-align: center;">
+      <p style="font-size: 0.9em; margin-bottom: 0.5em;">Scan for slides:</p>
+      <!-- QR code placeholder: add image with alt text -->
+      <div style="width: 12em; height: 12em; margin: 0 auto; border: 2px dashed currentColor; display: flex; align-items: center; justify-content: center; font-size: 0.8em; opacity: 0.5;">
+       QR Code<br>Placeholder
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+ </body>
+</html>

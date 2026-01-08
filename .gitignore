@@ -11,6 +11,7 @@
 *.gem
 .bundle/
 vendor/
+Gemfile
 Gemfile.lock
 
 # Jekyll build output

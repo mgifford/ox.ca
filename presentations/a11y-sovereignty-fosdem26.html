@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">x
+    <meta name="viewport" content="width=device-width">
+    <title>Accessible Sovereignty: Four Freedoms Require Inclusion</title>
+    <meta name="description" content="Accessible Sovereignty: Inclusion as enforcement of the Four Freedoms. Slides by Mike Gifford using the W3C b6+/Shower template.">
+    <link rel="stylesheet" href="ca-slides/slides.css?v=20260108">
+    <script src="ca-slides/b6plus.js?v=20260108"></script>
+    <!-- <script src="ca-slides/auto-scale.js"></script> -->
+    <script src="ca-slides/details-popovers.js?v=20260108"></script>
+    <script src="ca-slides/offline-indicator.js?v=20260108"></script>
+    <script src="ca-slides/ui-metrics.js?v=20260108"></script>
+  </head>
+  <body class="shower fade-in duration=20 warn=5 hidemouse">
+    <div class="progress"></div>
+    <div class="clock"></div>
+    <div role="region" aria-live="assertive">Leaving slide mode.</div>
+    <!-- Submitted proposal (for reference) -->
+    <!--
+  Proposal title: Accessible Sovereignty: Why the Four Freedoms Depend on Inclusion
+
+  Abstract: The four essential freedoms defined by the Free Software Foundation — freedom 0: the freedom to run the software; freedom 1: the freedom to study &amp; change it; freedom 2: the freedom to redistribute; freedom 3: the freedom to distribute modified versions — are widely cited as the foundation of free software. https://www.gnu.org/philosophy/free-sw.en.html#four-freedoms
+
+  But what does “freedom” mean when people with disabilities cannot meaningfully use, extend &amp; share software? Digital sovereignty is hollow unless the tools &amp; communities respect accessibility. If a user interface or workflow excludes a segment of users, then the right to “run” or “modify” the software is in practice restricted.
+
+  This talk argues that accessibility (in code, UI, documentation, communities) is not an optional add-on — it is essential for the exercise of the four freedoms &amp; thus for true digital sovereignty. We will explore how CMS projects can embed accessibility into their governance, workflows &amp; contributions so that every user can exercise the freedoms of use, study, share &amp; collaborate.
+
+  It is great to see GitHub making significant efforts to improve their accessibility &amp; that of the tools that they give to the community. https://accessibility.github.com/
+  https://github.blog/open-source/social-impact/our-pledge-to-help-improve-the-accessibility-of-open-source-software-at-scale/
+
+  We will cover:
+  • How exclusion of users with disabilities limits freedom of software use &amp; modification.
+  • The link between accessibility &amp; community inclusivity: if you cannot participate fully, you cannot help shape the software.
+  • Practical steps for CMS ecosystems (Drupal, WordPress, etc) to make accessibility a governance norm rather than a compliance afterthought.
+  • A call to action: build tools, policies &amp; default workflows so that accessibility becomes part of the infrastructure of freedom.
+
+  Notes: I should be available both days to present in person. Sorry I couldn't modify the submission to add that in.
+
+  Language: en
+
+  Software license(s): CC-SA
+
+  All presentations will be recorded &amp; made available under Creative Commons licences, CC-By-SA or CC-By. Please confirm that you agree to this.: Yes
+
+  I have read the FOSDEM Code of Conduct &amp; agree to abide by it.: Yes
+
+  talk slug: Our freedoms depend on accessibility
+  -->
+
+    <!-- Slide 1 -->
+    <section class="slide cover clear" id="title" tabindex="-1">
+      <h1>Accessible Sovereignty: Why the Four Freedoms Depend on Inclusion</h1>
+      <h2>Sovereignty is a practice; accessibility is the power to exercise it.</h2>
+      <address>Mike Gifford, CivicActions</address>
+      <p class="event">FOSDEM 2026 | Digital Sovereignty Track <br>Date & Location TBD </p>
+      <aside class="notes">I’m here to talk about a 'bug' in the way we view freedom. </aside>
+      <aside class="details">Opening: Sovereignty is a discipline, not a product. So is inclusion. If you stop practicing, it atrophies. Inclusion operationalizes freedom. A legal right (the license) without functional power (accessibility) is an empty promise. Full submitted abstract is preserved in the comment above the cover slide.</aside>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide textfit" id="core-premise">
+      <h2>The Core Premise</h2>
+      <ul>
+        <li>Foundation: Digital sovereignty is built on the Four Freedoms</li>
+        <li>Problem: Digital freedom is an illusion without accessibility</li>
+        <li>Thesis: Accessibility is the infrastructure that makes software freedom possible</li>
+        <li>Sovereignty = control; reliance on intermediaries erodes autonomy</li>
+        <li>If you cannot perceive/operate the tool, <strong>you are not sovereign</strong>
+        </li>
+      </ul>
+      <aside class="notes"></aside>
+      <aside class="details">Define digital sovereignty as the ability for people &amp; their communities to control &amp; adapt the digital tools, data &amp; infrastructure they rely on. You have no freedom without accessibility: “open without accessible” is exclusion — a library with the lights turned off vs a living, visible forest where everyone can use, study &amp; share. Pair governance with tooling: just as DejaCode keeps licensing honest, ship accessibility automation (e.g., axe) in CI/CD so freedom is testable, not aspirational.</aside>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide textfit" id="freedoms">
+      <h2>Re-evaluating the Four Freedoms</h2>
+      <p>Requires the ability to:</p>
+      <ul>
+        <li>Freedom 0 (Use): <strong>Perceive</strong> perceive the UI </li>
+        <li>Freedom 1 (Study/Edit/Improve): <strong>Operate</strong> operate &amp; open it </li>
+        <li>Freedom 2 (Redistribute): Demonstrate <strong>understanding</strong>
+        </li>
+        <li>Freedom 3 (Modify &amp Share): Refactor ideas &amp; becoming more <strong>robust</strong>
+        </li>
+      </ul>
+      <aside class="notes">Map 0–3 to POUR: P/O</aside>
+      <aside class="details">Freedom 2: forges must be navigable &amp; usable. Freedom 3: editors &amp; IDEs (VSCode, Vim, etc.) &amp; authoring platforms (ATAG 2.0). Cite FSF Four Freedoms: https://www.gnu.org/philosophy/free-sw.en.html#four-freedoms. If POUR breaks, the freedoms are theoretical.</aside>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide textfit" id="foreground-accessibility">
+      <h2>Accessibility at the Foreground of Sovereignty</h2>
+      <ul>
+        <li>Accessibility long predates free software: a tradition of adaptive tech</li>
+        <li>Digital accessibility is the everyday practice of sovereignty</li>
+        <li>Both involve thinking beyond “me-now” &amp; design for others</li>
+        <li>Accessibility &amp; free software both expand choice over time</li>
+        <li>Always build for variation &amp; resilience; preserve paths to maximum participation</li>
+      </ul>
+      <aside class="notes"></aside>
+      <aside class="details">Frame accessibility as the practical foreground of sovereignty—functional power to exercise rights. Barriers to access existed long before FOSS; see historical inventions: https://cs.stanford.edu/people/eroberts/courses/soco/projects/2005-06/accessibility/firstwave.html. Both accessibility &amp; free software ask us to think bigger than the present self, giving the future “me” more options. Use POUR as the operational lens that keeps freedoms real across contexts.</aside>
+    </section>
+
+    <!-- New slide
+    Freedom #0 & 10th Anniversary
+    -->
+
+    <!-- Slide 5 -->
+    <section class="slide textfit" id="community-keeps-freedom">
+      <h2>Community is What Keeps Freedom Alive</h2>
+      <ul>
+        <li>FOSS thrives because people care enough to participate, modify &amp; share</li>
+        <li>Accessibility thrives when communities care about others</li>
+        <li>If you cannot participate fully, you cannot help shape the future</li>
+        <li>It benefits us all to build for a wider variation in ability</li>
+        <li>Disability is innately human. We all have temporary &amp; situational barriers</li>
+      </ul>
+      <aside class="notes">Show of hands: Is software freedom a human right?</aside>
+      <aside class="details">Replace the Machine/Mycelium metaphor with community reality. Microsoft Inclusive Design lens: permanent, temporary, situational barriers all need coverage. Accessibility is the same adaptability that lets FOSS communities riff &amp; personalize for today’s needs. Cite Microsoft Inclusive Design: https://www.microsoft.com/design/inclusive/. Everyone cycles through different ability states; building for variation protects future-you.</aside>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide textfit" id="inclusive-design">
+      <h2>Inclusive Design: The Multiplier</h2>
+      <ul>
+        <li>Permanent: low vision, mobility limits, cognitive load</li>
+        <li>Temporary: broken arm, eye infection, jet lag</li>
+        <li>Situational: glare, bad Wi‑Fi, noisy room</li>
+        <li>Curb-Cut Effect: screen reader fixes often improve SEO &amp; performance</li>
+        <li class="next">
+          <strong>Book Announcement: </strong>Digital Accessibility Ethics — Disability Inclusion in All Things Tech
+        </li>
+      </ul>
+      <aside class="notes"></aside>
+      <aside class="details">These states rotate through a community. Building flexibility now protects the future-you &amp; keeps the Four Freedoms usable when circumstances change. https://www.routledge.com/Digital-Accessibility-Ethics-Disability-Inclusion-in-All-Things-Tech/Feingold-Gilbert-Fleet/p/book/9781041018681</aside>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide textfit" id="accessible-forge">
+      <h2>Open Source Accessibility Summit</h2>
+      <p>GitHub hosted a free side event at All Things Open in October 2025</p>
+      <ul>
+        <li>Community Communication and Collaboration</li>
+        <li>Development Process Integration</li>
+        <li>Information and Documentation Gaps</li>
+        <li>Lack of Awareness and Knowledge</li>
+        <li>Organizational and Leadership Challenges</li>
+        <li>Testing and Tooling Difficulties</li>
+      </ul>
+      <aside class="notes"></aside>
+      <aside class="details"> GitHub commitments: https://accessibility.github.com/ &amp; https://github.blog/open-source/social-impact/our-pledge-to-help-improve-the-accessibility-of-open-source-software-at-scale/. Pair accessibility linting with SCA/license checks so pipelines guard freedom &amp; compliance together. Coference overview: https://github.com/orgs/open-source-accessibility/discussions/7 </aside>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="slide textfit" id="cms-governance">
+      <h2>Governance for Accessibility</h2>
+      <ul>
+        <li>Ship accessible defaults &amp; review checklists, pattern libraries by default</li>
+        <li>Upstream-first fixes prevent forks of inaccessible code</li>
+        <li>Require accessibility checks in build workflows</li>
+        <li>Assign an accessibility champion in project governance to keep discipline funded &amp; accountable</li>
+        <li>Leadership matters: The accessibility needs to be regularly re-inforced in the community</li>
+      </ul>
+      <aside class="notes">Ground the abstract in community practice:</aside>
+      <aside class="details">
+      </aside>
+    </section>
+
+    <!-- Slide 9 -->
+    <section class="slide textfit" id="a11y-as-bugs">
+      <h2>Treat Accessibility Issues as Bugs</h2>
+      <ul>
+        <li>When people cannot report bugs or suggest fixes, Freedom 3 is lost</li>
+        <li>Exclusion from contribution turns sovereign users into passive consumers</li>
+        <li>Fix the gap: accessible editors, forges &amp; involve people with lived experience of disability</li>
+        <li><a href="https://github.com/readme/guides/fix-accessibility-bugs">GitHub: Fix Accessibility Bugs</a></li>
+      </ul>
+      <aside class="notes"></aside>
+      <aside class="details">Participation gates define who holds power. If you cannot use the tools or contribute, the Four Freedoms are hollow.</aside>
+    </section>  
+
+    <!-- Slide 10 -->
+    <section class="slide textfit" id="the-issue-queue">
+      <h2>Sunlight is the Best Disinfectant</h2>
+      <ul>
+        <li>Open, accessible collaboration is the engine of sovereignty</li>
+        <li>Contribution workflows must be perceivable, operable, understandable &amp; robust (POUR)</li>
+        <li>Accessible issue queues prove progress toward perfection</li>
+        <li>Participation gates define who holds power. Make contribution pipelines inclusive.</li>
+      </ul>
+      <aside class="notes">Link role-based actions in the <a href="https://ox.ca/presentations/handouts/">handout table</a> for accessibility accountability.</aside>
+      <aside class="details">
+        POUR framework operationalizes the Four Freedoms in contribution workflows.
+      </aside>
+    </section>
+
+    <!-- Slide 11 -->
+    <section class="slide textfit" id="ethics-sustainability">
+      <h2>Accessibility &amp; Sustainability</h2>
+      <br/>We are in a climate crisis so do want to raise how climate relates to accessibility.
+      <ul>
+        <li>Lightweight code is green &amp; accessible</li>
+        <li>Emergencies demand tools that work for everyone</li>
+        <li>Transparency: do not hide barriers; report them publicly</li>
+        <li>Web Sustainability Guidelines currently touches on both open &amp; accessibility</li>
+      </ul>
+      <aside class="notes">Cite Digital Accessibility Ethics; align eco-efficiency with inclusion.</aside>
+    </section>
+
+    <!-- Slide 12 -->
+    <section class="slide textfit" id="cta">
+      <h2>Prioritize Building an Inclusive Community</h2>
+      <ul>
+        <li>Ensure your team is engaging in upstream bugs</li>
+        <li>Hire developers with disabilities</li>
+        <li>Ship with accessibility mode enabled by default</li>
+        <li>Require accessibility sign-off in PR templates</li>
+      </ul>
+      <aside class="notes">Closing: Sovereignty and inclusion are practiced. </aside>
+      <aside class="details">Fund the roots, or the forest dies. End with action: money, policy, hiring. Inclusion is the practice that sustains freedom.</aside>
+    </section>
+
+    <!-- Slide 13 -->
+    <section class="slide final" id="questions">
+      <h2>Questions</h2>
+      <div class="next">
+        <div class="columns">
+          <div>
+            <p>
+              <strong>Mike Gifford</strong>
+              <br>
+              <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a>
+            </p>
+            <p style="margin-top: 1em;">
+              <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a>
+              <br>
+              <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a>
+              <br>
+              <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
+            </p>
+            <p style="margin-top: 1em; font-size: 1.1em;">
+              <a href="https://ox.ca">https://ox.ca</a>
+            </p>
+          </div>
+          <div style="text-align: center;">
+            <p style="font-size: 0.9em; margin-bottom: 0.5em;">Scan for slides:</p>
+            <!-- QR code placeholder: add image with alt text -->
+            <div style="width: 12em; height: 12em; margin: 0 auto; border: 2px dashed currentColor; display: flex; align-items: center; justify-content: center; font-size: 0.8em; opacity: 0.5;"> QR Code <br>Placeholder </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  </body>
+</html>

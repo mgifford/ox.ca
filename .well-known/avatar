@@ -1,0 +1,24 @@
+// https://shkspr.mobi/blog/2025/10/alpha-launch-well-known-avatar-feedback-wanted/
+{
+    "subject": "acct:whatever@shkspr.mobi",
+    "links": [
+        {
+              "rel": "http:\/\/webfinger.net\/rel\/avatar",
+             "type": "image\/webp",
+             "href": "https:\/\/ox.ca\/.well-known\/avatar_img/Open_UK_SOOC250460-1024.webp",
+            "sizes": "1024x1024"
+        },
+        {
+              "rel": "http:\/\/webfinger.net\/rel\/avatar",
+             "type": "image\/jpeg",
+             "href": "https:\/\/ox.ca\/.well-known\/avatar_img\/Open_UK_SOOC250460-512.jpg",
+            "sizes": "512x512"
+        },
+        {
+            "rel": "http:\/\/webfinger.net\/rel\/avatar",
+            "type": "image\/png",
+            "href": "https:\/\/ox.ca\/.well-known\/avatar_img\/Open_UK_SOOC250460-64.png",
+            "sizes": "64x64"
+        }
+    ]
+}
