@@ -1,0 +1,65 @@
+name: QA
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  html-validate:
+    name: HTML Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: |
+          npm ci || npm install
+      - name: Run html-validate
+        run: npx html-validate --config .htmlvalidate.json "presentations/**/*.html"
+
+  accessibility:
+    name: Accessibility scan (pa11y)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install pa11y-ci
+        run: npm install -g pa11y-ci@6
+      - name: Run pa11y-ci (scan built site)
+        run: |
+          # Build site if you have a build step; otherwise scan local HTML files
+          if [ -f package.json ] && grep -q build package.json; then npm run build || true; fi
+          pa11y-ci --config .pa11yci.json || true
+
+  link-check:
+    name: Link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run lychee-action link checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: "--recursive presentations --exclude .git --format github"
+
+  spell-check:
+    name: Markdown spell-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install cspell
+        run: npm install -g cspell
+      - name: Run cspell on Markdown only
+        run: |
+          git ls-files "**/*.md" | xargs -r cspell || true
