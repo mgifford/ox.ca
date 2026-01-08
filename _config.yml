@@ -9,14 +9,27 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 title: Mike Gifford
-logo: /media/Mike_Gifford_OpenUK_vsmall.webp
-description: Personal landing page
+
+logo: /media/Open_UK_SOOC250460.jpg
+# logo: /media/Mike_Gifford_OpenUK_vsmall.webp
+description: Accessibility & Open Web advocate. W3C Expert. CivicActions Lead.
+author: Mike Gifford
+twitter_username: mgifford
+github_username: mgifford
+linkedin_username: mgifford
 show_downloads: false
 theme: jekyll-theme-minimal
-include: [".well-known"]
+url: https://ox.ca
+include:
+  - ".well-known"
+  - robots.txt.liquid
+  - carbon.txt
+plugins:
+  - jekyll-sitemap
 exclude: ["AGENTS.md"]
 site.lang: en-ca
 
 # Dart Sass configuration to reduce deprecation noise from dependencies
 sass:
   quiet_deps: true
+

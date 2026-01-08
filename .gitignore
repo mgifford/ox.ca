@@ -1,9 +1,29 @@
-# Jekyll build output
-_site/
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+.VolumeIcon.icns
+.Spotlight-V100
+.Trashes
+._*
 
-# Local bundler files
+# Ruby & Bundler
+*.gem
+.bundle/
+vendor/
 Gemfile
 Gemfile.lock
 
-# macOS metadata
-.DS_Store
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*~
