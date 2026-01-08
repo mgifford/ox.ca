@@ -29,3 +29,15 @@ mgifford
 ox
 arrm
 SaaS
+shortlinks
+salesy
+bsky
+Nunito
+Merriweather
+Grayscale
+darkmode
+hidemouse
+TPAC
+handoffs
+siloed
+presentations

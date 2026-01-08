@@ -7,7 +7,7 @@ Unsure why this isn't in the W3C Repo. I've copied the [zip file from the Templa
 The presentation starts with an overview. To start the presentation, press play (at the bottom).
 
 ## Clone this repo
-The easiest way to make presentations for TPAC will be to just clone a repo (like this one) and then make your changes in GitHub. This way it can be better shared with others before/durring/after the event. 
+The easiest way to make presentations for TPAC will be to just clone a repo (like this one) and then make your changes in GitHub. This way it can be better shared with others before/during/after the event. 
 
 ## GitHub Pages
 GitHub Pages makes the hosting easy. This of course can all be served locally too, as it is just HTML. 
