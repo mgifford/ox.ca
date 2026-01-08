@@ -143,3 +143,34 @@ a:focus-visible,
   /* Add an outline-offset if you want space between the element and the shadow */
   /* outline-offset: 2px; */
 }
+
+.qr-placeholder {
+  width: 12em;
+  height: 12em;
+  margin: 0 auto;
+  border: 2px dashed currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.contact-links p {
+  margin-top: 1em;
+}
+
+.contact-links p:last-child {
+  font-size: 1.1em;
+}
+
+.scan-label {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.contact-link-primary {
+  margin-top: 1em;
+  font-size: 1.1em;
+}

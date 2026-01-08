@@ -13,10 +13,10 @@
 
   <div class="progress"></div>
   <div class="clock"></div>
-  <div role="region" aria-live="assertive">Leaving slide mode.</div>
+  <section aria-live="assertive" aria-label="Slide mode status">Leaving slide mode.</section>
 
   <!-- Slide 1 -->
-  <section class="slide cover clear" id="cover">
+  <section class="slide cover clear" id="cover" aria-label="Cover: Procurement and Accessibility">
    <h1>Procurement Is the Biggest Form of Fundraising for FLOSS</h1>
    <h2>Shifting from "Free Assets" to "Living Infrastructure"</h2>
    <address>Mike Gifford, CivicActions</address>
@@ -25,7 +25,7 @@
   </section>
 
   <!-- Slide 2 -->
-  <section class="slide" id="misunderstanding">
+  <section class="slide" id="misunderstanding" aria-label="Common Misunderstandings">
    <h2>The Great Misunderstanding</h2>
    <div class="columns">
     <div>
@@ -41,7 +41,7 @@
   </section>
 
   <!-- Slide 3 -->
-  <section class="slide" id="scale">
+  <section class="slide" id="scale" aria-label="Scaling Accessibility">
    <h2>Whales vs. Minnows</h2>
    <table class="striped" aria-label="Funding scale comparison">
     <thead>
@@ -56,13 +56,13 @@
   </section>
 
   <!-- Slide 4 -->
-  <section class="slide" id="free-puppy">
+  <section class="slide" id="free-puppy" aria-label="Free Puppy Analogy">
    <h1 class="shout">Open Source isn't a Free Chair. It's a Free Puppy.</h1>
    <aside class="notes">Maintenance = food, training, vet bills. Drive home ongoing costs; procurement needs to fund upkeep.</aside>
   </section>
 
   <!-- Slide 5 -->
-  <section class="slide" id="pivot">
+  <section class="slide" id="pivot" aria-label="Pivot">
    <h2>The Financial Pivot</h2>
    <table class="striped" aria-label="CapEx vs OpEx comparison">
     <thead>
@@ -78,7 +78,7 @@
   </section>
 
   <!-- Slide 6 -->
-  <section class="slide" id="dpi">
+  <section class="slide" id="dpi" aria-label="Digital Public Infrastructure">
    <h2>Digital Public Infrastructure</h2>
    <ul>
     <li>Open Source: the engine</li>
@@ -90,7 +90,7 @@
   </section>
 
   <!-- Slide 7 -->
-  <section class="slide" id="rfp-hack">
+  <section class="slide" id="rfp-hack" aria-label="RFP Hacks">
    <h2>The Contract Hack</h2>
    <pre><code>Mandatory Requirement: Vendor must demonstrate history of upstream contribution.
 All bug fixes must be submitted upstream.</code></pre>
@@ -99,7 +99,7 @@ All bug fixes must be submitted upstream.</code></pre>
   </section>
 
   <!-- Slide 8 -->
-  <section class="slide" id="training">
+  <section class="slide" id="training" aria-label="Training">
    <h2>DITAP &amp; Procurement Culture</h2>
    <ul>
     <li>Procurement officers fear risk</li>
@@ -110,13 +110,13 @@ All bug fixes must be submitted upstream.</code></pre>
   </section>
 
   <!-- Slide 9 -->
-  <section class="slide" id="flywheel">
+  <section class="slide" id="flywheel" aria-label="Procurement Flywheel">
    <h2>The Virtuous Cycle</h2>
    <aside class="notes">Flow: Gov ($$) → Agency (hires) → Maintainer (code) → Foundation (governance) → Better software → Gov benefit. Use simple arrows or SVG if desired; ensure text alt. Describe the loop verbally; emphasize reinvestment and governance.</aside>
   </section>
 
   <!-- Slide 10 -->
-  <section class="slide" id="cta">
+  <section class="slide" id="cta" aria-label="Call To Action">
    <h2>Call to Action</h2>
    <ul>
     <li>Maintainers: build enterprise-ready docs</li>
@@ -127,13 +127,13 @@ All bug fixes must be submitted upstream.</code></pre>
   </section>
 
   <!-- Slide 11 -->
-  <section class="slide" id="final-quote">
+  <section class="slide" id="final-quote" aria-label="Final Quote">
    <h1 class="shout">Procurement is unsexy, bureaucratic, and boring. It is also the only thing that can save the Open Web.</h1>
    <aside class="notes">Land the urgency and inevitability of procurement as leverage.</aside>
   </section>
 
   <!-- Slide 12 -->
-  <section class="slide" id="resources">
+  <section class="slide" id="resources" aria-label="Resources">
    <h2>Scan for Playbook</h2>
    <p>QR code placeholder.</p>
    <ul>
@@ -153,22 +153,20 @@ All bug fixes must be submitted upstream.</code></pre>
      <div>
       <p><strong>Mike Gifford</strong><br>
       <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a></p>
-      <p style="margin-top: 1em;">
+      <p>
        <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
        <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
        <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
       </p>
-      <p style="margin-top: 1em; font-size: 1.1em;">
+      <p class="contact-link-primary">
        <a href="https://ox.ca">https://ox.ca</a>
       </p>
      </div>
-     <div style="text-align: center;">
-      <p style="font-size: 0.9em; margin-bottom: 0.5em;">Scan for slides:</p>
-      <!-- QR code placeholder: add image with alt text -->
-      <div style="width: 12em; height: 12em; margin: 0 auto; border: 2px dashed currentColor; display: flex; align-items: center; justify-content: center; font-size: 0.8em; opacity: 0.5;">
-       QR Code<br>Placeholder
-      </div>
-     </div>
+    <div class="contact-links" role="group" aria-label="Scan for slides">
+     <p class="scan-label">Scan for slides:</p>
+     <!-- QR code placeholder: add image with alt text -->
+     <div class="qr-placeholder" aria-hidden="true">QR Code<br>Placeholder</div>
+    </div>
     </div>
    </div>
   </section>

@@ -13,10 +13,10 @@
 
   <div class="progress"></div>
   <div class="clock"></div>
-  <div role="region" aria-live="assertive">Leaving slide mode.</div>
+  <section aria-live="assertive" aria-label="Slide mode status">Leaving slide mode.</section>
 
   <!-- Slide 1 -->
-  <section class="slide cover clear" id="cover">
+  <section class="slide cover clear" id="cover" aria-label="Cover: From ATAG 2.0 to Local AI & Automated WCAG-EM">
    <h1>We Need to Support Authors Better to Deliver Accessible Content</h1>
    <h2>From ATAG 2.0 to Local AI &amp; Automated WCAG-EM</h2>
    <address>Mike Gifford</address>
@@ -25,7 +25,7 @@
   </section>
 
   <!-- Slide 2 -->
-  <section class="slide" id="problem">
+  <section class="slide" id="problem" aria-label="Problem Statement">
    <h2>The Definition of Insanity</h2>
    <p>The Cycle of Failure:</p>
    <ul class="emerge">
@@ -37,7 +37,7 @@
   </section>
 
   <!-- Slide 3 -->
-  <section class="slide" id="atag">
+  <section class="slide" id="atag" aria-label="From ATAG 2.0 to Local AI & Automated WCAG-EM">
    <h2>The Missing Standard: ATAG 2.0</h2>
    <div class="columns">
     <div>
@@ -53,7 +53,7 @@
   </section>
 
   <!-- Slide 4 -->
-  <section class="slide" id="we4authors">
+  <section class="slide" id="we4authors" aria-label="We for Authors">
    <h2>The We4Authors Lesson</h2>
    <ul>
     <li>Drupal, Joomla, Plone, Umbraco aligned on defaults like compulsory alt text</li>
@@ -64,13 +64,13 @@
   </section>
 
   <!-- Slide 5 -->
-  <section class="slide" id="pivot">
+  <section class="slide" id="pivot" aria-label="Pivot">
    <h1 class="shout">Move from Gatekeeping to Guiding.</h1>
    <aside class="notes">Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance.</aside>
   </section>
 
   <!-- Slide 6 -->
-  <section class="slide" id="architecture">
+  <section class="slide" id="architecture" aria-label="Architecture">
    <h2>The Moment of Authoring</h2>
    <div class="columns">
     <div>
@@ -94,7 +94,7 @@
   </section>
 
   <!-- Slide 7 -->
-  <section class="slide" id="atag3">
+  <section class="slide" id="atag3" aria-label="ATAG 3 Overview">
    <h2>Practical ATAG 3.0 Moves</h2>
    <ul class="emerge">
     <li>Contextual alt text: AI suggests descriptions using image analysis plus page context</li>
@@ -105,7 +105,7 @@
   </section>
 
   <!-- Slide 8 -->
-  <section class="slide" id="wcagem">
+  <section class="slide" id="wcagem" aria-label="WCAG-EM and Measurement">
    <h2>Compliance is Science (WCAG-EM)
 </h2>
    <p>ATAG is about writing, but WCAG-EM closes the loop on managing the site.</p>
@@ -114,7 +114,7 @@
   </section>
 
   <!-- Slide 9 -->
-  <section class="slide" id="sample">
+  <section class="slide" id="sample" aria-label="Sample Use Cases">
    <h2>The "Generate Sample" Button</h2>
    <p>The CMS already knows:</p>
    <ul>
@@ -127,7 +127,7 @@
   </section>
 
   <!-- Slide 10 -->
-  <section class="slide" id="community">
+  <section class="slide" id="community" aria-label="Community">
    <h2>Community Update (Dec 2025)</h2>
    <ul class="emerge">
     <li>W3C ATAG Community Group revitalized on Dec 05, 2025</li>
@@ -138,7 +138,7 @@
   </section>
 
   <!-- Slide 11 -->
-  <section class="slide" id="cta">
+  <section class="slide" id="cta" aria-label="Call To Action">
    <h2>The Open Web Alliance Mandate</h2>
    <ul class="emerge">
     <li>Join the W3C ATAG Community Group</li>
@@ -149,7 +149,7 @@
   </section>
 
   <!-- Slide 12 -->
-  <section class="slide" id="resources">
+  <section class="slide" id="resources" aria-label="Resources">
    <h2>Resources</h2>
    <ul>
     <li><a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a></li>
@@ -168,22 +168,22 @@
      <div>
       <p><strong>Mike Gifford</strong><br>
       <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a></p>
-      <p style="margin-top: 1em;">
-       <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
-       <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
-       <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
-      </p>
-      <p style="margin-top: 1em; font-size: 1.1em;">
-       <a href="https://ox.ca">https://ox.ca</a>
-      </p>
-     </div>
-     <div style="text-align: center;">
-      <p style="font-size: 0.9em; margin-bottom: 0.5em;">Scan for slides:</p>
-      <!-- QR code placeholder: add image with alt text -->
-      <div style="width: 12em; height: 12em; margin: 0 auto; border: 2px dashed currentColor; display: flex; align-items: center; justify-content: center; font-size: 0.8em; opacity: 0.5;">
-       QR Code<br>Placeholder
+      <div class="contact-links">
+       <p>
+        <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
+        <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
+        <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
+       </p>
+       <p>
+        <a href="https://ox.ca">https://ox.ca</a>
+       </p>
       </div>
      </div>
+    <div class="contact-links" role="group" aria-label="Scan for slides">
+     <p class="scan-label">Scan for slides:</p>
+     <!-- QR code placeholder: add image with alt text -->
+     <div class="qr-placeholder" aria-hidden="true">QR Code<br>Placeholder</div>
+    </div>
     </div>
    </div>
   </section>
