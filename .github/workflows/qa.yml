@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: '20'
       - name: Install pa11y-ci
-        run: npm install -g pa11y-ci@6
+        run: npm install -g pa11y-ci
       - name: Run pa11y-ci (scan built site)
         run: |
           # Build site if you have a build step; otherwise scan local HTML files
@@ -51,7 +51,7 @@ jobs:
       - name: Run lychee-action link checker
         uses: lycheeverse/lychee-action@v2
         with:
-          args: "'./**/*.md' './presentations/**/*.html' --exclude .git --exclude node_modules --exclude _site --format github"
+          args: "'./**/*.md' './presentations/**/*.html' --exclude .git --exclude node_modules --exclude _site --format markdown"
 
   spell-check:
     name: Markdown spell-check
