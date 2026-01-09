@@ -19,7 +19,7 @@
     "presentations/ca-slides/**"
   ],
   "files": [
-    "**/*.{md,markdown,mdx,html,htm,css,scss,js,json,yml,yaml}"
+    "**/*.{md,markdown,mdx}"
   ],
   "words": [
     "CivicActions",
@@ -53,6 +53,7 @@
     "ox",
     "arrm",
     "SaaS"
+    ,"DITAP","USDS","OSPO","OSPOs","behavior","presentations","presentatons"
   ],
   "dictionaryDefinitions": [
     {
