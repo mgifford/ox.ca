@@ -33,12 +33,15 @@ Guardrails for keeping the ox.ca landing page clear, accurate, and accessible.
 
 ## Shortlinks and redirects
 - The /p short URL must redirect to /presentations/; include a canonical link in redirect pages.
-- If adding typo catches (e.g., /presentatons/), redirect to the canonical /presentations/ path instead of copying files.
+- If adding typo catches (e.g., /presentations/), redirect to the canonical /presentations/ path instead of copying files.
 
 ## Review checklist
 - Links work and have context; alt text is present where needed.
 - Spelling and casing match the guidance; YAML front matter (if any) is valid.
 - Page renders cleanly on mobile and desktop; nothing breaks the minimal theme.
+
+## Style
+- Bullets: no trailing periods unless the bullet is a full sentence; keep structure parallel and concise.
 
 ## Slide augmentations and scripts
 - Keep custom behavior for the decks in separate scripts under /presentations/ca-slides so b6plus.js can be updated directly from https://www.w3.org/Talks/Tools/b6plus/ without merge conflict.
