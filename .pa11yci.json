@@ -1,0 +1,12 @@
+{
+  "defaults": {
+    "timeout": 30000,
+    "standard": "WCAG2AA"
+  },
+  "urls": [
+    "file:///Users/mgifford/ox.ca/presentations/EAA-drupal4gov-eu26.html",
+    "file:///Users/mgifford/ox.ca/presentations/a11y-sovereignty-fosdem26.html",
+    "file:///Users/mgifford/ox.ca/presentations/atag-fosdem26.html",
+    "file:///Users/mgifford/ox.ca/presentations/procurement-fosdem26.html"
+  ]
+}
