@@ -87,64 +87,104 @@
   <section class="slide" id="we4authors" aria-label="We for Authors">
    <h2>The We4Authors Lesson</h2>
    <ul>
-    <li>Drupal, Joomla, Plone, Umbraco aligned on defaults like compulsory alt text</li>
-    <li>Static code turned into Clippy: annoying, context-blind, brittle</li>
-    <li>It could not tell a layout table from a data table</li>
+    <li>Funka lead an Eurpean Commission funded project to prepare for the EAA</li>
+    <li>Drupal, Joomla, Plone, Umbraco, TinyMCE and others aligned on some defaults</li>
+    <li>The focus was on building a better UI &amp; doing user research with authors</li>
+    <li>4 years ago, the possibilities of AI seemed far away</li>
    </ul>
   <div class="notes" hidden>We hit the wall of what if/then statements can do. Call back to the pain of static linters: they either under-fire or over-fire. Authors tuned them out.</div>
   </section>
 
+
+
   <!-- Slide 5 -->
-  <section class="slide" id="pivot" aria-label="Pivot">
-   <h1 class="shout">Move from Gatekeeping to Guiding.</h1>
-  <div class="notes" hidden>Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance.</div>
+  <section class="slide" id="conformance-reviews" aria-label="Accessibility Conformance Reviews">
+   <h2>Accessibility Conformance Reviews</h2>
+   <p>We need to standardize how we report on compliance:</p>
+   <ul>
+    <li><a href="https://w3c.github.io/wai-wcag-em/">WCAG-EM</a>: The reporting framework common in Europe</li>
+    <li>VPAT / ACR: The standard for North American procurement</li>
+    <li><a href="https://github.com/mgifford/python-acr">Python-ACR</a>: Machine readable conformance reports (Open Source)</li>
+   </ul>
+   <div class="notes" hidden>Reporting is as critical as remediation. In Europe, WCAG-EM provides the structure. In the US, we rely on VPATs. Python-ACR helps bridge the gap with machine-readable data.</div>
   </section>
 
   <!-- Slide 6 -->
-  <section class="slide" id="architecture" aria-label="Architecture">
-   <h2>The Moment of Authoring</h2>
-   <div class="columns">
-    <div>
-     <p>Privacy-first AI pipeline:</p>
-     <ul class="emerge">
-      <li>Draft stays inside the CMS boundary</li>
-      <li>Inference happens via WebAssembly or a local service</li>
-      <li>No drafts leak to OpenAI or other third parties</li>
-     </ul>
-    </div>
-    <div>
-     <p>Local SLM stack:</p>
-     <ul>
-      <li>Bundled with the CMS for offline and regulated deployments</li>
-      <li>Optimized prompts for authoring context (field, template, role)</li>
-      <li>Deterministic fallbacks when the model cannot decide</li>
-     </ul>
-    </div>
-   </div>
-    <div class="notes" hidden>Emphasize the procurement reality: government and enterprise cannot ship drafts to remote AI. Local SLMs are our compliance path and our open-source advantage.</div>
+  <section class="slide" id="pivot" aria-label="Pivot">
+   <h2>Move from Gatekeeping to Guiding</h2>
+   <ul class="emerge">
+    <li><strong>User Research &amp; Flow:</strong> Applying friction strategically to help, not hinder</li>
+    <li><strong>Better Feedback:</strong> Error messages that inform and nudge towards solutions</li>
+    <li><strong>Smart AI:</strong> Verification tools that ensure humans stay in the loop</li>
+    <li><strong>Contextual Learning:</strong> Teaching the 'why' alongside the 'how' in the workflow</li>
+   </ul>
+  <div class="notes" hidden>Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance. This ensures we are helping users evaluate AI suggestions and keeping them in the loop.</div>
   </section>
 
   <!-- Slide 7 -->
+  <section class="slide" id="shift-left" aria-label="Shifting Left">
+   <h2>Shifting Left: The Moment of Authoring</h2>
+   <div class="columns">
+    <div>
+     <p>Catching errors where they happen:</p>
+     <ul class="emerge">
+      <li>Think Spellcheck</li>
+      <li><strong>Sa11y:</strong> Automatic tooltip-driven guidance</li>
+      <li><strong>Editoria11y:</strong> User-friendly checks without the noise</li>
+      <li>Fix content <em>before</em> it gets published</li>
+     </ul>
+    </div>
+    <div class="next">
+     <p>Why this matters:</p>
+     <ul>
+      <li>Reduces remediation costs significantly</li>
+      <li>Empowers authors instead of policing them</li>
+      <li>Scales accessibility across the organization</li>
+     </ul>
+    </div>
+   </div>
+    <div class="notes" hidden>We need to shift left locally. Tools like Sa11y and Editoria11y show us the way by integrating checks directly into the authoring workflow.</div>
+  </section>
+
+  <!-- Slide 8 -->
   <section class="slide" id="atag3" aria-label="ATAG 3 Overview">
    <h2>Practical ATAG 3.0 Moves</h2>
    <ul class="emerge">
     <li>Contextual alt text: AI suggests descriptions using image analysis plus page context</li>
     <li>Plain language nudges: flag jargon and propose simpler synonyms to reduce cognitive load</li>
-    <li>Structure hints: "You bolded this—did you mean H3?"</li>
+    <li>Structure hints: "You bolded this—did you mean a heading (h3)?"</li>
    </ul>
   <div class="notes" hidden>Goal: lower cognitive load, not replace authors. Reiterate: keep authors in control. AI proposes, humans confirm.</div>
   </section>
 
-  <!-- Slide 8 -->
-  <section class="slide" id="wcagem" aria-label="WCAG-EM and Measurement">
-   <h2>Compliance is Science (WCAG-EM)
-</h2>
-   <p>ATAG is about writing, but WCAG-EM closes the loop on managing the site.</p>
-   <p>The worst step: WCAG-EM Step 3 — select a representative sample. Humans hate doing this.</p>
-  <div class="notes" hidden>Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork.</div>
+  <!-- Slide 9 -->
+  <section class="slide" id="eaa-reporting" aria-label="EAA Reporting">
+   <h2>European Accessibility Act (EAA) Reporting</h2>
+   <p>Publish It, Maintain It, Produce It on Request.</p>
+   <ul>
+    <li>EAA mandates service accessibility information (Article 13 + Annex V) is public, accessible &amp; maintained</li>
+    <li>Compliance needs to be updated as services change, not just at launch</li>
+    <li>Be ready to supply evidence to authorities on request (tests, defects, remediation actions)</li>
+    <li><strong>Practical output:</strong> a publishable “Annex V page” + a living defect &amp; remediation log (issue queue)</li>
+   </ul>
+    <div class="notes" hidden>
+     Be precise about terminology. WAD (Directive (EU) 2016/2102) explicitly requires an accessibility statement &amp; the Commission published a model statement (Implementing Decision (EU) 2018/1523). EAA does not reuse the phrase “accessibility statement”, but Article 13 requires service providers to comply with accessibility requirements, document &amp; maintain compliance &amp; provide information in line with Annex V (public, accessible &amp; kept available/updated for as long as the service is offered). This is the part most teams miss. The compliance deliverable is not just “fix bugs”; it is “publish the accessibility information, keep it current &amp; be ready to produce supporting evidence on request.” References: WAD https://eur-lex.europa.eu/eli/dir/2016/2102/oj/eng ; model statement decision https://eur-lex.europa.eu/eli/dec_impl/2018/1523/oj/eng ; EAA (see Article 13 + Annex V) https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng ; human-readable guide https://tetralogical.com/blog/2025/03/19/understanding-the-eaa/
+    </div>
   </section>
 
   <!-- Slide 9 -->
+  <section class="slide" id="wcagem" aria-label="WCAG-EM and Measurement">
+   <h2>Compliance is Science (WCAG-EM)
+</h2>
+    <li>ATAG is about writing &amp; structure</li>
+    <li>WCAG-EM closes the loop on managing the site</li>
+    <li>Automation &amp; training can reduce the workload</li>
+    <li>Use random sampling helps reduce the load</li>
+
+  <div class="notes" hidden>Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork.</div>
+  </section>
+
+  <!-- Slide 10 -->
   <section class="slide" id="sample" aria-label="Sample Use Cases">
    <h2>The "Generate Sample" Button</h2>
    <p>The CMS already knows:</p>
@@ -157,7 +197,7 @@
   <div class="notes" hidden>Turn the audit from a consulting contract into a dashboard widget. Highlight how automation de-risks audits: consistent sampling, faster retests, cheaper renewals.</div>
   </section>
 
-  <!-- Slide 10 -->
+  <!-- Slide 11 -->
   <section class="slide" id="community" aria-label="Community">
    <h2>Community Update (Dec 2025)</h2>
    <ul class="emerge">
@@ -168,7 +208,7 @@
   <div class="notes" hidden>Join the GitHub discussions and shape the norms before platforms lock them in. Invite contributors by name if present; point them to repos and meeting cadence.</div>
   </section>
 
-  <!-- Slide 11 -->
+  <!-- Slide 12 -->
   <section class="slide" id="cta" aria-label="Call To Action">
    <h2>The Open Web Alliance Mandate</h2>
    <ul class="emerge">
@@ -179,19 +219,21 @@
   <div class="notes" hidden>Challenge the room: we either build the open stack now or live under proprietary audit bots.</div>
   </section>
 
-  <!-- Slide 12 -->
+  <!-- Slide 13 -->
   <section class="slide" id="resources" aria-label="Resources">
    <h2>Resources</h2>
    <ul>
     <li><a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a></li>
-    <li><a href="https://www.w3.org/TR/WCAG-EM/">WCAG-EM</a></li>
-    <li><a href="https://github.com/w3c/atag">W3C ATAG Community Group GitHub</a></li>
+    <li><a href="https://www.w3.org/community/atag/">W3C ATAG Community Group (CG)</a></li>
+    <li><a href="https://github.com/w3c-cg/atag">W3C ATAG CG on GitHub</a></li>
+    <li><a href="https://w3c.github.io/wai-wcag-em/">W3C WCAG-EM Updated Draft</a></li>
+    <li><a href="https://github.com/w3c/wai-wcag-em">W3C WCAG-EM on GitHub</a></li>
    </ul>
    <p>QR code placeholder for quick access.</p>
   <div class="notes" hidden>Encourage scanning the QR and committing to one action before leaving the room.</div>
   </section>
 
-  <!-- Slide 13 -->
+  <!-- Slide 14 -->
   <section class="slide final" id="questions" aria-label="Questions and contact">
    <h2>Questions</h2>
    <div class="next">
