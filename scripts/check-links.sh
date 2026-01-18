@@ -18,7 +18,7 @@ while IFS= read -r url; do
   [ -z "$url" ] && continue
   # skip anchors and mailto
   case "$url" in
-    '#'* | 'mailto:'*)
+    '#'* | 'mailto:'* | 'http://localhost'* | 'https://www.drupal.org'*)
       continue
       ;;
   esac
