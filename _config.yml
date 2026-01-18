@@ -26,7 +26,16 @@ include:
   - carbon.txt
 plugins:
   - jekyll-sitemap
-exclude: ["AGENTS.md"]
+exclude:
+  - AGENTS.md
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE
 site.lang: en-ca
 
 # Dart Sass configuration to reduce deprecation noise from dependencies
