@@ -77,6 +77,14 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Narrative alignment: conflict/villain/hero/twist/call preserved.
 - Timing: duration/warn classes intact; progress/clock elements present.
 
+## Quality Assurance
+Before committing changes to presentations:
+- Run full QA: `npm run qa:all` (requires `npm install` in project root)
+- Verify HTML validity: `npm run validate:html`
+- Check links: `npm run check:links`
+- Audit accessibility: `npm run scan:accessibility`
+- Fix any landmarks errors (ensure unique labels) and heading order.
+
 ## Scope to /presentations
 - Do not apply any changes from this to the parent directory. Keep it to within the /presentations folder
 - Each presentation should be able to run independently, assuming access to the /presentations/ca-slides folder
