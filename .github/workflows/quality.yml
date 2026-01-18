@@ -22,6 +22,15 @@ jobs:
         with:
           node-version: 20
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build
+
       - name: HTML validation (presentations + built site)
         run: |
           npx --yes html-validate "presentations/**/*.html" "p/**/*.html" || true
