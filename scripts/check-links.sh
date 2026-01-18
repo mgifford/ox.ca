@@ -18,7 +18,7 @@ while IFS= read -r url; do
   [ -z "$url" ] && continue
   # skip anchors and mailto
   case "$url" in
-    '#'* | 'mailto:'* | 'http://localhost'* | 'https://www.drupal.org'*)
+    '#'* | 'mailto:'* | 'http://localhost'* | 'https://www.drupal.org'* | 'https://www.linkedin.com'*)
       continue
       ;;
   esac
@@ -40,6 +40,8 @@ while IFS= read -r url; do
       # resolve relative to the presentations dir
       path=$(python3 -c 'import os,sys; print(os.path.normpath(os.path.join(sys.argv[1], sys.argv[2], sys.argv[3])))' "$ROOT" "$base_dir" "$url")
     fi
+    # strip query string
+    path="${path%%\?*}"
     if [ -e "$path" ]; then
       echo "OK: local $url -> $path"
     else
