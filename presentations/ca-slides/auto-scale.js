@@ -28,6 +28,8 @@
       // Reset any previous scaling to get accurate measurements
       slide.style.fontSize = '';
       slide.style.lineHeight = '';
+      slide.style.width = '';
+      slide.style.height = '';
       slide.removeAttribute('data-text-scaled');
       
       // Reset list item margins
@@ -39,6 +41,7 @@
       // Force layout recalculation
       void slide.offsetHeight;
       
+      const originalWidth = slide.offsetWidth;
       const slideHeight = slide.offsetHeight;
       const availableHeight = slideHeight - footerReserve;
       
@@ -66,6 +69,8 @@
         const newSize = currentSize * scaleFactor;
         
         slide.style.fontSize = `${newSize}px`;
+        slide.style.width = `${originalWidth}px`;
+        slide.style.height = `${slideHeight}px`;
         
         // Proportionally adjust line-height
         const computedLineHeight = window.getComputedStyle(slide).lineHeight;
