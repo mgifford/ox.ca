@@ -8,6 +8,7 @@ exclude = [
   "https://www.legislation.gov.uk/**", # Gov site intermittently returns nonstandard/unknown codes to bots
   "https://patterns.localgovdrupal.org/**", # Occasionally unreachable from CI network
   "https://www.gnu.org/philosophy/free-sw.en.html" # Rate-limited (429) under CI
+  ,"https://tetralogical.com/**" # Blocks frequent bot requests; avoid CI failures
 ]
 
 # Retry a bit to reduce flakiness (mirrors CI flags)
