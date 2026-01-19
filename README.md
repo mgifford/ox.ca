@@ -13,7 +13,7 @@ bundle install
 bundle exec jekyll serve --source .
 ```
 
-Then open http://localhost:4000 after the server starts (keep it as text so link checkers ignore it).
+Then open localhost:4000 in your browser once the server starts (local dev only; not reachable in CI).
 
 ---
 
