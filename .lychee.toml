@@ -4,7 +4,10 @@ exclude = [
   "https://www.drupal.org/**",   # Drupal blocks HEAD/GET from bots (returns 403)
   "http://localhost:4000/**",    # Local dev host
   "http://127.0.0.1/**",         # Local dev host
-  "https://www.linkedin.com/**"   # LinkedIn often returns nonstandard status codes to bots
+  "https://www.linkedin.com/**",  # LinkedIn often returns nonstandard status codes to bots
+  "https://www.legislation.gov.uk/**", # Gov site intermittently returns nonstandard/unknown codes to bots
+  "https://patterns.localgovdrupal.org/**", # Occasionally unreachable from CI network
+  "https://www.gnu.org/philosophy/free-sw.en.html" # Rate-limited (429) under CI
 ]
 
 # Retry a bit to reduce flakiness (mirrors CI flags)
