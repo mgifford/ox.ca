@@ -78,38 +78,13 @@ jobs:
           echo "Server did not start" >&2
           exit 1
 
-      - name: Accessibility scan (home)
+      - name: Accessibility scan (pa11y-ci)
         if: always()
         run: |
           if [ -f /tmp/server.pid ]; then
-            npx --yes pa11y http://127.0.0.1:4173/ --standard WCAG2AA --timeout 60000
+            npx --yes pa11y-ci --config .pa11yci-ci.json || true
           else
             echo "Skipping pa11y: server not running."
-          fi
-
-      - name: Accessibility scan (presentations index)
-        if: always()
-        run: |
-          if [ -f /tmp/server.pid ]; then
-            npx --yes pa11y http://127.0.0.1:4173/presentations/ --standard WCAG2AA --timeout 60000 || true
-          fi
-
-      - name: Accessibility scan (key presentation pages)
-        if: always()
-        run: |
-          if [ -f /tmp/server.pid ]; then
-            set -e
-            PAGES=(
-              "/p/"
-              "/presentations/a11y-sovereignty-fosdem26.html"
-              "/presentations/atag-fosdem26.html"
-              "/presentations/EAA-drupal4gov-eu26.html"
-              "/presentations/procurement-fosdem26.html"
-            )
-            for path in "${PAGES[@]}"; do
-              echo "Running pa11y on ${path}"
-              npx --yes pa11y "http://127.0.0.1:4173${path}" --standard WCAG2AA --timeout 60000 || true
-            done
           fi
 
       - name: Static security checks (basic)

@@ -1,0 +1,18 @@
+{
+  "defaults": {
+    "timeout": 60000,
+    "standard": "WCAG2AA",
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    }
+  },
+  "urls": [
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/presentations/",
+    "http://127.0.0.1:4173/p/",
+    "http://127.0.0.1:4173/presentations/a11y-sovereignty-fosdem26.html",
+    "http://127.0.0.1:4173/presentations/atag-fosdem26.html",
+    "http://127.0.0.1:4173/presentations/EAA-drupal4gov-eu26.html",
+    "http://127.0.0.1:4173/presentations/procurement-fosdem26.html"
+  ]
+}
