@@ -33,11 +33,23 @@ jobs:
 
       - name: HTML validation (presentations + built site)
         run: |
-          npx --yes html-validate -c .htmlvalidate.json "presentations/**/*.html" "p/**/*.html" || true
+          set +e
+          npx --yes html-validate -c .htmlvalidate.json "presentations/**/*.html" "p/**/*.html"
+          PRES_EXIT=$?
           # Validate built HTML if present (use repo config)
           if [ -d _site ]; then
-            npx --yes html-validate -c .htmlvalidate.json "_site/**/*.html" || true
+            npx --yes html-validate -c .htmlvalidate.json "_site/**/*.html"
+            SITE_EXIT=$?
+          else
+            SITE_EXIT=0
           fi
+          # Only fail if presentations have errors (built site warnings are acceptable)
+          if [ $PRES_EXIT -ne 0 ]; then
+            echo "Presentation validation failed with exit code $PRES_EXIT"
+            exit $PRES_EXIT
+          fi
+          echo "HTML validation completed (built site exit: $SITE_EXIT)"
+          exit 0
 
       - name: Spell check (content only)
         run: |
