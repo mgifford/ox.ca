@@ -25,7 +25,8 @@ while IFS= read -r url; do
 
   if [[ "$url" =~ ^https?:// ]]; then
     # check external URL
-    status=$(curl -I -L --max-time 10 -s -o /dev/null -w "%{http_code}" "$url" || echo 000)
+    # Use GET (not HEAD) to avoid false 404s on hosts that block HEAD (e.g., Bluesky)
+    status=$(curl -L --max-time 10 -s -o /dev/null -w "%{http_code}" "$url" || echo 000)
     if [ "$status" = "000" ] || [ "$status" -ge 400 ]; then
       echo "BROKEN: $url (status $status)"
       failed=1

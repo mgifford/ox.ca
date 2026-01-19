@@ -12,7 +12,7 @@ Feel free to reach out to me on:
 
 - [LinkedIn: mgifford](https://www.linkedin.com/in/mgifford/)
 - [Mastodon: @mgifford@mastodon.social](https://mastodon.social/@mgifford)
-- [Bluesky: @ox.ca ](https://bsky.app/profile/ox.ca)
+- [Bluesky: @ox.ca](https://bsky.app/profile/ox.ca)
 
 ## Other Sites
 
