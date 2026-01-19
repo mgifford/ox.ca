@@ -11,6 +11,6 @@ exclude = [
   ,"https://tetralogical.com/**" # Blocks frequent bot requests; avoid CI failures
 ]
 
-# Retry a bit to reduce flakiness (mirrors CI flags)
-max-retries = 2
-retry-wait-time = 2
+# Retry a bit more to reduce flakiness
+max-retries = 4
+retry-wait-time = 3
