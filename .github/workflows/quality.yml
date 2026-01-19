@@ -118,7 +118,7 @@ jobs:
       - name: Link check (lychee)
         uses: lycheeverse/lychee-action@v2.0.2
         with:
-          args: --verbose --no-progress --retry-wait-time 2 --max-retries 2 --exclude 'https://www.drupal.org.*' --exclude 'http://localhost:4000.*' "_site/**/*.html"
+          args: --verbose --no-progress --retry-wait-time 2 --max-retries 2 --config .lychee.toml "_site/**/*.html"
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

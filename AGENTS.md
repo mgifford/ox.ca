@@ -38,6 +38,7 @@ Guardrails for keeping the ox.ca landing page clear, accurate, and accessible.
 ## Review checklist
 - Run local quality checks: `npm run qa:all` (requires `npm install`).
 - Links work and have context; alt text is present where needed.
+- Pin external links to their final destinations to avoid redirects and reduce link-check noise.
 - Spelling and casing match the guidance; YAML front matter (if any) is valid.
 - Page renders cleanly on mobile and desktop; nothing breaks the minimal theme.
 

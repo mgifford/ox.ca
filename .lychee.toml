@@ -1,0 +1,11 @@
+# Link checker configuration
+# Centralize ignores so local runs and CI stay in sync.
+exclude = [
+  "https://www.drupal.org/**",   # Drupal blocks HEAD/GET from bots (returns 403)
+  "http://localhost:4000/**",    # Local dev host
+  "http://127.0.0.1/**"          # Local dev host
+]
+
+# Retry a bit to reduce flakiness (mirrors CI flags)
+max-retries = 2
+retry-wait-time = 2
