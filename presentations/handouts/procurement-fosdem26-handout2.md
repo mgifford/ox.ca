@@ -1,4 +1,4 @@
-# Procurement handout: RFP clauses and evaluation checklist
+# Procurement Handout: RFP Clauses & Checklist
 
 This handout contains extended RFP clause examples and an evaluation checklist that procurement teams can copy into tenders.
 
