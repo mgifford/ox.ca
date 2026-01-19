@@ -82,7 +82,7 @@ jobs:
         if: always()
         run: |
           if [ -f /tmp/server.pid ]; then
-            npx --yes pa11y http://127.0.0.1:4173/ --standard wcag2aa --timeout 60000
+            npx --yes pa11y http://127.0.0.1:4173/ --standard WCAG2AA --timeout 60000
           else
             echo "Skipping pa11y: server not running."
           fi
@@ -91,7 +91,7 @@ jobs:
         if: always()
         run: |
           if [ -f /tmp/server.pid ]; then
-            npx --yes pa11y http://127.0.0.1:4173/presentations/ --standard wcag2aa --timeout 60000 || true
+            npx --yes pa11y http://127.0.0.1:4173/presentations/ --standard WCAG2AA --timeout 60000 || true
           fi
 
       - name: Accessibility scan (key presentation pages)
@@ -108,7 +108,7 @@ jobs:
             )
             for path in "${PAGES[@]}"; do
               echo "Running pa11y on ${path}"
-              npx --yes pa11y "http://127.0.0.1:4173${path}" --standard wcag2aa --timeout 60000 || true
+              npx --yes pa11y "http://127.0.0.1:4173${path}" --standard WCAG2AA --timeout 60000 || true
             done
           fi
 
