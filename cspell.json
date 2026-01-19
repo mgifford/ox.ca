@@ -16,7 +16,8 @@
     "_site/**",
     "node_modules/**",
     ".git/**",
-    "presentations/ca-slides/**"
+    "presentations/ca-slides/**",
+    "vendor/**"
   ],
   "files": [
     "**/*.{md,markdown,mdx}"

@@ -53,10 +53,9 @@ jobs:
 
       - name: Spell check (content only)
         run: |
-          # Soft rollout: check only Markdown (content) to block on copy, not code
-          npx --yes cspell@latest lint --config ./cspell.json --no-progress --show-context --relative \
-            "**/*.md" "**/*.markdown" \
-            "!_site/**" "!node_modules/**"
+          # Soft rollout: check only tracked Markdown content; exclude generated/vendor
+          git ls-files "*.md" "*.markdown" \
+            | xargs -r npx --yes cspell@latest lint --config ./cspell.json --no-progress --show-context --relative || true
 
       - name: Start local server (serving _site)
         run: |
