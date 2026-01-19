@@ -107,7 +107,8 @@
    <ul>
     <li>ATAG 2.0 and We4Authors were both before the current LLM acceleration</li>
     <li>Code on its own can provide good guidance, but is limited</li>
-    <li>AI allows us to move to providing better su to guiding</li>
+    <li>AI allows us to move to providing better guidance</li>
+    <li>Not for AI generated content but AI assisted guidance</li>
    </ul>
   <div class="notes" hidden>We are moving from scolding to guiding.</div>
   <div class="details">Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance.</div>
@@ -115,22 +116,23 @@
 
   <!-- Slide 6 -->
   <section class="slide" id="architecture" aria-label="Slide: Authoring Architecture">
-   <h2 id="architecture-heading">The Moment of Authoring</h2>
+   <h2 id="architecture-heading">Vision: The Moment of Authoring</h2>
    <div class="columns">
     <div>
      <p>Privacy-first AI pipeline:</p>
      <ul class="emerge">
       <li>Draft stays inside the CMS boundary</li>
-      <li>Inference happens via WebAssembly or a local service</li>
-      <li>No drafts leak to OpenAI or other third parties</li>
+      <li>Inference via a local service</li>
+      <li>No drafts leak to third parties</li>
      </ul>
     </div>
     <div>
-     <p>Local SLM stack:</p>
+     <p>Admin has choice of LLM models:</p>
      <ul>
-      <li>Bundled with the CMS for offline and regulated deployments</li>
-      <li>Optimized prompts for authoring context (field, template, role)</li>
-      <li>Deterministic fallbacks when the model cannot decide</li>
+      <li>Local Small Language Model (SLM)</li>
+      <li>Bundled with the CMS, with regulated deployments</li>
+      <li>Optimized prompts for authoring context (field, template & role)</li>
+      <li>Guardrails for LLM inputs</li>
      </ul>
     </div>
    </div>
@@ -146,17 +148,17 @@
      <p>Catching errors where they happen:</p>
      <ul class="emerge">
       <li>Think Spellcheck</li>
-      <li><strong>Sa11y:</strong> Automatic tooltip-driven guidance</li>
-      <li><strong>Editoria11y:</strong> User-friendly checks without the noise</li>
-      <li>Fix content <em>before</em> it gets published</li>
+      <li><strong>Sa11y:</strong> Bookmarklet+</li>
+      <li><strong>Editoria11y:</strong> CMS integrated</li>
+      <li>Both fix content <em>before</em> it gets published</li>
      </ul>
     </div>
     <div class="next">
      <p>Why this matters:</p>
      <ul>
       <li>Reduces remediation costs significantly</li>
-      <li>Empowers authors instead of policing them</li>
-      <li>Scales accessibility across the organization</li>
+      <li>Empowers authors != policing them</li>
+      <li>X-organization accessibility</li>
      </ul>
     </div>
    </div>
@@ -168,22 +170,27 @@
   <section class="slide" id="atag3" aria-label="Slide: AI Capabilities">
    <h2 id="atag3-heading">What is Possible With AI?</h2>
    <ul class="emerge">
-    <li><strong>Better Alt Text:</strong> AI often outperforms humans (even experts) in drafting descriptions.</li>
-    <li><strong>Plain Language &amp; Captions:</strong> Automated simplification and media alternatives.</li>
-    <li><strong>The Guardrails:</strong> Friction is a feature. Require human review (e.g., "Remove this line to publish").</li>
-    <li>Structural hints: "you bolded this-did you mean an H3?"</li>
+    <li><strong>Better Alt Text:</strong> AI often outperforms humans (even experts) in drafting descriptions</li>
+    <li><strong>Plain Language &amp; Captions:</strong> Automated simplification and media alternatives</li>
+    <li><strong>Guardrails:</strong> Friction is a feature. Require human review</li>
+    <li><strong>Structural Hints:</strong> "you bolded this-did you mean an H3?"</li>
    </ul>
-  <div class="notes" hidden>AI does the heavy lifting, but humans must verify.</div>
+  <div class="notes" hidden>"Remove this line to publish". AI does the heavy lifting, but humans must verify.</div>
   <div class="details">Based on recent discussions in the W3C ATAG CG. We can use AI to do the heavy lifting for plain language and alt text, but we must implement UI friction to ensure the author actually verifies the output.</div>
   </section>
 
   <!-- Slide 9 -->
   <section class="slide" id="wcagem" aria-label="Slide: WCAG-EM Compliance">
    <h2 id="wcagem-heading">Compliance is Science (Revised WCAG-EM)</h2>
-   <p>ATAG is about writing, but the <a href="https://w3c.github.io/wai-wcag-em/">revised WCAG-EM 2.0</a> closes the loop on managing.</p>
-   <p>The worst step: WCAG-EM Step 3 — select a representative sample. Humans hate doing this.</p>
+   <ul>   
+    <li>ATAG is about writing, but WCAG-EM closes the loop on managing the site</li>
+    <li>AI can help make this easier</li>
+    <li>WCAG-EM is about testing and validating</li>
+    <li>All of which supports reporting for the Web Accessibility Directive and the European Accessibility Act</li>
+   </ul>
+
+  <div class="details">EAA Annex V service accessibility information. Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork. WCAG-EM Step 3 — select a representative sample. Humans hate doing this.</p>
   <div class="notes" hidden>Sampling should be data science, not busywork.</div>
-  <div class="details">Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork.</div>
   </section>
 
   <!-- Slide 10 -->
