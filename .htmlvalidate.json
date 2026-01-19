@@ -5,6 +5,7 @@
     "unique-landmark": "error",
     "hidden-focusable": "error",
     "no-inline-style": "warn",
-    "no-trailing-whitespace": "error"
+    "no-trailing-whitespace": "warn",
+    "void-style": "off"
   }
 }

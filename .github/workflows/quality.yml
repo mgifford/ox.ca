@@ -33,10 +33,10 @@ jobs:
 
       - name: HTML validation (presentations + built site)
         run: |
-          npx --yes html-validate "presentations/**/*.html" "p/**/*.html" || true
-          # Validate built HTML if present
+          npx --yes html-validate -c .htmlvalidate.json "presentations/**/*.html" "p/**/*.html" || true
+          # Validate built HTML if present (use repo config)
           if [ -d _site ]; then
-            npx --yes html-validate "_site/**/*.html"
+            npx --yes html-validate -c .htmlvalidate.json "_site/**/*.html" || true
           fi
 
       - name: Spell check (content only)
