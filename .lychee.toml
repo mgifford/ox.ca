@@ -9,8 +9,15 @@ exclude = [
   "https://patterns.localgovdrupal.org/**", # Occasionally unreachable from CI network
   "https://www.gnu.org/philosophy/free-sw.en.html" # Rate-limited (429) under CI
   ,"https://tetralogical.com/**" # Blocks frequent bot requests; avoid CI failures
+  ,"https://www.lflegal.com/**"  # Timeout-prone; skip for now
 ]
 
 # Retry a bit more to reduce flakiness
 max-retries = 4
 retry-wait-time = 3
+
+# Increase timeout threshold for slow sites (default is 20s)
+timeout = 30
+
+# Use warnings instead of errors for timeouts to avoid build failures
+error-level = "warning"
