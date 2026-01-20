@@ -272,6 +272,9 @@ h4 {font-size: 1.2em; margin: 0.5em 0}
 .slide .ca-footer .ca-footer-text {flex: 0 1 auto; white-space: nowrap;
   overflow: hidden; text-overflow: ellipsis; text-align: center}
 
+/* Hide footer text on slides with .hide-footer-text class (for content-heavy slides) */
+.slide.hide-footer-text .ca-footer-text {display: none}
+
 /* EM elements get a highlighter-like background */
 .slide em {font-style: normal; padding-left: 0.1em; padding-right: 0.1em;
   text-shadow: none; background: var(--em-bg)}
