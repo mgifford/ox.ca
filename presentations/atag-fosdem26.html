@@ -68,7 +68,7 @@
     <li>We train authors &rarr; they leave &rarr; we retrain</li>
     <li>Authors are SMEs, not accessibility experts</li>
     <li>The CMS as filter — If the filter allows garbage, we get garbage</li>
-    <li>We need focus on authors, not auditors</li>
+    <li>Focus on authors, not auditors</li>
    </ul>
   <div class="notes" hidden>Remediation costs more than prevention. </div>
   <div class="details">Remediation costs more than prevention every single time. Reinforce the burn rate: every handoff and retrain cycle multiplies cost. Prevention is cheaper than cleanup.</div>
@@ -81,7 +81,7 @@
     <div>
      <h3>Part A: The Editor UI</h3>
      <p>The authoring interface itself must be accessible.</p>
-     <p>~25% of the the population has a disability (including authors).</p>
+     <p>~25% of the population has a disability (including authors).</p>
     </div>
     <div class="next">
      <h3>Part B: Support Authors</h3>
@@ -112,7 +112,7 @@
    <h2 id="we4authors-heading">The We4Authors Lesson</h2>
    <ul>
     <li>Funka lead an initiative to prepare for the European Accessibility Act (EAA)</li>
-    <li>Several CMS authors aligned on some basic defaults</li>
+    <li>Several CMS &amp; editor projects aligned on basic defaults</li>
     <li>The focus was on building a better UI &amp; doing user research with authors</li>
     <li>4 years ago, the possibilities of AI seemed far away</li>
    </ul>
@@ -121,14 +121,15 @@
   </section>
 
   <!-- Slide 6  -->
-  <section class="slide" id="we4authors" aria-label="Slide: We4Authors Opportunities">
-   <h2 id="we4authors-heading">Outstanding Opportunities</h2>
+  <section class="slide" id="we4authors-opportunity" aria-label="Slide: We4Authors Opportunities">
+   <h2 id="we4authors-opportunity-heading">Outstanding Opportunities</h2>
+   <p>Biggest opportunities for improvement in authoring tools:</p>
    <div class="columns">
     <div>
      <ul>
       <li>Change language</li>
       <li>Tables creator</li>
-      <li>Text alternative (ALT-text)</li>
+      <li>Text alternative (ALT text)</li>
       <li>Forms editor</li>
       <li>Video</li>
      </ul>
@@ -143,11 +144,11 @@
      </ul>
     </div>
    </div>
-  <div class="notes" hidden>Summary of opportunities</div>
-  <div class="details">Archive of the references https://mgifford.github.io/We4Authors/ </div>
+  <div class="notes" hidden>Short & punchy</div>
+  <div class="details">Summary of opportunities. Archive of the references https://mgifford.github.io/We4Authors/ </div>
   </section>
 
-  <!-- Slide 6 -->
+  <!-- Slide 7 -->
   <section class="slide" id="architecture" aria-label="Slide: Authoring Architecture">
    <h2 id="architecture-heading">Vision: The Moment of Authoring</h2>
    <div class="columns">
@@ -173,7 +174,7 @@
   <div class="details">Local SLMs are our compliance path and our open-source advantage. Emphasize the procurement reality: government and enterprise cannot ship drafts to remote AI.</div>
   </section>
 
-  <!-- Slide 7 -->
+  <!-- Slide 8 -->
   <section class="slide" id="shift-left" aria-label="Slide: Shift Left">
    <h2 id="shift-left-heading">Right Now: Shifting Left</h2>
    <div class="columns">
@@ -199,74 +200,76 @@
   <div class="details">Tools like Sa11y and Editoria11y show us the way by integrating checks directly into the authoring workflow.</div>
   </section>
 
-  <!-- Slide 8 -->
+  <!-- Slide 9 -->
   <section class="slide" id="atag3" aria-label="Slide: AI Capabilities">
    <h2 id="atag3-heading">What More is Possible?</h2>
    <ul class="emerge">
-    <li><strong>Better Alt Text:</strong> AI often outperforms humans (even experts) in drafting descriptions</li>
+    <li><strong>Better Alt Text:</strong> In my previous evaluation, AI often outperforms humans (Trust but Verify)</li>
     <li><strong>Plain Language &amp; Captions:</strong> Automated simplification and media alternatives</li>
     <li><strong>Friction:</strong> Actually require human review</li>
-    <li><strong>Structural Hints:</strong> "you bolded this-did you mean an H3?"</li>
+    <li><strong>Structural Hints:</strong> “You bolded this. Did you mean an H3?”</li>
    </ul>
   <div class="notes" hidden>Friction is a feature. "Remove this line to publish". AI does the heavy lifting, but humans must verify.</div>
-  <div class="details">Based on recent discussions in the W3C ATAG CG. We can use AI to do the heavy lifting for plain language and alt text, but we must implement UI friction to ensure the author actually verifies the output.</div>
-  </section>
-
-
-  <!-- Slide 9 -->
-  <section class="slide" id="wcagem" aria-label="Slide: WCAG-EM Compliance">
-   <h2 id="wcagem-heading">Compliance is Science</h2>
-   <ul>   
-    <li>Web Content Accessibility Guidelines - Evaluation Methodology <br/>
-      WCAG-EM: a W3C process for consistently evaluating site accessibility</li>
-    <li>There is potential for AI to help accelerate the process</li>
-    <li>These reports feed into the Web Accessibility Directive (WAD) &amp; the European Accessibility Act (EAA)</li>
-   </ul>
-  <div class="details">EAA Annex V service accessibility information. Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment. Sampling is data science, not busywork. WCAG-EM Step 3 — select a representative sample. Humans hate doing this.</div>
-  <div class="notes" hidden>Sampling should be data science, not busywork.</div>
+  <div class="details">Based on recent discussions in the W3C ATAG CG. We can use AI to do the heavy lifting for plain language and alt text, but we must implement UI friction to ensure the author actually verifies the output. Alternative Text for Images: How Bad Are Our ALT text Anyway? https://archive.fosdem.org/2025/schedule/event/fosdem-2025-4709-alternative-text-for-images-how-bad-are-our-alt-text-anyway-/</div>
   </section>
 
 
   <!-- Slide 10 -->
+  <section class="slide" id="wcagem" aria-label="Slide: WCAG-EM Compliance">
+   <h2 id="wcagem-heading">Compliance is Science</h2>
+   <ul>
+    <li>Authoring support reduces audit scope and failure rates</li>
+    <li>Web Content Accessibility Guidelines - Evaluation Methodology</li>
+    <li>WCAG-EM gives a repeatable sampling and evaluation process — AI can support this</li>
+    <li>Python-ACR: a new tool to draft OpenACR documents</li>
+    <li>These reports feed into the Web Accessibility Directive (WAD) &amp; the European Accessibility Act (EAA)</li>
+   </ul>
+   <div class="notes" hidden>Other ACR tools: https://github.com/mgifford/python-acr https://acreditor.section508.gov/</div>
+   <div class="details">EAA Annex V service accessibility information. Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment.</div>
+  </section>
+
+
+  <!-- Slide 11 -->
   <section class="slide" id="wcagem-auto" aria-label="Slide: Automate WCAG-EM">
    <h2 id="wcagem-auto-heading">Automate WCAG-EM</h2>
    <ul>   
     <li>You can't automate everything, but much more can be</li>
     <li>Automated crawlers pulling in key pages &amp; random samples</li>
     <li>Organized by WCAG Success Criteria &amp; written straight to JSON</li>
-    <li>Manual + users with disabilities + accessibility statements</li>
+    <li>Manual testing, including testing with disabled users where appropriate, plus accessibility statements</li>
    </ul>
   <div class="notes" hidden>What can be automated.</div>
   <div class="details"></div>
   </section>
 
-  <!-- Slide 11 -->
+  <!-- Slide 12 -->
   <section class="slide" id="cta" aria-label="Slide: Collaborate">
    <h2 id="cta-heading">Move Together</h2>
    <ul class="emerge">
-    <li>We are all rushing to keep up</li>
+    <li>Pick one ATAG Part B practice and implement it in your editor or CMS</li>
     <li>Join the W3C ATAG Community Group</li>
     <li>Share your work &amp; seek ways to collaborate</li>
     <li>Advocate for LLMs to be more inclusive</li>
    </ul>
   <div class="notes" hidden>Build the open stack or live under proprietary bots.</div>
-  <div class="details">Challenge the room: we either build the open stack now or live under proprietary audit bots.</div>
+  <div class="details">Challenge the room: we either build the open stack now or live under proprietary audit bots. Designing Content Authoring Experiences by Greg Dunlap https://authoringexperience.com/</div>
   </section>
 
-  <!-- Slide 12 -->
+  <!-- Slide 13 -->
   <section class="slide" id="resources" aria-label="Slide: Resources">
    <h2 id="resources-heading">Resources</h2>
    <ul>
     <li><a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a></li>
+    <li><a href="https://github.com/w3c-cg/atag">W3C ATAG Community Group</a></li>
     <li><a href="https://w3c.github.io/wai-wcag-em/">Revised WCAG-EM 2.0 (Draft)</a></li>
-    <li><a href="https://www.w3.org/community/atag/">W3C ATAG Community Group</a></li>
+    <li><a href="https://mgifford.github.io/We4Authors/">WeAuthors: Archive</a></li>
    </ul>
    <p>QR code placeholder for quick access.</p>
   <div class="notes" hidden>Scan the QR and commit to one action.</div>
   <div class="details">Encourage scanning the QR and committing to one action before leaving the room.</div>
   </section>
 
-  <!-- Slide 13 -->
+  <!-- Slide 14 -->
   <section class="slide final" id="questions" aria-label="Slide: Questions">
    <h2 id="questions-heading">Questions</h2>
    <div class="next">
