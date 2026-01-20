@@ -18,15 +18,14 @@ while IFS= read -r url; do
   [ -z "$url" ] && continue
   # skip anchors and mailto
   case "$url" in
-    '#'* | 'mailto:'* | 'http://localhost'* | 'https://www.drupal.org'* | 'https://www.linkedin.com'*)
+    '#'* | 'mailto:'*)
       continue
       ;;
   esac
 
   if [[ "$url" =~ ^https?:// ]]; then
     # check external URL
-    # Use GET (not HEAD) to avoid false 404s on hosts that block HEAD (e.g., Bluesky)
-    status=$(curl -L --max-time 10 -s -o /dev/null -w "%{http_code}" "$url" || echo 000)
+    status=$(curl -I -L --max-time 10 -s -o /dev/null -w "%{http_code}" "$url" || echo 000)
     if [ "$status" = "000" ] || [ "$status" -ge 400 ]; then
       echo "BROKEN: $url (status $status)"
       failed=1
@@ -41,8 +40,6 @@ while IFS= read -r url; do
       # resolve relative to the presentations dir
       path=$(python3 -c 'import os,sys; print(os.path.normpath(os.path.join(sys.argv[1], sys.argv[2], sys.argv[3])))' "$ROOT" "$base_dir" "$url")
     fi
-    # strip query string
-    path="${path%%\?*}"
     if [ -e "$path" ]; then
       echo "OK: local $url -> $path"
     else

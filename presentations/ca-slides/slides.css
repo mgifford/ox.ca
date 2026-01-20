@@ -356,7 +356,7 @@ ul.with-icons > li > *:first-child {display: inline-block;
   margin: 1.5em 0 0.5em 0; text-align: right}
 .slide.cover p.event, .slide.cover .deck-event {line-height: 1.4; color: var(--slide-fg);
   font-size: 0.95em; margin: 0; text-align: right}
-.slide.cover p:not(.note):not(.notes)::first-line {color: transparent}
+.slide.cover p:not(.note):not(.notes):not(.event)::first-line {color: transparent}
 .slide.cover p.event::first-line, .slide.cover .deck-event::first-line {color: inherit}
 .slide.cover .ca-footer {display: flex}
 
