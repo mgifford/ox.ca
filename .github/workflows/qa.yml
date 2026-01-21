@@ -51,7 +51,7 @@ jobs:
       - name: Run lychee-action link checker
         uses: lycheeverse/lychee-action@v2
         with:
-          args: "'./**/*.md' './presentations/**/*.html' --exclude .git --exclude node_modules --exclude _site --format markdown"
+          args: "--config .lychee.toml './**/*.md' './presentations/**/*.html' --exclude .git --exclude node_modules --exclude _site --format markdown"
 
   spell-check:
     name: Markdown spell-check
