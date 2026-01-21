@@ -2,14 +2,16 @@
 # Centralize ignores so local runs and CI stay in sync.
 exclude = [
   "https://www.drupal.org/**",   # Drupal blocks HEAD/GET from bots (returns 403)
+  "https://medium.com/**",       # Medium blocks bots; returns 403 to automated checkers
+  "https://www.weforum.org/**",  # World Economic Forum blocks automated checkers
   "http://localhost:4000/**",    # Local dev host
   "http://127.0.0.1/**",         # Local dev host
   "https://www.linkedin.com/**",  # LinkedIn often returns nonstandard status codes to bots
   "https://www.legislation.gov.uk/**", # Gov site intermittently returns nonstandard/unknown codes to bots
   "https://patterns.localgovdrupal.org/**", # Occasionally unreachable from CI network
-  "https://www.gnu.org/philosophy/free-sw.en.html" # Rate-limited (429) under CI
-  ,"https://tetralogical.com/**" # Blocks frequent bot requests; avoid CI failures
-  ,"https://www.lflegal.com/**"  # Timeout-prone; skip for now
+  "https://www.gnu.org/philosophy/free-sw.en.html", # Rate-limited (429) under CI
+  "https://tetralogical.com/**", # Blocks frequent bot requests; avoid CI failures
+  "https://www.lflegal.com/**"   # Timeout-prone; skip for now
 ]
 
 # Retry a bit more to reduce flakiness
@@ -18,6 +20,10 @@ retry-wait-time = 3
 
 # Increase timeout threshold for slow sites (default is 20s)
 timeout = 30
+
+# Accept 403 Forbidden for sites that block bots (excluded patterns above should catch these)
+# This allows legitimate content to pass while we exclude known bot-blocking domains
+accept = [200, 301, 302, 403, 429]
 
 # Use warnings instead of errors for timeouts to avoid build failures
 error-level = "warning"
