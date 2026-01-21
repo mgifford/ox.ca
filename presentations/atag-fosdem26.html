@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 
 <html lang="en-us">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Support Authors for Accessible Content</title>
-   <link rel="stylesheet" href="ca-slides/slides.css">
-   <script src="ca-slides/b6plus.js"></script>
-   <!-- <script src="ca-slides/auto-scale.js"></script> -->
-   <script src="ca-slides/offline-indicator.js"></script>
-   <script src="ca-slides/footer-overlap-detector.js"></script>
- </head>
+  <link rel="stylesheet" href="ca-slides/slides.css">
+  <script src="ca-slides/b6plus.js"></script>
+  <!-- <script src="ca-slides/auto-scale.js"></script> -->
+  <script src="ca-slides/offline-indicator.js"></script>
+  <script src="ca-slides/footer-overlap-detector.js"></script>
+</head>
 
-  <!-- Technical Notes for AI (A mini-AGENTS.md file) -->
-  <!--
+<!-- Technical Notes for AI (A mini-AGENTS.md file) -->
+<!--
   Anything within a class "notes"or "details" is hidden to the audience but visible to the speaker (or those who are viewing the slides afterwards)
   Notes are what the speaker needs to be remidned of. Details are for folks looking at it later, or if questions come up from the audience.
   Standardize on American spelling and use &amp; instead of "and".
   Avoid jargon where possible; explain acronyms on first use.
   -->
 
-  <!-- Submitted proposal (for reference) -->
-  <!--
+<!-- Submitted proposal (for reference) -->
+<!--
   Proposal title: We Need to Support Authors Better to Deliver Accessible Content
   Track: Collaboration and content management
   Time: 30min
@@ -50,7 +51,7 @@
 
   -->
 
- <body class="shower fade-in duration=25 warn=5 hidemouse">
+<body class="shower fade-in duration=25 warn=5 hidemouse">
 
   <div class="progress"></div>
   <div class="clock"></div>
@@ -58,252 +59,443 @@
 
   <!-- Slide 1 -->
   <section class="slide cover clear" id="cover" aria-label="Slide: Cover">
-   <h1 id="cover-heading">We Need to Support Authors Better to Deliver Accessible Content</h1>
-   <h2>From ATAG 2.0 to Local AI &amp; Automated WCAG-EM</h2>
-   <address>Mike Gifford</address>
-   <p class="event">4:05pm, Jan 31, 2026 (K.3.401) | FOSDEM 2026<br/>
-   Collaboration &amp; Content Management</p>
-   
-  <div class="notes" hidden>Welcome everyone. Thanks to the track organizers.</div>
-  <div class="details">Centering this conversation on authors is crucial. We usually focus on auditors, but authors are the ones creating the content.</div>
+    <h1 id="cover-heading">We Need to Support Authors Better to Deliver Accessible Content</h1>
+    <h2>From ATAG 2.0 to Local AI &amp; Automated WCAG-EM</h2>
+    <address>Mike Gifford</address>
+    <p class="event">4:05pm, Jan 31, 2026 (K.3.401) | FOSDEM 2026<br />
+      Collaboration &amp; Content Management</p>
+
+    <div class="notes" hidden>Thank organizers. Frame: authors, not auditors.</div>
+    <div class="details" hidden>
+      <p><strong>Why authors:</strong> Most accessibility failures originate during authoring (structure, links, images,
+        tables, headings, media alternatives). Audits only detect the outcomes.</p>
+      <p><strong>Scope of talk:</strong> ATAG 2.0 Part B (author support), We4Authors work, and what local AI changes
+        (context-aware guidance at the moment of authoring).</p>
+      <p><strong>Key claim this talk defends:</strong> Accessible content at scale requires better tooling defaults and
+        in-context guidance, not more one-off training.</p>
+    </div>
   </section>
 
   <!-- Slide 2 -->
   <section class="slide" id="problem" aria-label="Slide: Problem Definition">
-   <h2 id="problem-heading">The Definition of Insanity</h2>
-   <p>The Cycle of Failure:</p>
-   <ul class="emerge">
-    <li>We train authors &rarr; they leave &rarr; we retrain</li>
-    <li>Authors are SMEs, not accessibility experts</li>
-    <li>The CMS as filter — If the filter allows garbage, we get garbage</li>
-    <li>Focus on authors, not auditors</li>
-   </ul>
-  <div class="notes" hidden>Remediation costs more than prevention. </div>
-  <div class="details">Remediation costs more than prevention every single time. Reinforce the burn rate: every handoff and retrain cycle multiplies cost. Prevention is cheaper than cleanup.</div>
+    <h2 id="problem-heading">The Definition of Insanity</h2>
+    <p>The Cycle of Failure:</p>
+    <ul class="emerge">
+      <li>We train authors &rarr; they leave &rarr; we retrain</li>
+      <li>Authors are SMEs, not accessibility experts</li>
+      <li>The CMS as filter — If the filter allows garbage, we get garbage</li>
+      <li>Focus on authors, not auditors</li>
+    </ul>
+    <div class="notes" hidden>Prevention beats remediation. CMS is the gate.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li><strong>Training churn:</strong> Organizations repeatedly retrain because authors change roles or leave.
+          Tooling must carry knowledge forward.</li>
+        <li><strong>Authors are SMEs:</strong> Subject matter experts are not expected to be accessibility specialists.
+          The system must make the accessible path the easy path.</li>
+        <li><strong>CMS as filter:</strong> If the editor allows missing headings, bad link text, empty alt, broken
+          table structure, inaccessible embeds, you will publish those defects at scale.</li>
+        <li><strong>Shift focus:</strong> Support authors where decisions are made, instead of relying on auditors after
+          publication.</li>
+      </ul>
+      <p><strong>Supportive standards context:</strong> Authoring Tool Accessibility Guidelines (ATAG) explicitly frames
+        authoring tools as responsible for both accessible UIs and helping produce accessible content.
+        https://www.w3.org/TR/ATAG20/</p>
+    </div>
   </section>
 
   <!-- Slide 3 -->
   <section class="slide" id="atag" aria-label="Slide: ATAG Standard">
-   <h2 id="atag-heading">The Missing Standard: ATAG 2.0</h2>
-   <div class="columns">
-    <div>
-     <h3>Part A: The Editor UI</h3>
-     <p>The authoring interface itself must be accessible.</p>
-     <p>~25% of the population has a disability (including authors).</p>
+    <h2 id="atag-heading">The Missing Standard: ATAG 2.0</h2>
+    <div class="columns">
+      <div>
+        <h3>Part A: The Editor UI</h3>
+        <p>The authoring interface itself must be accessible.</p>
+        <p>~25% of the population has a disability (including authors).</p>
+      </div>
+      <div class="next">
+        <h3>Part B: Support Authors</h3>
+        <p>Accessible content creation can be hard.</p>
+        <p>Tools need to help content authors to produce accessible output.</p>
+      </div>
     </div>
-    <div class="next">
-     <h3>Part B: Support Authors</h3>
-     <p>Accessible content creation can be hard.</p>
-     <p>Tools need to help content authors to produce accessible output.</p>
+    <div class="notes" hidden>ATAG: A = accessible editor. B = help authors.</div>
+    <div class="details" hidden>
+      <p><strong>ATAG 2.0 structure:</strong></p>
+      <ul>
+        <li><strong>Part A:</strong> the authoring interface itself is accessible (authors can have disabilities too).
+        </li>
+        <li><strong>Part B:</strong> the tool supports producing accessible output (prompts, checks, repair help,
+          accessible defaults).</li>
+      </ul>
+      <p><strong>Why “missing standard”:</strong> WCAG is widely discussed, but ATAG adoption is limited. Many systems
+        treat author support as documentation, not product requirements.</p>
+      <p><strong>Reference:</strong> ATAG 2.0 (W3C Recommendation). https://www.w3.org/TR/ATAG20/</p>
     </div>
-   </div>
-  <div class="notes" hidden>ATAG Part B is the most ignored W3C standard.</div>
-  <div class="details">We wrote the checklist but never shipped the software because static rules could not cover dynamic context. Stress the historical gap: we treated ATAG Part B as aspirational because we lacked contextual engines.</div>
   </section>
 
 
   <!-- Slide 4 -->
   <section class="slide" id="pivot" aria-label="Slide: Pivot Strategy">
-   <h1 class="shout" id="pivot-heading">Move from Gatekeeping to Guiding</h1>
-   <ul>
-    <li>ATAG 2.0 is now over a decade old, prior to current LLM acceleration</li>
-    <li>Code on its own can provide guardrails, but guidance is limited</li>
-    <li>AI allows us to move to providing more custom assistance to authors</li>
-    <li>We don't need more AI generated content, but better help for people</li>
-   </ul>
-  <div class="notes" hidden>We are moving from scolding to guiding.</div>
-  <div class="details">Set the pivot: we are not scolding authors, we are giving them smart, contextual guidance.</div>
+    <h1 class="shout" id="pivot-heading">Move from Gatekeeping to Guiding</h1>
+    <ul>
+      <li>ATAG 2.0 is now over a decade old, prior to current LLM acceleration</li>
+      <li>Code on its own can provide guardrails, but guidance is limited</li>
+      <li>AI allows us to move to providing more custom assistance to authors</li>
+      <li>We don't need more AI generated content, but better help for people</li>
+    </ul>
+    <div class="notes" hidden>Stop policing. Start guiding in context.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li>ATAG 2.0 predates today’s LLM tooling. The original guidance assumed mostly static rules and limited context
+          awareness.</li>
+        <li>Rules-based guardrails are useful but shallow. They catch “missing alt” but not “bad alt for this image and
+          this page goal.”</li>
+        <li>Local AI can provide contextual assistance at authoring time: suggestions, checks, and coaching tied to the
+          actual draft content.</li>
+        <li>This is not about generating more content. It is about better decisions by humans, supported by tooling.
+        </li>
+      </ul>
+      <p><strong>Reference for the standard basis:</strong> ATAG 2.0. https://www.w3.org/TR/ATAG20/</p>
+    </div>
   </section>
 
   <!-- Slide 5  -->
   <section class="slide" id="we4authors" aria-label="Slide: We4Authors">
-   <h2 id="we4authors-heading">The We4Authors Lesson</h2>
-   <ul>
-    <li>Funka lead an initiative to prepare for the European Accessibility Act (EAA)</li>
-    <li>Several CMS &amp; editor projects aligned on basic defaults</li>
-    <li>The focus was on building a better UI &amp; doing user research with authors</li>
-    <li>4 years ago, the possibilities of AI seemed far away</li>
-   </ul>
-  <div class="notes" hidden>See earlier presentation.</div>
-  <div class="details">2023 Presentation https://archive.fosdem.org/2023/schedule/event/accessibility_and_open_source/</div>
+    <h2 id="we4authors-heading">The We4Authors Lesson</h2>
+    <ul>
+      <li>Funka lead an initiative to prepare for the European Accessibility Act (EAA)</li>
+      <li>Several CMS &amp; editor projects aligned on basic defaults</li>
+      <li>The focus was on building a better UI &amp; doing user research with authors</li>
+      <li>4 years ago, the possibilities of AI seemed far away</li>
+    </ul>
+    <div class="notes" hidden>We4Authors: good defaults, low adoption.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li>We4Authors was a cross-tool effort to improve authoring experiences and defaults ahead of the European
+          Accessibility Act context.</li>
+        <li>The emphasis was user research with authors and practical defaults, not only compliance checklists.</li>
+        <li>At the time, the missing piece was scalable contextual guidance inside authoring tools.</li>
+      </ul>
+      <p><strong>Reference (DrupalCon Europe session):</strong>
+        https://events.drupal.org/europe2020/sessions/top-cms-tools-are-working-together-build-more-inclusive-world.html
+      </p>
+      <p><strong>Related talk (FOSDEM archive):</strong>
+        https://archive.fosdem.org/2023/schedule/event/accessibility_and_open_source/</p>
+    </div>
   </section>
 
   <!-- Slide 6  -->
   <section class="slide" id="we4authors-opportunity" aria-label="Slide: We4Authors Opportunities">
-   <h2 id="we4authors-opportunity-heading">Outstanding Opportunities</h2>
-   <p>Biggest opportunities for improvement in authoring tools:</p>
-   <div class="columns">
-    <div>
-     <ul>
-      <li>Change language</li>
-      <li>Tables creator</li>
-      <li>Text alternative (ALT text)</li>
-      <li>Forms editor</li>
-      <li>Video</li>
-     </ul>
+    <h2 id="we4authors-opportunity-heading">Outstanding Opportunities</h2>
+    <p>Biggest opportunities for improvement in authoring tools:</p>
+    <div class="columns">
+      <div>
+        <ul>
+          <li>Change language</li>
+          <li>Tables creator</li>
+          <li>Text alternative (ALT text)</li>
+          <li>Forms editor</li>
+          <li>Video</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Documentation</li>
+          <li>Live testing while authoring</li>
+          <li>Testing of documents</li>
+          <li>Testing the content of pages</li>
+          <li>Testing the whole website</li>
+        </ul>
+      </div>
     </div>
-    <div>
-     <ul>
-      <li>Documentation</li>
-      <li>Live testing while authoring</li>
-      <li>Testing of documents</li>
-      <li>Testing the content of pages</li>
-      <li>Testing the whole website</li>
-     </ul>
+    <div class="notes" hidden>List the big gaps. Point to archive.</div>
+    <div class="details" hidden>
+      <p><strong>What these opportunities represent:</strong> recurring high-impact failure modes where authoring tools
+        can prevent defects before publication.</p>
+      <ul>
+        <li><strong>Language:</strong> correct language tags, mixed-language spans, and author prompts.</li>
+        <li><strong>Tables:</strong> header association, captions, scope, and discouraging layout tables.</li>
+        <li><strong>Alt text:</strong> presence, quality checks, and context-aware suggestions.</li>
+        <li><strong>Forms:</strong> labels, instructions, error prevention, and error recovery support.</li>
+        <li><strong>Video:</strong> captions, transcripts, audio description prompts, and publishing gates.</li>
+        <li><strong>Testing:</strong> live checks while authoring, plus document and site-level evaluations.</li>
+      </ul>
+      <p><strong>Reference archive:</strong> https://mgifford.github.io/We4Authors/</p>
     </div>
-   </div>
-  <div class="notes" hidden>Short & punchy</div>
-  <div class="details">Summary of opportunities. Archive of the references https://mgifford.github.io/We4Authors/ </div>
+    </div>
   </section>
 
   <!-- Slide 7 -->
   <section class="slide" id="architecture" aria-label="Slide: Authoring Architecture">
-   <h2 id="architecture-heading">Vision: The Moment of Authoring</h2>
-   <div class="columns">
-    <div>
-     <p>Privacy-first AI pipeline:</p>
-     <ul class="emerge">
-      <li>Draft stays inside the CMS boundary</li>
-      <li>Quality of content is maintained</li>
-      <li>No drafts leak to third parties</li>
-     </ul>
+    <h2 id="architecture-heading">Vision: The Moment of Authoring</h2>
+    <div class="columns">
+      <div>
+        <p>Privacy-first AI pipeline:</p>
+        <ul class="emerge">
+          <li>Draft stays inside the CMS boundary</li>
+          <li>Quality of content is maintained</li>
+          <li>No drafts leak to third parties</li>
+        </ul>
+      </div>
+      <div class="next">
+        <p>Admin should have choice of LLMs:</p>
+        <ul>
+          <li>Small Language Models (SLMs)</li>
+          <li>Tools bundled with the CMS</li>
+          <li>Optimized prompts for authoring context</li>
+          <li>Guardrails for LLM inputs</li>
+        </ul>
+      </div>
     </div>
-    <div class="next">
-     <p>Admin should have choice of LLMs:</p>
-     <ul>
-      <li>Small Language Models (SLMs)</li>
-      <li>Tools bundled with the CMS</li>
-      <li>Optimized prompts for authoring context</li>
-      <li>Guardrails for LLM inputs</li>
-     </ul>
+    <div class="notes" hidden>Keep drafts local. Admin chooses model.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li><strong>Privacy-first:</strong> Draft content often includes personal data, sensitive policy, or unpublished
+          material. Many organizations cannot send it to third-party AI services.</li>
+        <li><strong>CMS boundary:</strong> Keeping the pipeline local reduces legal and procurement friction and
+          supports regulated environments.</li>
+        <li><strong>Choice of models:</strong> Administrators need options (small language models, local deployments,
+          enterprise-approved models) and the ability to tune prompts for authoring context.</li>
+        <li><strong>Guardrails:</strong> Constrain inputs and outputs, log what was suggested, and require human
+          confirmation where it matters.</li>
+      </ul>
+      <p><strong>Why this matters:</strong> Local SLMs can be an open-source advantage if the community builds shared
+        modules, prompts, and evaluation datasets.</p>
     </div>
-   </div>
-  <div class="notes" hidden>Government and enterprise cannot ship drafts to remote AI.</div>
-  <div class="details">Local SLMs are our compliance path and our open-source advantage. Emphasize the procurement reality: government and enterprise cannot ship drafts to remote AI.</div>
   </section>
 
   <!-- Slide 8 -->
   <section class="slide" id="shift-left" aria-label="Slide: Shift Left">
-   <h2 id="shift-left-heading">Right Now: Shifting Left</h2>
-   <div class="columns">
-    <div>
-     <p>Catching errors where they happen:</p>
-     <ul class="emerge">
-      <li>Think Spellcheck</li>
-      <li><strong>Sa11y:</strong> Bookmarklet+</li>
-      <li><strong>Editoria11y:</strong> CMS integrated</li>
-      <li>Both fix content <em>before</em> it gets published</li>
-     </ul>
+    <h2 id="shift-left-heading">Right Now: Shifting Left</h2>
+    <div class="columns">
+      <div>
+        <p>Catching errors where they happen:</p>
+        <ul class="emerge">
+          <li>Think Spellcheck</li>
+          <li><strong>Sa11y:</strong> Bookmarklet+</li>
+          <li><strong>Editoria11y:</strong> CMS integrated</li>
+          <li>Both fix content <em>before</em> it gets published</li>
+        </ul>
+      </div>
+      <div class="next">
+        <p>Why this matters:</p>
+        <ul>
+          <li>Reduces remediation costs significantly</li>
+          <li>Empowers authors != policing them</li>
+          <li>Cross-organization accessibility</li>
+        </ul>
+      </div>
     </div>
-    <div class="next">
-     <p>Why this matters:</p>
-     <ul>
-      <li>Reduces remediation costs significantly</li>
-      <li>Empowers authors != policing them</li>
-      <li>Cross-organization accessibility</li>
-     </ul>
+    <div class="notes" hidden>Spellcheck, but for a11y. Sa11y, Editoria11y.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li><strong>Shift left:</strong> Catch issues during authoring when fixes are cheap and obvious.</li>
+        <li><strong>Author empowerment:</strong> The tool should explain what to do and why, not just block publishing.
+        </li>
+        <li><strong>Cross-organization impact:</strong> When checks are built into the workflow, you do not depend on
+          individual expertise or a single accessibility specialist.</li>
+      </ul>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Sa11y (in-page checking model): https://sa11y.netlify.app/</li>
+        <li>Editoria11y (CMS integration model): https://editoria11y.princeton.edu/</li>
+      </ul>
     </div>
-   </div>
-  <div class="notes" hidden>We need to shift left locally.</div>
-  <div class="details">Tools like Sa11y and Editoria11y show us the way by integrating checks directly into the authoring workflow.</div>
   </section>
 
   <!-- Slide 9 -->
   <section class="slide" id="atag3" aria-label="Slide: AI Capabilities">
-   <h2 id="atag3-heading">What More is Possible?</h2>
-   <ul class="emerge">
-    <li><strong>Better Alt Text:</strong> In my previous evaluation, AI often outperforms humans (Trust but Verify)</li>
-    <li><strong>Plain Language &amp; Captions:</strong> Automated simplification and media alternatives</li>
-    <li><strong>Friction:</strong> Actually require human review</li>
-    <li><strong>Structural Hints:</strong> “You bolded this. Did you mean an H3?”</li>
-   </ul>
-  <div class="notes" hidden>Friction is a feature. "Remove this line to publish". AI does the heavy lifting, but humans must verify.</div>
-  <div class="details">Based on recent discussions in the W3C ATAG CG. We can use AI to do the heavy lifting for plain language and alt text, but we must implement UI friction to ensure the author actually verifies the output. Alternative Text for Images: How Bad Are Our ALT text Anyway? https://archive.fosdem.org/2025/schedule/event/fosdem-2025-4709-alternative-text-for-images-how-bad-are-our-alt-text-anyway-/</div>
+    <h2 id="atag3-heading">What More is Possible?</h2>
+    <ul class="emerge">
+      <li><strong>Better Alt Text:</strong> In my previous evaluation, AI often outperforms humans (Trust but Verify)
+      </li>
+      <li><strong>Plain Language &amp; Captions:</strong> Automated simplification and media alternatives</li>
+      <li><strong>Friction:</strong> Actually require human review</li>
+      <li><strong>Structural Hints:</strong> “You bolded this. Did you mean an H3?”</li>
+    </ul>
+    <div class="notes" hidden>Make friction mandatory. AI drafts, humans sign off.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li><strong>Alt text quality:</strong> AI can draft better starting points than many humans, but it still needs
+          verification for accuracy and relevance.</li>
+        <li><strong>Plain language &amp; captions:</strong> AI can draft simplifications and media alternatives, but
+          accessibility risk rises if teams treat drafts as final.</li>
+        <li><strong>Friction as safety:</strong> Require explicit review actions (for example, a checkbox, a short
+          confirmation, or “explain why this is accurate”) before publish.</li>
+        <li><strong>Structural hints:</strong> Tools can detect common anti-patterns (bold used as headings, broken list
+          structure) and guide correction.</li>
+      </ul>
+      <p><strong>Reference (your prior talk):</strong> Alternative Text for Images: How Bad Are Our ALT text Anyway?
+        https://archive.fosdem.org/2025/schedule/event/fosdem-2025-4709-alternative-text-for-images-how-bad-are-our-alt-text-anyway-/
+      </p>
+      <p><strong>Standards anchor:</strong> This aligns with ATAG Part B’s intent: tools should assist authors in
+        producing accessible content, not just warn after the fact. https://www.w3.org/TR/ATAG20/</p>
+    </div>
   </section>
 
 
   <!-- Slide 10 -->
   <section class="slide" id="wcagem" aria-label="Slide: WCAG-EM Compliance">
-   <h2 id="wcagem-heading">Compliance is Science</h2>
-   <ul>
-    <li>Authoring support reduces audit scope and failure rates</li>
-    <li>Web Content Accessibility Guidelines - Evaluation Methodology</li>
-    <li>WCAG-EM gives a repeatable sampling and evaluation process — AI can support this</li>
-    <li>Python-ACR: a new tool to draft OpenACR documents</li>
-    <li>These reports feed into the Web Accessibility Directive (WAD) &amp; the European Accessibility Act (EAA)</li>
-   </ul>
-   <div class="notes" hidden>Other ACR tools: https://github.com/mgifford/python-acr https://acreditor.section508.gov/</div>
-   <div class="details">EAA Annex V service accessibility information. Why are we manually listing URLs for an audit in 2026? Frame compliance as a repeatable experiment.</div>
+    <h2 id="wcagem-heading">Compliance is Science</h2>
+    <ul>
+      <li>Authoring support reduces audit scope and failure rates</li>
+      <li>Web Content Accessibility Guidelines - Evaluation Methodology</li>
+      <li>WCAG-EM gives a repeatable sampling and evaluation process — AI can support this</li>
+      <li>Python-ACR: a new tool to draft OpenACR documents</li>
+      <li>These reports feed into the Web Accessibility Directive (WAD) &amp; the European Accessibility Act (EAA)</li>
+    </ul>
+    <div class="notes" hidden>WCAG-EM is the method. AI can speed sampling + reporting.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li><strong>Authoring support reduces audit scope:</strong> fewer basic failures make evaluation faster and
+          increase pass rates on repeat audits.</li>
+        <li><strong>WCAG-EM:</strong> provides a repeatable evaluation methodology (define scope, explore site, select
+          representative sample, audit, report).</li>
+        <li><strong>AI support:</strong> can help with page discovery, sampling, evidence capture, and report drafting,
+          but not final conformance decisions.</li>
+        <li><strong>ACR tooling:</strong> Structured reports (OpenACR) reduce vendor spin and force disclosure of gaps
+          and evidence.</li>
+        <li><strong>Why it matters:</strong> These artifacts feed legal reporting and procurement expectations (WAD
+          statements in the public sector context, EAA service accessibility info in services context).</li>
+      </ul>
+      <p><strong>References:</strong></p>
+      <ul>
+        <li>WCAG-EM (revised draft): https://w3c.github.io/wai-wcag-em/</li>
+        <li>python-acr: https://github.com/mgifford/python-acr</li>
+        <li>ACR editor (Section508.gov): https://acreditor.section508.gov/</li>
+      </ul>
+    </div>
   </section>
 
 
   <!-- Slide 11 -->
   <section class="slide" id="wcagem-auto" aria-label="Slide: Automate WCAG-EM">
-   <h2 id="wcagem-auto-heading">Automate WCAG-EM</h2>
-   <ul>   
-    <li>You can't automate everything, but much more can be</li>
-    <li>Automated crawlers pulling in key pages &amp; random samples</li>
-    <li>Organized by WCAG Success Criteria &amp; written straight to JSON</li>
-    <li>Manual testing, including testing with disabled users where appropriate, plus accessibility statements</li>
-   </ul>
-  <div class="notes" hidden>What can be automated.</div>
-  <div class="details"></div>
+    <h2 id="wcagem-auto-heading">Automate WCAG-EM</h2>
+    <ul>
+      <li>You can't automate everything, but much more can be</li>
+      <li>Automated crawlers pulling in key pages &amp; random samples</li>
+      <li>Organized by WCAG Success Criteria &amp; written straight to JSON</li>
+      <li>Manual testing, including testing with disabled users where appropriate, plus accessibility statements</li>
+    </ul>
+    <div class="notes" hidden>Automate sampling + structure. Humans do judgment.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li>Full automation is not realistic. Many success criteria require human judgment and user testing.</li>
+        <li>What <em>can</em> be automated: crawling, representative/random sampling, collecting evidence artifacts,
+          organizing findings by WCAG success criteria, and writing structured outputs (JSON) that tools can reuse.</li>
+        <li>What stays manual: task testing, usability friction, cognitive load issues, assistive technology workflows,
+          and validation with disabled users where appropriate.</li>
+        <li>The outcome should still include a public statement and a maintenance process, not a one-time report.</li>
+      </ul>
+      <p><strong>Reference:</strong> WCAG-EM draft: https://w3c.github.io/wai-wcag-em/</p>
+    </div>
   </section>
 
   <!-- Slide 12 -->
   <section class="slide" id="cta" aria-label="Slide: Collaborate">
-   <h2 id="cta-heading">Move Together</h2>
-   <ul class="emerge">
-    <li>Pick one ATAG Part B practice and implement it in your editor or CMS</li>
-    <li>Join the W3C ATAG Community Group</li>
-    <li>Share your work &amp; seek ways to collaborate</li>
-    <li>Advocate for LLMs to be more inclusive</li>
-   </ul>
-  <div class="notes" hidden>Build the open stack or live under proprietary bots.</div>
-  <div class="details">Challenge the room: we either build the open stack now or live under proprietary audit bots. Designing Content Authoring Experiences by Greg Dunlap https://authoringexperience.com/</div>
+    <h2 id="cta-heading">Move Together</h2>
+    <ul class="emerge">
+      <li>Pick one ATAG Part B practice and implement it in your editor or CMS</li>
+      <li>Join the W3C ATAG Community Group</li>
+      <li>Share your work &amp; seek ways to collaborate</li>
+      <li>Advocate for LLMs to be more inclusive</li>
+    </ul>
+    <div class="notes" hidden>Join ATAG CG. Share work.</div>
+    <div class="details" hidden>
+      <p><strong>Claims behind the bullets:</strong></p>
+      <ul>
+        <li>ATAG Part B is implementable in pieces. Teams do not need to solve everything at once.</li>
+        <li>The W3C ATAG Community Group is the coordination venue for shared patterns, requirements, and reference
+          implementations.</li>
+        <li>Open collaboration is how we avoid each CMS building incompatible, proprietary authoring assistants.</li>
+        <li>Inclusive LLM behavior is not automatic. Vendors optimize for “helpful,” not necessarily for accessibility,
+          accuracy, or safe author workflows.</li>
+      </ul>
+      <p><strong>References:</strong></p>
+      <ul>
+        <li>ATAG CG GitHub: https://github.com/w3c-cg/atag</li>
+        <li>Designing Content Authoring Experiences (Greg Dunlap): https://authoringexperience.com/</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Slide 13 -->
   <section class="slide" id="resources" aria-label="Slide: Resources">
-   <h2 id="resources-heading">Resources</h2>
-   <ul>
-    <li><a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a></li>
-    <li><a href="https://github.com/w3c-cg/atag">W3C ATAG Community Group</a></li>
-    <li><a href="https://w3c.github.io/wai-wcag-em/">Revised WCAG-EM 2.0 (Draft)</a></li>
-    <li><a href="https://mgifford.github.io/We4Authors/">WeAuthors: Archive</a></li>
-   </ul>
-   <p>QR code placeholder for quick access.</p>
-  <div class="notes" hidden>Scan the QR and commit to one action.</div>
-  <div class="details">Encourage scanning the QR and committing to one action before leaving the room.</div>
+    <h2 id="resources-heading">Resources</h2>
+    <ul>
+      <li><a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a></li>
+      <li><a href="https://github.com/w3c-cg/atag">W3C ATAG Community Group</a></li>
+      <li><a href="https://w3c.github.io/wai-wcag-em/">Revised WCAG-EM 2.0 (Draft)</a></li>
+      <li><a href="https://mgifford.github.io/We4Authors/">WeAuthors: Archive</a></li>
+    </ul>
+    <p>QR code placeholder for quick access.</p>
+    <div class="notes" hidden>QR: commit to one concrete action.</div>
+    <div class="details" hidden>
+      <p><strong>Use these links as the “take-home kit”:</strong></p>
+      <ul>
+        <li><strong>ATAG 2.0:</strong> the standards basis for accessible authoring tools and author support.
+          https://www.w3.org/TR/ATAG20/</li>
+        <li><strong>ATAG Community Group:</strong> where coordination and modern tooling alignment is happening.
+          https://github.com/w3c-cg/atag</li>
+        <li><strong>WCAG-EM draft:</strong> the evolving evaluation methodology that can be partially automated.
+          https://w3c.github.io/wai-wcag-em/</li>
+        <li><strong>We4Authors archive:</strong> prior research, gaps, and recommendations.
+          https://mgifford.github.io/We4Authors/</li>
+      </ul>
+      <p><strong>Prompt:</strong> Scan the QR and write down one specific change you will implement (one ATAG Part B
+        practice, one editor check, one publishing gate, or one evaluation automation).</p>
+    </div>
   </section>
 
   <!-- Slide 14 -->
   <section class="slide final" id="questions" aria-label="Slide: Questions">
-   <h2 id="questions-heading">Questions</h2>
-   <div class="next">
-    <div class="columns">
-     <div>
-      <p><strong>Mike Gifford</strong><br>
-      <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a></p>
-      <div class="contact-links">
-       <p>
-        <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
-        <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
-        <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
-       </p>
-       <p>
-        <a href="https://ox.ca">https://ox.ca</a>
-       </p>
+    <h2 id="questions-heading">Questions</h2>
+    <div class="next">
+      <div class="columns">
+        <div>
+          <p><strong>Mike Gifford</strong><br>
+            <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a>
+          </p>
+          <div class="contact-links">
+            <p>
+              <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
+              <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
+              <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
+            </p>
+            <p>
+              <a href="https://ox.ca">https://ox.ca</a>
+            </p>
+          </div>
+        </div>
+        <div class="contact-links" role="group" aria-label="Scan for slides">
+          <p class="scan-label">Scan for slides:</p>
+          <!-- QR code placeholder: add image with alt text -->
+          <div class="qr-placeholder" aria-hidden="true">QR Code<br>Placeholder</div>
+        </div>
       </div>
-     </div>
-    <div class="contact-links" role="group" aria-label="Scan for slides">
-     <p class="scan-label">Scan for slides:</p>
-     <!-- QR code placeholder: add image with alt text -->
-     <div class="qr-placeholder" aria-hidden="true">QR Code<br>Placeholder</div>
     </div>
+    <div class="notes" hidden>Invite: which CMS, which workflow, which constraint?</div>
+    <div class="details" hidden>
+      <p><strong>Q&amp;A prompts:</strong></p>
+      <ul>
+        <li>Which authoring surface: Drupal, WordPress, headless CMS, Git-based publishing, custom editor?</li>
+        <li>Which constraint dominates: privacy/procurement, author skill levels, workflow complexity, or lack of
+          testing capacity?</li>
+        <li>Where to start: pick one ATAG Part B feature and one WCAG-EM automation that reduces repeated manual work.
+        </li>
+      </ul>
     </div>
-   </div>
   </section>
 
- </body>
+</body>
+
 </html>

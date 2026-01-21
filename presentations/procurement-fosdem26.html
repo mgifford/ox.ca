@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 
 <html lang="en-us">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Procurement is the Biggest Form of Fundraising for FLOSS</title>
-   <link rel="stylesheet" href="ca-slides/slides.css">
-   <script src="ca-slides/b6plus.js"></script>
-   <!-- <script src="ca-slides/auto-scale.js"></script> -->
-   <script src="ca-slides/offline-indicator.js"></script>
-   <script src="ca-slides/footer-overlap-detector.js"></script>
- </head>
+  <link rel="stylesheet" href="ca-slides/slides.css">
+  <script src="ca-slides/b6plus.js"></script>
+  <!-- <script src="ca-slides/auto-scale.js"></script> -->
+  <script src="ca-slides/offline-indicator.js"></script>
+  <script src="ca-slides/footer-overlap-detector.js"></script>
+</head>
 
-  <!-- Technical Notes for AI (A mini-AGENTS.md file) -->
-  <!--
+<!-- Technical Notes for AI (A mini-AGENTS.md file) -->
+<!--
   Anything within a class "notes"or "details" is hidden to the audience but visible to the speaker (or those who are viewing the slides afterwards)
   Notes are what the speaker needs to be remidned of. Details are for folks looking at it later, or if questions come up from the audience.
   Standardize on American spelling and use &amp; instead of "and".
   Avoid jargon where possible; explain acronyms on first use.
   -->
 
-  <!-- Submitted proposal (for reference) -->
-  <!--
+<!-- Submitted proposal (for reference) -->
+<!--
   Proposal title: Procurement Is the Biggest Form of Fundraising for FLOSS
   Track: Funding the FOSS Ecosystem
   Time: 30min
@@ -47,7 +48,7 @@
 
   -->
 
- <body class="shower fade-in duration=30 warn=5 hidemouse">
+<body class="shower fade-in duration=30 warn=5 hidemouse">
 
   <div class="progress"></div>
   <div class="clock"></div>
@@ -55,132 +56,209 @@
 
   <!-- Slide 1 -->
   <section class="slide cover clear" id="cover" aria-label="Cover: Procurement &amp; Accessibility">
-   <h1>Procurement Is the Biggest Form of Fundraising for FLOSS</h1>
-   <h2>Shifting from "Free Assets" to "Living Infrastructure"</h2>
-   <address>Mike Gifford, CivicActions</address>
-  <p class="event">11:10am, Jan 31, 2026 (UD2.218A) | FOSDEM <br/> 
-  Funding the FOSS Ecosystem</p>
-  <div class="notes" hidden>Frame procurement as an infrastructure investment, not charity. Mention CivicActions &amp; my role as Drupal Core Accessibility Maintainer. Thesis: We don't need more donations; we need better procurement policies to fund maintenance &amp; upstream work.</div>
+    <h1>Procurement Is the Biggest Form of Fundraising for FLOSS</h1>
+    <h2>Shifting from "Free Assets" to "Living Infrastructure"</h2>
+    <address>Mike Gifford, CivicActions</address>
+    <p class="event">11:10am, Jan 31, 2026 (UD2.218A) | FOSDEM <br />
+      Funding the FOSS Ecosystem</p>
+    <div class="notes" hidden>Procurement funds maintenance, not charity. Name + role. Thesis.</div>
+    <div class="details" hidden>
+      <p><strong>Thesis:</strong> Public procurement is the largest realistic funding stream for long-term open source
+        maintenance, because it is recurring, budgeted, and tied to mission delivery.</p>
+      <p><strong>Anchor concept:</strong> “Public Money, Public Code” argues that publicly funded software should be
+        publicly reusable. https://publiccode.eu/</p>
+      <p><strong>Why this talk exists:</strong> Donations are episodic. Procurement is structural. If procurement
+        requires open deliverables and upstream contributions, it becomes durable funding for the commons.</p>
+    </div>
   </section>
 
 
   <!-- Problem slide: Charity Model -->
   <section class="slide" id="charity-model" aria-label="The Problem: Charity Model">
-   <h2>The Problem: The Charity Model Is Broken</h2>
-   <ul>
-    <li>Relying on donations leads to maintainer burnout &amp; fragile projects</li>
-    <li>Unfunded maintenance creates insecure supply chains</li>
-    <li>Donations don't scale to meet the maintenance needs of infrastructure</li>
-    <li class="next"><strong>Infrastructure needs ongoing, reliable investments</strong></li>
+    <h2>The Problem: The Charity Model Is Broken</h2>
+    <ul>
+      <li>Relying on donations leads to maintainer burnout &amp; fragile projects</li>
+      <li>Unfunded maintenance creates insecure supply chains</li>
+      <li>Donations don't scale to meet the maintenance needs of infrastructure</li>
+      <li class="next"><strong>Infrastructure needs ongoing, reliable investments</strong></li>
 
-  </ul>
-  <div class="notes" hidden>Mention Log4j &amp; xz-utils as concrete supply-chain examples; keep descriptions short &amp; factual.</div>
+    </ul>
+    <div class="notes" hidden>Supply-chain risk. Log4j, xz. Maintenance is security.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> Unfunded maintenance creates systemic security risk because critical components are
+        widely reused without sustainable staffing.</p>
+      <ul>
+        <li><strong>Log4Shell (Log4j):</strong> widely used Java logging library vulnerability exposed how understaffed
+          infrastructure projects can be. https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a</li>
+        <li><strong>xz-utils backdoor attempt:</strong> shows social engineering and maintainer compromise risk in core
+          tooling. https://www.cisa.gov/news-events/alerts/2024/04/01/hidden-backdoor-found-xz-utils</li>
+      </ul>
+      <p><strong>Conclusion:</strong> “Maintenance” is not optional work. It is security work. Procurement can fund it
+        as operational necessity.</p>
+    </div>
   </section>
 
   <!-- Slide 2 -->
   <section class="slide" id="misunderstanding" aria-label="Common Misunderstandings">
-   <h2>The Great Misunderstanding</h2>
-   <div class="columns">
-    <div>
-     <h3>The Coffee Money</h3>
-     <ul>
-      <li>User donations</li>
-      <li>Pledges</li>
-      <li>Tech Funds</li>
-     </ul>
+    <h2>The Great Misunderstanding</h2>
+    <div class="columns">
+      <div>
+        <h3>The Coffee Money</h3>
+        <ul>
+          <li>User donations</li>
+          <li>Pledges</li>
+          <li>Tech Funds</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The Trillion Dollar River</h3>
+        <ul>
+          <li>Government procurement: $50M+ contracts</li>
+          <li>But, procurement buys vendors and warranties, not open code</li>
+          <li>Public procurement remains by far the largest funding source</li>
+        </ul>
+      </div>
     </div>
-    <div>
-     <h3>The Trillion Dollar River</h3>
-     <ul>
-      <li>Government procurement: $50M+ contracts</li>
-      <li>But, procurement buys vendors and warranties, not open code</li>
-      <li>Public procurement remains by far the largest funding source</li>
-     </ul>
+    <p class="next">Several excellent developers in the Drupal community have tried fundraisers to support their work.
+    </p>
+    <div class="notes" hidden>$5 vs $50M. Crowdfunding is noise. Procurement is signal.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> We overweight small-dollar fundraising because it is culturally familiar, but it cannot
+        match the scale of public procurement.</p>
+      <ul>
+        <li><strong>Donations/pledges:</strong> useful, but unpredictable and limited in scale.</li>
+        <li><strong>Procurement:</strong> budgets exist already; the question is what requirements they enforce (open
+          deliverables, maintenance, upstream work).</li>
+      </ul>
+      <p><strong>Example pledge framing:</strong> attempts to normalize funding commitments in industry.
+        https://opensourcepledge.com</p>
+      <p><strong>Speaker point:</strong> This talk is not anti-donation. It is “stop pretending donations solve
+        infrastructure funding.”</p>
     </div>
-   </div>
-   <p class="next">Several excellent developers in the Drupal community have tried fundraisers to support their work.</p>
-    <div class="notes" hidden>Visual placeholder: pictures/donation-vs-contract.png. 
-      Message: we obsess over $5 while ignoring $50M. 
-      Highlight asymmetry: crowdfunding vs public sector procurement. 
-      Urgency: redirect focus.
-      https://opensourcepledge.com 
-  </div>
   </section>
 
-    <!-- Slide 4: Market Reality (Consolidated) -->
+  <!-- Slide 4: Market Reality (Consolidated) -->
   <section class="slide" id="market-reality" aria-label="Market Reality">
-  <h2>Technical &amp; Market Reality</h2>
-  <div class="columns">
-    <div>
+    <h2>Technical &amp; Market Reality</h2>
+    <div class="columns">
+      <div>
+        <ul>
+          <li>97% of audited codebases contain open source components</li>
+          <li>Open source technology has won, but the movement hasn't</li>
+          <li>Business incentives aren't aligned</li>
+        </ul>
+      </div>
+      <div class="next">
+        <table class="striped small" aria-label="Funding scale comparison">
+          <thead>
+            <tr>
+              <th scope="col">Source</th>
+              <th scope="col">Scale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sovereign Tech Fund</td>
+              <td>€17M (Minnow)</td>
+            </tr>
+            <tr>
+              <td>EU public IT & digital services procurement: hundreds of billions annually (Whale)</td>
+            </tr>
+            <tr>
+              <td>GovTech Market</td>
+              <td>~$600B (Pods)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="notes" hidden>97% uses OSS. Funding mismatch. Cite sources.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> Open source is ubiquitous in delivered software, but funding and incentives do not
+        match that dependence.</p>
       <ul>
-        <li>97% of audited codebases contain open source components</li>
-        <li>Open source technology has won, but the movement hasn't</li>
-        <li>Business incentives aren't aligned</li>
+        <li><strong>97% statistic:</strong> cite the Black Duck Open Source Security and Risk Analysis (OSSRA) report
+          used for your slide claim. https://www.blackduck.com/resources/research-reports/ossra.html</li>
+        <li><strong>GovTech scale:</strong> frame as a large market where procurement rules determine who benefits.
+          World Economic Forum GovTech framing.
+          https://www.weforum.org/publications/the-global-public-impact-of-govtech/</li>
+        <li><strong>Public digital capability gaps:</strong> procurement and delivery reform context (UK review).
+          https://www.gov.uk/government/publications/state-of-digital-government-review/state-of-digital-government-review
+        </li>
       </ul>
+      <p><strong>What to defend verbally:</strong> “Open source won the technical war; funding did not follow.”</p>
     </div>
-    <div class="next">
-      <table class="striped small" aria-label="Funding scale comparison">
-       <thead><tr><th scope="col">Source</th><th scope="col">Scale</th></tr></thead>
-       <tbody>
-        <tr><td>Sovereign Tech Fund</td><td>€17M (Minnow)</td></tr>
-        <tr><td>EU public IT & digital services procurement: hundreds of billions annually (Whale)</td></tr>
-        <tr><td>GovTech Market</td><td>~$600B (Pods)</td></tr>
-       </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="notes" hidden>Contrast the ubiquity of code (97%) with the disparity in funding. STF is great but tiny (€17M) compared to the procurement ocean (€200B+). We must tap the whale.</div>
-  <div class="details" hidden>References: 
-     2025 BlackDuck OSS Report https://www.blackduck.com/content/dam/black-duck/en-us/reports/rep-ossra.pdf
-     WEF GovTech Report https://www.weforum.org/publications/the-global-public-impact-of-govtech/ 
-     UK Gov Digital Review https://www.gov.uk/government/publications/state-of-digital-government-review/state-of-digital-government-review
-  </div>
   </section>
 
   <!-- Slide 5: Financial Resilience (Consolidated) -->
   <section class="slide" id="financial-resilience" aria-label="Financial Resilience">
-  <h2>The Pivot: Operational Maintenance</h2>
-  <div class="columns">
-    <div>
-     <h3>Problem: Central Funding is Fragile</h3>
-     <ul>
-      <li>Grants/Sponsorships end abruptly</li>
-      <li>Political shifts enable cuts (STF risk)</li>
-      <li>Decentralized procurement builds resilience</li>
-     </ul>
+    <h2>The Pivot: Operational Maintenance</h2>
+    <div class="columns">
+      <div>
+        <h3>Problem: Central Funding is Fragile</h3>
+        <ul>
+          <li>Grants/Sponsorships end abruptly</li>
+          <li>Political shifts enable cuts (STF risk)</li>
+          <li>Decentralized procurement builds resilience</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Solution: Funded OpEx</h3>
+        <ul class="small">
+          <li><strong>Proprietary:</strong> High OpEx (Rent)</li>
+          <li><strong>OSS (Broken):</strong> Unfunded Maint.</li>
+          <li><strong>OSS (Resilient):</strong> ~20% allocated to upstream maintenance</li>
+        </ul>
+      </div>
     </div>
-    <div>
-     <h3>Solution: Funded OpEx</h3>
-     <ul class="small">
-      <li><strong>Proprietary:</strong> High OpEx (Rent)</li>
-      <li><strong>OSS (Broken):</strong> Unfunded Maint.</li>
-      <li><strong>OSS (Resilient):</strong> ~20% allocated to upstream maintenance</li>
-     </ul>
+    <div class="notes" hidden>Move to funded OpEx. 20% upstream rule.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> Central grants are fragile. Procurement is distributed and recurring. That creates
+        resilience.</p>
+      <ul>
+        <li><strong>Grants end:</strong> timeboxed funding does not guarantee long-term maintenance.</li>
+        <li><strong>Political risk:</strong> centrally administered funds can be cut; distributed procurement spreads
+          risk across many buyers.</li>
+      </ul>
+      <p><strong>Practical rule of thumb:</strong> When adopting OSS, allocate a predictable slice of delivery spend to
+        upstream maintenance (your “~20%” example) and treat it as ongoing operations, not a one-time project cost.</p>
+      <p><strong>Reference point (fund model context):</strong> Sovereign Tech Fund. https://www.sovereign.tech/</p>
     </div>
-  </div>
-  <div class="notes" hidden>Argument: Move from "free puppy" to "security guard". Central grants are fragile (political risk); procurement budgets are vast and recurring. Shift 20% of savings to maintenance.</div>
-  <div class="details" hidden>Reference: EU Sovereign Tech Fund model vs. Agency Procurement.</div>
   </section>
 
-<!-- Slide 6 -->
+  <!-- Slide 6 -->
   <section class="slide" id="dpi" aria-label="Digital Public Infrastructure">
-   <h2>Why procurement should treat FOSS as infrastructure</h2>
-   <ul>
-    <li>Open Standards: prevent lock-in</li>
-    <li>Open source: enables reuse and auditability</li>
-    <li>Open governance: reduces single-vendor capture</li>
-    <li class="next">Actually FOSS AI: enables innovation</li>
-   </ul>
-  <div class="notes" hidden>Position DPI as the stack; mention OpenACR as procurement-ready evidence.</div>
-  <div class="details" hidden>Digital Public Infrastructure (DPI)
-       <ul>
-    <li>Open Source &amp; Digital Public Goods: the engine</li>
-    <li>Open Standards: the rails</li>
-    <li>Open Data: the cargo</li>
-    <li class="next">Actually Open AI: all of the above?</li>
-    <li class="next">Open Communities: the governance</li>
-   </ul>
-  </div>
+    <h2>Why procurement should treat FOSS as infrastructure</h2>
+    <ul>
+      <li>Open Standards: prevent lock-in</li>
+      <li>Open source: enables reuse and auditability</li>
+      <li>Open governance: reduces single-vendor capture</li>
+      <li class="next">Actually FOSS AI: enables innovation</li>
+    </ul>
+    <div class="notes" hidden>Position DPI as the stack; mention OpenACR as procurement-ready evidence.</div>
+    <div class="details" hidden>Digital Public Infrastructure (DPI)
+      <ul>
+        <li>Open Source &amp; Digital Public Goods: the engine</li>
+        <li>Open Standards: the rails</li>
+        <li>Open Data: the cargo</li>
+        <li class="next">Actually Open AI: all of the above?</li>
+        <li class="next">Open Communities: the governance</li>
+      </ul>
+    </div>
+    <div class="notes" hidden>DPI stack: standards, code, governance. Mention OpenACR.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> Digital Public Infrastructure (DPI) requires open standards, open code, and open
+        governance to prevent capture and enable auditability and reuse.</p>
+      <ul>
+        <li><strong>Open standards:</strong> reduce lock-in and keep data portable.</li>
+        <li><strong>Open source:</strong> enables auditing, reuse, and faster remediation across organizations.</li>
+        <li><strong>Open governance:</strong> reduces single-vendor control of critical systems.</li>
+      </ul>
+      <p><strong>Procurement evidence example:</strong> Accessibility Conformance Reports (ACRs) are a structured way to
+        require and evaluate claims. OpenACR is an initiative for an open format and tooling. https://openacr.org/</p>
+      <p><strong>Speaker caution:</strong> If “AI” is mentioned here, keep it grounded: the issue is not novelty, it is
+        whether systems remain auditable and controllable under public accountability.</p>
+    </div>
   </section>
 
   <!-- Slide 7 -->
@@ -193,33 +271,74 @@
       <li class="next">Fully open source development of the source code</li>
       <li class="next">Each rung increases reuse and reduces vendor capture</li>
     </ol>
-    <div class="notes" hidden>Encourage procurement teams to climb the ladder; each step increases sustainability &amp; resilience. Emphasize funding upstream maintenance as a critical pivot. Source: Maurice Hendriks / NL Government.</div>
-    <div class="details" hidden>Maurice Hendricks/NL Government: https://hackmd.io/@MauriceHendriks/ryZ9dWptJx</div>
+    <div class="notes" hidden>Ambition ladder: climb one rung at a time.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> Procurement can progressively increase openness without requiring a single “big bang”
+        policy change.</p>
+      <ol>
+        <li>Publish code at contract completion.</li>
+        <li>Publish at milestones (reduces lock-in earlier).</li>
+        <li>Develop in the open from day one (maximizes reuse and community oversight).</li>
+      </ol>
+      <p><strong>Why it matters:</strong> Each rung increases reuse and reduces vendor capture by making the work
+        visible and reusable earlier.</p>
+      <p><strong>Source:</strong> Maurice Hendriks (NL Government) write-up of the Open Source Ambition Ladder.
+        https://hackmd.io/@MauriceHendriks/ryZ9dWptJx</p>
+    </div>
   </section>
 
 
   <!-- Slide 8: RFP Hacks (Consolidated) -->
   <section class="slide" id="rfp-hack" aria-label="RFP Hacks">
-  <h2>RFP Hacks: Upstream-First &amp; Working in the Open</h2>
-  <ul>
-   <li>Require upstream submission (PR links) as deliverables</li>
-   <li>Create public repo early; include LICENSE, README, CONTRIBUTING, CI</li>
-   <li>Use release tags &amp; public issue trackers for provenance</li>
-   <li>Optional: holdback or small escrow released after repo verification</li>
-  </ul>
-  <div class="details" hidden>References: Drupal RFP guide; code.gouv; DINUM guidance.</div>
-  <div class="notes" hidden>Keep slide short; point attendees to the handout for copy-paste clauses and checklists.</div>
+    <h2>RFP Hacks: Upstream-First &amp; Working in the Open</h2>
+    <ul>
+      <li>Require upstream submission (PR links) as deliverables</li>
+      <li>Create public repo early; include LICENSE, README, CONTRIBUTING, CI</li>
+      <li>Use release tags &amp; public issue trackers for provenance</li>
+      <li>Optional: holdback or small escrow released after repo verification</li>
+    </ul>
+    <div class="notes" hidden>Handout has clauses. Stress “upstream PR links”.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> “Upstream-first” only happens reliably when it is a contractual deliverable with
+        verification steps.</p>
+      <ul>
+        <li><strong>Deliverable form:</strong> PR links submitted upstream, not just “we changed code.”</li>
+        <li><strong>Repo hygiene:</strong> LICENSE, README, CONTRIBUTING, CI, and public issue tracking establish
+          provenance and continuity.</li>
+        <li><strong>Verification lever:</strong> small holdback/escrow tied to repository openness and basic compliance
+          checks.</li>
+      </ul>
+      <p><strong>Reference examples to cite in Q&amp;A:</strong></p>
+      <ul>
+        <li>Drupal RFP Guide (community procurement guidance): https://www.drupal.org/community/governance/rfp</li>
+        <li>French public code guidance ecosystem (code.gouv / DINUM): https://code.gouv.fr/</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Slide 9: Contract Examples -->
   <section class="slide" id="contract-examples" aria-label="Contract Examples Summary">
     <h2>Contract Examples</h2>
     <ul>
-      <li>Deliverables must use open standards and be delivered without licensing or contractual restrictions at contract close</li>
+      <li>Deliverables must use open standards and be delivered without licensing or contractual restrictions at
+        contract close</li>
       <li>Payment holdback 1–5% until repo is public, licensed, and has CI</li>
       <li>Define maintenance as an option year with SLAs and upstream contribution expectations</li>
     </ul>
-    <div class="notes" hidden>Handout contains full clauses and evaluation checklist (QR on Resources slide).</div>
+    <div class="notes" hidden>Holdback + open repo + option-year maintenance.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> “Open deliverables” must be defined in contract language, verified, and tied to payment
+        milestones.</p>
+      <ul>
+        <li><strong>Open standards requirement:</strong> avoids hidden lock-in through proprietary formats and
+          undocumented APIs.</li>
+        <li><strong>Repo requirements:</strong> public by contract close, with an OSI-approved license and working CI.
+        </li>
+        <li><strong>Maintenance clause:</strong> define an option-year (or equivalent) for maintenance with explicit
+          upstream contribution expectations and service-level commitments.</li>
+      </ul>
+      <p><strong>Support reference:</strong> Public Code (policy framing): https://publiccode.eu/</p>
+    </div>
   </section>
 
   <!-- Slide 10: Procurement Culture (Merged DITAP) -->
@@ -230,31 +349,53 @@
       <li>Use practical exercises (DITAP-style) to build confidence</li>
       <li>Embed contribution requirements in evaluation criteria</li>
     </ul>
-    <div class="details" hidden>Reference: DITAP &amp; USDS materials; code.gouv examples.</div>
+    <div class="notes" hidden>Procurement is learned skill. Train like DITAP.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> Procurement outcomes depend on staff capability and evaluation criteria, not just
+        policy slogans.</p>
+      <ul>
+        <li><strong>Training:</strong> officers need practical literacy in OSS risks (supply chain, maintenance,
+          security updates) and mitigations (upstream-first, SBOMs, contracts that fund maintenance).</li>
+        <li><strong>Exercises:</strong> scenario-based learning builds confidence to enforce requirements and evaluate
+          bids.</li>
+        <li><strong>Evaluation criteria:</strong> require evidence of upstream contribution history, maintainership
+          plans, and open deliverables.</li>
+      </ul>
+      <p><strong>Reference points:</strong></p>
+      <ul>
+        <li>DITAP overview (training model reference): https://www.fai.gov/ditap/</li>
+        <li>Open Contracting Partnership (procurement transparency practice): https://www.open-contracting.org/</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Pull-out quote -->
   <section class="slide" id="pullout-quote" aria-label="Pull-out Quote">
     <h1 class="shout">Public Money, Public Code.</h1>
     <p class="attribution">— Public Code / community standard</p>
-    <div class="notes" hidden>Use this slide as a pull-out quote. Duplicate and replace the text for other quotes. Keep attribution short.</div>
+    <div class="notes" hidden>Pause slide. Let it land. One sentence: “This is enforceable.”</div>
+    <div class="details" hidden>
+      <p><strong>Why this matters:</strong> “Public Money, Public Code” is the simplest procurement test: if the public
+        paid, the public should be able to reuse, audit, and improve.</p>
+      <p><strong>Reference:</strong> https://publiccode.eu/</p>
+    </div>
   </section>
 
   <!-- Slide 11: Final Quote & Call to Action (Merged) -->
   <section class="slide" id="final-quote" aria-label="Final Quote">
-  <h1 class="shout">Procurement is often bureaucratic &amp; overlooked — it is also the most powerful lever to sustain the Open Web.</h1>
-  <ul>
-    <li>Procurement controls where public money flows — fund open deliverables</li>
-    <li>Recurring contracts create predictable maintenance revenue</li>
-    <li>Open deliverables increase reuse, transparency, and sovereignty</li>
-    <li>Small policy changes scale into sustained investments</li>
-    <li>Adopt one rule: no public money without a public repo</li>
-  </ul>
-  <div class="notes" aria-hidden="true">Close: ask the audience to adopt one procurement change (1% pledge or public repo requirement). Handout QR on Resources slide.</div>
+    <h1 class="shout">Procurement is often bureaucratic &amp; overlooked — it is also the most powerful lever to sustain
+      the Open Web.</h1>
+    <ul>
+      <li>Procurement controls where public money flows — fund open deliverables</li>
+      <li>Recurring contracts create predictable maintenance revenue</li>
+      <li>Open deliverables increase reuse, transparency, and sovereignty</li>
+      <li>Small policy changes scale into sustained investments</li>
+      <li>Adopt one rule: no public money without a public repo</li>
+    </ul>
+    <div class="notes" hidden>Close: ask the audience to adopt one procurement change (1% pledge or public repo requirement). Handout QR on Resources slide.</div>
   </section>
 
   <!-- Slide 12 -->
-    <!-- Slide 12: Resources (Consolidated) -->
   <section class="slide" id="resources" aria-label="Resources">
     <h2>Resources &amp; Handout</h2>
     <div class="columns">
@@ -276,34 +417,63 @@
         </ul>
       </div>
     </div>
-    <div class="notes" hidden>Explain handout value. Mention licensing.</div>
+    <div class="notes" hidden>Ask for one change: public repo rule or 1% upstream.</div>
+    <div class="details" hidden>
+      <p><strong>Claim:</strong> Procurement is the largest lever because it controls where money flows and can create
+        recurring maintenance funding.</p>
+      <ul>
+        <li><strong>Fund open deliverables:</strong> require public repos, open licenses, and open standards.</li>
+        <li><strong>Recurring contracts:</strong> create predictable maintenance revenue, reducing burnout and improving
+          security posture.</li>
+        <li><strong>Reuse:</strong> open deliverables let other agencies adopt without repaying for the same work.</li>
+        <li><strong>Small policy changes scale:</strong> one agency clause replicated across frameworks becomes
+          structural funding.</li>
+      </ul>
+      <p><strong>Concrete procurement rule you can defend:</strong> “No public money without a public repo.” Tie it to
+        verification (license, CI, issue tracker, release tags).</p>
+      <p><strong>Optional budgeting rule:</strong> reserve a defined maintenance allocation for upstream work (your “1%”
+        or “20%” framing, depending on audience).</p>
+    </div>
   </section>
 
   <!-- Slide 13 -->
   <section class="slide final" id="questions" aria-label="Questions &amp; contact">
-   <h2>Questions</h2>
-   <div class="next">
-    <div class="columns">
-     <div>
-      <p><strong>Mike Gifford</strong><br>
-      <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a></p>
-      <p>
-       <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
-       <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
-       <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
-      </p>
-      <p class="contact-link-primary">
-       <a href="https://ox.ca">https://ox.ca</a>
-      </p>
-     </div>
-    <div class="contact-links" role="group" aria-label="Scan for slides">
-     <p class="scan-label">Scan for slides:</p>
-     <!-- QR code placeholder: add image with alt text -->
-     <div class="qr-placeholder" aria-hidden="true">QR Code<br>Placeholder</div>
+    <h2>Questions</h2>
+    <div class="next">
+      <div class="columns">
+        <div>
+          <p><strong>Mike Gifford</strong><br>
+            <a href="mailto:mike.gifford@civicactions.com">mike.gifford@civicactions.com</a>
+          </p>
+          <p>
+            <a href="https://bsky.app/profile/ox.ca">Bluesky: @ox.ca</a><br>
+            <a href="https://www.linkedin.com/in/mgifford/">LinkedIn: mgifford</a><br>
+            <a href="https://mastodon.social/@mgifford">Mastodon: @mgifford</a>
+          </p>
+          <p class="contact-link-primary">
+            <a href="https://ox.ca">https://ox.ca</a>
+          </p>
+        </div>
+        <div class="contact-links" role="group" aria-label="Scan for slides">
+          <p class="scan-label">Scan for slides:</p>
+          <!-- QR code placeholder: add image with alt text -->
+          <div class="qr-placeholder" aria-hidden="true">QR Code<br>Placeholder</div>
+        </div>
+      </div>
     </div>
+    <div class="notes" hidden>Ask: which clause will you adopt? What blocks you?</div>
+    <div class="details" hidden>
+      <p><strong>Q&amp;A prompts:</strong></p>
+      <ul>
+        <li>What procurement regime are you operating under (EU, national, municipal, federal)?</li>
+        <li>What is the smallest clause you can add this year (public repo, upstream PR deliverable, maintenance option
+          year, open standards requirement)?</li>
+        <li>What verification step is missing today (license, CI, issue tracker, release tags, contribution evidence)?
+        </li>
+      </ul>
     </div>
-   </div>
   </section>
 
- </body>
+</body>
+
 </html>
