@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Accessible Sovereignty Checklist</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+        header {
+            border-bottom: 2px solid #0056b3;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+        h1 {
+            color: #0056b3;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 0;
+        }
+        .intro-box {
+            background: #fff;
+            border-left: 5px solid #0056b3;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f0f4f8;
+            color: #0056b3;
+            font-weight: bold;
+            width: 20%;
+        }
+        tr:hover {
+            background-color: #fcfcfc;
+        }
+        .freedom-badge {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #01579b;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .question {
+            font-weight: 600;
+            color: #222;
+        }
+        .implication {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 1rem;
+        }
+        @media print {
+            body { padding: 0; background: #fff; }
+            .intro-box { box-shadow: none; border: 1px solid #ccc; border-left: 5px solid #000; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Accessible Sovereignty Checklist</h1>
+    <p class="subtitle">Why Compliance Depends on Freedom</p>
+</header>
+
+<div class="intro-box">
+    <p><strong>The Core Premise:</strong> You cannot guarantee government accessibility obligations (WCAG / Section 508 / EN 301 549) without the sovereignty provided by Free Software. If you cannot inspect and fix the tool, your compliance is merely a vendor's promise.</p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Freedom Layer</th>
+            <th>The Sovereign Right</th>
+            <th>The Accessibility Check ("The Bug")</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <span class="freedom-badge">Freedom 0</span><br>
+                <strong>The Foundation</strong>
+            </td>
+            <td>The freedom to <strong>run</strong> the program as you wish, for any purpose.</td>
+            <td>
+                <div class="question">Constraint Check:</div>
+                Does the EULA or DRM prevent the use of specialized screen readers, overlays, or text-to-speech tools?
+                <div class="implication">If yes, the software is not sovereign and inherently excludes users.</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="freedom-badge">Freedom 1</span><br>
+                <strong>Inspection</strong>
+            </td>
+            <td>The freedom to <strong>study</strong> how the program works and change it.</td>
+            <td>
+                <div class="question">Verification Check:</div>
+                Can we view the source code to verify ARIA labels, semantic HTML, and focus states are correct?
+                <div class="implication">Without this, "WCAG Compliant" is just a marketing claim you cannot audit.</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="freedom-badge">Freedom 2</span><br>
+                <strong>Distribution</strong>
+            </td>
+            <td>The freedom to <strong>redistribute</strong> copies so you can help others.</td>
+            <td>
+                <div class="question">Scale Check:</div>
+                Once we fix an accessibility bug, can we legally share that accessible version with other agencies or departments?
+                <div class="implication">Proprietary licenses often force every agency to pay to fix the same barrier.</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="freedom-badge">Freedom 3</span><br>
+                <strong>Remediation</strong>
+            </td>
+            <td>The freedom to <strong>distribute copies of your modified versions</strong> to others.</td>
+            <td>
+                <div class="question">Action Check:</div>
+                When a user reports a barrier, do we have the power to fix it immediately (upstream), or must we wait for a vendor roadmap?
+                <div class="implication">Rights without remedies are theoretical. Freedom 3 turns "feedback" into "solutions."</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<footer>
+    <p>Presented at FOSDEM 2026 | Mike Gifford, CivicActions</p>
+    <p><em>Licensed under CC-BY-SA 4.0</em></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+graph TD
+    subgraph Foundation ["The Legal Foundation (Four Freedoms)"]
+        direction LR
+        F0[Freedom 0: Run]
+        F1[Freedom 1: Study]
+        F2[Freedom 2: Share]
+        F3[Freedom 3: Modify]
+        %% Force ordering with invisible links
+        F0 ~~~ F1 ~~~ F2 ~~~ F3
+    end
+
+    subgraph Practice ["The Essential Practice (POUR)"]
+        direction LR
+        P[Perceivable]
+        O[Operable]
+        U[Understandable]
+        R[Robust]
+        %% Force ordering with invisible links
+        P ~~~ O ~~~ U ~~~ R
+    end
+
+    %% The Integration Circle
+    T((Together))
+
+    subgraph Outcome ["The Goal"]
+        direction LR
+        S[Sovereignty & Inclusion]
+    end
+
+    %% Relationships
+    F0 --> P
+    P <--> F1
+    F1 <--> O
+    F1 <--> U
+    F1 <--> R
+    F3 <--> R
+    F2 <--> R
+    F0 --> F1
+    F1 <--> F2
+    F2 --> F3
+
+    %% The Convergence Pathways
+    R --> T
+    F3 --> T
+    T --> S
+
+    %% Styling
+    style Foundation fill:#e1f5fe,stroke:#01579b
+    style Practice fill:#e8f5e9,stroke:#1b5e20
+    style Outcome fill:#fff3e0,stroke:#e65100
+    style T fill:#ffeb3b,stroke:#fbc02d,stroke-width:2px,color:#000
+
+%%accTitle Accessibility and the Four Freedoms Convergence
+%%accDescr A dependency stack showing how the Four Freedoms and POUR principles must converge "Together" to achieve Sovereignty.

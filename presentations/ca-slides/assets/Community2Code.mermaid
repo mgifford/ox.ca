@@ -1,0 +1,29 @@
+flowchart LR
+    %% Phase 1: Shift Left (Definition)
+    subgraph Def ["Shift Left (Definition)"]
+        direction TB
+        H["Community Input<br/>(Lived Experience)"] --> I["Inclusive Design<br/>(Specs)"]
+    end
+
+    %% Phase 2: Development
+    I --> A[Code Commit]
+    A --> B{Auto-A11y Lint}
+    B -- Fail --> C[Fix Code]
+    C --> A
+    B -- Pass --> D[Code Review]
+
+    %% Phase 3: Validation (Involvement)
+    D --> E["User Testing<br/>(PWD & Assistive Tech)"]
+    E -- "Feedback (Freedom 3)" --> C
+    E -- Pass --> M[Merge Upstream]
+    M --> F["Distribute (Freedom 2)"]
+
+    %% Styling
+    style B fill:#ffcdd2,stroke:#b71c1c
+    style E fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style F fill:#c8e6c9,stroke:#2e7d32
+    style H fill:#e1f5fe,stroke:#01579b
+    style I fill:#e1f5fe,stroke:#01579b
+
+%%accTitle Accessible Open Source Workflow
+%%accDescr A workflow diagram showing accessibility shifting left into design and community input, before moving through code, linting, and user testing with people with disabilities.
