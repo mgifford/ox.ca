@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="1892"
-   height="950"
+   width="100%"
+   height="auto"
    viewBox="0 0 1892 950"
    role="img"
    aria-labelledby="t d"
@@ -34,9 +34,9 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="svg258" />
   <title
-     id="t">The Four Freedoms (FSF) handout style</title>
+     id="t">The Four Freedoms of Free Software</title>
   <desc
-     id="d">A 2x2 poster showing Freedom 0 through Freedom 3 with short descriptions and simple red icons.</desc>
+     id="d">A 2x2 grid poster explaining the Four Freedoms of free software: Freedom 0 (use), marked with a mouse icon; Freedom 1 (study and improve), shown with a magnifying glass and light bulb; Freedom 2 (share copies), represented by a heart; and Freedom 3 (share modifications), combining a heart with a light bulb. Each quadrant includes the freedom title and a description explaining its importance to software freedom and digital sovereignty.</desc>
   <defs
      id="defs138">
     <!-- Inkscape-safe: no CSS variables, no :root, fixed colors only -->
