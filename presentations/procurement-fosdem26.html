@@ -11,6 +11,16 @@
   <!-- <script src="ca-slides/auto-scale.js"></script> -->
   <script src="ca-slides/offline-indicator.js"></script>
   <script src="ca-slides/footer-overlap-detector.js"></script>
+  <script>
+window.SeededSVG = {
+  density: 20,
+  colors: ["#162E51", "#005EA2", "#FA9441"],
+  opacityRange: [0.05, 0.15],
+  shapes: { circles: true, lines: false, blobs: false, triangles: false, confetti: false },
+  avoidCenter: true
+};
+</script>
+<script src="ca-slides/seeded-svgs.js" defer></script>
 </head>
 
 <!-- Technical Notes for AI (A mini-AGENTS.md file) -->
@@ -91,7 +101,7 @@
         <li><strong>Log4Shell (Log4j):</strong> widely used Java logging library vulnerability exposed how understaffed
           infrastructure projects can be. https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a</li>
         <li><strong>xz-utils backdoor attempt:</strong> shows social engineering and maintainer compromise risk in core
-          tooling. https://www.cisa.gov/news-events/alerts/2024/04/01/hidden-backdoor-found-xz-utils</li>
+          tooling. https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-094a</li>
       </ul>
       <p><strong>Conclusion:</strong> “Maintenance” is not optional work. It is security work. Procurement can fund it
         as operational necessity.</p>
@@ -175,8 +185,8 @@
       <p><strong>Claim:</strong> Open source is ubiquitous in delivered software, but funding and incentives do not
         match that dependence.</p>
       <ul>
-        <li><strong>97% statistic:</strong> cite the Black Duck Open Source Security and Risk Analysis (OSSRA) report
-          used for your slide claim. https://www.blackduck.com/resources/research-reports/ossra.html</li>
+        <li><strong>97% statistic:</strong> cite the Synopsys Open Source Security and Risk Analysis (OSSRA) report
+          used for your slide claim. https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html</li>
         <li><strong>GovTech scale:</strong> frame as a large market where procurement rules determine who benefits.
           World Economic Forum GovTech framing.
           https://www.weforum.org/publications/the-global-public-impact-of-govtech/</li>
@@ -359,7 +369,7 @@
       </ul>
       <p><strong>Reference points:</strong></p>
       <ul>
-        <li>DITAP overview: https://www.fai.gov/ditap/</li>
+        <li>DITAP overview: https://www.gsa.gov/technology/technology-products-services/it-security/digital-it-acquisition-professional-ditap-program</li>
         <li>Open Contracting Partnership: https://www.open-contracting.org/</li>
       </ul>
     </div>
