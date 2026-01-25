@@ -1,0 +1,138 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Accessibility Depends on the Four Freedoms (Grid View)</title>
+  <desc id="desc">A grid of four cards explaining how software freedoms impact accessibility.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&amp;display=swap');
+      .font-base { font-family: 'Roboto', sans-serif; }
+      
+      /* Colors */
+      .bg-main { fill: #f9f9f9; }
+      .card-bg { fill: #ffffff; stroke: #e0e0e0; stroke-width: 1; }
+      
+      .head-yellow { fill: #fcd46e; }
+      .head-lblue { fill: #aaddf2; }
+      .head-orange { fill: #f27e26; }
+      .head-dblue { fill: #203f6f; }
+      
+      /* Text Colors */
+      .title-text { fill: #203f6f; font-size: 32px; font-weight: 900; }
+      .title-accent { fill: #c04000; font-style: italic; }
+      
+      .txt-head-dark { fill: #222; font-size: 22px; font-weight: 700; }
+      .txt-head-white { fill: #fff; font-size: 22px; font-weight: 700; }
+      
+      .txt-body { fill: #333; font-size: 16px; font-weight: 400; }
+      .txt-body-bold { fill: #000; font-size: 16px; font-weight: 700; }
+      
+      .divider { stroke: #eee; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" class="bg-main"/>
+
+  <text x="500" y="50" text-anchor="middle" class="font-base title-text">
+    Accessibility Depends on the <tspan class="title-accent">Four Freedoms</tspan>
+  </text>
+
+  <g transform="translate(100, 80)">
+    <rect width="390" height="280" rx="8" class="card-bg"/>
+    <path d="M0,0 h390 a8,8 0 0 1 8,8 v82 h-398 v-82 a8,8 0 0 1 8,-8 z" class="head-yellow"/> <g transform="translate(30, 20)">
+        <rect x="0" y="0" width="50" height="35" rx="3" fill="none" stroke="#222" stroke-width="3"/>
+        <line x1="25" y1="35" x2="25" y2="45" stroke="#222" stroke-width="3"/>
+        <line x1="15" y1="45" x2="35" y2="45" stroke="#222" stroke-width="3"/>
+        <polyline points="15,18 22,25 35,10" fill="none" stroke="#222" stroke-width="3"/>
+    </g>
+    
+    <text x="100" y="40" class="font-base txt-head-dark">Use the</text>
+    <text x="100" y="65" class="font-base txt-head-dark">Software</text>
+    
+    <text x="25" y="130" class="font-base txt-body">Anyone can run the software</text>
+    <text x="25" y="150" class="font-base txt-body">for any purpose.</text>
+    
+    <line x1="25" y1="170" x2="365" y2="170" class="divider"/>
+    
+    <text x="25" y="200" class="font-base txt-body">Assistive technologies work</text>
+    <text x="25" y="220" class="font-base txt-body">without restriction.</text>
+  </g>
+
+  <g transform="translate(510, 80)">
+    <rect width="390" height="280" rx="8" class="card-bg"/>
+    <path d="M0,0 h390 a8,8 0 0 1 8,8 v82 h-398 v-82 a8,8 0 0 1 8,-8 z" class="head-lblue"/>
+    
+    <g transform="translate(30, 20)">
+        <rect x="0" y="0" width="50" height="35" rx="3" fill="none" stroke="#222" stroke-width="3"/>
+        <circle cx="35" cy="25" r="12" fill="#aaddf2" stroke="#222" stroke-width="3"/>
+        <line x1="44" y1="34" x2="52" y2="42" stroke="#222" stroke-width="3"/>
+        <polyline points="10,12 18,18 10,24" stroke="#222" stroke-width="2" fill="none"/>
+    </g>
+    
+    <text x="100" y="40" class="font-base txt-head-dark">Freedom 1</text>
+    <text x="100" y="65" class="font-base txt-head-dark">Study the Software</text>
+    
+    <text x="25" y="130" class="font-base txt-body">Anyone can examine how it works.</text>
+    
+    <line x1="25" y1="150" x2="365" y2="150" class="divider"/>
+    
+    <text x="25" y="180" class="font-base txt-body-bold">Accessibility <tspan font-weight="400">barriers can be</tspan></text>
+    <text x="25" y="200" class="font-base txt-body">found and verified.</text>
+  </g>
+
+  <g transform="translate(100, 380)">
+    <rect width="390" height="280" rx="8" class="card-bg"/>
+    <path d="M0,0 h390 a8,8 0 0 1 8,8 v82 h-398 v-82 a8,8 0 0 1 8,-8 z" class="head-orange"/>
+    
+    <g transform="translate(30, 25)">
+        <path d="M10,15 L25,5 L25,12 H40 A5,5 0 0 1 45,17 V25" stroke="#fff" stroke-width="4" fill="none"/>
+        <path d="M40,35 L25,45 L25,38 H10 A5,5 0 0 1 5,33 V25" stroke="#fff" stroke-width="4" fill="none"/>
+    </g>
+    
+    <text x="100" y="40" class="font-base txt-head-white">Freedom 2</text>
+    <text x="100" y="65" class="font-base txt-head-white">Share the Software</text>
+    
+    <text x="25" y="130" class="font-base txt-body">Anyone can copy and redistribute.</text>
+    
+    <line x1="25" y1="150" x2="365" y2="150" class="divider"/>
+    
+    <text x="25" y="180" class="font-base txt-body-bold">Accessibility <tspan font-weight="400">improvements</tspan></text>
+    <text x="25" y="200" class="font-base txt-body">spread across institutions.</text>
+    
+    <g transform="translate(320, 220)">
+        <path d="M0,5 h15 l5,-5 h25 v30 h-45 z" fill="#f27e26"/>
+        <circle cx="40" cy="25" r="8" fill="#203f6f"/>
+        <polyline points="37,25 40,28 43,22" stroke="#fff" stroke-width="2" fill="none"/>
+    </g>
+  </g>
+
+  <g transform="translate(510, 380)">
+    <rect width="390" height="280" rx="8" class="card-bg"/>
+    <path d="M0,0 h390 a8,8 0 0 1 8,8 v82 h-398 v-82 a8,8 0 0 1 8,-8 z" class="head-dblue"/>
+    
+    <g transform="translate(30, 25)">
+       <path d="M35,10 L45,20 M15,30 L25,40" stroke="#fff" stroke-width="4" />
+       <circle cx="15" cy="40" r="8" stroke="#fff" stroke-width="3" fill="none"/>
+       <path d="M30,25 l10,-10" stroke="#fff" stroke-width="4"/>
+       <circle cx="40" cy="15" r="5" fill="#fcd46e"/> 
+    </g>
+    
+    <text x="100" y="40" class="font-base txt-head-white">Freedom 3</text>
+    <text x="100" y="65" class="font-base txt-head-white">Improve the Software</text>
+    
+    <text x="25" y="130" class="font-base txt-body">Anyone can fix and enhance it.</text>
+    
+    <line x1="25" y1="150" x2="365" y2="150" class="divider"/>
+    
+    <text x="25" y="180" class="font-base txt-body-bold">Accessibility <tspan font-weight="400">issues can be</tspan></text>
+    <text x="25" y="200" class="font-base txt-body">corrected immediately.</text>
+    
+    <g transform="translate(310, 225)">
+        <rect width="50" height="30" fill="#203f6f" rx="2"/>
+        <line x1="5" y1="10" x2="25" y2="10" stroke="#fff" stroke-width="2"/>
+        <line x1="5" y1="18" x2="35" y2="18" stroke="#fff" stroke-width="2"/>
+        <circle cx="45" cy="25" r="10" fill="#7cb342"/>
+        <polyline points="40,25 43,28 50,21" stroke="#fff" stroke-width="2" fill="none"/>
+    </g>
+  </g>
+
+</svg>
