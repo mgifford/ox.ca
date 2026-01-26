@@ -1,0 +1,113 @@
+{
+  "cms": [
+    {
+      "name": "Drupal",
+      "description": "Open source content management system",
+      "url": "https://api.iconify.design/simple-icons/drupal.svg"
+    },
+    {
+      "name": "WordPress",
+      "description": "Open source content management system",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg"
+    },
+    {
+      "name": "Joomla",
+      "description": "Open source content management system",
+      "url": "https://api.iconify.design/simple-icons/joomla.svg"
+    },
+    {
+      "name": "TYPO3",
+      "description": "Open source enterprise content management system",
+      "url": "https://api.iconify.design/simple-icons/typo3.svg"
+    },
+    {
+      "name": "Wagtail",
+      "description": "Open source Django-based CMS",
+      "url": "https://api.iconify.design/simple-icons/wagtail.svg"
+    },
+    {
+      "name": "Craft CMS",
+      "description": "Content management system",
+      "url": "https://craftcms.com/dist/images/logo.svg"
+    },
+    {
+      "name": "ProcessWire",
+      "description": "Open source content management system",
+      "url": "https://d1juguve2xwkcy.cloudfront.net/tpl/css/images/processwire-blk.svg"
+    }
+  ],
+  "headless_cms": [
+    {
+      "name": "Strapi",
+      "description": "Open source headless CMS",
+      "url": "https://api.iconify.design/simple-icons/strapi.svg"
+    },
+    {
+      "name": "Directus",
+      "description": "Open source data platform",
+      "url": "https://api.iconify.design/simple-icons/directus.svg"
+    },
+    {
+      "name": "Ghost",
+      "description": "Open source publishing platform",
+      "url": "https://api.iconify.design/simple-icons/ghost.svg"
+    }
+  ],
+  "static_site_generators": [
+    {
+      "name": "Hugo",
+      "description": "Fast static site generator",
+      "url": "https://api.iconify.design/simple-icons/hugo.svg"
+    },
+    {
+      "name": "Jekyll",
+      "description": "Static site generator",
+      "url": "https://api.iconify.design/simple-icons/jekyll.svg"
+    },
+    {
+      "name": "Eleventy",
+      "description": "Simple static site generator",
+      "url": "https://raw.githubusercontent.com/11ty/11ty-logo/refs/heads/master/img/logo.svg"
+    },
+    {
+      "name": "Gatsby",
+      "description": "React-based static site generator",
+      "url": "https://api.iconify.design/simple-icons/gatsby.svg"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Astro",
+      "description": "Modern web framework",
+      "url": "https://api.iconify.design/simple-icons/astro.svg"
+    }
+  ],
+  "social_platforms": [
+    {
+      "name": "Mastodon",
+      "description": "Open source decentralized social network",
+      "url": "https://joinmastodon.org/logos/logo-black.svg"
+    }
+  ],
+  "learning_platforms": [
+    {
+      "name": "Moodle",
+      "description": "Open source learning management system",
+      "url": "https://api.iconify.design/simple-icons/moodle.svg"
+    }
+  ],
+  "writing_tools": [
+    {
+      "name": "Wikibooks",
+      "description": "Open source collaborative book creation",
+      "url": "https://api.iconify.design/simple-icons/wikibooks.svg"
+    },
+    {
+      "name": "novelWriter",
+      "description": "Open source novel writing application",
+      "url": "https://novelwriter.io/_images/novelwriter-icon.svg"
+    }
+  ]
+}
+
+
