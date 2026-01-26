@@ -162,16 +162,33 @@
     const maxAttempts = 12;
     const paddingPx = 8; // padding between logos
 
+    // Keep track of names placed on this slide to avoid duplicates
+    const slideChosen = new Set();
     for (let i = 0; i < pickCount; i++) {
-      const item = items[Math.floor(Math.random() * items.length)];
+      // choose an item biased toward those with the lowest global usage to ensure even coverage
       const size = (Math.random() * (maxScale - minScale)) + minScale; // percent
+
+      // Build candidate pool excluding names already placed on this slide
+      let candidates = items.filter(it => it && it.name && !slideChosen.has(it.name));
+      if (candidates.length === 0) candidates = items.slice();
+
+      // compute minimum usage among candidates
+      let minUsage = Infinity;
+      candidates.forEach(c => {
+        const n = (window._logoUsageMap && window._logoUsageMap[c.name]) || 0;
+        if (n < minUsage) minUsage = n;
+      });
+
+      // narrow to candidates with usage == minUsage
+      const minCandidates = candidates.filter(c => ((window._logoUsageMap && window._logoUsageMap[c.name]) || 0) === minUsage);
+      let chosen = null;
+      if (minCandidates.length > 0) chosen = minCandidates[Math.floor(Math.random() * minCandidates.length)];
+      if (!chosen) chosen = items[Math.floor(Math.random() * items.length)];
 
       let attempt = 0;
       let leftPct, topPct, rot, leftPx, topPx, widthPx, heightPx;
       let box, overlaps;
-
       do {
-        // biased placement toward right/bottom (40%..100%)
         leftPct = 40 + (Math.random() * 60);
         topPct = 40 + (Math.random() * 60);
         rot = (Math.random() - 0.5) * 40; // -20..20deg
@@ -190,21 +207,31 @@
           x1: leftPx - (widthPx / 2) - paddingPx,
           y1: topPx - (heightPx / 2) - paddingPx,
           x2: leftPx + (widthPx / 2) + paddingPx,
-          y2: topPx + (heightPx / 2) + paddingPx
+          y2: topPx + (heightPx / 2) + paddingPx,
+          name: chosen && chosen.name
         };
 
         overlaps = placedBoxes.some(pb => !(box.x2 < pb.x1 || box.x1 > pb.x2 || box.y2 < pb.y1 || box.y1 > pb.y2));
         attempt++;
       } while (overlaps && attempt < maxAttempts);
 
-      // Convert back to percentage positions (use clamped pixel positions)
       const finalLeftPct = (leftPx / slideWidth) * 100;
       const finalTopPct = (topPx / slideHeight) * 100;
 
-      const node = createLogoNode(item, size, finalLeftPct, finalTopPct, rot);
+      const node = createLogoNode(chosen, size, finalLeftPct, finalTopPct, rot);
       wrapper.appendChild(node);
 
       placedBoxes.push(box);
+      if (chosen && chosen.name) slideChosen.add(chosen.name);
+
+      // increment global usage for the chosen logo name
+      try {
+        if (chosen && chosen.name) {
+          if (!window._logoUsageMap) window._logoUsageMap = Object.create(null);
+          if (typeof window._logoUsageMap[chosen.name] === 'undefined') window._logoUsageMap[chosen.name] = 0;
+          window._logoUsageMap[chosen.name]++;
+        }
+      } catch (e) {}
     }
 
     slide.appendChild(wrapper);
@@ -223,6 +250,11 @@
             if (Array.isArray(json[k])) json[k].forEach(i => flat.push(i));
           });
           window._logoSourcesCache = flat;
+          // Initialize global usage map to balance coverage across slides
+          if (!window._logoUsageMap) {
+            window._logoUsageMap = Object.create(null);
+            flat.forEach(i => { try { if (i && i.name) window._logoUsageMap[i.name] = 0; } catch (e) {} });
+          }
         }
       } catch (e) {
         // ignore - fallback behaviour in addCMSToSlide will handle missing sources
@@ -253,6 +285,12 @@
           console.warn('Could not load cms-logos.svg sprite:', e);
         }
       }
+
+    // If sources were loaded but usage map was not initialized for some reason, create it now
+    if (window._logoSourcesCache && !window._logoUsageMap) {
+      window._logoUsageMap = Object.create(null);
+      window._logoSourcesCache.forEach(i => { try { if (i && i.name) window._logoUsageMap[i.name] = 0; } catch (e) {} });
+    }
 
     const slides = document.querySelectorAll('.slide.cms-showcase, section.slide.cms-showcase');
     slides.forEach(slide => addCMSToSlide(slide));
