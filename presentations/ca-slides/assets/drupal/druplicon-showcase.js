@@ -183,6 +183,38 @@
   `;
   document.head.appendChild(style);
 
+  // Optional: verify sprite ids once and cache results for debugging
+  async function verifySpriteIds(path) {
+    try {
+      // Avoid CORS errors when opened directly via file://
+      const protocol = (window.location && window.location.protocol) || '';
+      if (!/^https?:$/.test(protocol)) {
+        return; // skip verification in non-web contexts
+      }
+      if (window._drupliconSpriteVerified) return;
+      const res = await fetch(path, { cache: 'no-store' });
+      if (!res.ok) return;
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'image/svg+xml');
+      const els = doc.querySelectorAll('[id]');
+      const ids = new Set();
+      const dupes = new Set();
+      els.forEach(el => {
+        const id = el.getAttribute('id');
+        if (!id) return;
+        if (ids.has(id)) dupes.add(id);
+        ids.add(id);
+      });
+      window._drupliconAvailableIds = ids;
+      window._drupliconDuplicateIds = dupes;
+      window._drupliconSpriteVerified = true;
+      if (dupes.size) console.warn('Druplicon sprite duplicate ids:', Array.from(dupes));
+    } catch (err) {
+      // best-effort; do not block rendering
+    }
+  }
+
   function addDrupliconsToSlide(slide) {
     // If a watermark container already exists or we marked it as loaded, skip
     if (slide.dataset.drupliconsLoaded === 'true') return;
@@ -194,8 +226,6 @@
     const w = slide.clientWidth || slide.offsetWidth;
     const h = slide.clientHeight || slide.offsetHeight;
     if (w < 50 || h < 50) return; 
-
-    slide.dataset.drupliconsLoaded = 'true';
 
     // Configuration via data attributes
     // Use data-druplicon-count if set, otherwise default to random 2-5
@@ -267,8 +297,8 @@
 
     // Place logos while avoiding overlap where possible.
     const placedBoxes = [];
-    const maxAttempts = 100; // Increased attempts to find non-overlapping spot
-    const paddingPx = 10; // padding between logos
+    const maxTotalAttempts = 2000; // Global limit to prevent infinite loops
+    let totalAttempts = 0;
 
     // Keep track of names placed on this slide to avoid duplicates
     const slideChosen = new Set();
@@ -276,12 +306,18 @@
     // Usage map for fair distribution across slides
     if (!window._drupliconUsageMap) window._drupliconUsageMap = {};
 
-    for (let i = 0; i < pickCount; i++) {
+    while (placedBoxes.length < pickCount && totalAttempts < maxTotalAttempts) {
+      totalAttempts++;
       const size = (Math.random() * (maxScale - minScale)) + minScale; // percent
 
       // Build candidate pool excluding names already placed on this slide
-      let candidates = ICON_IDS.filter(id => !slideChosen.has(id));
-      if (candidates.length === 0) candidates = ICON_IDS.slice();
+      // Build candidate pool excluding names already placed, and ensure ID exists in sprite if verified
+      let basePool = ICON_IDS;
+      if (window._drupliconAvailableIds && window._drupliconAvailableIds.size) {
+        basePool = ICON_IDS.filter(id => window._drupliconAvailableIds.has(id));
+      }
+      let candidates = basePool.filter(id => !slideChosen.has(id));
+      if (candidates.length === 0) candidates = basePool.slice();
 
       // compute minimum usage among candidates to ensure even coverage
       let minUsage = Infinity;
@@ -294,10 +330,25 @@
       const minCandidates = candidates.filter(id => (window._drupliconUsageMap[id] || 0) === minUsage);
       
       let chosenId = null;
-      if (minCandidates.length > 0) chosenId = minCandidates[Math.floor(Math.random() * minCandidates.length)];
-      if (!chosenId) chosenId = ICON_IDS[Math.floor(Math.random() * ICON_IDS.length)];
+      const sequenceMode = (
+        (slide.dataset.drupliconSequence === 'true') ||
+        (document.body && document.body.dataset && document.body.dataset.drupliconSequence === 'true') ||
+        (document.documentElement && document.documentElement.dataset && document.documentElement.dataset.drupliconSequence === 'true')
+      );
+      if (sequenceMode) {
+        const idx = window._drupliconSeqIndex || 0;
+        const seqPool = (window._drupliconAvailableIds && window._drupliconAvailableIds.size)
+          ? ICON_IDS.filter(id => window._drupliconAvailableIds.has(id))
+          : ICON_IDS;
+        chosenId = seqPool[idx % seqPool.length];
+        window._drupliconSeqIndex = idx + 1;
+      } else {
+        if (minCandidates.length > 0) chosenId = minCandidates[Math.floor(Math.random() * minCandidates.length)];
+        if (!chosenId) chosenId = candidates[Math.floor(Math.random() * candidates.length)];
+      }
 
-      let attempt = 0;
+      let placementAttempt = 0;
+      const maxPlacementAttempts = 100; // Attempts per icon
       let leftPct, topPct,RDeg, leftPx, topPx, widthPx, heightPx;
       let box, overlaps;
       
@@ -306,7 +357,6 @@
       
       do {
         // Place in bottom-right quadrant (approx 50-95% width, 50-95% height)
-        // Keeps top-left empty as requested
         leftPct = 50 + (Math.random() * 45); // 50% to 95%
         topPct = 40 + (Math.random() * 55);  // 40% to 95%
         RDeg = (Math.random() - 0.5) * 60; // -30..30deg
@@ -322,34 +372,44 @@
         topPx = Math.max(heightPx / 2, Math.min(slideHeight - heightPx / 2, topPx));
 
         box = {
-          x1: leftPx - (widthPx / 2) - paddingPx,
-          y1: topPx - (heightPx / 2) - paddingPx,
-          x2: leftPx + (widthPx / 2) + paddingPx,
-          y2: topPx + (heightPx / 2) + paddingPx
+          x1: leftPx - (widthPx / 2),
+          y1: topPx - (heightPx / 2),
+          x2: leftPx + (widthPx / 2),
+          y2: topPx + (heightPx / 2)
         };
 
-        overlaps = placedBoxes.some(pb => !(box.x2 < pb.x1 || box.x1 > pb.x2 || box.y2 < pb.y1 || box.y1 > pb.y2));
-        attempt++;
-      } while (overlaps && attempt < maxAttempts);
+        // Check for overlap with a bit of padding
+        const padding = 10;
+        overlaps = placedBoxes.some(pb => 
+          box.x1 < pb.x2 + padding &&
+          box.x2 > pb.x1 - padding &&
+          box.y1 < pb.y2 + padding &&
+          box.y2 > pb.y1 - padding
+        );
+        placementAttempt++;
+      } while (overlaps && placementAttempt < maxPlacementAttempts);
 
-      // CRITICAL FIX: If we still overlap after max attempts, SKIP this placement.
-      // Do not render it, do not record usage.
-      if (overlaps) {
-        continue;
+      // If we found a spot, place it. Otherwise, the outer loop will try again.
+      if (!overlaps) {
+        const finalLeftPct = (leftPx / slideWidth) * 100;
+        const finalTopPct = (topPx / slideHeight) * 100;
+
+        const node = createLogoNode(chosenId, size, finalLeftPct, finalTopPct, RDeg);
+        wrapper.appendChild(node);
+
+        placedBoxes.push(box);
+        slideChosen.add(chosenId);
+
+        // increment global usage
+        if (!window._drupliconUsageMap[chosenId]) window._drupliconUsageMap[chosenId] = 0;
+        window._drupliconUsageMap[chosenId]++;
       }
+    }
 
-      const finalLeftPct = (leftPx / slideWidth) * 100;
-      const finalTopPct = (topPx / slideHeight) * 100;
-
-      const node = createLogoNode(chosenId, size, finalLeftPct, finalTopPct, RDeg);
-      wrapper.appendChild(node);
-
-      placedBoxes.push(box);
-      slideChosen.add(chosenId);
-
-      // increment global usage
-      if (!window._drupliconUsageMap[chosenId]) window._drupliconUsageMap[chosenId] = 0;
-      window._drupliconUsageMap[chosenId]++;
+    // Only mark as loaded if we actually added something.
+    // This allows IntersectionObserver to retry if placement fails.
+    if (placedBoxes.length > 0) {
+      slide.dataset.drupliconsLoaded = 'true';
     }
 
     slide.appendChild(wrapper);
@@ -358,6 +418,11 @@
   function initDrupliconShowcase() {
     // Look for slides with class "druplicon" OR "druplicon-watermark" (backward compatibility)
     const slides = document.querySelectorAll('.slide.druplicon, section.slide.druplicon, .slide.druplicon-watermark, section.slide.druplicon-watermark');
+    // Kick off sprite id verification (best effort) only under http(s)
+    const protocol = (window.location && window.location.protocol) || '';
+    if (/^https?:$/.test(protocol)) {
+      verifySpriteIds(SPRITE_PATH);
+    }
     
     // Use IntersectionObserver to ensure we only generate watermarks when the slide is rendered and has dimensions.
     // This fixes issues with slides hidden via display:none having 0x0 placement or content collisions.
