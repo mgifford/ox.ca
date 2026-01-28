@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Druplicon Sprite Demo - Dark/Light Mode</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    :root {
+      --bg: #fff;
+      --text: #000;
+      --border: #ccc;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --text: #fff;
+        --border: #444;
+      }
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    
+    p {
+      margin-bottom: 2rem;
+      color: var(--text);
+      opacity: 0.8;
+    }
+    
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .icon-item {
+      text-align: center;
+    }
+    
+    .icon-item svg {
+      width: 80px;
+      height: 80px;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    
+    .icon-item label {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text);
+      opacity: 0.6;
+      word-break: break-word;
+    }
+    
+    .watermark-demo {
+      position: relative;
+      margin: 3rem 0;
+      padding: 3rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      min-height: 300px;
+      overflow: hidden;
+    }
+    
+    .watermark-demo h2 {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .watermark-demo svg {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 200px;
+      height: 200px;
+      opacity: 0.08;
+      color: var(--text);
+      pointer-events: none;
+    }
+    
+    /* Force light/dark for manual testing */
+    body.light-mode {
+      --bg: #fff;
+      --text: #000;
+      --border: #ccc;
+    }
+    
+    body.dark-mode {
+      --bg: #1a1a1a;
+      --text: #fff;
+      --border: #444;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  
+  <h1>Druplicon Sprite Demo</h1>
+  <p>
+    162 Druplicon icons with greyscale-preserving color normalization.
+    Icons use <code>currentColor</code> with luminance-based opacity for dark/light mode compatibility.
+  </p>
+  
+  <div class="watermark-demo">
+    <h2>Watermark Example</h2>
+    <p>This box shows how druplicons work as subtle watermarks in presentations.</p>
+    <svg>
+      <use href="druplicon-sprite.svg#druplicon-drupal-hero_drupal-20hero"/>
+    </svg>
+  </div>
+  
+  <div class="watermark-demo">
+    <h2>Random Watermark (GitHub Pages Compatible)</h2>
+    <p>Each time you reload, you'll see a different random druplicon. Click the button below to change it.</p>
+    <button onclick="randomizeWatermark()" style="padding: 0.5rem 1rem; margin-top: 1rem; cursor: pointer;">
+      Randomize Watermark
+    </button>
+    <div id="random-watermark"></div>
+  </div>
+  
+  <h2>Sample Icons</h2>
+  <div class="icon-grid">
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-angry-drop_angry"/></svg>
+      <label>angry</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-a11y_druplicon-a11y"/></svg>
+      <label>a11y</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-drupal-hero_drupal-20hero"/></svg>
+      <label>hero</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-druplicon-batman_druplicon-batman"/></svg>
+      <label>batman</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-druplicon-angel_druplicon-angel"/></svg>
+      <label>angel</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-composer"/></svg>
+      <label>composer</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-drupal-europe-2018"/></svg>
+      <label>europe 2018</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-bootstrap-paragraphs"/></svg>
+      <label>bootstrap</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-drupal-cafe-lviv_drupal-lviv"/></svg>
+      <label>lviv</label>
+    </div>
+    <div class="icon-item">
+      <svg><use href="druplicon-sprite.svg#druplicon-badcamp-2016_badcamp-2016-logo"/></svg>
+      <label>badcamp 2016</label>
+    </div>
+    <div class="icon-item">
+      <sv src="druplicon-random.js"></script>
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+      }
+    }
+    
+    function randomizeWatermark() {
+      const container = document.getElementById('random-watermark');
+      container.innerHTML = ''; // Clear previous
+      DruplIconRandom.insert('#random-watermark', {
+        position: 'absolute',
+        opacity: 0.08,
+        spritePath: 'druplicon-sprite.svg'
+      });
+    }
+    
+    // Initialize with random watermark on load
+    randomizeWatermark();unction toggleTheme() {
+      const body = document.body;
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+      }
+    }
+  </script>
+</body>
+</html>
