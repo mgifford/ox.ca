@@ -24,6 +24,13 @@ while IFS= read -r url; do
   esac
 
   if [[ "$url" =~ ^https?:// ]]; then
+    # Skip hosts known to block HEAD or automated checks
+    case "$url" in
+      https://www.linkedin.com/*|https://linkedin.com/*|https://bsky.app/*|https://www.microsoft.com/*)
+        echo "SKIP: $url (known to block HEAD/automated checks)"
+        continue
+        ;;
+    esac
     # check external URL
     status=$(curl -I -L --max-time 10 -s -o /dev/null -w "%{http_code}" "$url" || echo 000)
     if [ "$status" = "000" ] || [ "$status" -ge 400 ]; then

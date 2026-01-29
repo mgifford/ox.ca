@@ -310,11 +310,12 @@
       totalAttempts++;
       const size = (Math.random() * (maxScale - minScale)) + minScale; // percent
 
-      // Build candidate pool excluding names already placed on this slide
-      // Build candidate pool excluding names already placed, and ensure ID exists in sprite if verified
+      // Build candidate pool excluding names already placed.
+      // Prefer dynamically discovered IDs from the sprite when available.
       let basePool = ICON_IDS;
       if (window._drupliconAvailableIds && window._drupliconAvailableIds.size) {
-        basePool = ICON_IDS.filter(id => window._drupliconAvailableIds.has(id));
+        // Use all discovered druplicon IDs from the sprite
+        basePool = Array.from(window._drupliconAvailableIds).filter(id => id && id.indexOf('druplicon-') === 0);
       }
       let candidates = basePool.filter(id => !slideChosen.has(id));
       if (candidates.length === 0) candidates = basePool.slice();
@@ -338,7 +339,7 @@
       if (sequenceMode) {
         const idx = window._drupliconSeqIndex || 0;
         const seqPool = (window._drupliconAvailableIds && window._drupliconAvailableIds.size)
-          ? ICON_IDS.filter(id => window._drupliconAvailableIds.has(id))
+          ? Array.from(window._drupliconAvailableIds).filter(id => id && id.indexOf('druplicon-') === 0)
           : ICON_IDS;
         chosenId = seqPool[idx % seqPool.length];
         window._drupliconSeqIndex = idx + 1;

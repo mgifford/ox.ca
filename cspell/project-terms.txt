@@ -43,3 +43,8 @@ siloed
 presentations
 cleanup
 playbooks
+Druplicon
+druplicon
+Popovers
+popovers
+DruplIconRandom

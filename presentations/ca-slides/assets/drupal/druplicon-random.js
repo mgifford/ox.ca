@@ -21,6 +21,27 @@
   
   const SPRITE_PATH = 'ca-slides/assets/drupal/druplicon-sprite.svg';
   
+  // Best-effort verification: fetch sprite and cache available IDs for dynamic use
+  async function verifySpriteIds(path) {
+    try {
+      const protocol = (window.location && window.location.protocol) || '';
+      if (!/^https?:$/.test(protocol)) return; // skip when opened via file://
+      if (window._drupliconSpriteVerified) return;
+      const res = await fetch(path, { cache: 'no-store' });
+      if (!res.ok) return;
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'image/svg+xml');
+      const els = doc.querySelectorAll('[id]');
+      const ids = new Set();
+      els.forEach(el => { const id = el.getAttribute('id'); if (id) ids.add(id); });
+      window._drupliconAvailableIds = ids;
+      window._drupliconSpriteVerified = true;
+    } catch (e) {
+      // Non-blocking
+    }
+  }
+  
   // All 162 available icon IDs
   const ICON_IDS = [
     'druplicon-42-druplicon',
@@ -179,7 +200,10 @@
      * @returns {string} Icon ID (e.g., 'druplicon-a11y_druplicon-a11y')
      */
     getRandomId: function() {
-      return ICON_IDS[Math.floor(Math.random() * ICON_IDS.length)];
+      const dynamic = (window._drupliconAvailableIds && window._drupliconAvailableIds.size)
+        ? Array.from(window._drupliconAvailableIds).filter(id => id && id.indexOf('druplicon-') === 0)
+        : ICON_IDS;
+      return dynamic[Math.floor(Math.random() * dynamic.length)];
     },
     
     /**
@@ -188,8 +212,11 @@
      * @returns {string[]} Array of icon IDs
      */
     getRandomIds: function(count) {
-      const shuffled = [...ICON_IDS].sort(() => Math.random() - 0.5);
-      return shuffled.slice(0, Math.min(count, ICON_IDS.length));
+      const pool = (window._drupliconAvailableIds && window._drupliconAvailableIds.size)
+        ? Array.from(window._drupliconAvailableIds).filter(id => id && id.indexOf('druplicon-') === 0)
+        : ICON_IDS;
+      const shuffled = [...pool].sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, Math.min(count, pool.length));
     },
     
     /**
@@ -288,6 +315,9 @@
      * @returns {string[]} Array of all 162 icon IDs
      */
     getAllIds: function() {
+      if (window._drupliconAvailableIds && window._drupliconAvailableIds.size) {
+        return Array.from(window._drupliconAvailableIds).filter(id => id && id.indexOf('druplicon-') === 0);
+      }
       return [...ICON_IDS];
     },
     
@@ -296,6 +326,9 @@
      * @returns {number} Total count (162)
      */
     getCount: function() {
+      if (window._drupliconAvailableIds && window._drupliconAvailableIds.size) {
+        return Array.from(window._drupliconAvailableIds).filter(id => id && id.indexOf('druplicon-') === 0).length;
+      }
       return ICON_IDS.length;
     },
     
@@ -304,6 +337,11 @@
      * Called automatically on DOMContentLoaded
      */
     init: function() {
+      // Kick off sprite id verification (best effort) only under http(s)
+      const protocol = (window.location && window.location.protocol) || '';
+      if (/^https?:$/.test(protocol)) {
+        verifySpriteIds(SPRITE_PATH);
+      }
       const autoElements = document.querySelectorAll('[data-druplicon="random"], .druplicon-watermark');
       autoElements.forEach(element => {
         this.insert(element, {

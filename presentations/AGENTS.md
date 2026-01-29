@@ -21,6 +21,23 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Keep the `aria-live` region that announces exit from slide mode; it supports screen reader users.
 - Include a Resources slide near the end and keep a final Questions slide with contact links and a QR placeholder when possible.
 
+## Slide Augmentations & Helpers
+- Load helpers after `ca-slides/b6plus.js` and before deck content where possible
+- **Druplicon Showcase** (`ca-slides/assets/drupal/druplicon-showcase.js`)
+    - Adds watermark druplicon icons to slides with `class="druplicon"` or `class="druplicon-watermark"`
+    - Controls:
+        - `data-druplicon-count` – number of icons per slide
+        - `data-druplicon-opacity` – opacity (0–1)
+        - `data-druplicon-scale-min` / `data-druplicon-scale-max` – size bounds (percent)
+        - `data-druplicon-sequence="true"` on `<body>` to distribute icons sequentially across slides
+- **Random Druplicon** (`ca-slides/assets/drupal/druplicon-random.js`)
+    - `window.DruplIconRandom.insert(target, options)` to place a single random watermark
+    - Uses dynamic IDs discovered from the sprite over http(s) and falls back to a static list
+- **CMS Showcase** (`ca-slides/cms-showcase.js`)
+    - For non-Drupal logo watermarks; similar data attributes apply
+- **Details Popovers** (`ca-slides/details-popovers.js`)
+    - Optional popovers for supplemental slide content; load after `b6plus.js`
+
 ## Accessibility & Content Hygiene
 - Keep headings in order (no skipped levels); one `h1` on the cover, `h2` per slide.
 - Use clear, descriptive link text; avoid "click here." Include `alt` text when adding images/QRs.
@@ -30,6 +47,14 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Prefer literal characters; keep HTML entities only where required for HTML (`&`, `<`, `>`).
 - Be consistent with use of "and" and "&" - default to "&" for space.
 - In notes, include source URLs in full (https...) and keep citations readable without relying on link previews.
+
+## Druplicon Sprite Maintenance
+- Originals folder: `presentations/ca-slides/assets/drupal/originals`
+- Sprite output: `presentations/ca-slides/assets/drupal/druplicon-sprite.svg`
+- Manifest: `presentations/ca-slides/assets/drupal/druplicon-manifest.txt`
+- Regenerate after adding/removing originals:
+    - `python scripts/build_druplicon_sprite.py`
+- JS reads IDs dynamically from the sprite when served over http(s), so no manual JS updates are required
 
 ## Tone & Narrative
 - Voice: direct, community-focused, pragmatic. Call out procurement/privacy realities and open-source advantages.
@@ -84,6 +109,10 @@ Before committing changes to presentations:
 - Check links: `npm run check:links`
 - Audit accessibility: `npm run scan:accessibility`
 - Fix any landmarks errors (ensure unique labels) and heading order.
+
+## Scope
+- Edit source files in `/presentations/` only; do not edit generated output in `/_site`
+- Keep paths and shortlinks stable; use redirects under `/p/` rather than moving content
 
 ## Scope to /presentations
 - Do not apply any changes from this to the parent directory. Keep it to within the /presentations folder

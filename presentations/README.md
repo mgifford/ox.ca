@@ -1,16 +1,48 @@
-# W3C TPAC Template
-Unsure why this isn't in the W3C Repo. I've copied the [zip file from the Template page](https://www.w3.org/2025/Talks/TPAC/Templates/) to here so that it is easier to track. It can also be found on [GitHub in a WebView-CG subdirectory](https://github.com/WebView-CG/tpac/tree/main/TPAC-2025).
+# Presentations
+Slide decks for talks under `/presentations/`, built on W3C’s b6+ templates with a minimal theme.
 
-## My copy of the template
-[Overview.html](https://mgifford.github.io/w3c-tpac-template/Templates/Overview.html)
+## Framework
+- **Template**: b6+ tooling from W3C (Overview in `/presentations/ca-slides/Overview.html`)
+- **Runtime scripts**: `ca-slides/b6plus.js`, optional helpers loaded after it
+- **Theme**: `ca-slides/slides.css` supports light/dark backgrounds and text colors
 
-The presentation starts with an overview. To start the presentation, press play (at the bottom).
+## Authoring
+- Edit slides only in `/presentations/`; never edit generated files in `/_site`
+- Keep `body` classes like `shower fade-in duration=20 warn=5 hidemouse` unless timing needs change
+- Each deck should have a Cover, Resources, and Questions slide
+- Use `class="next"` for staged reveals; keep headings in order and include alt text for images
 
-## Clone this repo
-The easiest way to make presentations for TPAC will be to just clone a repo (like this one) and then make your changes in GitHub. This way it can be better shared with others before/during/after the event. 
+## Assets
+- **Druplicon sprite**: built from originals in `presentations/ca-slides/assets/drupal/originals`
+	- Generated file: `presentations/ca-slides/assets/drupal/druplicon-sprite.svg`
+	- Manifest: `presentations/ca-slides/assets/drupal/druplicon-manifest.txt`
+	- Regenerate sprite:
+		- `python scripts/build_druplicon_sprite.py`
+- **QR codes**: under `presentations/qr-codes/` with SVG files referenced by slides
 
-## GitHub Pages
-GitHub Pages makes the hosting easy. This of course can all be served locally too, as it is just HTML. 
+## Helpers
+- **Druplicon Showcase**: `ca-slides/assets/drupal/druplicon-showcase.js`
+	- Adds watermark icons to slides with `class="druplicon"` or `class="druplicon-watermark"`
+	- Data attributes:
+		- `data-druplicon-count` – number of icons per slide
+		- `data-druplicon-opacity` – icon opacity (0–1)
+		- `data-druplicon-scale-min` / `data-druplicon-scale-max` – icon size bounds (percent)
+		- `data-druplicon-sequence="true"` on `<body>` to distribute icons sequentially across slides
+- **Random Druplicon**: `ca-slides/assets/drupal/druplicon-random.js`
+	- Provides `window.DruplIconRandom` utilities to insert or pick random sprite icons
+- **CMS Showcase**: `ca-slides/cms-showcase.js` for non-Drupal logos
+- **Details Popovers**: `ca-slides/details-popovers.js` for optional slide popovers
 
-## Questions
-I don't know what the difference is between the [W3C's b6+](https://www.w3.org/Talks/Tools/b6plus/) and [Shower](https://shwr.me/), or why one would use one or the other. 
+## Local Preview
+- Serve from any static server or open files directly; dynamic sprite ID discovery runs only over http(s)
+- GitHub Pages can host the `/presentations/` directory without additional setup
+
+## QA
+- Run in project root:
+	- `npm install` once
+	- `npm run qa:all` to validate HTML, links, and basic accessibility
+	- Fix headings, alt text, and landmark labels before publishing
+
+## References
+- b6+: https://www.w3.org/Talks/Tools/b6plus/
+- Shower: https://shwr.me/

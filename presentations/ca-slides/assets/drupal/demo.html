@@ -124,7 +124,7 @@
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <button class="theme-toggle" type="button" onclick="toggleTheme()">Toggle Theme</button>
   
   <h1>Druplicon Sprite Demo</h1>
   <p>
@@ -143,7 +143,7 @@
   <div class="watermark-demo">
     <h2>Random Watermark (GitHub Pages Compatible)</h2>
     <p>Each time you reload, you'll see a different random druplicon. Click the button below to change it.</p>
-    <button onclick="randomizeWatermark()" style="padding: 0.5rem 1rem; margin-top: 1rem; cursor: pointer;">
+    <button type="button" onclick="randomizeWatermark()" style="padding: 0.5rem 1rem; margin-top: 1rem; cursor: pointer;">
       Randomize Watermark
     </button>
     <div id="random-watermark"></div>
@@ -192,7 +192,12 @@
       <label>badcamp 2016</label>
     </div>
     <div class="icon-item">
-      <sv src="druplicon-random.js"></script>
+      <svg><use href="druplicon-sprite.svg#druplicon-drupalcon-global-2020"/></svg>
+      <label>global 2020</label>
+    </div>
+  </div>
+
+  <script src="druplicon-random.js"></script>
   <script>
     function toggleTheme() {
       const body = document.body;
@@ -204,28 +209,21 @@
         body.classList.add('dark-mode');
       }
     }
-    
+
     function randomizeWatermark() {
       const container = document.getElementById('random-watermark');
-      container.innerHTML = ''; // Clear previous
-      DruplIconRandom.insert('#random-watermark', {
-        position: 'absolute',
-        opacity: 0.08,
-        spritePath: 'druplicon-sprite.svg'
-      });
-    }
-    
-    // Initialize with random watermark on load
-    randomizeWatermark();unction toggleTheme() {
-      const body = document.body;
-      if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-      } else {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
+      container.innerHTML = '';
+      if (window.DruplIconRandom && typeof window.DruplIconRandom.insert === 'function') {
+        window.DruplIconRandom.insert('#random-watermark', {
+          position: 'absolute',
+          opacity: 0.08,
+          spritePath: 'druplicon-sprite.svg'
+        });
       }
     }
+
+    // Initialize with random watermark on load
+    randomizeWatermark();
   </script>
 </body>
 </html>
