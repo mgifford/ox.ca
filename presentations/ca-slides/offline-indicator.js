@@ -41,6 +41,9 @@ const applyOfflineClass = isOffline => {
 };
 
 const isServerReachable = async () => {
+  // Avoid CORS/security errors when opened directly via file://
+  const protocol = (window.location && window.location.protocol) || "";
+  if (protocol === "file:") return true;
   if (typeof fetch !== "function") return isOfflineHinted();
   try {
     const response = await fetch(window.location.href, {
