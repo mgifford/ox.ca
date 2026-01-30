@@ -25,6 +25,9 @@ const shortlinks = {
   'procurement-fosdem26-handout2.QR.svg': { url: '/p/2-h2', name: 'Procurement Handout 2' },
   'accessible-sovereignty-handout.QR.svg': { url: '/p/4-h1', name: 'Accessibility & Sovereignty Handout 1' },
   'accessible-sovereignty-handout2.QR.svg': { url: '/p/4-h2', name: 'Accessibility & Sovereignty Handout 2' },
+  
+  // Book (external)
+  'digital-accessibility-ethics.QR.svg': { url: 'https://lflegal.com/book/digital-accessibility-ethics', name: 'Digital Accessibility Ethics (book)' },
 };
 
 async function generateQRCodes() {
@@ -43,7 +46,7 @@ async function generateQRCodes() {
   };
   
   for (const [filename, data] of Object.entries(shortlinks)) {
-    const fullUrl = `${BASE_URL}${data.url}`;
+    const fullUrl = data.url.startsWith('http') ? data.url : `${BASE_URL}${data.url}`;
     const svgPath = path.join(outputDir, filename);
     
     try {
