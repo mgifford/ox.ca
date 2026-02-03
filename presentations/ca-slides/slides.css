@@ -78,6 +78,11 @@ body.full {
 body.full .slide {
   max-height: calc(100vh - 5em);
 }
+
+/* Iframe full width in demo frames */
+.demo-frame iframe {
+  width: 100%;
+}
 }
 
 /* Local fonts for CivicActions branding */
