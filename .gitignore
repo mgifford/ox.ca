@@ -31,3 +31,7 @@ _site/
 # Node
 node_modules/
 package-lock.json
+
+# Whisper demos (fetched locally, not committed)
+presentations/whisper.cpp/
+presentations/whisper-demo/

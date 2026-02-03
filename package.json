@@ -15,6 +15,10 @@
     "scan:accessibility": "pa11y-ci --config .pa11yci.json || true",
     "check:links": "./scripts/check-links.sh || true",
     "spell:md": "git ls-files \"**/*.md\" | xargs -r npx cspell || true",
-    "qa:all": "npm run validate:html && npm run scan:accessibility && npm run check:links && npm run spell:md"
+    "qa:all": "npm run validate:html && npm run scan:accessibility && npm run check:links && npm run spell:md",
+    "fetch:whisper": "./scripts/fetch-whisper-demo.sh",
+    "dev:transcript": "node scripts/whisper-transcript-watch.js --src presentations/whisper-demo/transcript.txt",
+    "dev:transcript:json": "node scripts/whisper-transcript-watch.js --src presentations/whisper-demo/transcript.json",
+    "dev:whisper": "node scripts/run-whisper.js"
   }
 }
