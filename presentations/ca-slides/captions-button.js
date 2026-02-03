@@ -216,7 +216,7 @@
           '<li>Run <code style="background: var(--code-bg, #f0f0f0); padding: 2px 6px; border-radius: 3px;">npm run dev:whisper</code> from the project root</li>' +
           '</ol>' +
           '<p>When active, this button will show a green indicator (🟢).</p>' +
-          '<p style="margin-top: 1.5em;"><a href="README-whisper.md" target="_blank" style="color: #005EA2; text-decoration: underline;">→ View detailed setup instructions</a></p>' +
+          '<p style="margin-top: 1.5em;"><a href="/presentations/README-whisper.html" target="_blank" style="color: #005EA2; text-decoration: underline;">→ View detailed setup instructions</a></p>' +
           '<button style="margin-top: 1.5em; padding: 0.5em 1.5em; background: #005EA2; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Close</button>';
       }
       
