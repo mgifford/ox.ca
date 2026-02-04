@@ -41,11 +41,15 @@ while IFS= read -r url; do
     fi
   else
     # treat as local path
-    if [[ "$url" = /* ]]; then
-      path="$ROOT${url}"
+    # Strip query parameters and fragments for file checking
+    clean_url="${url%%\?*}"
+    clean_url="${clean_url%%\#*}"
+    
+    if [[ "$clean_url" = /* ]]; then
+      path="$ROOT${clean_url}"
     else
       # resolve relative to the presentations dir
-      path=$(python3 -c 'import os,sys; print(os.path.normpath(os.path.join(sys.argv[1], sys.argv[2], sys.argv[3])))' "$ROOT" "$base_dir" "$url")
+      path=$(python3 -c 'import os,sys; print(os.path.normpath(os.path.join(sys.argv[1], sys.argv[2], sys.argv[3])))' "$ROOT" "$base_dir" "$clean_url")
     fi
     if [ -e "$path" ]; then
       echo "OK: local $url -> $path"

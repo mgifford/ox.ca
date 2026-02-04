@@ -49,3 +49,8 @@ Guardrails for keeping the ox.ca landing page clear, accurate, and accessible.
 - Keep custom behavior for the decks in separate scripts under /presentations/ca-slides so b6plus.js can be updated directly from https://www.w3.org/Talks/Tools/b6plus/ without merge conflict.
 - Load helpers like details-popovers.js after ca-slides/b6plus.js (and after auto-scale.js when that helper is used) so the global helpers (`_`, document structure) are available.
 - Document any additional helper scripts in this AGENTS file so the maintenance plan is clear for future updates.
+
+## Git submodules
+- whisper.cpp is included as a git submodule at `presentations/whisper.cpp/` for optional live captioning features.
+- The submodule is not required for basic site functionality; it's only needed when building presentations with live caption support.
+- After cloning, initialize with: `git submodule update --init --recursive`

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Live Captioning with Whisper
+---
+
 # Live Captioning with Whisper
 
 This feature provides real-time live captioning for presentations using Whisper.cpp.
@@ -18,13 +23,14 @@ The caption system polls a JSON file that gets updated in real-time by Whisper.c
 
 ### 1. Build Whisper.cpp
 
-Clone and build whisper.cpp inside the presentations directory to keep everything together:
+Whisper.cpp is included as a git submodule. After cloning this repository, initialize and build it:
 
 ```bash
-# From the presentations directory
-cd presentations
-git clone https://github.com/ggerganov/whisper.cpp.git
-cd whisper.cpp
+# Initialize and fetch the whisper.cpp submodule
+git submodule update --init --recursive
+
+# Navigate to the submodule directory
+cd presentations/whisper.cpp
 
 # Install SDL2 (required for microphone capture)
 brew install sdl2
@@ -35,8 +41,6 @@ cmake --build build --config Release
 ```
 
 This creates the `whisper-stream` binary at `presentations/whisper.cpp/build/bin/whisper-stream`.
-
-**Note:** You can also add whisper.cpp as a git submodule if you want to track it properly in version control.
 
 ### 2. Download a Model
 
