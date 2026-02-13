@@ -16,7 +16,7 @@ Authoring guidance for keeping the slide deck consistent, accessible, and on-mes
 - Incremental bullets use `<ul class="emerge">` and `class="next"` where needed.
 - Big pivot uses `<p class="shout">`.
 - Side-by-side content uses `<div class="columns">` with child blocks.
-- Keep `<div class="progress"></div>` and `<div class="clock"></div>` in place for timing.
+- Use `<aside class="progress" aria-label="Presentation progress"></aside>` and `<aside class="clock" aria-label="Presentation timer"></aside>` for presentation controls (these are ARIA landmarks required for WCAG 2.1 compliance).
 - Cover slide should include a subtitle, speaker line (name + affiliation), event line (venue + date/time with time zone), and a note block that lists the event URL(s), slide link, and the hook for the talk.
 - Keep the `aria-live` region that announces exit from slide mode; it supports screen reader users.
 - Include a Resources slide near the end and keep a final Questions slide with contact links and a QR placeholder when possible.
