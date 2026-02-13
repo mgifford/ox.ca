@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
     "cspell": "^6.8.0",
     "html-validate": "^8.7.0",
     "linkinator": "^6.0.0",
