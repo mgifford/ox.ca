@@ -37,7 +37,7 @@ This site is checked on every push with:
 - [pa11y-ci](https://github.com/pa11y/pa11y-ci) — WCAG 2.1 AA automated scan
 - [Axe](https://github.com/dequelabs/axe-core) via Playwright
 - [html-validate](https://html-validate.org/) — structural HTML validation
-- [Lychee](https://lychee.climateaction.tech/) — broken link detection
+- [Lychee](https://github.com/lycheeverse/lychee) — broken link detection
 
 ## Reporting an issue
 
