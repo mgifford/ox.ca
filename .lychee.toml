@@ -25,5 +25,3 @@ timeout = 30
 # This allows legitimate content to pass while we exclude known bot-blocking domains
 accept = [200, 301, 302, 403, 429]
 
-# Use warnings instead of errors for timeouts to avoid build failures
-error-level = "warning"

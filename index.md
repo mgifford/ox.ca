@@ -6,6 +6,9 @@ layout: home
 
 I'm passionate about sustainability, accessibility and open. Planet, people and collaboration to make our lives better. I work at [CivicActions](https://civicactions.com/) as the Open Standards and Practices Lead. I'm a [W3C Invited Expert](https://www.w3.org/invited-experts/list/?initial=g) and play a leadership role in an [accessibility community group](https://www.w3.org/community/arrm/) and a [web sustainability interest group](https://www.w3.org/groups/ig/sustainableweb/). 
 
+<div class="two-col-grid" markdown="1">
+<div markdown="1">
+
 ## Social Media
 
 Feel free to reach out to me on:
@@ -13,6 +16,9 @@ Feel free to reach out to me on:
 - [LinkedIn: mgifford](https://www.linkedin.com/in/mgifford/)
 - [Mastodon: @mgifford@mastodon.social](https://mastodon.social/@mgifford)
 - [Bluesky: @ox.ca](https://bsky.app/profile/ox.ca)
+
+</div>
+<div markdown="1">
 
 ## Other Sites
 
@@ -22,6 +28,9 @@ I've also got content up on:
 - [Drupal: @mgifford](https://www.drupal.org/u/mgifford)
 - [GitHub: @mgifford](https://github.com/mgifford)
 - [Wikipedia: @mgifford](https://en.wikipedia.org/wiki/User:Mgifford)
+
+</div>
+</div>
 
 ## My Biography
 
