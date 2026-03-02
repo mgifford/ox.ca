@@ -13,8 +13,11 @@
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script>
-      const mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", mode);
+      (function () {
+        var saved = localStorage.getItem('theme');
+        var mode = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', mode);
+      }());
     </script>
     
     <link rel="preload" href="/assets/fonts/Sen-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -47,6 +50,15 @@ Photographer: <a href="https://www.linkedin.com/in/tiana-lea-6778b3145/">Tiana L
           <a href="/media/Open_UK_SOOC250460.jpg"><img src="{{site.logo | relative_url}}" alt="Mike Gifford wearing a CivicActions jacket and T-Shirt" fetchpriority="high" /></a>
         </figure>
 {% endif %}
+      <button id="theme-toggle" aria-label="Switch to dark mode">
+        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" width="20" height="20" focusable="false">
+          <circle cx="12" cy="12" r="5" fill="currentColor"/>
+          <path fill="currentColor" d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" width="20" height="20" focusable="false">
+          <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
       </header>
 
       <main>
@@ -54,9 +66,10 @@ Photographer: <a href="https://www.linkedin.com/in/tiana-lea-6778b3145/">Tiana L
       </main>
 
       <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a> &mdash; <a href="/accessibility/">Accessibility</a></small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/theme-toggle.js" | relative_url }}"></script>
   </body>
 </html>
