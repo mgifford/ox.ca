@@ -307,3 +307,15 @@ a:focus-visible,
   margin-top: 1em;
   font-size: 1.1em;
 }
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+@media (max-width: 37.5em) {
+  .two-col-grid {
+    grid-template-columns: 1fr;
+  }
+}
