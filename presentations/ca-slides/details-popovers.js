@@ -74,6 +74,10 @@ const initDetails = () => {
     const notesContainer = slide.querySelector(":scope > .notes");
     if (notesContainer) {
       notesContainer.appendChild(trigger);
+      // If the notes container is aria-hidden, make the button non-focusable
+      if (notesContainer.getAttribute("aria-hidden") === "true") {
+        trigger.setAttribute("tabindex", "-1");
+      }
     } else {
       slide.insertBefore(trigger, detail);
     }
