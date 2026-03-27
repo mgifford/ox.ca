@@ -16,8 +16,8 @@ exclude = [
 ]
 
 # Retry a bit more to reduce flakiness
-max-retries = 4
-retry-wait-time = 3
+max_retries = 4
+retry_wait_time = 3
 
 # Increase timeout threshold for slow sites (default is 20s)
 timeout = 30
