@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+
+
+
+
+
+
+
+
+<div class="slides">
+    <section class="stack" data-id="f6f05edb0cb768e4ba0ea00db68ce9b2">
+        <section class="" data-id="a4a92f31934bbbb25c76ddbdb5ed2b66" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/480111/Open-1.png">
+<h2 class="absolute-element" style="position: absolute; width: 550px; height: 178px; z-index: 5; left: 10px; top: 50px; max-height: none; max-width: none; color: #fff; font-size: 80px;">
+Fixing Accessibility Problems
+</h2>
+
+<h1 class="absolute-element" style="position: absolute; width: 964.03125px; height: 115px; z-index: 4; left: 47px; top: 300px; max-height: none; max-width: none; color: #fff;">
+at the Source
+</h1>
+
+<h3 style="position: absolute; width: 960px; height: 136px; z-index: 4; left: 50px; top: 550px; max-height: none; max-width: none; color: #fff;" class="absolute-element">
+Mike Gifford - OpenConcept.ca
+</h3>
+
+<p style="position: absolute; width: 500px; height: 20px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px; color: #fff;">
+Photo: <a href="https://secure.flickr.com/photos/kk/492908390/sizes/l/">Kris Krung</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+        <section class="" data-id="4cf816324b0f3ed67ac06459b941e96a">
+            <h2>Introduction</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<div>Mike Gifford, President</div>
+<div>OpenConcept Consulting Inc.</div>
+<div>
+<br>
+</div>
+<div>Drupal Core Accessibility Maintainer</div>
+<div>
+<br>
+</div>
+<div>@mgifford</div>
+<div>
+    <br>
+    </div>
+<div>http://openconcept.ca</div>
+    <div>
+        <br>
+    </div>
+<div>#a11yopen</div>
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-grey-2014-382x100-compressed.png" width="350" height="90">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+    </section>
+
+
+
+    <section class="stack" data-id="8acf9d49b227395119afb860d56a825a">
+    <section class="" data-id="5c503f5f85d40f8b9480d1267cc044fc" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/480220/Scale.jpg">
+<h2 class="absolute-element" style="position: absolute; width: 267.84375px; height: 58px; z-index: 4; left: 27px; top: 37px;">
+<b>Scaling</b>
+</h2>
+<h2 class="absolute-element" style="position: absolute; width: 285.6875px; height: 58px; z-index: 6; left: 654px; top: 37px;">
+<b>Matters!</b>
+</h2>
+
+<p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px;">
+<span style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.8); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Photo: <a href="https://secure.flickr.com/photos/monana7/3621283977/sizes/o/">Yamashita Yohei</a>
+</span>
+</p>
+
+
+
+
+
+
+
+</section>
+    <section class="" data-id="bf99e7e24a8e1dfc2f04b7132b0dc41c"> <h2>Focus Has Been On</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<div class="fragment" data-fragment-index="0">
+<span style="font-size: 35.6842994689941px; font-style: normal; font-variant: normal;">Assistive Technology</span>
+</div>
+<div class="fragment" data-fragment-index="1">
+    <span style="font-size: 35.6842994689941px; font-style: normal; font-variant: normal;">Standards &amp; Guidelines</span>&nbsp;</div>
+<div class="fragment" data-fragment-index="2">Individual Sites</div>
+<div class="fragment" data-fragment-index="3">Educational Efforts</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="4">Increasingly:</div>
+
+<div class="fragment" data-fragment-index="4">Automated Tests, Themes &amp; Plugins</div>
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-350x58-approved.png" width="350" height="58">
+</p>
+</section>
+</section>
+<section class="stack" data-id="b765df36fadc7d9ed810b700afe1c948">
+    <section class="" data-id="eeb3d360fc05773e1f578dc797f65d05" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/480279/Library-transition.png">
+        <h2 class="absolute-element" style="position: absolute; width: 937.90625px; height: 130.140625px; z-index: 4; left: -3px; top: 464px;">
+<font color="#ffffff">The Modern Web Is Built with Central Libraries!</font>
+</h2>
+
+<p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px; color: #fff;">
+Photo: <a href="https://secure.flickr.com/photos/mathrong/7988229132/sizes/o/">mathrong</a>
+</p>
+
+
+</section>
+    <section class="" data-id="b632b3ed81381f8d090b649b686d1026">
+        <h2>Software Like:</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<h3>
+<div class="fragment" data-fragment-index="0">
+<b>Content Management Systems</b>
+</div>
+</h3>
+
+<div class="fragment" data-fragment-index="1" style="display: inline-block;">WordPress </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (48%) - </div>
+
+<div class="fragment" data-fragment-index="2" style="display: inline-block;">Drupal </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (13%)</div>
+
+<br>
+
+<h3>
+<div class="fragment" data-fragment-index="0">
+<b>Design Frameworks</b>
+</div>
+</h3>
+
+<div class="fragment" data-fragment-index="3" style="display: inline-block;">HTML5 Boilerplate </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (57%) - </div>
+
+<div class="fragment" data-fragment-index="4" style="display: inline-block;">Bootstrap </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (31%)</div>
+
+<br>
+
+<h3>
+<div class="fragment" data-fragment-index="0">
+<b>Javascript</b>
+</div>
+</h3>
+
+<div class="fragment" data-fragment-index="5" style="display: inline-block;">jQuery </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (20%) - </div>
+
+<div class="fragment" data-fragment-index="6" style="display: inline-block;">Modernizr </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (5%)</div>
+
+<br>
+
+<h3>
+<div class="fragment" data-fragment-index="0">
+<b>Multimedia</b>
+</div>
+</h3>
+
+<div class="fragment" data-fragment-index="7" style="display: inline-block;">JW Player </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (16%) -</div>
+
+<div class="fragment" data-fragment-index="8" style="display: inline-block;">MediaElement.js </div>
+<div class="fragment" data-fragment-index="9" style="display: inline-block;"> (4%)</div>
+
+
+
+
+</section>
+    </section>
+
+
+    <section class="stack" data-id="5bc99d96f24cf5244c1ea206b78e3adf">
+    <section class="" data-id="c99088c534fe4214a42b47c5c41ba9b7" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/483199/OpenSourceAwards.jpg">
+        <p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px;">
+<span style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.8); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Photo: <a href="https://secure.flickr.com/photos/kubina/198847870/sizes/o/">Jeff Kubina</a>
+</span>
+</p>
+
+
+
+
+</section>
+        <section class="" data-id="0907d4fdfa4a73e5e28b933873962f72">
+            <h2>
+    <b>Four Freedoms</b>
+</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<h3 class="absolute-element fragment" style="position: absolute; width: 499.921875px; height: 42px; z-index: 4; right: 64px; top: 150px;" data-fragment-index="0">Use for any purpose</h3>
+<h3 class="absolute-element fragment" style="position: absolute; width: 520.328125px; height: 42px; z-index: 4; left: 64px; top: 300px;" data-fragment-index="1">Modify it as you wish</h3>
+<h3 class="absolute-element fragment" style="position: absolute; width: 454.5px; height: 42px; z-index: 4; right: 64px; top: 450px;" data-fragment-index="2">Share with others</h3>
+<h3 class="absolute-element fragment" style="position: absolute; width: 412.09375px; height: 42px; z-index: 4; left: 64px; top: 600px;" data-fragment-index="3">Contribute back</h3>
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-350x58-approved.png" width="350" height="58">
+</p>
+        </section>
+    </section>
+    <section class="stack" data-id="09eff8cbd2726a7a535a9e4c94c5ebf1">
+        <section class="" data-id="46d87610a0d9bab30c15dc5eba2aacf8" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/483203/FreeKitens.jpg">
+            <h2>
+    <b>
+<font color="#ffffff">Free As In Kittens!</font>
+</b>
+</h2>
+
+<p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px;">
+<span style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.8); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Photo: <a href="https://secure.flickr.com/photos/8725928@N02/12371993323/sizes/o/">Harry Whittier Frees</a>
+</span>
+</p>
+
+
+
+
+</section>
+            <section class="" data-id="3643cff3070ba6c83a473cc852b03eaa">
+                <h2>Collaboration</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+<div>
+<ul>
+<li>
+<span style="text-align: center;">bug reports</span>
+</li>
+<li>
+<span style="text-align: center;">feature requests</span>
+</li>
+<li>
+<span style="text-align: center;">documentation</span>
+</li>
+<li>
+<span style="text-align: center;">design</span>
+</li>
+<li>
+<span style="text-align: center;">UX</span>
+</li>
+<li>
+<span style="text-align: center;">editing</span>
+</li>
+<li>
+<span style="text-align: center;">testing</span>
+</li>
+<li>
+<span style="text-align: center;">finances&nbsp;</span>
+</li>
+<li>
+<span style="text-align: center;">and much more.</span>
+<br>
+</li>
+</ul>
+</div>
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-350x58-approved.png" width="350" height="58">
+</p>
+            </section>
+        </section>
+        <section class="stack" data-id="8d15ccb83ffc4d2d447c41c0d4080e4a">
+            <section class="" data-id="3619290a91c48eedd8f2eebbedaefb90" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/483293/drupal8-contributor-mosaic.jpg">&nbsp;<h2 class="absolute-element" style="position: absolute; width: 234.015625px; height: 59px; z-index: 4; left: 0px; top: 21px;">
+<b style="background-color: rgba(255, 255, 255, 0.592157);">Drupal</b>
+</h2>
+
+<p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px;">
+<span style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.8); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Photo: <a href="http://palantir.net/presentations/midcamp2014-presenting-drupal-8/#/8/2">Palantir</a>
+</span>
+</p>
+
+
+</section>
+            <section class="" data-id="a5ef131e2bad9f9c1c1c3943bf96d799">
+                <h2>What's Different</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<div class="fragment" data-fragment-index="0">
+<ul>
+    <li class="fragment" data-fragment-index="1">
+        <span style="text-align: center;">Perceivable &amp; Operable on front &amp; back-end</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="2">
+        <span style="text-align: center;">Goal of WCAG 2.0 AA</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="3">
+        <span style="text-align: center;">Proudly Built Elsewhere</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="4">
+        <span style="text-align: center;">Accessibility integrated into culture</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="5">
+        <span style="text-align: center;">Open governance process (meritocracy)</span>
+        <br>
+    </li>
+</ul>
+</div>
+
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-350x58-approved.png" width="350" height="58">
+</p>
+
+</section>
+            </section>
+            <section class="stack" data-id="2f87ccdc039f6939da9dae3dfb20a1ce">
+                <section class="" data-id="d25da1c04201352d513ee7840729c998" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/484222/Escher.jpg">
+                    <h2>
+    <b style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">How</b>
+</h2>
+<div>
+<br>
+</div>
+<h2>
+<b style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">IS</b>
+</h2>
+<div>
+<b>
+<br>
+</b>
+</div>
+<h2>
+<b style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">IT&nbsp;</b>
+</h2>
+<div>
+<br>
+</div>
+<h2>
+<b style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Accessible?</b>
+</h2>
+
+
+<p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px;">
+<span style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Photo: <a href="https://secure.flickr.com/photos/cdisegna/13941853010/sizes/o/">Corrado Disegna</a>
+</span>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+                    <section class="" data-id="ecabf63e0563d598420dc00943409caf">
+                        <h2>What We've Done</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<p>
+</p>
+<ul>
+    <li>
+        <span style="text-align: center;">Involved programmers with disabilities</span>
+        <br>
+    </li>
+    <li>
+        <span style="text-align: center;">Reached out to browsers &amp; AT vendors</span>
+        <br>
+    </li>
+    <li>
+        <span style="text-align: center;">Used automated testing tools (WAVE, QUAIL, etc)</span>
+        <br>
+    </li>
+    <li>
+        <span style="text-align: center;">Contacted subject experts about specific problems</span>
+        <br>
+    </li>
+    <li>
+        <span style="text-align: center;">Have an open/transparent issue queue</span>
+        <br>
+    </li>
+    <li>
+        <span style="text-align: center;">Make a11y part of the whole development cycle</span>
+        <br>
+    </li>
+</ul>
+<p>
+</p>
+<div>
+    <br>
+</div>
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-350x58-approved.png" width="350" height="58">
+</p>
+</section>
+                    </section>
+                    <section class="" data-id="0e06d26be4ec23f46246a5e2d3c2bf81" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/484338/Amsterdam.jpg">&nbsp;<h2 class="absolute-element" style="position: absolute; width: 370px; height: 58px; z-index: 4; right: 50px; top: 450px;">
+<b style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Accessible</b>
+</h2>
+<h2 class="absolute-element" style="position: absolute; width: 350px; height: 58px; z-index: 4; right: 50px; top: 550px;">
+<b style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Defaults</b>
+</h2>
+
+
+<p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px;">
+<span style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Photo: <a href="https://secure.flickr.com/photos/ibikelondon/7473298900/sizes/o/">MarkA</a>
+</span>
+</p>
+
+
+
+
+
+
+
+</section>
+                    <section class="" data-id="9ee1a70f037e2b98a16a5ee77a877da0">
+                        <h2>The right attitude</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<div class="fragment" data-fragment-index="0">
+<ul>
+    <li class="fragment" data-fragment-index="1">
+        <span style="text-align: center;">Establish a precedent</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="2">
+        <span style="text-align: center;">Foster personal agency, I can fix this!</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="3">
+        <span style="text-align: center;">Supportive, inclusive community</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="4">
+        <span style="text-align: center;">Be vigilant, n</span>
+        <span style="text-align: center;">othing will 100% accessible</span>
+        <br>
+    </li>
+    <li class="fragment" data-fragment-index="5">
+        <span style="text-align: center;">Don't settle for the status quo</span>
+        <br>
+    </li>
+</ul>
+</div>
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-350x58-approved.png" width="350" height="58">
+</p>
+</section>
+                        <section class="" data-id="ae37ce93abb0b0e29e056458fc7ff517" data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/mgifford/images/484454/NASA-SpaceX.jpg">
+                            <h2>
+    <b>Why Open Source&nbsp;</b>
+</h2>
+<h2>
+<b>Matters for&nbsp;</b>
+</h2>
+<h2>
+<b>Accessibility</b>
+</h2>
+
+
+<p style="position: absolute; width: 500px; height: 40px; z-index: 4; right: 5px; bottom: 5px; max-height: none; max-width: none; font-size: 20px;">
+<span style="margin: 3px; padding: 3px; background-color: rgba(255, 255, 255, 0.5); color: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">Photo: <a href="https://secure.flickr.com/photos/nasa2explore/13936619150/sizes/k/">NASA: 2Explore</a>
+</span>
+</p>
+
+
+</section>
+                            <section class="" data-id="7c937f1c4bd7ca41128561e8c8af9514">
+                                <h2>Open Source &amp; Accessibility</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<h3 class="absolute-element fragment" style="position: absolute; width: 500px; height: 42px; z-index: 4; right: 64px; top: 200px;" data-fragment-index="0">
+    Rate of change on the Internet
+</h3>
+<h3 class="absolute-element fragment" style="position: absolute; width: 500px; height: 42px; z-index: 4; left: 64px; top: 300px;" data-fragment-index="1">
+    Need for regular testing
+</h3>
+<h3 class="absolute-element fragment" style="position: absolute; width: 500px; height: 42px; z-index: 4; right: 64px; top: 400px;" data-fragment-index="2">
+    Problems too big to solve alone
+</h3>
+<h3 class="absolute-element fragment" style="position: absolute; width: 500px; height: 42px; z-index: 4; left: 64px; top: 500px;" data-fragment-index="3">
+    Engage disabled people in solution
+</h3>
+
+
+<p style="position: absolute; width: 400; height: 100; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-350x58-approved.png" width="350" height="58">
+</p>
+                            </section>
+                            <section class="" data-id="5154fa15e8f8149182ede6ad249bbe9a">
+                                <h2>Mike Gifford</h2>
+
+<div style="width: 100%;">
+  <div style="background:#AD113B; display: inline-block; width: 10%; height: 20px; margin: 2px;">&nbsp;</div>
+  <div style="background:#00A9E0; display: inline-block; width: 80%; height: 20px; margin: 2px;">&nbsp;</div>
+</div>
+
+<div>OpenConcept Consulting Inc.</div>
+<div>
+<br>
+</div>
+
+<div>http://openconcept.ca</div>
+<div>
+<br>
+</div>
+<div>@mgifford</div>
+
+<p style="position: absolute; width: 764; height: 200; z-index: 4; right: 5px; bottom: 5px;">
+<img src="http://openconcept.ca/sites/openconcept/files/OC-logo-2014-1000x164-approved.png" width="750">
+</p>
+
+</section>
+                            </div>
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
