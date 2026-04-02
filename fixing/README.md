@@ -851,7 +851,7 @@ Reveal.initialize({
 });
 ```
 
-Read MathJax's documentation if you need [HTTPS delivery](http://docs.mathjax.org/en/latest/start.html#secure-access-to-the-cdn) or serving of [specific versions](http://docs.mathjax.org/en/latest/configuration.html#loading-mathjax-from-the-cdn) for stability.
+Read MathJax's documentation if you need [HTTPS delivery](https://docs.mathjax.org/en/latest/web/start.html) or serving of [specific versions](https://docs.mathjax.org/en/latest/web/configuration.html) for stability.
 
 
 ## Installation
