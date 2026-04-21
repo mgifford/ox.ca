@@ -6,7 +6,7 @@ You also need to install Ruby and then Sass (with `gem install sass`).
 
 ## Creating a Theme
 
-To create your own theme, start by duplicating any ```.scss``` file in [/css/theme/source](https://github.com/hakimel/reveal.js/blob/master/css/theme/source) and adding it to the compilation list in the [Gruntfile](https://github.com/hakimel/reveal.js/blob/master/Gruntfile.js).
+To create your own theme, start by duplicating any ```.scss``` file in [/css/theme/source](https://github.com/hakimel/reveal.js/tree/2.6.2/css/theme/source) and adding it to the compilation list in the [Gruntfile](https://github.com/hakimel/reveal.js/blob/2.6.2/Gruntfile.js).
 
 Each theme file does four things in the following order:
 
