@@ -12,6 +12,7 @@ exclude = [
   "https://www.gnu.org/philosophy/free-sw.en.html", # Rate-limited (429) under CI
   "https://tetralogical.com/**", # Blocks frequent bot requests; avoid CI failures
   "https://www.lflegal.com/**",  # Timeout-prone; skip for now
+  "https://www.etsi.org/**",              # ETSI blocks bots and directory listings return 404
   "https://github.com/mgifford/ox.ca/**"  # Self-referential; intermittently returns 502 in CI
 ]
 
