@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "title": "Code as Constitution: Building Public Digital Infrastructure We Can Actually Trust",
+    "lang": "en-CA",
+    "theme": "default-high-contrast",
+    "durationMinutes": "40",
+    "slideWidth": "1280",
+    "slideHeight": "720",
+    "titleSlide": true,
+    "titleSlideNumber": "4",
+    "subtitle": "Drupal, AI, and the Architecture of Digital Sovereignty",
+    "date": "2026-05-01",
+    "location": "DrupalCamp Ottawa, Canada",
+    "speakers": "Mike Gifford (CivicActions)",
+    "closingSlide": true,
+    "closingSlideNumber": "-1",
+    "closingTitle": "Questions?",
+    "closingPrompt": "What are you building today that you may not control tomorrow?",
+    "contactUrl": "https://ox.ca",
+    "socialLinks": "Mastodon @mgifford@mastodon.social; Bluesky @ox.ca",
+    "presentationUrl": "https://ox.ca/p/5"
+  },
+  "slides": [
+    {
+      "id": "slide-1",
+      "index": 0,
+      "raw": "![DrupalCamp Ottawa 2025](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Conference.svg)",
+      "body": "![DrupalCamp Ottawa 2025](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Conference.svg)",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-2",
+      "index": 1,
+      "raw": "![Thank Sponsors](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Thanks.svg)",
+      "body": "![Thank Sponsors](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Thanks.svg)",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-3",
+      "index": 2,
+      "raw": "![Speaker Bio](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Speaker.svg)",
+      "body": "![Speaker Bio](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Speaker.svg)",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-title",
+      "index": 3,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "title",
+      "title": "Code as Constitution: Building Public Digital Infrastructure We Can Actually Trust",
+      "subtitle": "Drupal, AI, and the Architecture of Digital Sovereignty",
+      "date": "2026-05-01",
+      "location": "DrupalCamp Ottawa, Canada",
+      "speakers": "Mike Gifford (CivicActions)",
+      "qrUrl": ""
+    },
+    {
+      "id": "slide-4",
+      "index": 4,
+      "raw": "# Solving More Than Is Recognized\n## Drupal is already playing a strong role\n\n::column-left\n- Publishing at scale \n\n- Accessibility / security  \n\n- Flexible, multilingual delivery  \n\n- Complex workflows  \n::\n\n::column-right on-click\n- Open source  \n\n- Vendor-neutral  \n\n- Globally maintained\n\n- Built locally\n::\n\n\n::notes\nStart grounded. **Next slide reframes Drupal as infrastructure.**\n\nGovernments are already using Drupal for mission-critical services. The key point is that Drupal already embodies many of the properties we associate with digital independence.",
+      "body": "# Solving More Than Is Recognized\n## Drupal is already playing a strong role\n\n::column-left\n- Publishing at scale \n\n- Accessibility / security  \n\n- Flexible, multilingual delivery  \n\n- Complex workflows  \n::\n\n::column-right on-click\n- Open source  \n\n- Vendor-neutral  \n\n- Globally maintained\n\n- Built locally\n::",
+      "notes": "Start grounded. **Next slide reframes Drupal as infrastructure.**\n\nGovernments are already using Drupal for mission-critical services. The key point is that Drupal already embodies many of the properties we associate with digital independence.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-5",
+      "index": 5,
+      "raw": "# A Stable Interface for Change \n## Drupal is infrastructure, bridging systems\n\n::column-left\n- Learning community\n\n- Extensive well-organized content \n\n- Forward-looking (Remember RDFa) \n\n- Lots of documentation & examples\n::\n\n::column-right on-click\n- API-first architecture  \n\n- Well-structured content  \n\n- Extensible modules  \n\n- Almost built for AI\n::\n\n::center on-click\n**Drupal is Brilliantly Boring!**\n::\n\n::notes\nHighlight architecture. **Next slide moves into AI.**\n\nThis is what makes Drupal strategic for integrating new capabilities like AI. If we treat Drupal as infrastructure, we make different decisions about funding, governance, and architecture.",
+      "body": "# A Stable Interface for Change \n## Drupal is infrastructure, bridging systems\n\n::column-left\n- Learning community\n\n- Extensive well-organized content \n\n- Forward-looking (Remember RDFa) \n\n- Lots of documentation & examples\n::\n\n::column-right on-click\n- API-first architecture  \n\n- Well-structured content  \n\n- Extensible modules  \n\n- Almost built for AI\n::\n\n::center on-click\n**Drupal is Brilliantly Boring!**\n::",
+      "notes": "Highlight architecture. **Next slide moves into AI.**\n\nThis is what makes Drupal strategic for integrating new capabilities like AI. If we treat Drupal as infrastructure, we make different decisions about funding, governance, and architecture.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-6",
+      "index": 6,
+      "raw": "# Foundation for Independence\n## It isn't just about the code\n\n::column-left\n- Multiple providers\n\n- Vibrant ecosystem  \n\n- Legal consistency (GPL)  \n\n- Many hosting options\n::\n\n::column-right on-click\n\n- Continuity & workflow flexibility\n\n- History of reduced risk\n\n- Options to do it internally\n\n- Reduced cost of ownership\n::\n\n::notes\nDefine independence concretely. **Next slide shows where control lives.**\n\nDrupal already gives governments a level of control most platforms do not.",
+      "body": "# Foundation for Independence\n## It isn't just about the code\n\n::column-left\n- Multiple providers\n\n- Vibrant ecosystem  \n\n- Legal consistency (GPL)  \n\n- Many hosting options\n::\n\n::column-right on-click\n\n- Continuity & workflow flexibility\n\n- History of reduced risk\n\n- Options to do it internally\n\n- Reduced cost of ownership\n::",
+      "notes": "Define independence concretely. **Next slide shows where control lives.**\n\nDrupal already gives governments a level of control most platforms do not.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-7",
+      "index": 7,
+      "raw": "# What AI in Drupal Looks Like\n## **Content + AI** & Integration Patterns\n\n::column-left\n- Summarization / Translation  \n\n- Content generation / Search\n\n- New accessibility improvements\n\n- Speed of development \n::\n\n::column-right on-click\n- External APIs for external data\n\n- Choices of local models \n\n- Hybrid systems  \n\n- Your Agentic CMS\n::\n\n::notes\nMake it practical. **Next slide defines the risk.**\n\nThis is where most teams are starting today. The question is how this is implemented.",
+      "body": "# What AI in Drupal Looks Like\n## **Content + AI** & Integration Patterns\n\n::column-left\n- Summarization / Translation  \n\n- Content generation / Search\n\n- New accessibility improvements\n\n- Speed of development \n::\n\n::column-right on-click\n- External APIs for external data\n\n- Choices of local models \n\n- Hybrid systems  \n\n- Your Agentic CMS\n::",
+      "notes": "Make it practical. **Next slide defines the risk.**\n\nThis is where most teams are starting today. The question is how this is implemented.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-8",
+      "index": 8,
+      "raw": "# The Risk: Proprietary Integration\n## Vendor-lock in with AI is riskier than just the code\n\n::column-left\n- Single AI provider \n\n- No abstraction layer \n\n- No independent validation \n\n- Clear lack of sovereignty \n::\n\n::column-right on-click\n- Hard to switch when prices increase \n- Difficult to audit between versions \n- Just not yours to control  \n\n- **Just like proprietary technology**\n::\n\n::notes\nShow failure mode. **Next slide shows alternative.**\n\nMost early AI implementations look like this. It works initially, but creates long-term dependency.",
+      "body": "# The Risk: Proprietary Integration\n## Vendor-lock in with AI is riskier than just the code\n\n::column-left\n- Single AI provider \n\n- No abstraction layer \n\n- No independent validation \n\n- Clear lack of sovereignty \n::\n\n::column-right on-click\n- Hard to switch when prices increase \n- Difficult to audit between versions \n- Just not yours to control  \n\n- **Just like proprietary technology**\n::",
+      "notes": "Show failure mode. **Next slide shows alternative.**\n\nMost early AI implementations look like this. It works initially, but creates long-term dependency.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-9",
+      "index": 9,
+      "raw": "# Drupal Allows AI Flexibility\n## We should choose based on what allows us control\n\n::column-left\n**Models**\n- Large Language Models (LLMs)  \n- Small Language Models (SLMs)  \n- Proprietary or Open Source AI\n  - Training data & weights\n::\n\n::column-right on-click\n**Deployment**\n- Cloud  \n- Local  \n- Hybrid\n- Grid-aware\n::\n\n::notes\nShow options. **Next slide expands to governance.**\n\nArchitecture determines control, not the model alone.",
+      "body": "# Drupal Allows AI Flexibility\n## We should choose based on what allows us control\n\n::column-left\n**Models**\n- Large Language Models (LLMs)  \n- Small Language Models (SLMs)  \n- Proprietary or Open Source AI\n  - Training data & weights\n::\n\n::column-right on-click\n**Deployment**\n- Cloud  \n- Local  \n- Hybrid\n- Grid-aware\n::",
+      "notes": "Show options. **Next slide expands to governance.**\n\nArchitecture determines control, not the model alone.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-10",
+      "index": 10,
+      "raw": "# Platforms == Constitutions\n## Systems we choose limit our choices & are buttressed\n\n::column-left\n- How digital tools are accessed\n\n- What software can be used\n\n- If we can share our work\n\n- What can be known\n::\n\n::column-right\n- Intellectual Property \n\n- Contract rights\n\n- Silos of responsibility  \n\n- [>] **Code is law** (governance)\n::\n\n::notes\nMake analogy explicit. **Next slide shows problem.**\n\nConstitutions are meant to be transparent. Platforms are not.",
+      "body": "# Platforms == Constitutions\n## Systems we choose limit our choices & are buttressed\n\n::column-left\n- How digital tools are accessed\n\n- What software can be used\n\n- If we can share our work\n\n- What can be known\n::\n\n::column-right\n- Intellectual Property \n\n- Contract rights\n\n- Silos of responsibility  \n\n- [>] **Code is law** (governance)\n::",
+      "notes": "Make analogy explicit. **Next slide shows problem.**\n\nConstitutions are meant to be transparent. Platforms are not.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-11",
+      "index": 11,
+      "raw": "# Where Control Actually Resides\n\nMost of the world is leasing the bulk of software from US owned companies\n\n::column-left\nThese companies own:\n- Infrastructure  \n- Software\n- Patents\n- Roadmap\n::\n\n::column-right on-click\n**The governance of this software is almost entirely outside of Canada**\n\nThe future will be controlled by those that own digital (including AI)\n::\n\n\n::notes\nClarify structure. **Next slide connects to Canada.**\n\nDrupal helps at one layer, but broader issues remain.",
+      "body": "# Where Control Actually Resides\n\nMost of the world is leasing the bulk of software from US owned companies\n\n::column-left\nThese companies own:\n- Infrastructure  \n- Software\n- Patents\n- Roadmap\n::\n\n::column-right on-click\n**The governance of this software is almost entirely outside of Canada**\n\nThe future will be controlled by those that own digital (including AI)\n::",
+      "notes": "Clarify structure. **Next slide connects to Canada.**\n\nDrupal helps at one layer, but broader issues remain.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-12",
+      "index": 12,
+      "raw": "# ☹ Canada's Digital Sovereignty ☹\n## Canadian ventures with valuable IP don't stay that way\n\n::column-left\n**Today's focus**\n- Data sovereignty  \n\n- AI compute ownership\n::\n\n::column-right\n**Missing**\n- Software control  \n\n- Platform control  \n::\n\n\n::notes\nHighlight gap. **Next slide introduces AI control.**\n\nOwning data is not enough if systems are external.",
+      "body": "# ☹ Canada's Digital Sovereignty ☹\n## Canadian ventures with valuable IP don't stay that way\n\n::column-left\n**Today's focus**\n- Data sovereignty  \n\n- AI compute ownership\n::\n\n::column-right\n**Missing**\n- Software control  \n\n- Platform control  \n::",
+      "notes": "Highlight gap. **Next slide introduces AI control.**\n\nOwning data is not enough if systems are external.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-13",
+      "index": 13,
+      "raw": "# Small Language Models (SLMs)\n## Open Source SLMs help innovation\n\n::column-left\n- Domain-specific customization\n\n- Lower cost maintenance\n\n- Audit-ability\n\n- Cross-training for models\n::\n\n::column-right\n- Local deployment  \n\n- Predictable outcomes  \n\n- Open source collaboration\n\n- Ownership and knowledge will stay Canadian\n::\n\n::notes\nPresent alternative. **Next slide expands globally.**\n\nThis is a strategic direction, not just technical.",
+      "body": "# Small Language Models (SLMs)\n## Open Source SLMs help innovation\n\n::column-left\n- Domain-specific customization\n\n- Lower cost maintenance\n\n- Audit-ability\n\n- Cross-training for models\n::\n\n::column-right\n- Local deployment  \n\n- Predictable outcomes  \n\n- Open source collaboration\n\n- Ownership and knowledge will stay Canadian\n::",
+      "notes": "Present alternative. **Next slide expands globally.**\n\nThis is a strategic direction, not just technical.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-14",
+      "index": 14,
+      "raw": "# Brussels, Berlin, Estonia, Oh My!\n## Open source events, **Europe is happening!**\n\n- EU Open Source Week (FOSDEM)\n- Germany's Sovereign Tech Agency\n- EU Sovereign Tech Fund (proposal)\n- EU is investing in open ecosystems",
+      "body": "# Brussels, Berlin, Estonia, Oh My!\n## Open source events, **Europe is happening!**\n\n- EU Open Source Week (FOSDEM)\n- Germany's Sovereign Tech Agency\n- EU Sovereign Tech Fund (proposal)\n- EU is investing in open ecosystems",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-15",
+      "index": 15,
+      "raw": "# International Momentum\n## Europe is leading the way!\n\n::column-left\n- European procurement reform\n- Government Open Source Program Offices (OSPOs)\n- Discussions in the European Parliament\n- UN Open Source Week\n::\n\n::column-right on-click\nTrends\n- Dangers with US Technology\n- Reducing dependency on US\n- Increased domestic & EU control  \n::\n\n\n::notes\nValidate direction. **Next slide returns to open source.**\n\nIn Europe, they've realized that Digital Sovereignty is Security. If a foreign corporation can turn off your document editor or your AI assistant because of a trade dispute or a change in TOS, you aren't a sovereign nation; you're a tenant. Canada is currently the world’s most polite tenant. We need to start acting like landlords of our own digital infrastructure.",
+      "body": "# International Momentum\n## Europe is leading the way!\n\n::column-left\n- European procurement reform\n- Government Open Source Program Offices (OSPOs)\n- Discussions in the European Parliament\n- UN Open Source Week\n::\n\n::column-right on-click\nTrends\n- Dangers with US Technology\n- Reducing dependency on US\n- Increased domestic & EU control  \n::",
+      "notes": "Validate direction. **Next slide returns to open source.**\n\nIn Europe, they've realized that Digital Sovereignty is Security. If a foreign corporation can turn off your document editor or your AI assistant because of a trade dispute or a change in TOS, you aren't a sovereign nation; you're a tenant. Canada is currently the world’s most polite tenant. We need to start acting like landlords of our own digital infrastructure.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-16",
+      "index": 16,
+      "raw": "# Germany’s ZenDiS: Beyond Funding\n## Digital Sovereignty as a Federal Mandate\n\n::column-left\n\n- The Center for Digital Sovereignty\n\n- Wholly-owned federal agency (ZenDiS)\n\n- Managing the openDesk suite\n\n- Goal: Total exit from MS 365/Google\n::\n\n::column-right on-click\n\n- Open CoDE Repository\n\n- Single source for all public code\n\n- Taxpayer funded = Taxpayer owned\n\n- Standardizing OSS procurement\n::\n\n::center\nSovereignty isn't a checkbox; it’s a dedicated institutional capacity.\n::\n\n::notes\nZenDiS is the \"missing link\" in Canada. They didn't just buy open source; they built a federal entity to ensure they never lose control again. It's the ultimate implementation of \"Public Money, Public Code.\"",
+      "body": "# Germany’s ZenDiS: Beyond Funding\n## Digital Sovereignty as a Federal Mandate\n\n::column-left\n\n- The Center for Digital Sovereignty\n\n- Wholly-owned federal agency (ZenDiS)\n\n- Managing the openDesk suite\n\n- Goal: Total exit from MS 365/Google\n::\n\n::column-right on-click\n\n- Open CoDE Repository\n\n- Single source for all public code\n\n- Taxpayer funded = Taxpayer owned\n\n- Standardizing OSS procurement\n::\n\n::center\nSovereignty isn't a checkbox; it’s a dedicated institutional capacity.\n::",
+      "notes": "ZenDiS is the \"missing link\" in Canada. They didn't just buy open source; they built a federal entity to ensure they never lose control again. It's the ultimate implementation of \"Public Money, Public Code.\"",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-17",
+      "index": 17,
+      "raw": "# The EU AI Act & Audit-ability\n## The \"Brussels Effect\" is (hopefully) coming to Canada\n\n::column-left\n- The Right to Know\n\n- Mandatory audits for \"High Risk\" AI\n\n- Requires transparency of training data\n\n- Explicit protections for OSS developers\n::\n\n::column-right on-click\n\n- Mirroring EU's risk-based approach\n\n- You cannot audit a \"Black Box\"\n\n- Proprietary AI = Unverifiable Government\n\n- Is it acting on our best interest?\n::\n\n::center on-click\nIf we cannot peek inside the model, **should we deploy it?**\n::\n\n::notes\nEurope is codifying the \"Right to Audit.\" Canada's upcoming AIDA follows this lead. If we bake proprietary, closed-source AI into our Drupal sites, we may find ourselves legally unable to meet transparency requirements in 2027.",
+      "body": "# The EU AI Act & Audit-ability\n## The \"Brussels Effect\" is (hopefully) coming to Canada\n\n::column-left\n- The Right to Know\n\n- Mandatory audits for \"High Risk\" AI\n\n- Requires transparency of training data\n\n- Explicit protections for OSS developers\n::\n\n::column-right on-click\n\n- Mirroring EU's risk-based approach\n\n- You cannot audit a \"Black Box\"\n\n- Proprietary AI = Unverifiable Government\n\n- Is it acting on our best interest?\n::\n\n::center on-click\nIf we cannot peek inside the model, **should we deploy it?**\n::",
+      "notes": "Europe is codifying the \"Right to Audit.\" Canada's upcoming AIDA follows this lead. If we bake proprietary, closed-source AI into our Drupal sites, we may find ourselves legally unable to meet transparency requirements in 2027.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-18",
+      "index": 18,
+      "raw": "# Canada: Builders or Tenants?\n## Escaping the \"Branch Plant\" Digital Economy\n\n::column-left\n- The \"Tenant\" Risk\n\n- Relying on US-SaaS exports data\n\n- No control over the roadmap\n\n- Profits leave the country\n::\n\n::column-right on-click\n\n- The \"Builder\" Opportunity\n\n- Drupal keeps IP in Canada\n\n- Local agencies = Local experts\n\n- Procurement as Industrial Policy\n::\n\n\n::center\n**Europe is investing in \"Strategic Autonomy.\" Why is Canada still paying rent?**\n::\n\n::notes\nConnect this to the Ottawa audience. Every time we choose a proprietary SaaS over an open platform like Drupal, we are opting to be tenants rather than owners. Europe is proving that \"Strategic Autonomy\" is a viable economic path.",
+      "body": "# Canada: Builders or Tenants?\n## Escaping the \"Branch Plant\" Digital Economy\n\n::column-left\n- The \"Tenant\" Risk\n\n- Relying on US-SaaS exports data\n\n- No control over the roadmap\n\n- Profits leave the country\n::\n\n::column-right on-click\n\n- The \"Builder\" Opportunity\n\n- Drupal keeps IP in Canada\n\n- Local agencies = Local experts\n\n- Procurement as Industrial Policy\n::\n\n\n::center\n**Europe is investing in \"Strategic Autonomy.\" Why is Canada still paying rent?**\n::",
+      "notes": "Connect this to the Ottawa audience. Every time we choose a proprietary SaaS over an open platform like Drupal, we are opting to be tenants rather than owners. Europe is proving that \"Strategic Autonomy\" is a viable economic path.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-19",
+      "index": 19,
+      "raw": "# Open Source as Public Infrastructure\n## Common public investments are like roads\n\n::column-left\n- Must be maintained  \n\n- Must be inspectable  \n\n- Must be shared  \n\n- We all depend on them\n::\n\n::column-right\n- Transparency  \n\n- Better government services  \n\n- Opportunities for entrepreneurs   \n\n- Economic growth\n\n- Greater security\n::\n\n::notes\nReinforce model. **Next slide connects back to Drupal.**\n\nThis is where Drupal fits in.",
+      "body": "# Open Source as Public Infrastructure\n## Common public investments are like roads\n\n::column-left\n- Must be maintained  \n\n- Must be inspectable  \n\n- Must be shared  \n\n- We all depend on them\n::\n\n::column-right\n- Transparency  \n\n- Better government services  \n\n- Opportunities for entrepreneurs   \n\n- Economic growth\n\n- Greater security\n::",
+      "notes": "Reinforce model. **Next slide connects back to Drupal.**\n\nThis is where Drupal fits in.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-20",
+      "index": 20,
+      "raw": "# Small Business Matters\n## Small businesses drive Drupal's development\n\n- Drive innovation  \n- Reduce concentration risk  \n- Enable competition  \n- Employ a lot of Canadians\n- Support the local economy & tax base\n\n\n::center\n**They are often excluded from most government procurement**\n::\n\n::notes\nEconomic dimension. **Next slide shows the CTA.**\n\nHealthy ecosystems require participation.",
+      "body": "# Small Business Matters\n## Small businesses drive Drupal's development\n\n- Drive innovation  \n- Reduce concentration risk  \n- Enable competition  \n- Employ a lot of Canadians\n- Support the local economy & tax base\n\n\n::center\n**They are often excluded from most government procurement**\n::",
+      "notes": "Economic dimension. **Next slide shows the CTA.**\n\nHealthy ecosystems require participation.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-21",
+      "index": 21,
+      "raw": "# Call to Action\n## If you cannot replace it, **you cannot control it**\n\n- Think of Drupal as infrastructure  \n- Look for new places for open source\n- [Resist and unsubscribe](https://www.profgalloway.com/resist-and-unsubscribe/), Scott Galloway\n- Talking to your representatives\n- [Public Money, Public Code](https://mgifford.github.io/DigitalPolicies/domains/open-source-in-government/full-model/)\n\n::notes\nEnd strong. **Next slide opens discussion.**\n\nThis is about intentional architecture.",
+      "body": "# Call to Action\n## If you cannot replace it, **you cannot control it**\n\n- Think of Drupal as infrastructure  \n- Look for new places for open source\n- [Resist and unsubscribe](https://www.profgalloway.com/resist-and-unsubscribe/), Scott Galloway\n- Talking to your representatives\n- [Public Money, Public Code](https://mgifford.github.io/DigitalPolicies/domains/open-source-in-government/full-model/)",
+      "notes": "End strong. **Next slide opens discussion.**\n\nThis is about intentional architecture.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-closing",
+      "index": 22,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "closing",
+      "title": "Questions?",
+      "prompt": "What are you building today that you may not control tomorrow?",
+      "contactEmail": "",
+      "contactUrl": "https://ox.ca",
+      "socialLinks": "Mastodon @mgifford@mastodon.social; Bluesky @ox.ca",
+      "presentationUrl": "https://ox.ca/p/5"
+    },
+    {
+      "id": "slide-22",
+      "index": 23,
+      "raw": "![Thank Sponsors](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Thanks.svg)\n\n---",
+      "body": "![Thank Sponsors](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Thanks.svg)\n\n---",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    }
+  ],
+  "source": "---\ntitle: Code as Constitution: Building Public Digital Infrastructure We Can Actually Trust\nlang: en-CA\n\ntheme: default-high-contrast\ndurationMinutes: 40\nslideWidth: 1280\nslideHeight: 720\n\ntitleSlide: true\ntitleSlideNumber: 4\nsubtitle: Drupal, AI, and the Architecture of Digital Sovereignty\n\ndate: 2026-05-01\nlocation: DrupalCamp Ottawa, Canada\n\nspeakers: Mike Gifford (CivicActions)\n\nclosingSlide: true\nclosingSlideNumber: -1\nclosingTitle: Questions?\nclosingPrompt: What are you building today that you may not control tomorrow?\n\ncontactUrl: https://ox.ca\nsocialLinks: Mastodon @mgifford@mastodon.social; Bluesky @ox.ca\npresentationUrl: https://ox.ca/p/5\n\n---\n\n![DrupalCamp Ottawa 2025](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Conference.svg)\n\n---\n\n![Thank Sponsors](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Thanks.svg)\n\n---\n\n![Speaker Bio](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Speaker.svg)\n\n---\n\n# Solving More Than Is Recognized\n## Drupal is already playing a strong role\n\n::column-left\n- Publishing at scale \n\n- Accessibility / security  \n\n- Flexible, multilingual delivery  \n\n- Complex workflows  \n::\n\n::column-right on-click\n- Open source  \n\n- Vendor-neutral  \n\n- Globally maintained\n\n- Built locally\n::\n\n\n::notes\nStart grounded. **Next slide reframes Drupal as infrastructure.**\n\nGovernments are already using Drupal for mission-critical services. The key point is that Drupal already embodies many of the properties we associate with digital independence.\n\n---\n\n# A Stable Interface for Change \n## Drupal is infrastructure, bridging systems\n\n::column-left\n- Learning community\n\n- Extensive well-organized content \n\n- Forward-looking (Remember RDFa) \n\n- Lots of documentation & examples\n::\n\n::column-right on-click\n- API-first architecture  \n\n- Well-structured content  \n\n- Extensible modules  \n\n- Almost built for AI\n::\n\n::center on-click\n**Drupal is Brilliantly Boring!**\n::\n\n::notes\nHighlight architecture. **Next slide moves into AI.**\n\nThis is what makes Drupal strategic for integrating new capabilities like AI. If we treat Drupal as infrastructure, we make different decisions about funding, governance, and architecture.\n\n---\n\n# Foundation for Independence\n## It isn't just about the code\n\n::column-left\n- Multiple providers\n\n- Vibrant ecosystem  \n\n- Legal consistency (GPL)  \n\n- Many hosting options\n::\n\n::column-right on-click\n\n- Continuity & workflow flexibility\n\n- History of reduced risk\n\n- Options to do it internally\n\n- Reduced cost of ownership\n::\n\n::notes\nDefine independence concretely. **Next slide shows where control lives.**\n\nDrupal already gives governments a level of control most platforms do not.\n\n---\n\n# What AI in Drupal Looks Like\n## **Content + AI** & Integration Patterns\n\n::column-left\n- Summarization / Translation  \n\n- Content generation / Search\n\n- New accessibility improvements\n\n- Speed of development \n::\n\n::column-right on-click\n- External APIs for external data\n\n- Choices of local models \n\n- Hybrid systems  \n\n- Your Agentic CMS\n::\n\n::notes\nMake it practical. **Next slide defines the risk.**\n\nThis is where most teams are starting today. The question is how this is implemented.\n\n---\n\n# The Risk: Proprietary Integration\n## Vendor-lock in with AI is riskier than just the code\n\n::column-left\n- Single AI provider \n\n- No abstraction layer \n\n- No independent validation \n\n- Clear lack of sovereignty \n::\n\n::column-right on-click\n- Hard to switch when prices increase \n- Difficult to audit between versions \n- Just not yours to control  \n\n- **Just like proprietary technology**\n::\n\n::notes\nShow failure mode. **Next slide shows alternative.**\n\nMost early AI implementations look like this. It works initially, but creates long-term dependency.\n\n---\n\n# Drupal Allows AI Flexibility\n## We should choose based on what allows us control\n\n::column-left\n**Models**\n- Large Language Models (LLMs)  \n- Small Language Models (SLMs)  \n- Proprietary or Open Source AI\n  - Training data & weights\n::\n\n::column-right on-click\n**Deployment**\n- Cloud  \n- Local  \n- Hybrid\n- Grid-aware\n::\n\n::notes\nShow options. **Next slide expands to governance.**\n\nArchitecture determines control, not the model alone.\n\n---\n\n# Platforms == Constitutions\n## Systems we choose limit our choices & are buttressed\n\n::column-left\n- How digital tools are accessed\n\n- What software can be used\n\n- If we can share our work\n\n- What can be known\n::\n\n::column-right\n- Intellectual Property \n\n- Contract rights\n\n- Silos of responsibility  \n\n- [>] **Code is law** (governance)\n::\n\n::notes\nMake analogy explicit. **Next slide shows problem.**\n\nConstitutions are meant to be transparent. Platforms are not.\n\n---\n\n# Where Control Actually Resides\n\nMost of the world is leasing the bulk of software from US owned companies\n\n::column-left\nThese companies own:\n- Infrastructure  \n- Software\n- Patents\n- Roadmap\n::\n\n::column-right on-click\n**The governance of this software is almost entirely outside of Canada**\n\nThe future will be controlled by those that own digital (including AI)\n::\n\n\n::notes\nClarify structure. **Next slide connects to Canada.**\n\nDrupal helps at one layer, but broader issues remain.\n\n---\n\n# ☹ Canada's Digital Sovereignty ☹\n## Canadian ventures with valuable IP don't stay that way\n\n::column-left\n**Today's focus**\n- Data sovereignty  \n\n- AI compute ownership\n::\n\n::column-right\n**Missing**\n- Software control  \n\n- Platform control  \n::\n\n\n::notes\nHighlight gap. **Next slide introduces AI control.**\n\nOwning data is not enough if systems are external.\n\n---\n\n# Small Language Models (SLMs)\n## Open Source SLMs help innovation\n\n::column-left\n- Domain-specific customization\n\n- Lower cost maintenance\n\n- Audit-ability\n\n- Cross-training for models\n::\n\n::column-right\n- Local deployment  \n\n- Predictable outcomes  \n\n- Open source collaboration\n\n- Ownership and knowledge will stay Canadian\n::\n\n::notes\nPresent alternative. **Next slide expands globally.**\n\nThis is a strategic direction, not just technical.\n\n---\n# Brussels, Berlin, Estonia, Oh My!\n## Open source events, **Europe is happening!**\n\n- EU Open Source Week (FOSDEM)\n- Germany's Sovereign Tech Agency\n- EU Sovereign Tech Fund (proposal)\n- EU is investing in open ecosystems  \n\n---\n\n# International Momentum\n## Europe is leading the way!\n\n::column-left\n- European procurement reform\n- Government Open Source Program Offices (OSPOs)\n- Discussions in the European Parliament\n- UN Open Source Week\n::\n\n::column-right on-click\nTrends\n- Dangers with US Technology\n- Reducing dependency on US\n- Increased domestic & EU control  \n::\n\n\n::notes\nValidate direction. **Next slide returns to open source.**\n\nIn Europe, they've realized that Digital Sovereignty is Security. If a foreign corporation can turn off your document editor or your AI assistant because of a trade dispute or a change in TOS, you aren't a sovereign nation; you're a tenant. Canada is currently the world’s most polite tenant. We need to start acting like landlords of our own digital infrastructure.\n\n---\n\n# Germany’s ZenDiS: Beyond Funding\n## Digital Sovereignty as a Federal Mandate\n\n::column-left\n\n- The Center for Digital Sovereignty\n\n- Wholly-owned federal agency (ZenDiS)\n\n- Managing the openDesk suite\n\n- Goal: Total exit from MS 365/Google\n::\n\n::column-right on-click\n\n- Open CoDE Repository\n\n- Single source for all public code\n\n- Taxpayer funded = Taxpayer owned\n\n- Standardizing OSS procurement\n::\n\n::center\nSovereignty isn't a checkbox; it’s a dedicated institutional capacity.\n::\n\n::notes\nZenDiS is the \"missing link\" in Canada. They didn't just buy open source; they built a federal entity to ensure they never lose control again. It's the ultimate implementation of \"Public Money, Public Code.\"\n\n---\n\n# The EU AI Act & Audit-ability\n## The \"Brussels Effect\" is (hopefully) coming to Canada\n\n::column-left\n- The Right to Know\n\n- Mandatory audits for \"High Risk\" AI\n\n- Requires transparency of training data\n\n- Explicit protections for OSS developers\n::\n\n::column-right on-click\n\n- Mirroring EU's risk-based approach\n\n- You cannot audit a \"Black Box\"\n\n- Proprietary AI = Unverifiable Government\n\n- Is it acting on our best interest?\n::\n\n::center on-click\nIf we cannot peek inside the model, **should we deploy it?**\n::\n\n::notes\nEurope is codifying the \"Right to Audit.\" Canada's upcoming AIDA follows this lead. If we bake proprietary, closed-source AI into our Drupal sites, we may find ourselves legally unable to meet transparency requirements in 2027.\n\n---\n\n# Canada: Builders or Tenants?\n## Escaping the \"Branch Plant\" Digital Economy\n\n::column-left\n- The \"Tenant\" Risk\n\n- Relying on US-SaaS exports data\n\n- No control over the roadmap\n\n- Profits leave the country\n::\n\n::column-right on-click\n\n- The \"Builder\" Opportunity\n\n- Drupal keeps IP in Canada\n\n- Local agencies = Local experts\n\n- Procurement as Industrial Policy\n::\n\n\n::center\n**Europe is investing in \"Strategic Autonomy.\" Why is Canada still paying rent?**\n::\n\n::notes\nConnect this to the Ottawa audience. Every time we choose a proprietary SaaS over an open platform like Drupal, we are opting to be tenants rather than owners. Europe is proving that \"Strategic Autonomy\" is a viable economic path.\n\n---\n\n# Open Source as Public Infrastructure\n## Common public investments are like roads\n\n::column-left\n- Must be maintained  \n\n- Must be inspectable  \n\n- Must be shared  \n\n- We all depend on them\n::\n\n::column-right\n- Transparency  \n\n- Better government services  \n\n- Opportunities for entrepreneurs   \n\n- Economic growth\n\n- Greater security\n::\n\n::notes\nReinforce model. **Next slide connects back to Drupal.**\n\nThis is where Drupal fits in.\n\n---\n\n# Small Business Matters\n## Small businesses drive Drupal's development\n\n- Drive innovation  \n- Reduce concentration risk  \n- Enable competition  \n- Employ a lot of Canadians\n- Support the local economy & tax base\n\n\n::center\n**They are often excluded from most government procurement**\n::\n\n::notes\nEconomic dimension. **Next slide shows the CTA.**\n\nHealthy ecosystems require participation.\n\n---\n\n# Call to Action\n## If you cannot replace it, **you cannot control it**\n\n- Think of Drupal as infrastructure  \n- Look for new places for open source\n- [Resist and unsubscribe](https://www.profgalloway.com/resist-and-unsubscribe/), Scott Galloway\n- Talking to your representatives\n- [Public Money, Public Code](https://mgifford.github.io/DigitalPolicies/domains/open-source-in-government/full-model/)\n\n::notes\nEnd strong. **Next slide opens discussion.**\n\nThis is about intentional architecture.\n\n---\n\n![Thank Sponsors](https://raw.githubusercontent.com/mgifford/ox.ca/refs/heads/main/presentations/drupal-camp-ottawa/DrupalCampOttawa2026%20-%20Thanks.svg)\n\n---"
+}
