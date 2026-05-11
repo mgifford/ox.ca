@@ -10,3 +10,5 @@ At Davos, Mark Carney argued that we are in a rupture, not a transition, and tha
 This talk examines how AI can either deepen dependency or enable greater control, depending on how it is implemented. It makes the case that open source and Digital Public Goods are essential tools for collaboration between middle powers, allowing governments to share infrastructure, reduce duplication, and retain control over the systems they rely on.
 
 The question is not whether to use AI. It is whether governments will control it, or be controlled by it.
+
+— May 26, 11:50am (30 mins talk and 8 mins moderated Q&A), FWD50 Digital independence
