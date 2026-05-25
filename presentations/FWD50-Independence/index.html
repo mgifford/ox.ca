@@ -1,0 +1,3041 @@
+<!doctype html>
+<html lang="en-CA" data-theme="default-high-contrast">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Is Rewriting the Rules. Who Controls the Outcome?</title>
+    
+    <style>:root {
+  --slide-width-px: 1280;
+  --slide-height-px: 720;
+  --slide-aspect-ratio: 1.7777778;
+  --bg: #f5f1e8;
+  --panel: rgba(255, 255, 255, 0.86);
+  --panel-strong: #fffdf7;
+  --ink: #102542;
+  --muted: rgba(16, 37, 66, 0.8);
+  --accent: #b14d2c;
+  --accent-soft: #ffe0d1;
+  --border: rgba(16, 37, 66, 0.18);
+  --error: #9f1f17;
+  --warning: #8a5b00;
+  --info: #0b4f6c;
+  --ok: #1d6b3c;
+  --shadow: 0 18px 60px rgba(16, 37, 66, 0.12);
+  --body-layer-1: radial-gradient(circle at top left, rgba(255, 224, 209, 0.7), transparent 28%);
+  --body-layer-2: radial-gradient(circle at bottom right, rgba(17, 77, 109, 0.12), transparent 26%);
+  --body-layer-3: linear-gradient(135deg, #f8f2e8, #f0efe9 48%, #e5ebef);
+  --panel-alt: rgba(255, 255, 255, 0.72);
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --font-body: "Avenir Next", "Segoe UI", sans-serif;
+  --hero-overlay-bg: rgba(0, 0, 0, 0.7);
+  --hero-overlay-color: #fff;
+  --hero-overlay-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+:root[data-theme="paper-warm"] {
+  --accent: #9a4c1d;
+  --accent-soft: #f6dbc8;
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: "Gill Sans", "Avenir Next", sans-serif;
+}
+
+:root[data-theme="night-slate"] {
+  --accent: #f1b24a;
+  --accent-soft: rgba(241, 178, 74, 0.16);
+  --font-display: "Charter", "Palatino Linotype", serif;
+  --font-body: "Helvetica Neue", "Segoe UI", sans-serif;
+}
+
+:root[data-theme="civic-bright"] {
+  --accent: #d44712;
+  --accent-soft: #ffe0d1;
+  --info: #0b5c8a;
+  --font-display: "Baskerville", "Iowan Old Style", serif;
+  --font-body: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1722;
+    --panel: rgba(17, 27, 39, 0.9);
+    --panel-strong: #172434;
+    --panel-alt: rgba(23, 36, 52, 0.92);
+    --ink: #e9f0f6;
+    --muted: rgba(233, 240, 246, 0.84);
+    --border: rgba(233, 240, 246, 0.18);
+    --error: #ff9a8e;
+    --warning: #ffd166;
+    --info: #91d5ff;
+    --ok: #7bd88f;
+    --shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+    --body-layer-1: radial-gradient(circle at top left, rgba(241, 178, 74, 0.12), transparent 28%);
+    --body-layer-2: radial-gradient(circle at bottom right, rgba(145, 213, 255, 0.08), transparent 26%);
+    --body-layer-3: linear-gradient(135deg, #08111b, #101a27 48%, #13202f);
+    --hero-overlay-bg: rgba(0, 0, 0, 0.7);
+    --hero-overlay-color: #fff;
+    --hero-overlay-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  }
+}
+
+:root[data-color-mode="light"] {
+  --bg: #f5f1e8;
+  --panel: rgba(255, 255, 255, 0.86);
+  --panel-strong: #fffdf7;
+  --panel-alt: rgba(255, 255, 255, 0.72);
+  --ink: #102542;
+  --muted: rgba(16, 37, 66, 0.8);
+  --border: rgba(16, 37, 66, 0.18);
+  --error: #9f1f17;
+  --warning: #8a5b00;
+  --info: #0b4f6c;
+  --ok: #1d6b3c;
+  --shadow: 0 18px 60px rgba(16, 37, 66, 0.12);
+  --body-layer-1: radial-gradient(circle at top left, rgba(255, 224, 209, 0.7), transparent 28%);
+  --body-layer-2: radial-gradient(circle at bottom right, rgba(17, 77, 109, 0.12), transparent 26%);
+  --body-layer-3: linear-gradient(135deg, #f8f2e8, #f0efe9 48%, #e5ebef);
+  --hero-overlay-bg: rgba(255, 255, 255, 0.82);
+  --hero-overlay-color: #102542;
+  --hero-overlay-text-shadow: 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+:root[data-color-mode="dark"] {
+  --bg: #0f1722;
+  --panel: rgba(17, 27, 39, 0.9);
+  --panel-strong: #172434;
+  --panel-alt: rgba(23, 36, 52, 0.92);
+  --ink: #e9f0f6;
+  --muted: rgba(233, 240, 246, 0.84);
+  --border: rgba(233, 240, 246, 0.18);
+  --error: #ff9a8e;
+  --warning: #ffd166;
+  --info: #91d5ff;
+  --ok: #7bd88f;
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --body-layer-1: radial-gradient(circle at top left, rgba(241, 178, 74, 0.12), transparent 28%);
+  --body-layer-2: radial-gradient(circle at bottom right, rgba(145, 213, 255, 0.08), transparent 26%);
+  --body-layer-3: linear-gradient(135deg, #08111b, #101a27 48%, #13202f);
+  --hero-overlay-bg: rgba(0, 0, 0, 0.7);
+  --hero-overlay-color: #fff;
+  --hero-overlay-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  background: var(--body-layer-1), var(--body-layer-2), var(--body-layer-3);
+}
+
+button,
+textarea,
+a,
+input {
+  font: inherit;
+}
+
+button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--ink);
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.topbar h1,
+.slide-card h1,
+.slide-card h2,
+.slide-card h3 {
+  font-family: var(--font-display);
+}
+
+.topbar h1 {
+  margin: 0.1rem 0 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.topbar__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.collapsed-panel-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.collapsed-panel-actions button {
+  padding-inline: 0.85rem;
+  border-style: dashed;
+}
+
+.eyebrow,
+.panel__label,
+.meta-text,
+.lint-summary,
+.local-save-status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.eyebrow,
+.panel__label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.editor-layout,
+.presenter-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.mobile-pane-tabs {
+  display: none;
+  grid-column: 1 / -1;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mobile-pane-tabs__button.is-current {
+  background: var(--accent);
+  color: white;
+  border-color: color-mix(in srgb, var(--accent) 72%, black);
+}
+
+.editor-layout {
+  --editor-panel-fr: 1fr;
+  --preview-panel-fr: 1fr;
+  --editor-divider-width: 0.6rem;
+  align-items: stretch;
+  grid-template-columns:
+    minmax(0, var(--editor-panel-fr))
+    var(--editor-divider-width)
+    minmax(0, var(--preview-panel-fr));
+}
+
+.editor-layout[data-editor-collapsed="true"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.editor-layout[data-preview-collapsed="true"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.editor-layout__divider {
+  width: var(--editor-divider-width);
+  min-height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel-strong) 88%, var(--accent-soft));
+  cursor: col-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.editor-layout__divider::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: var(--muted);
+  border-radius: 50%;
+  --grip-dot-spacing: 8px;
+  box-shadow:
+    0 var(--grip-dot-spacing) 0 var(--muted),
+    0 calc(var(--grip-dot-spacing) * 2) 0 var(--muted),
+    0 calc(var(--grip-dot-spacing) * -1) 0 var(--muted),
+    0 calc(var(--grip-dot-spacing) * -2) 0 var(--muted);
+  pointer-events: none;
+}
+
+.editor-layout[data-resizing="true"] .editor-layout__divider,
+.editor-layout__divider:hover {
+  background: color-mix(in srgb, var(--accent-soft) 78%, var(--panel-strong));
+}
+
+.presenter-layout {
+  grid-template-columns: 1fr 1fr minmax(280px, 340px);
+}
+
+.presenter-layout--custom {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+}
+
+.presentation-layout,
+.panel,
+.slide-card,
+.presentation-frame,
+.preview-frame,
+.presenter-sidebar,
+.presenter-panel {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+}
+
+.panel,
+.presentation-layout,
+.presenter-sidebar,
+.presenter-panel {
+  padding: 1rem;
+}
+
+.editor {
+  width: 100%;
+  min-height: 68vh;
+  border: none;
+  background: transparent;
+  resize: vertical;
+  color: var(--ink);
+  line-height: 1.55;
+  /* Prevent page scroll when the textarea reaches its own scroll limit */
+  overscroll-behavior: contain;
+  /* Prevent Mobile Safari from zooming in when the field is focused */
+  font-size: max(1rem, 16px);
+}
+
+@supports (min-height: 100dvh) {
+  .editor {
+    min-height: 68dvh;
+  }
+}
+
+.local-save-status {
+  margin-top: 0.5rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.panel-heading button {
+  padding: 0.5rem 0.85rem;
+}
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+}
+
+.editor-toolbar button {
+  padding: 0.45rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2rem;
+}
+
+.toolbar-item {
+  position: relative;
+  display: inline-flex;
+}
+
+.toolbar-tooltip {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 8px;
+  background: var(--panel-strong);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s, visibility 0.12s;
+}
+
+.toolbar-item:hover .toolbar-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+.toolbar-item:focus-within .toolbar-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.preview-header,
+.presentation-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.layout-warning {
+  position: relative;
+  margin-top: 0;
+  flex: 0 0 auto;
+}
+
+.layout-warning__button {
+  padding: 0.38rem 0.7rem;
+  border-radius: 999px;
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 10%, var(--panel-strong));
+  border-color: color-mix(in srgb, var(--warning) 24%, var(--border));
+}
+
+.layout-warning__tooltip {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  z-index: 10;
+  width: min(32rem, 80vw);
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel-strong);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  line-height: 1.45;
+}
+
+.audience-shell {
+  max-width: none;
+}
+
+.audience-shell .presentation-layout {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.audience-shell .presentation-frame {
+  min-height: 100vh;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  /* Reserve space at the bottom so live captions don't overlay slide content.
+     --caption-bar-height is set dynamically via JS when captions are visible. */
+  padding-bottom: var(--caption-bar-height, 0px);
+  display: grid;
+  place-items: center;
+}
+
+@supports (min-height: 100dvh) {
+  .audience-shell .presentation-frame {
+    min-height: 100dvh;
+  }
+}
+
+.audience-shell .slide-card {
+  min-height: 0;
+  border-radius: 0;
+  /* Prevent the slide from ever exceeding the visible viewport height.
+     The width calculation already targets 100vh, but mobile browsers and
+     sub-pixel rounding can push the rendered height slightly over.
+     max-height acts as a hard clamp; aspect-ratio then trims the width.
+     --caption-bar-height (set dynamically) further reduces the available
+     height so live captions never overlap slide content. */
+  max-height: calc(100vh - var(--caption-bar-height, 0px));
+}
+
+@supports (height: 100dvh) {
+  /* dvh (dynamic viewport height) accounts for retractable browser UI chrome
+     on mobile, giving a more accurate bound than static vh. */
+  .audience-shell .slide-card {
+    max-height: calc(100dvh - var(--caption-bar-height, 0px));
+    width: min(100%, calc((100dvh - var(--caption-bar-height, 0px)) * var(--slide-aspect-ratio)));
+  }
+}
+
+.audience-paused-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
+  z-index: 9999;
+  padding: 2rem;
+  text-align: center;
+}
+
+.audience-paused-message {
+  font-size: 1.25rem;
+  max-width: 36ch;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.audience-takeover-button {
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.audience-takeover-button:hover,
+.audience-takeover-button:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* When the hidden attribute is set in JS, display: flex must be explicitly
+   overridden — author stylesheets take precedence over the UA [hidden] rule. */
+.audience-paused-overlay[hidden] {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.preview-header__actions,
+.lint-summary {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 0;
+}
+
+.preview-header__actions {
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
+.lint-summary {
+  justify-content: flex-end;
+}
+
+.theme-menu {
+  position: relative;
+}
+
+.theme-menu__panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: min(320px, 78vw);
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel-strong);
+  box-shadow: var(--shadow);
+  z-index: 20;
+}
+
+.theme-menu__panel[hidden] {
+  display: none !important;
+}
+
+.theme-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.theme-menu__header button {
+  padding: 0.45rem 0.75rem;
+}
+
+.theme-control {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  min-width: 0;
+}
+
+.theme-control span {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.theme-control select,
+.theme-control input {
+  min-width: 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel-strong);
+  color: var(--ink);
+}
+
+.theme-control select {
+  min-width: 180px;
+}
+
+.theme-control--wide input {
+  width: min(250px, 26vw);
+  text-overflow: ellipsis;
+}
+
+.theme-menu__panel .theme-control--wide input {
+  width: 100%;
+}
+
+.panel--preview .preview-header__actions > button {
+  white-space: nowrap;
+}
+
+#layout-warning-button,
+#toggle-outline-panel-header {
+  padding: 0.38rem 0.6rem;
+  min-width: 2.1rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.preview-header__nav {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-inline-start: auto;
+  flex: 0 0 auto;
+}
+
+.preview-header__nav > button {
+  white-space: nowrap;
+}
+
+.color-mode-toggle {
+  min-width: 7.5rem;
+}
+
+.lock-mode-toggle,
+.unlock-mode-toggle {
+  min-width: 5.5rem;
+}
+
+.editor-layout[data-editor-collapsed="true"] .panel--editor {
+  padding: 0.9rem 1rem;
+}
+
+.editor-layout[data-editor-collapsed="true"] .panel--editor .local-save-status,
+.editor-layout[data-editor-collapsed="true"] .panel--editor .editor,
+.editor-layout[data-editor-collapsed="true"] .panel--editor .editor-toolbar {
+  display: none;
+}
+
+.preview-frame,
+.presentation-frame {
+  min-height: 60vh;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+@supports (min-height: 100dvh) {
+  .preview-frame,
+  .presentation-frame {
+    min-height: 60dvh;
+  }
+}
+
+.preview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 0.8fr);
+  gap: 1rem;
+}
+
+.preview-layout[data-outline-collapsed="true"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.outline-panel[data-collapsed="true"] {
+  padding: 1rem;
+}
+
+.outline-panel[data-collapsed="true"] .outline-list {
+  display: none;
+}
+
+.preview-frame--compact {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: var(--slide-aspect-ratio);
+  min-height: 0;
+  padding: 0;
+  display: block;
+}
+
+.preview-frame--compact .slide-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--slide-width-px, 1280) * 1px);
+  height: calc(var(--slide-height-px, 720) * 1px);
+  max-width: none;
+  transform-origin: top left;
+  transform: scale(var(--preview-scale, 1));
+}
+
+.presenter-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.presenter-panel__controls {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.presenter-panel__controls button {
+  padding: 0.4rem 0.7rem;
+  min-width: 2.4rem;
+}
+
+.presenter-panel__body {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.presenter-panel--fullscreen {
+  grid-column: span 12 !important;
+}
+
+.presenter-panel[data-panel-id="current"] {
+  background: color-mix(in srgb, var(--panel) 85%, var(--accent-soft) 15%);
+}
+
+.presenter-layout--controls-locked .presenter-panel__controls {
+  display: none;
+}
+
+.captions-transcript {
+  min-height: 8rem;
+  white-space: pre-wrap;
+}
+
+.slide-card {
+  width: min(100%, calc(100vh * var(--slide-aspect-ratio)));
+  max-width: min(100%, calc(var(--slide-width-px) * 1px));
+  aspect-ratio: var(--slide-aspect-ratio);
+  min-height: 0;
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  background:
+    linear-gradient(160deg, color-mix(in srgb, var(--panel-strong) 94%, white), color-mix(in srgb, var(--panel) 96%, transparent)),
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--info) 12%, transparent));
+}
+
+.slide-card__content {
+  height: 100%;
+  max-width: 70ch;
+  font-size: calc(clamp(1.5rem, 2.8vw, 2.25rem) * var(--presentation-text-zoom, 1) * var(--panel-span-scale, 1));
+  line-height: 1.45;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(1em * var(--slide-body-scale, 1));
+}
+
+.slide-card__body p,
+.slide-card__body li,
+.slide-card__body blockquote {
+  font-size: inherit;
+}
+
+.slide-card a {
+  overflow-wrap: break-word;
+}
+
+.layout-center {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.layout-center img {
+  margin-inline: auto;
+  max-width: 50%;
+}
+
+.layout-text-large {
+  font-size: 1.4em;
+}
+
+.layout-text-small {
+  font-size: 0.72em;
+}
+
+.layout-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  gap: 0;
+  margin: calc(-1 * clamp(1.5rem, 3vw, 3rem));
+}
+
+.layout-split--right {
+  grid-template-columns: 1fr 1fr;
+}
+
+.layout-split--right .layout-split__image {
+  order: 2;
+}
+
+.layout-split--right .layout-split__text {
+  order: 1;
+}
+
+.layout-split__image {
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+.layout-split__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.layout-split__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* Big-stat directive: large centred statistic with equal spacing above and below */
+.layout-big-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  flex: 1 1 0;
+  min-height: 0;
+  gap: 0;
+}
+
+.big-stat__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-stat__visual svg,
+.big-stat__visual .layout-svg svg {
+  width: clamp(3rem, 8vw, 6rem);
+  height: auto;
+  color: var(--accent);
+  opacity: 0.75;
+}
+
+/* Reset the flex-grow that layout-svg applies when used inside big-stat */
+.big-stat__visual .layout-svg {
+  flex: none;
+  min-height: unset;
+  overflow: visible;
+}
+
+.big-stat__number {
+  line-height: 1;
+}
+
+.big-stat__number strong,
+.big-stat__number p > strong:only-child {
+  display: block;
+  font-size: clamp(5rem, 18vw, 13rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+/* Unwrap the <p> wrapper so the strong fills the flex cell cleanly */
+.big-stat__number > p {
+  margin: 0;
+}
+
+.big-stat__body {
+  font-size: clamp(0.95rem, 2.2vw, 1.35rem);
+  color: var(--muted);
+  max-width: 55ch;
+}
+
+.big-stat__body > p {
+  margin: 0;
+}
+
+.layout-svg,
+.layout-mermaid {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  min-height: 0;
+  overflow: hidden;
+  flex: 1 1 0;
+}
+
+.layout-svg img,
+.layout-svg svg,
+.layout-mermaid svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.layout-mermaid .mermaid {
+  width: 100%;
+  overflow: auto;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel-strong) 94%, transparent);
+}
+
+.layout-columns {
+  display: flex;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.layout-columns__column {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.layout-columns__column[style] {
+  flex: 0 0 var(--column-basis);
+  max-width: var(--column-basis);
+}
+
+.layout-media {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.layout-media--right {
+  grid-template-columns: minmax(0, 1.2fr) minmax(180px, 0.8fr);
+}
+
+.layout-media--right .layout-media__visual {
+  order: 2;
+}
+
+.layout-media--right .layout-media__body {
+  order: 1;
+}
+
+.layout-callout,
+.layout-quote {
+  margin: 0;
+  border-radius: 18px;
+}
+
+.layout-callout > :first-child,
+.layout-quote > :first-child {
+  margin-top: 0;
+}
+
+.layout-callout > :last-child,
+.layout-quote > :last-child {
+  margin-bottom: 0;
+}
+
+/* Callout: accent-coloured left border with a bold tinted background */
+.layout-callout {
+  padding: 1rem 1.15rem 1rem 1.35rem;
+  border-left: 0.45rem solid var(--accent);
+  background: color-mix(in srgb, var(--accent-soft) 45%, var(--panel-strong));
+}
+
+/* Quote: typographic large open-quote mark, neutral background */
+.layout-quote {
+  position: relative;
+  padding: 1.6rem 1.25rem 1rem 1.5rem;
+  border-left: none;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--info) 6%, var(--panel-strong));
+  font-style: italic;
+  color: var(--muted);
+}
+
+.layout-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.2rem;
+  left: 0.6rem;
+  font-size: 4rem;
+  line-height: 1;
+  font-family: var(--font-display);
+  font-style: normal;
+  color: var(--info);
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Code block directive */
+.layout-code {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.layout-code pre {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  background: color-mix(in srgb, var(--ink) 8%, var(--panel-strong));
+  border-radius: 12px;
+}
+
+.layout-code pre code {
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "Menlo", monospace;
+  font-size: 0.85em;
+  line-height: 1.5;
+  white-space: pre;
+  color: var(--ink);
+}
+
+/* Table directive */
+.layout-table {
+  margin: 0;
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.layout-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.layout-table th,
+.layout-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.layout-table thead th {
+  background: color-mix(in srgb, var(--accent-soft) 45%, var(--panel-strong));
+  font-weight: 600;
+}
+
+.layout-table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--panel-strong) 60%, transparent);
+}
+
+.slide-card .layout-table tr.next[hidden] {
+  display: none;
+}
+
+/* Figure directive (image + caption) */
+.layout-figure {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.layout-figure img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.layout-figure figcaption {
+  font-size: 0.85em;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Image-hero: full-bleed background image with overlay text and optional corner logo */
+.slide-card--image-hero {
+  padding: 0;
+  background: #000;
+}
+
+.slide-card--image-hero .slide-card__content {
+  max-width: none;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-card--image-hero:not(.slide-card--image-hero-show-title) .slide-card__content > h1:first-of-type,
+.slide-card--image-hero:not(.slide-card--image-hero-show-subtitle) .slide-card__content > h2:first-of-type {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.slide-card--image-hero.slide-card--image-hero-show-all .slide-card__content > h1:first-of-type,
+.slide-card--image-hero.slide-card--image-hero-show-all .slide-card__content > h2:first-of-type {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0 0 0.45em;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border: 0;
+}
+
+.slide-card--image-hero-show-title .slide-card__content > h1:first-of-type,
+.slide-card--image-hero-show-subtitle .slide-card__content > h2:first-of-type {
+  position: absolute;
+  z-index: 3;
+  color: var(--hero-overlay-color);
+  padding: 0.3em 0.6em;
+  background: var(--hero-overlay-bg);
+  border-radius: 4px;
+  width: fit-content;
+  max-width: 80%;
+  text-shadow: var(--hero-overlay-text-shadow);
+}
+
+.slide-card--hero-text-top-left > .slide-card__content > h1:first-of-type,
+.slide-card--hero-text-top-left > .slide-card__content > h2:first-of-type { top: 5%; left: 5%; }
+.slide-card--hero-text-top-right > .slide-card__content > h1:first-of-type,
+.slide-card--hero-text-top-right > .slide-card__content > h2:first-of-type { top: 5%; right: 5%; }
+.slide-card--hero-text-bottom-left > .slide-card__content > h1:first-of-type,
+.slide-card--hero-text-bottom-left > .slide-card__content > h2:first-of-type { bottom: 5%; left: 5%; }
+.slide-card--hero-text-bottom-right > .slide-card__content > h1:first-of-type,
+.slide-card--hero-text-bottom-right > .slide-card__content > h2:first-of-type { bottom: 5%; right: 5%; }
+/* Adjust second heading offset for bottom positions */
+.slide-card--hero-text-bottom-left > .slide-card__content > h2:first-of-type { top: calc(5% + 2.5rem); left: 5%; }
+.slide-card--hero-text-bottom-right > .slide-card__content > h2:first-of-type { bottom: calc(5% + 2.5rem); right: 5%; }
+
+/* Existing center rule */
+.slide-card--hero-text-center > .slide-card__content > h1:first-of-type,
+.slide-card--hero-text-center > .slide-card__content > h2:first-of-type { top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+
+.slide-card[class*="hero-text-top"].slide-card--image-hero-show-title .slide-card__content > h2:first-of-type {
+  top: calc(5% + 3.2em);
+}
+
+/* When both headings are shown at bottom positions, anchor H1 at the
+   bottom edge and stack H2 clearly above it using H2's own em unit
+   so the gap scales naturally with the slide font size. */
+.slide-card--hero-text-bottom-left.slide-card--image-hero-show-title.slide-card--image-hero-show-subtitle > .slide-card__content > h1:first-of-type {
+  bottom: 5%;
+  left: 5%;
+}
+.slide-card--hero-text-bottom-left.slide-card--image-hero-show-title.slide-card--image-hero-show-subtitle > .slide-card__content > h2:first-of-type {
+  bottom: calc(5% + 3em);
+  left: 5%;
+}
+.slide-card--hero-text-bottom-right.slide-card--image-hero-show-title.slide-card--image-hero-show-subtitle > .slide-card__content > h1:first-of-type {
+  bottom: 5%;
+  right: 5%;
+}
+.slide-card--hero-text-bottom-right.slide-card--image-hero-show-title.slide-card--image-hero-show-subtitle > .slide-card__content > h2:first-of-type {
+  bottom: calc(5% + 3em);
+  right: 5%;
+}
+
+.layout-image-hero {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.layout-image-hero .layout-image-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+  z-index: 0;
+  filter: blur(0px) saturate(1);
+  transform: scale(1) translate(0%, 0%);
+  transition:
+    opacity var(--hero-transition, 2s) ease,
+    filter var(--hero-transition, 2s) ease,
+    transform var(--hero-transition, 2s) ease;
+  transition-delay: var(--hero-stay, 0s);
+}
+
+.layout-image-hero .layout-image-hero__overlay {
+  position: absolute;
+  z-index: 2;
+  padding: 0.35em 0.65em;
+  background: var(--hero-overlay-bg);
+  color: var(--hero-overlay-color);
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  font-weight: 700;
+  border-radius: 6px;
+  max-width: 55%;
+  line-height: 1.25;
+}
+
+/* Timed heroes: overlay starts hidden and fades in after the stay delay */
+.layout-image-hero--timed .layout-image-hero__overlay {
+  opacity: 0;
+  transition: opacity var(--hero-transition, 2s) ease;
+  transition-delay: var(--hero-stay, 0s);
+}
+
+/* Text position modifiers */
+.layout-image-hero--text-top-left .layout-image-hero__overlay {
+  top: 5%;
+  left: 5%;
+}
+
+.layout-image-hero--text-top-right .layout-image-hero__overlay {
+  top: 5%;
+  right: 5%;
+}
+
+.layout-image-hero--text-bottom-left .layout-image-hero__overlay {
+  bottom: 5%;
+  left: 5%;
+}
+
+.layout-image-hero--text-bottom-right .layout-image-hero__overlay {
+  bottom: 5%;
+  right: 5%;
+}
+
+.layout-image-hero--text-center .layout-image-hero__overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 70%;
+}
+
+/* Corner logo */
+.layout-image-hero__logo {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  line-height: 0;
+}
+
+.layout-image-hero__logo img,
+.layout-image-hero__logo svg {
+  display: block;
+  height: clamp(32px, 5%, 64px);
+  width: auto;
+  max-width: 20%;
+}
+
+.layout-image-hero--logo-top-left .layout-image-hero__logo {
+  top: 4%;
+  left: 4%;
+}
+
+.layout-image-hero--logo-top-right .layout-image-hero__logo {
+  top: 4%;
+  right: 4%;
+}
+
+.layout-image-hero--logo-bottom-left .layout-image-hero__logo {
+  bottom: 4%;
+  left: 4%;
+}
+
+.layout-image-hero--logo-bottom-right .layout-image-hero__logo {
+  bottom: 4%;
+  right: 4%;
+}
+
+.slide-card--image-hero.active .layout-image-hero .layout-image-hero__image {
+  opacity: var(--hero-opacity, var(--hero-final, 1));
+  filter: blur(var(--hero-blur, 0px)) saturate(var(--hero-saturation, 1));
+  transform: scale(1.05) translate(var(--hero-pan-x, 0%), var(--hero-pan-y, 0%));
+}
+
+.slide-card--image-hero.active .layout-image-hero--timed .layout-image-hero__overlay {
+  opacity: 1;
+}
+
+.slide-card--image-hero-show-all .slide-card__content {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.slide-card--image-hero-show-all .layout-image-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.slide-card--image-hero-show-all .layout-image-hero .layout-image-hero__overlay {
+  position: relative;
+  z-index: 2;
+  max-width: min(92%, 70ch);
+  margin: auto;
+  opacity: 1;
+  transition: none;
+  text-shadow: var(--hero-overlay-text-shadow);
+}
+
+.slide-card--image-hero-show-all .slide-card__content > :not(.layout-image-hero) {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  max-width: min(92%, 70ch);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.25em 0.65em;
+  border-radius: 8px;
+  background: var(--hero-overlay-bg);
+  color: var(--hero-overlay-color);
+  text-shadow: var(--hero-overlay-text-shadow);
+}
+
+/* Step directive: transparent progressive wrapper, no extra visual styling */
+.layout-step {
+  display: contents;
+}
+
+.slide-card--title {
+  display: grid;
+  align-items: center;
+}
+
+.slide-card--title .slide-card__content {
+  max-width: 78ch;
+}
+
+.title-slide {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.title-slide--closing {
+  grid-template-columns: minmax(0, 1.8fr) minmax(180px, 260px);
+  align-items: center;
+}
+
+.title-slide__primary {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.title-slide__header {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.title-slide__subtitle {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.75vw, 3rem);
+  color: var(--muted);
+}
+
+.title-slide__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.title-slide__meta div {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--panel-strong) 92%, transparent);
+}
+
+.title-slide__meta dt {
+  margin: 0 0 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.title-slide__meta dd,
+.title-slide__meta p {
+  margin: 0;
+}
+
+.title-slide__speakers {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.title-slide__qr {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.title-slide__qr img {
+  width: min(220px, 100%);
+  background: white;
+  padding: 0.75rem;
+  border-radius: 18px;
+}
+
+.title-slide__qr p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.slide-card h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.slide-card h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.8rem);
+  margin-bottom: 0.75rem;
+}
+
+.slide-card h1:has(+ h2) {
+  margin-bottom: 0;
+}
+
+.slide-card h1 + h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.slide-card h3 {
+  font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+  margin-bottom: 0.6rem;
+}
+
+.slide-card h2 + h3 {
+  margin-top: 0.15em;
+}
+
+.slide-card p,
+.slide-card li {
+  font-size: inherit;
+}
+
+.slide-card ul,
+.slide-card ol {
+  padding-left: 1.5em;
+}
+
+.slide-card ul ul,
+.slide-card ul ol,
+.slide-card ol ul,
+.slide-card ol ol {
+  font-size: calc(1em - 1px);
+  color: color-mix(in srgb, var(--ink) 90%, var(--panel));
+  padding-left: 1.5em;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+}
+
+.slide-card ul ul ul,
+.slide-card ul ul ol,
+.slide-card ul ol ul,
+.slide-card ul ol ol,
+.slide-card ol ul ul,
+.slide-card ol ul ol,
+.slide-card ol ol ul,
+.slide-card ol ol ol {
+  font-size: calc(1em - 1px);
+  color: color-mix(in srgb, var(--ink) 81%, var(--panel));
+}
+
+.slide-card li.next {
+  list-style: disc;
+}
+
+.slide-card li.next[hidden] {
+  display: none;
+}
+
+.slide-card li.active {
+  padding: 0.2rem 0.45rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent-soft) 72%, var(--panel-strong));
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+.slide-card li.visited {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.slide-card li.active::marker,
+.slide-card li.visited::marker {
+  color: var(--accent);
+}
+
+.slide-card li.active a,
+.slide-card li.visited a {
+  color: inherit;
+}
+
+.slide-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.outline-panel {
+  border: 1px solid var(--border);
+  background: var(--panel-alt);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.outline-list {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.2rem;
+  margin: 0.9rem 0 0;
+}
+
+.outline-list li.is-current {
+  font-weight: 700;
+}
+
+.outline-list button,
+.outline-list span {
+  width: 100%;
+  text-align: left;
+}
+
+.outline-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-radius: 14px;
+  padding: 0.65rem 0.8rem;
+}
+
+.outline-title {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.outline-density {
+  width: auto;
+  flex: 0 0 auto;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.outline-density--full {
+  background: color-mix(in srgb, var(--warning) 16%, var(--panel-strong));
+  color: var(--warning);
+}
+
+.outline-density--dense {
+  background: color-mix(in srgb, var(--error) 16%, var(--panel-strong));
+  color: var(--error);
+}
+
+.advanced-menu {
+  position: relative;
+}
+
+.advanced-menu__panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 220px;
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel-strong);
+  box-shadow: var(--shadow);
+  z-index: 20;
+}
+
+.advanced-menu__panel button {
+  width: 100%;
+  text-align: left;
+  border-radius: 14px;
+}
+
+.notes-panel,
+.presenter-sidebar__block {
+  margin-top: 1rem;
+}
+
+.notes-content {
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1rem;
+  min-height: 7rem;
+  overscroll-behavior: contain;
+}
+
+.support-section + .support-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.support-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.presenter-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.presenter-timer-controls {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timer-autostart-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.timer-status-button {
+  min-width: 7.2rem;
+  font-weight: 700;
+}
+
+.timer-status-button[data-tone="safe"] {
+  background: color-mix(in srgb, var(--ok) 10%, var(--panel-strong));
+  border-color: color-mix(in srgb, var(--ok) 24%, var(--border));
+}
+
+.timer-status-button[data-tone="caution"] {
+  background: color-mix(in srgb, var(--warning) 14%, var(--panel-strong));
+  border-color: color-mix(in srgb, var(--warning) 30%, var(--border));
+}
+
+.timer-status-button[data-tone="warning"] {
+  background: color-mix(in srgb, var(--accent) 18%, var(--panel-strong));
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--border));
+}
+
+.timer-status-button[data-tone="danger"] {
+  background: color-mix(in srgb, var(--error) 18%, var(--panel-strong));
+  border-color: color-mix(in srgb, var(--error) 34%, var(--border));
+}
+
+.stt-toggle-button {
+  font-size: 0.8rem;
+}
+
+.stt-toggle-button[data-stt-active="true"] {
+  background: color-mix(in srgb, var(--ok) 16%, var(--panel-strong));
+  border-color: color-mix(in srgb, var(--ok) 34%, var(--border));
+  color: var(--ok);
+}
+
+.stt-toggle-button[data-stt-active="false"] {
+  background: color-mix(in srgb, var(--muted) 10%, var(--panel-strong));
+  color: var(--muted);
+}
+
+.stt-waveform {
+  display: block;
+  width: 100%;
+  height: 32px;
+  margin-block: 0.25rem;
+  border-radius: 4px;
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
+}
+
+.captions-language-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-block: 0.4rem;
+}
+
+.captions-language-label select {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--panel-strong);
+  color: var(--text);
+}
+
+.captions-export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-block-start: 0.6rem;
+}
+
+.captions-export-actions button {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--panel-strong);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.captions-export-actions button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.captions-export-actions button:not(:disabled):hover {
+  background: color-mix(in srgb, var(--accent) 12%, var(--panel-strong));
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.slide-card--next {
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 2.2rem;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer[data-tone="safe"] {
+  color: var(--ok);
+}
+
+.timer[data-tone="caution"] {
+  color: var(--warning);
+}
+
+.timer[data-tone="warning"] {
+  color: var(--accent);
+}
+
+.timer[data-tone="danger"] {
+  color: var(--error);
+}
+
+.presenter-timer-progress {
+  width: 100%;
+  height: 4px;
+  background: color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+.presenter-slide-progress {
+  width: 100%;
+  height: 4px;
+  background: color-mix(in srgb, var(--border) 70%, transparent);
+  margin-top: 2px;
+}
+
+.presenter-timer-progress::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: var(--timer-progress, 100%);
+  background: var(--ok);
+}
+
+.presenter-slide-progress::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: var(--slide-progress, 0%);
+  background: var(--info);
+}
+
+.presenter-timer-progress[data-tone="warning"]::after {
+  background: var(--accent);
+}
+
+.presenter-timer-progress[data-tone="caution"]::after {
+  background: var(--warning);
+}
+
+.presenter-timer-progress[data-tone="danger"]::after {
+  background: var(--error);
+}
+
+.presenter-progress-bars {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.presenter-pace-indicator {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--panel-strong) 90%, transparent);
+}
+
+.presenter-pace-indicator[hidden] {
+  display: none;
+}
+
+.live-caption-display {
+  position: fixed;
+  left: 50%;
+  bottom: 0.85rem;
+  transform: translateX(-50%);
+  width: min(92vw, 72rem);
+  min-height: 3.6em;
+  max-height: 4.2em;
+  overflow-y: scroll;
+  padding: 0.8rem 1rem;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  background: color-mix(in srgb, var(--panel-strong) 94%, black 6%);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  line-height: 1.45;
+  z-index: 15;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.live-caption-display[hidden] {
+  display: block !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.live-caption-display.captions-inactive {
+  display: none;
+}
+
+.toc-dialog {
+  width: min(560px, calc(100vw - 2rem));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 0;
+  box-shadow: var(--shadow);
+}
+
+.toc-dialog::backdrop {
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+}
+
+.help-dialog {
+  width: min(760px, calc(100vw - 2rem));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 0;
+  box-shadow: var(--shadow);
+}
+
+.help-dialog::backdrop {
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+}
+
+.toc-dialog__inner {
+  padding: 1rem;
+}
+
+.toc-dialog__header,
+.help-dialog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.help-dialog__inner {
+  padding: 1rem 1rem 1.25rem;
+}
+
+.help-dialog__header h2 {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-display);
+}
+
+.help-dialog__content {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.help-dialog__content p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.ai-prompt-dialog {
+  width: min(1120px, calc(100vw - 2rem));
+}
+
+.ai-prompt-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 1.1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ai-prompt-fields,
+.ai-prompt-output {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.ai-prompt-textarea,
+.ai-prompt-output__field {
+  width: 100%;
+  min-height: 7rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel-strong);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.ai-prompt-output__field {
+  min-height: 28rem;
+}
+
+.ai-prompt-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel-alt);
+}
+
+.ai-prompt-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.empty-state {
+  display: grid;
+  place-items: center;
+}
+
+.snapshot-body .slide:not(.is-active) {
+  display: none;
+}
+
+.snapshot-body .slide {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+@supports (min-height: 100dvh) {
+  .snapshot-body .slide {
+    min-height: 100dvh;
+  }
+}
+
+.snapshot-body .slide__content {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@supports (min-height: 100dvh) {
+  .snapshot-body .slide__content {
+    min-height: 100dvh;
+  }
+}
+
+.snapshot-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+/* Mobile portrait: drop fixed aspect-ratio so slide content is fully visible */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  .snapshot-body .slide {
+    min-height: auto;
+    padding-block: 1.5rem 5rem;
+    align-items: start;
+  }
+
+  .snapshot-body .slide__content {
+    min-height: auto;
+    align-items: start;
+  }
+
+  .snapshot-body .slide-card {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .snapshot-body .slide-card__content {
+    height: auto;
+    overflow: visible;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .snapshot-controls button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+.one-page-body {
+  padding: 0 1rem 3rem;
+  background: var(--body-layer-1), var(--body-layer-2), var(--body-layer-3);
+}
+
+.one-page-controls {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel-strong) 92%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.one-page-body .presentation-shell {
+  display: grid;
+  gap: 1.75rem;
+  width: min(110rem, 100%);
+  margin: 0 auto;
+}
+
+.one-page-slide-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--panel-alt) 88%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.one-page-slide-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.one-page-slide-card__eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.one-page-body .slide {
+  min-height: auto;
+  padding: 0.25rem 0;
+}
+
+.one-page-body .slide__content {
+  min-height: auto;
+  display: grid;
+  place-items: center;
+}
+
+.one-page-body .slide-card {
+  width: min(100%, 90rem);
+  max-width: min(100%, 90rem);
+  margin: 0 auto;
+  min-height: 0;
+  aspect-ratio: var(--slide-aspect-ratio);
+}
+
+.one-page-body li.next[hidden] {
+  display: list-item !important;
+}
+
+.one-page-body .next[hidden]:not(li):not(span) {
+  display: block !important;
+}
+
+.one-page-body span.next[hidden] {
+  display: inline !important;
+}
+
+.one-page-body li.next.active,
+.one-page-body li.next.visited {
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+}
+
+.one-page-body li.next.active::marker,
+.one-page-body li.next.visited::marker {
+  color: currentColor;
+}
+
+/* Keep multi-column layouts intact inside one-page view slides regardless of viewport width */
+.one-page-body .slide .layout-columns,
+.one-page-body .slide .layout-media,
+.one-page-body .slide .layout-media--right {
+  display: flex !important;
+}
+
+.one-page-body .slide .layout-columns__column[style] {
+  flex: 0 0 var(--column-basis) !important;
+  max-width: var(--column-basis) !important;
+}
+
+/* 4-per-page screen preview */
+.one-page-body[data-print-layout="4up"] .presentation-shell {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* 4-up: slide card acts as thumbnail viewport (like preview-frame--compact) */
+.one-page-body[data-print-layout="4up"] .slide-card {
+  position: relative;
+  padding: 0;
+}
+
+/* 4-up: content renders at native slide dimensions and scales to fit */
+.one-page-body[data-print-layout="4up"] .slide-card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--slide-width-px, 1280) * 1px);
+  height: calc(var(--slide-height-px, 720) * 1px);
+  padding: clamp(1.5rem, 3vw, 3rem);
+  max-width: none;
+  transform-origin: top left;
+  transform: scale(var(--slide-4up-scale, 0.5));
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.one-page-support {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.one-page-support__card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--panel-alt) 94%, transparent);
+}
+
+.one-page-support__card h2 {
+  color: var(--ink);
+}
+
+.one-page-support__card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.one-page-support__content > :first-child {
+  margin-top: 0;
+}
+
+.one-page-support__content > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .presenter-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Move the sidebar (notes/timer) to a full-width row below the slide previews */
+  .presenter-layout .presenter-sidebar {
+    grid-column: 1 / -1;
+  }
+
+  .preview-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-prompt-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-media,
+  .layout-media--right {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .presenter-layout--custom .presenter-panel {
+    grid-column: span 12 !important;
+  }
+
+  .title-slide--closing {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .topbar {
+    align-items: stretch;
+  }
+
+  .topbar__actions,
+  .preview-header__actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .layout-columns,
+  .layout-media,
+  .layout-media--right {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .layout-columns__column[style] {
+    max-width: none;
+  }
+
+  .mobile-pane-tabs {
+    display: grid;
+  }
+
+  .editor-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-layout__divider {
+    display: none;
+  }
+
+  .editor-layout[data-mobile-pane="preview"] .panel--editor,
+  .editor-layout[data-mobile-pane="preview"] .notes-panel,
+  .editor-layout[data-mobile-pane="support"] .panel--editor,
+  .editor-layout[data-mobile-pane="support"] .preview-frame,
+  .editor-layout[data-mobile-pane="support"] .outline-panel,
+  .editor-layout[data-mobile-pane="editor"] .panel--preview {
+    display: none;
+  }
+
+  .editor-layout[data-mobile-pane="support"] .panel--preview {
+    display: block;
+  }
+
+  .editor-layout[data-mobile-pane="support"] .preview-layout {
+    display: none;
+  }
+
+  .panel--editor .editor {
+    min-height: 52vh;
+  }
+
+  /* Bottom-sheet pattern for floating menus on mobile */
+  .theme-menu__panel,
+  .advanced-menu__panel {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  @supports (max-height: 80dvh) {
+    .theme-menu__panel,
+    .advanced-menu__panel {
+      max-height: 80dvh;
+    }
+  }
+
+}
+
+/* Landscape small-screen optimization: maximize vertical space by hiding topbar */
+@media (max-height: 500px) and (orientation: landscape) {
+  .topbar {
+    display: none;
+  }
+
+  .app-shell {
+    padding: 0.25rem;
+  }
+
+  /* On landscape mobile, show editor+preview side by side even when < 800px */
+  .editor-layout:not([data-editor-collapsed="true"]):not([data-preview-collapsed="true"]) {
+    grid-template-columns:
+      minmax(0, var(--editor-panel-fr))
+      var(--editor-divider-width)
+      minmax(0, var(--preview-panel-fr));
+  }
+
+  .editor-layout__divider {
+    display: flex;
+  }
+
+  .mobile-pane-tabs {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    transition: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  button,
+  .panel,
+  .presentation-layout,
+  .presentation-frame,
+  .preview-frame,
+  .presenter-panel,
+  .outline-panel,
+  .notes-content,
+  .slide-card {
+    forced-color-adjust: auto;
+    background: Canvas;
+    color: CanvasText;
+    border-color: CanvasText;
+    box-shadow: none;
+  }
+
+  a {
+    color: LinkText;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  textarea:focus-visible,
+  input:focus-visible {
+    outline: 2px solid Highlight;
+  }
+}
+
+@page {
+  size: landscape;
+  margin: 0.5in;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  body,
+  .snapshot-body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .snapshot-controls {
+    display: none !important;
+  }
+
+  .live-caption-display {
+    display: none !important;
+  }
+
+  .snapshot-body .slide,
+  .snapshot-body .slide[hidden] {
+    display: block !important;
+    visibility: visible !important;
+    min-height: auto;
+    break-after: page;
+    break-inside: avoid;
+    page-break-after: always;
+  }
+
+  .snapshot-body .slide:last-of-type {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .snapshot-body .slide__content {
+    min-height: auto;
+    display: block;
+  }
+
+  .one-page-body {
+    padding: 0 !important;
+  }
+
+  .one-page-body .presentation-shell {
+    display: block;
+    width: 100%;
+  }
+
+  .one-page-slide-card {
+    display: block;
+    margin: 0 0 0.35in;
+    padding: 0.16in;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #666;
+    border-radius: 0;
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  /* 1-per-page: force each slide card onto its own page */
+  .one-page-body:not([data-print-layout="4up"]) .one-page-slide-card {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .one-page-body:not([data-print-layout="4up"]) .one-page-slide-card:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .one-page-slide-card__header {
+    margin-bottom: 0.14in;
+  }
+
+  .one-page-slide-card__eyebrow {
+    color: #222 !important;
+  }
+
+  .one-page-body .slide {
+    break-after: auto !important;
+    page-break-after: auto !important;
+  }
+
+  .snapshot-body .slide-card {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+    min-height: auto;
+    overflow: visible;
+    background: white !important;
+    border: 1px solid #666;
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .one-page-slide-card,
+  .one-page-support__card {
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  .snapshot-body .slide-card__content {
+    height: auto;
+    overflow: visible;
+  }
+
+  .one-page-body .slide-card {
+    border: 1px solid #444;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .one-page-support {
+    margin-top: 0.14in;
+  }
+
+  .one-page-support__card {
+    margin-top: 0.12in;
+    padding: 0.14in 0.16in;
+    border: 1px solid #999;
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .one-page-support__card h2 {
+    color: black !important;
+  }
+
+  .snapshot-body a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .one-page-body a[href]::after {
+    content: none;
+  }
+
+  .one-page-body img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* 4-per-page print layout: 2 columns × 2 rows per page */
+  .one-page-body[data-print-layout="4up"] .presentation-shell {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.15in;
+  }
+
+  .one-page-body[data-print-layout="4up"] .one-page-slide-card {
+    margin: 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Restore slide aspect ratio in 4-up mode and make it a thumbnail viewport */
+  .one-page-body[data-print-layout="4up"] .slide-card {
+    position: relative !important;
+    padding: 0 !important;
+    aspect-ratio: var(--slide-aspect-ratio) !important;
+    min-height: 0 !important;
+    overflow: hidden;
+  }
+
+  /* Ensure deck title in preview header truncates to a single line with ellipsis */
+  #deck-meta {
+    max-width: 20ch; /* approx 20 characters */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* Scale content to fit the thumbnail: column = (100vw - gap) / 2 / native-slide-width */
+  .one-page-body[data-print-layout="4up"] .slide-card__content {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: calc(var(--slide-width-px, 1280) * 1px) !important;
+    height: calc(var(--slide-height-px, 720) * 1px) !important;
+    padding: clamp(1.5rem, 3vw, 3rem) !important;
+    max-width: none !important;
+    transform-origin: top left !important;
+    transform: scale(calc((100vw - 0.15in) / (var(--slide-width-px, 1280) * 2px))) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Force page break after every 4 slides (2 rows) in 4-up mode */
+  .one-page-body[data-print-layout="4up"] .one-page-slide-card:nth-child(4n) {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .one-page-body[data-print-layout="4up"] .one-page-slide-card:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  /* Hide speaker notes and support cards in 4-up mode to save space */
+  .one-page-body[data-print-layout="4up"] .one-page-support {
+    display: none !important;
+  }
+
+  /* Preserve multi-column slide layouts in print regardless of page width */
+  .one-page-body .slide .layout-columns,
+  .one-page-body .slide .layout-media,
+  .one-page-body .slide .layout-media--right {
+    display: flex !important;
+  }
+
+  .one-page-body .slide .layout-columns__column[style] {
+    flex: 0 0 var(--column-basis) !important;
+    max-width: var(--column-basis) !important;
+  }
+
+  /* Hero slides: force final state in print so overlay text is readable */
+  .layout-image-hero .layout-image-hero__image {
+    opacity: var(--hero-final, 1) !important;
+    filter: blur(var(--hero-blur, 0px)) saturate(var(--hero-saturation, 1)) !important;
+    transform: scale(1.05) translate(var(--hero-pan-x, 0%), var(--hero-pan-y, 0%)) !important;
+    transition: none !important;
+  }
+
+  .layout-image-hero .layout-image-hero__overlay {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+
+  .slide-card--image-hero {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* On-click reveals: show all items in print */
+  .next {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .next[hidden] {
+    display: block !important;
+  }
+}
+</style>
+    <style>
+      .snapshot-viewer .slide__content {
+        overflow: hidden;
+      }
+      .snapshot-viewer .slide {
+        padding-bottom: 3rem;
+      }
+      .snapshot-viewer .slide-card {
+        max-height: calc(100vh - 3rem);
+        border-radius: 0;
+      }
+      @supports (height: 100dvh) {
+        .snapshot-viewer .slide-card {
+          max-height: calc(100dvh - 3rem);
+          width: min(100%, calc((100dvh - 3rem) * var(--slide-aspect-ratio, 1.7778)));
+        }
+      }
+      .snapshot-controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0.5rem 1rem;
+        background: color-mix(in srgb, var(--panel-strong, #1e1e2e) 90%, transparent);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid var(--border, #333);
+        z-index: 100;
+      }
+      /* Mobile portrait: let slide content flow at natural height */
+      @media screen and (orientation: portrait) and (max-width: 1024px) {
+        .snapshot-viewer .slide-card {
+          max-height: none;
+          width: 100%;
+          aspect-ratio: auto;
+          overflow: visible;
+        }
+        .snapshot-viewer .slide-card__content {
+          height: auto;
+          overflow: visible;
+        }
+        .snapshot-controls button {
+          min-height: 44px;
+          min-width: 44px;
+          padding: 0.5rem 1.25rem;
+        }
+      }
+      @media print {
+        .snapshot-viewer .slide-card {
+          max-height: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="snapshot-body snapshot-viewer" style="--slide-width-px:1280;--slide-height-px:720;--slide-aspect-ratio:1.7777777777777777;">
+    <main class="presentation-shell" aria-live="polite">
+      
+        <section class="slide is-active" data-slide-index="0" data-step-count="0" data-kind="title" aria-label="Slide 1">
+          <div class="slide__content">
+            <article class="slide-card slide-card--title">
+              <div class="slide-card__content">
+                
+      <div class="title-slide">
+        <div class="title-slide__primary">
+          <header class="title-slide__header">
+            <h1>AI Is Rewriting the Rules. Who Controls the Outcome?</h1>
+            <p class="title-slide__subtitle">Open Source, DPGs &amp; the Fight for Digital Independence</p>
+          </header>
+          <dl class="title-slide__meta"><div><dt>Date</dt><dd><p>2026-05-26</p></dd></div><div><dt>Location</dt><dd><p>FWD50, Ottawa / Virtual</p></dd></div><div><dt>Speakers</dt><dd><p>Mike Gifford (CivicActions)</p></dd></div></dl>
+        </div>
+        
+      </div>
+    
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="1" data-step-count="1" data-kind="content" aria-label="Slide 2">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>Digital Transformation Is Hard</h1><h2>The legacy models of the last 30 years no longer protect us</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><ul><li>Proprietary software was important</li><li>It helped organize both the technology &amp; the people around it</li><li>It also entrenched a handful of global brands &amp; narrow mindsets</li></ul></section><section class="layout-columns__column layout-columns__column--right next"><ul><li>Now open source powers the vast majority of modern software enterprise</li><li>Countries like Germany are clearly seeing open source as digital infrastructure</li><li>There are solid, reliable, secure open source alternatives</li></ul></section></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="2" data-step-count="1" data-kind="content" aria-label="Slide 3">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>The Davos Rupture</h1><h2>&quot;We are in a rupture, not a transition.&quot; — Mark Carney, 2026</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><ul><li>The old rules-based order is fading</li><li>The &quot;Natural Logic&quot; for IT has been choosing between USA brands</li><li>Middle powers face a choice:<ul><li><strong>Accommodate</strong> &amp; hope</li><li><strong>Act</strong> to build strategic autonomy</li></ul></li></ul></section><section class="layout-columns__column layout-columns__column--right next"><ul><li><strong>Digital Infrastructure is a new front line</strong></li><li><em>Code</em> now matters a lot in national security</li><li>Digital independence is now defined the ability to choose</li></ul></section></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="3" data-step-count="1" data-kind="content" aria-label="Slide 4">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>Proof of Concept: Europe’s Shift</h1><h2>Europe is truly leading the way</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><ul><li>Digital independence is possible now</li><li>Europe is quickly moving to prove this</li><li>Leaning on global software &amp; systems, governments can <strong>build &amp; buy local</strong></li></ul></section><section class="layout-columns__column layout-columns__column--right next"><ul><li>The strongest alternative to America-first is global collaboration</li><li>Digital Public Goods &amp; Digital Public Infrastructure focus humany efforts</li><li>Long-term investments becomes future-proofing for government</li></ul></section></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="4" data-step-count="1" data-kind="content" aria-label="Slide 5">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>Most Governments are Digital Tenants</h1><h2>Why proprietary software has become a sovereignty risk</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><p><strong>Performative Sovereignty</strong></p><ul><li>Data residency becomes meaningless</li><li>Corporate pledges are <strong>sales-talk</strong></li><li>SaaS models became vendor lock-in</li></ul></section><section class="layout-columns__column layout-columns__column--right next"><p><strong>The Harsh Reality</strong></p><ul><li><strong>Dependency:</strong> Very limited audit-ability</li><li><strong>Laws:</strong> Parent company's laws win</li><li><strong>Framing:</strong> We are <strong>Digital Colonies</strong></li></ul></section></div><div class="layout-center"><p><strong>If you cannot inspect, improve or distribute it, you certainly don't control it.</strong></p></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="5" data-step-count="1" data-kind="content" aria-label="Slide 6">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>AI: The Sovereignty Fork</h1><h2>Two paths for the future of state power</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><h3>Algorithmic Clientelism</h3><ul><li><strong>Consolidated:</strong> Total control by foreign tech hegemons</li><li><strong>Surrender of Authority:</strong> States become petitioners, relying on corporate EULAs for &quot;rights&quot;</li><li><strong>Monoculture:</strong> One-size-fits-all values and logic</li></ul></section><section class="layout-columns__column layout-columns__column--right next"><h3>Participatory Stewardship</h3><ul><li><strong>Distributed:</strong> Power shared across open ecosystems</li><li><strong>Active Authority:</strong> Governments co-shape, fork, and fix the code they run</li><li><strong>Diverse:</strong> Models localized to specific laws &amp; cultures</li></ul></section></div><div class="layout-center"><p><strong>AI investment must shift from replacing human labor to augmenting national autonomy.</strong></p></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="6" data-step-count="1" data-kind="content" aria-label="Slide 7">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>The Middle Power Strategy</h1><h2>Participatory Sovereignty Through DPGs</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><ul><li><strong>Allied Autonomy:</strong> Absolute independence is impossible alone; middle powers gain leverage through shared code stacks</li><li><strong>Collective Insurance:</strong> Digital Public Goods (DPGs) provide a sovereign fallback so that no external player can pull the plug</li></ul></section><section class="layout-columns__column layout-columns__column--right next"><ul><li><strong>Interoperability:</strong> Building on global, open DPI building blocks</li><li><strong>The EuroStack Play:</strong> Actively aligning with the EU, UK, and India to be architects of the roadmap, not passive buyers</li></ul></section></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="7" data-step-count="1" data-kind="content" aria-label="Slide 8">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>Sovereign SLMs: &quot;Weights as Law&quot;</h1><h2>Deploying open government AI safely</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><ul><li><strong>Local Deployment:</strong> Running models on sovereign, domestic, renewable compute</li><li><strong>Context-Aware:</strong> Trained strictly on <em>our</em> laws, regulatory frameworks, and cultural context</li><li><strong>Regulated:</strong> How do you begin to regulate a LLM?</li></ul></section><section class="layout-columns__column layout-columns__column--right next"><ul><li><strong>Open Weights:</strong> If the weights and training data aren't inspectable, governance is a black box</li><li><strong>Predictable Outcomes:</strong> Trading generative chaos for deterministic public administration</li><li><strong>Controlled Costs &amp; Versions:</strong> Keeping power over critical system</li></ul></section></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="8" data-step-count="1" data-kind="content" aria-label="Slide 9">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>Procurement as Industrial Policy</h1><h2>Feeding the Ecosystem, Not the Hegemons</h2><div class="layout-columns"><section class="layout-columns__column layout-columns__column--left"><ul><li><strong>Public Money, Public Code:</strong> If we pay for it, it should be public</li><li><strong>Modular Contracting:</strong> Breakup with corporate lock-in</li><li><strong>Shift Incentives:</strong> Encourage responsible collaboration</li><li><strong>Local Ecosystems :</strong> Leveraging SME innovation</li></ul></section><section class="layout-columns__column layout-columns__column--right next"><ul><li>open source / open standards is now <strong>critical infrastructure</strong></li><li>Currently most <strong>governments aren't contributing</strong></li><li><strong>Sovereign Tech Agencies</strong> are supporting better governance</li><li>We aren't going to <strong>vibe-code</strong> our way to better digital government</li></ul></section></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="9" data-step-count="0" data-kind="content" aria-label="Slide 10">
+          <div class="slide__content">
+            <article class="slide-card">
+              <div class="slide-card__content">
+                <h1>The FWD50 Call to Action</h1><h2>From Tenants to Architects</h2><ul><li><strong>Audit Your Stack:</strong> Where is the Rupture Risk?</li><li><strong>Prioritize DPGs:</strong> Before buying SaaS, ask look to see if DPG exists</li><li><strong>Find the Others:</strong> Are there other agencies with similar needs?</li><li><strong>Collaborate Globally:</strong> Middle powers must work together</li></ul><div class="layout-center"><p><strong>The future will be controlled by those that best steward digital infrastructure.</strong></p></div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="slide" data-slide-index="10" data-step-count="0" data-kind="closing" aria-label="Slide 11">
+          <div class="slide__content">
+            <article class="slide-card slide-card--title">
+              <div class="slide-card__content">
+                
+      <div class="title-slide title-slide--closing">
+        <div class="title-slide__primary">
+          <header class="title-slide__header">
+            <h1>Questions?</h1>
+            <p class="title-slide__subtitle">Thanks for following along. Here is how to keep the conversation going.</p>
+          </header>
+          <dl class="title-slide__meta"><div><dt>Website</dt><dd><a href="https://ox.ca/p/6">ox.ca/p/6</a></dd></div><div><dt>Social</dt><dd><ul class="title-slide__speakers"><li>Mastodon @mgifford@mastodon.social</li></ul></dd></div><div><dt>Slides</dt><dd><a href="https://ox.ca/p/6">ox.ca/p/6</a></dd></div></dl>
+        </div>
+        <aside class="title-slide__qr">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcAQMAAAAhlF3CAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABFElEQVRYhe2XOxKDMAxExaSg9BE4CkeDo3EUH4EyBRNFH2NDMAypWRXM2M80O16tRXRVA6caZcFRPv26EwENRhOq4TEsAtsP9bNrB7jCVpSaBdKLiQw2srMA/geLtoAn8kl1bwI8wOxPa1tn5gWswxwA+fbV0uHBcFPSwfT21QuwCl1b8ysrbHgKH7mTmgaACr2jiS1VPrlwDeeKgDt/8qxNS9NAT3ZctAW8ghaZ7k+riTw/AR160wpJwvwGiz4TAcZNQ7eIzP5cAO/AIS38heF1NO+joSvogyKzRaQfAbwFN1OkzNlJXv8FcA/Tnra3sfuVD7AMihTUn8tRPsAaXP0ZciCU5wfgIQDSi383IwGew6v6Ajwz7WkOtjRGAAAAAElFTkSuQmCC" alt="QR code linking to the published presentation" />
+                <p>Scan to view the published slides.</p>
+              </aside>
+      </div>
+    
+              </div>
+            </article>
+          </div>
+        </section>
+      <nav class="snapshot-controls" aria-label="Presentation controls">
+        <button type="button" data-action="prev">Previous</button>
+        <span id="snapshot-status">1 / 11</span>
+        <button type="button" data-action="next">Next</button>
+      </nav>
+    </main>
+    <script id="deck-source" type="application/json">{"metadata":{"title":"AI Is Rewriting the Rules. Who Controls the Outcome?","subtitle":"Open Source, DPGs & the Fight for Digital Independence","lang":"en-CA","theme":"default-high-contrast","durationMinutes":"30","slideWidth":"1280","slideHeight":"720","titleSlide":true,"titleSlideNumber":"1","date":"2026-05-26","location":"FWD50, Ottawa / Virtual","speakers":"Mike Gifford (CivicActions)","closingSlide":true,"closingTitle":"Questions?","closingPrompt":"Thanks for following along. Here is how to keep the conversation going.","contactUrl":"https://ox.ca/p/6","socialLinks":"Mastodon @mgifford@mastodon.social","presentationUrl":"https://ox.ca/p/6"},"source":"---\ntitle: AI Is Rewriting the Rules. Who Controls the Outcome?\nsubtitle: Open Source, DPGs & the Fight for Digital Independence\nlang: en-CA\n\ntheme: default-high-contrast\ndurationMinutes: 30\nslideWidth: 1280\nslideHeight: 720\n\ntitleSlide: true\ntitleSlideNumber: 1\ndate: 2026-05-26\nlocation: FWD50, Ottawa / Virtual\n\nspeakers: Mike Gifford (CivicActions)\n\nclosingSlide: true\nclosingTitle: Questions?\nclosingPrompt: Thanks for following along. Here is how to keep the conversation going.\ncontactUrl: https://ox.ca/p/6\nsocialLinks: Mastodon @mgifford@mastodon.social\n; Bluesky @ox.ca\npresentationUrl: https://ox.ca/p/6\n\n---\n\n# Digital Transformation Is Hard\n## The legacy models of the last 30 years no longer protect us\n\n::column-left\n- Proprietary software was important\n- It helped organize both the technology & the people around it\n- It also entrenched a handful of global brands & narrow mindsets\n::\n\n::column-right on-click\n- Now open source powers the vast majority of modern software enterprise\n- Countries like Germany are clearly seeing open source as digital infrastructure\n- There are solid, reliable, secure open source alternatives\n::\n\n::notes\nGovernments are not to blame for choosing proprietary software over the last 30 years. There were no easy options at that point. Open source maturity & digital public goods are changing this now. Government is old & slow to change, but change is always slow until it is fast.\n\nSet up the audience and prime them on the focus.\n::\n\n::reference\n- Sovereign Tech Agency structural overview and core parameters: https://en.wikipedia.org/wiki/Sovereign_Tech_Agency\n- Analysis of the systemic shift toward open source as public infrastructure: https://www.commonsnetwork.org/sovereign-tech-fund-germany/\n::\n\n---\n\n# The Davos Rupture\n## \"We are in a rupture, not a transition.\" — Mark Carney, 2026\n\n::column-left\n- The old rules-based order is fading\n- The \"Natural Logic\" for IT has been choosing between USA brands\n- Middle powers face a choice:\n  - **Accommodate** & hope\n  - **Act** to build strategic autonomy\n::\n\n::column-right on-click\n- **Digital Infrastructure is a new front line**\n- *Code* now matters a lot in national security\n- Digital independence is now defined the ability to choose\n::\n\n::notes\nStart with the Prime Minister's Davos framing. This isn't a tech talk; it's a risk management talk. If we can't control our code and AI, we are vulnerable.\n\nChange in government is slow, but not when there is a rupture. Daily we are reminded in the news about the need to gain more independence from USA digital governance. \n::\n\n::reference\n- Global economic and structural disruption coverage at the World Economic Forum: https://www.weforum.org/\n- Strategic geopolitical positioning updates for middle powers via the Centre for International Governance Innovation: https://www.cigionline.org/\n::\n\n---\n\n\n# Proof of Concept: Europe’s Shift\n## Europe is truly leading the way\n\n::column-left\n- Digital independence is possible now\n- Europe is quickly moving to prove this\n- Leaning on global software & systems, governments can **build & buy local**\n::\n\n::column-right on-click\n- The strongest alternative to America-first is global collaboration\n- Digital Public Goods & Digital Public Infrastructure focus humany efforts\n- Long-term investments becomes future-proofing for government\n::\n\n::notes\nEurope is already leading the way. Germany's Sovereign Tech Agency. France's La Suite. Dutch OSPOs. \n\nSo much work has been done to verify that mid-sized countries can shift to use open source and can collaborate with others outside their government. \n::\n\n::reference\n- Sovereign Tech Fund Official Portal for Open Infrastructure Maintenance: https://sovereigntechfund.de/en/\n- European Commission Digital Sovereignty and Open Source Strategy Framework: https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en\n::\n\n---\n\n# Most Governments are Digital Tenants\n## Why proprietary software has become a sovereignty risk\n\n::column-left\n**Performative Sovereignty**\n- Data residency becomes meaningless\n- Corporate pledges are **sales-talk**\n- SaaS models became vendor lock-in\n::\n\n::column-right on-click\n**The Harsh Reality**\n- **Dependency:** Very limited audit-ability\n- **Laws:** Parent company's laws win\n- **Framing:** We are **Digital Colonies**\n::\n\n::center\n**If you cannot inspect, improve or distribute it, you certainly don't control it.**\n::\n\n::Notes\n\nSince the rupture, it is clear that organizations cannot assume that software which is owned and controlled outside their country will abide by national laws. With increased vendor lock-in, a handful of giant companies are able to charge what they like.\n\nThere is still so much power held by a handful of USA companies & they have not stood up for democratic rights. They cannot be trusted with the future of our digital lives. \n\nThe Dutch Wake-up Call: The infrastructure behind the Netherlands' national ID system (DigiD) faced a US corporate takeover, triggering a parliamentary crisis over foreign data access under the US CLOUD Act.\n\n::\n\n::reference\n- Dutch MPs demand termination of DigiD infrastructure contract due to US sale: https://www.dutchnews.nl/2026/04/mps-demand-end-to-digid-deal-over-solvinity-us-sale/\n- Cross-border legal jurisdiction impacts on national identity lines: https://dutchreview.com/news/dutch-mps-fear-american-takeover-of-digid/\n- Judicial outcomes and legislative response regarding Kyndryl's acquisition of Solvinity: https://nltimes.nl/2026/05/06/government-wins-case-extend-digid-provider-solvinity-contract-despite-us-takeover\n- Geopolitical dependencies and cybersecurity risk evaluation of foreign takeovers of critical state platforms: https://www.computerweekly.com/news/366638606/US-bid-for-Dutch-ID-infrastructure-raises-sovereignty-concerns\n::\n\n---\n\n\n\n# AI: The Sovereignty Fork\n## Two paths for the future of state power\n\n::column-left\n### Algorithmic Clientelism\n- **Consolidated:** Total control by foreign tech hegemons\n- **Surrender of Authority:** States become petitioners, relying on corporate EULAs for \"rights\"\n- **Monoculture:** One-size-fits-all values and logic\n::\n\n::column-right on-click\n### Participatory Stewardship\n- **Distributed:** Power shared across open ecosystems\n- **Active Authority:** Governments co-shape, fork, and fix the code they run\n- **Diverse:** Models localized to specific laws & cultures\n::\n\n::center \n**AI investment must shift from replacing human labor to augmenting national autonomy.**\n::\n\n::notes\nIn traditional political theory, sovereignty means a state has absolute, supreme authority within its borders. But in the AI era, that absolute power is a mirage if you don't control the stack. \n\nWe face a choice. Path A is Algorithmic Clientelism, where we surrender absolute authority and become digital client states to a handful of foreign companies. Path B is Participatory Stewardship. We protect our sovereignty not by trying to stand alone, but by owning, modifying, and running the open infrastructure ourselves.\n::\n\n\n\n::notes\n\nCurrently most people perceive AI to be a choice between Anthropic, Google & OpenAI. The race is for nothing short of global domination. If this model succeeds, it will disrupt everything. There are alternatives though, which follows on building strategic autonomy.\n\n::\n\n::reference\n- The global definition, criteria, and governance surrounding Open Source AI and Open Weights: https://opensource.org/ai/open-weights\n- Strategic research on public computing resource consolidation and structural autonomy alternatives: https://www.isaca.org/\n::\n\n---\n\n\n# The Middle Power Strategy\n## Participatory Sovereignty Through DPGs\n\n::column-left\n- **Allied Autonomy:** Absolute independence is impossible alone; middle powers gain leverage through shared code stacks\n- **Collective Insurance:** Digital Public Goods (DPGs) provide a sovereign fallback so that no external player can pull the plug\n::\n\n::column-right on-click\n- **Interoperability:** Building on global, open DPI building blocks\n- **The EuroStack Play:** Actively aligning with the EU, UK, and India to be architects of the roadmap, not passive buyers\n::\n\n::notes\nIf the old Westphalian model of standalone national sovereignty is dead in the digital space, what replaces it? Participatory Sovereignty. \n\nMiddle powers like Canada cannot build a closed, proprietary ecosystem that rivals the US tech giants. We shouldn't try. Instead, our strategic autonomy relies on alliances. By building on Digital Public Goods alongside partners in Europe and globally, we ensure we are architects at the table, not tenants on the menu.\n::\n\n::reference\n- Digital Public Goods Alliance Global Registry and Qualification Standard: https://digitalpublicgoods.net/\n- Frameworks and alignment pathways for cross-border Digital Public Infrastructure: https://www.govstack.global/\n::\n\n---\n\n\n# Sovereign SLMs: \"Weights as Law\"\n## Deploying open government AI safely\n\n::column-left\n- **Local Deployment:** Running models on sovereign, domestic, renewable compute\n- **Context-Aware:** Trained strictly on *our* laws, regulatory frameworks, and cultural context\n- **Regulated:** How do you begin to regulate a LLM?\n::\n\n::column-right on-click\n- **Open Weights:** If the weights and training data aren't inspectable, governance is a black box\n- **Predictable Outcomes:** Trading generative chaos for deterministic public administration\n- **Controlled Costs & Versions:** Keeping power over critical system\n::\n\n::notes\nLet’s ground this strategy in technology: Small Language Models, or SLMs. \n\nTake France and Germany’s joint work on **Albert**—a sovereign generative AI built specifically by the state, for public administration agents. It doesn't rely on commercial black boxes; it leverages open-weights models like France's Mistral and Meta's Llama, fine-tuned precisely on government administrative guides.\n\nAs public servants, you have a constitutional duty to transparency and due process. If a Canadian citizen asks how an AI-assisted administrative decision was reached, you cannot answer, \"The proprietary algorithm said so.\" By using open Small Language Models (SLMs) hosted locally, we ensure that the weights of the model are as auditable as the laws of the land.\n\n::\n\n::reference\n- Official technical architecture and platform layout for France's Albert API for public administration: https://www.numerique.gouv.fr/offre-accompagnement/expertise-albert-ia-etat/\n- Public sector deployment case studies and operational insights on European open AI initiatives: https://ai.gov.uk/blogs/smarter-government-powered-by-ai-what-we-learned-in-france\n::\n\n---\n\n\n# Procurement as Industrial Policy\n## Feeding the Ecosystem, Not the Hegemons\n\n::column-left\n- **Public Money, Public Code:** If we pay for it, it should be public\n- **Modular Contracting:** Breakup with corporate lock-in\n- **Shift Incentives:** Encourage responsible collaboration\n- **Local Ecosystems :** Leveraging SME innovation\n::\n\n::column-right on-click\n- open source / open standards is now **critical infrastructure**\n- Currently most **governments aren't contributing**\n- **Sovereign Tech Agencies** are supporting better governance\n- We aren't going to **vibe-code** our way to better digital government \n::\n\n\n::notes\nWe need to address the rupture, learning from Europe. We need to find ways to help build better governance\n::\n\n::reference\n- Open procurement campaign frameworks and global policy templates for public sector architecture: https://publiccode.eu/\n- Funding models and application requirements for digital public asset sustainability: https://sovereigntechfund.de/en/applications/\n::\n\n---\n\n\n# The FWD50 Call to Action\n## From Tenants to Architects\n\n- **Audit Your Stack:** Where is the Rupture Risk?\n- **Prioritize DPGs:** Before buying SaaS, ask look to see if DPG exists\n- **Find the Others:** Are there other agencies with similar needs?\n- **Collaborate Globally:** Middle powers must work together\n\n::center\n**The future will be controlled by those that best steward digital infrastructure.**\n::\n\n::notes\nWe can do this. In many ways we are much closer than we might imagine. \n::\n\n::reference\n- Strategic policy research on building open and interoperable public frameworks across Europe and middle powers: https://openforumeurope.org/\n- Operational metrics and tooling for scalable Digital Public Infrastructure deployment: https://www.cdpi.dev/\n::","slideCount":11}</script>
+    <script>
+      const slides = [...document.querySelectorAll(".slide")];
+      const status = document.querySelector("#snapshot-status");
+      let activeIndex = 0;
+      let revealStep = 0;
+      let mermaidRenderSequence = 0;
+
+      async function renderMermaidBlocks(root = document) {
+        const blocks = [...root.querySelectorAll(".mermaid:not([data-mermaid-rendered])")];
+        if (!blocks.length) return;
+        try {
+          const module = await import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs");
+          const mermaid = module.default || module;
+          if (!window.__deckMermaidInitialized) {
+            mermaid.initialize({ startOnLoad: false, securityLevel: "strict" });
+            window.__deckMermaidInitialized = true;
+          }
+          for (const block of blocks) {
+            const source = block.textContent.trim();
+            if (!source) continue;
+            const fallbackId = `mermaid-snapshot-${mermaidRenderSequence += 1}`;
+            const result = await mermaid.render(block.dataset.mermaidId || fallbackId, source);
+            block.innerHTML = result.svg;
+            block.dataset.mermaidRendered = "true";
+          }
+        } catch (error) {
+          console.warn("Mermaid diagrams could not be rendered in the snapshot view.", error);
+        }
+      }
+
+      function contentOverflows(content) {
+        return content.scrollHeight > content.clientHeight + 1 || content.scrollWidth > content.clientWidth + 1;
+      }
+
+      function calculateBodyScale(measure) {
+        let scale = 1;
+        let measurement = measure(scale);
+
+        if (measurement.overflow) {
+          while (scale > 0.72 && measurement.overflow) {
+            scale = Math.max(0.72, Number((scale - 0.04).toFixed(2)));
+            measurement = measure(scale);
+          }
+          return scale;
+        }
+
+        while (scale < 1.56 && measurement.fillRatio < 0.82) {
+          const nextScale = Math.min(1.56, Number((scale + 0.04).toFixed(2)));
+          const nextMeasurement = measure(nextScale);
+          if (nextMeasurement.overflow) {
+            break;
+          }
+          scale = nextScale;
+          measurement = nextMeasurement;
+        }
+
+        return scale;
+      }
+
+      function prepareSlide(slide) {
+        const content = slide.querySelector(".slide-card__content");
+        if (!content || slide.dataset.kind === "title" || slide.dataset.kind === "closing" || content.querySelector(".layout-image-hero")) return;
+        let body = content.querySelector(":scope > .slide-card__body");
+        if (!body) {
+          body = document.createElement("div");
+          body.className = "slide-card__body";
+          const children = [...content.children].filter((node) => node.tagName !== "H1");
+          const anchor = content.querySelector(":scope > h1");
+          content.insertBefore(body, anchor ? anchor.nextSibling : content.firstChild);
+          children.forEach((child) => body.append(child));
+        }
+        const scale = calculateBodyScale((nextScale) => {
+          body.style.setProperty("--slide-body-scale", nextScale);
+          return {
+            overflow: contentOverflows(content),
+            fillRatio: content.scrollHeight / Math.max(1, content.clientHeight),
+          };
+        });
+        body.style.setProperty("--slide-body-scale", scale);
+      }
+
+      function applyRevealState(slide) {
+        const items = [...slide.querySelectorAll(".next")];
+        items.forEach((item, index) => {
+          const isVisible = index < revealStep;
+          const isCurrent = index === revealStep - 1;
+          item.hidden = !isVisible;
+          item.classList.toggle("visited", index < revealStep - 1);
+          item.classList.toggle("active", isCurrent);
+        });
+      }
+
+      function render() {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("is-active", index === activeIndex);
+          slide.hidden = index !== activeIndex;
+          if (index === activeIndex) {
+            prepareSlide(slide);
+            applyRevealState(slide);
+            renderMermaidBlocks(slide).then(() => prepareSlide(slide));
+          }
+        });
+        status.textContent = `${activeIndex + 1} / ${slides.length} · ${revealStep} / ${Number(slides[activeIndex]?.dataset.stepCount || 0)} reveals`;
+      }
+
+      function move(delta) {
+        const stepCount = Number(slides[activeIndex]?.dataset.stepCount || 0);
+        if (delta > 0 && revealStep < stepCount) {
+          revealStep += 1;
+        } else if (delta < 0 && revealStep > 0) {
+          revealStep -= 1;
+        } else {
+          activeIndex = Math.max(0, Math.min(slides.length - 1, activeIndex + delta));
+          revealStep = delta > 0 ? 0 : Number(slides[activeIndex]?.dataset.stepCount || 0);
+        }
+        render();
+      }
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") move(1);
+        if (event.key === "ArrowLeft" || event.key === "PageUp") move(-1);
+      });
+
+      document.addEventListener("click", (event) => {
+        const action = event.target.dataset.action;
+        if (action === "prev") move(-1);
+        if (action === "next") move(1);
+      });
+
+      let touchStartX = 0;
+      let touchStartY = 0;
+      const SWIPE_MIN_DISTANCE = 40;
+      const SWIPE_DIRECTION_THRESHOLD = 1.5;
+      document.addEventListener("touchstart", (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+        touchStartY = event.changedTouches[0].clientY;
+      }, { passive: true });
+      document.addEventListener("touchend", (event) => {
+        const dx = event.changedTouches[0].clientX - touchStartX;
+        const dy = event.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > Math.abs(dy) * SWIPE_DIRECTION_THRESHOLD && Math.abs(dx) > SWIPE_MIN_DISTANCE) {
+          move(dx < 0 ? 1 : -1);
+        }
+      }, { passive: true });
+
+      window.addEventListener("resize", render);
+
+      render();
+    </script>
+  </body>
+</html>
