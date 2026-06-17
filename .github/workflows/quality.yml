@@ -17,10 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -36,14 +36,12 @@ jobs:
           set +e
           npx --yes html-validate -c .htmlvalidate.json "presentations/**/*.html" "p/**/*.html"
           PRES_EXIT=$?
-          # Validate built HTML if present (use repo config)
           if [ -d _site ]; then
             npx --yes html-validate -c .htmlvalidate.json "_site/**/*.html"
             SITE_EXIT=$?
           else
             SITE_EXIT=0
           fi
-          # Only fail if presentations have errors (built site warnings are acceptable)
           if [ $PRES_EXIT -ne 0 ]; then
             echo "Presentation validation failed with exit code $PRES_EXIT"
             exit $PRES_EXIT
@@ -53,7 +51,6 @@ jobs:
 
       - name: Spell check (content only)
         run: |
-          # Soft rollout: check only tracked Markdown content; exclude generated/vendor
           git ls-files "*.md" "*.markdown" \
             | xargs -r npx --yes cspell@latest lint --config ./cspell.json --no-progress --show-context --relative || true
 
@@ -91,11 +88,9 @@ jobs:
         run: |
           set -e
           HAS_ERRORS=0
-          # Warn on HTTP assets
           if grep -RIn --include='*.html' 'src="http://' _site 2>/dev/null; then
             echo "WARN: HTTP asset detected; prefer HTTPS." >&2
           fi
-          # Warn on target=_blank without rel
           if grep -RIn --include='*.html' 'target="_blank"' _site 2>/dev/null | grep -v 'rel="noopener' >/dev/null; then
             echo "WARN: target=_blank without rel=\"noopener noreferrer\"." >&2
           fi
