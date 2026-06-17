@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Install dependencies
         run: |
           npm ci || npm install
@@ -30,12 +30,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Install pa11y-ci
         run: npm install -g pa11y-ci
       - name: Run pa11y-ci (scan built site)
         run: |
-          # Build site if you have a build step; otherwise scan local HTML files
           if [ -f package.json ] && grep -q build package.json; then npm run build || true; fi
           pa11y-ci --config .pa11yci.json || true
 
@@ -47,7 +46,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Run lychee-action link checker
         uses: lycheeverse/lychee-action@v2
         with:
@@ -61,7 +60,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Install cspell
         run: npm install -g cspell
       - name: Run cspell on Markdown only
