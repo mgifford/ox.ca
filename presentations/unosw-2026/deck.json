@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "title": "Open Source and Accessibility",
+    "lang": "en",
+    "theme": "default-high-contrast",
+    "durationMinutes": "30",
+    "slideWidth": "1280",
+    "slideHeight": "720",
+    "themeStylesheet": "",
+    "titleSlide": true,
+    "subtitle": "Contributing to a Common Solution",
+    "date": "2026-03-22",
+    "location": "NYC",
+    "speakers": "Mike Gifford",
+    "closingSlide": true,
+    "closingTitle": "Questions?",
+    "closingPrompt": "Thanks for following along. Here is how to keep the conversation going.",
+    "contactUrl": "https://ox.ca",
+    "socialLinks": "Mastodon @mgifford@mastodon.social; Bluesky @ox.ca",
+    "presentationUrl": "https://ox.ca/p/8"
+  },
+  "slides": [
+    {
+      "id": "slide-title",
+      "index": 0,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "title",
+      "title": "Open Source and Accessibility",
+      "subtitle": "Contributing to a Common Solution",
+      "date": "2026-03-22",
+      "location": "NYC",
+      "speakers": "Mike Gifford",
+      "qrUrl": ""
+    },
+    {
+      "id": "slide-1",
+      "index": 1,
+      "raw": "# Deque's Axe Core\n\n**It is the default as it has avoided false positives:**\nhttps://github.com/dequelabs/axe-core\n\nNote:",
+      "body": "# Deque's Axe Core\n\n**It is the default as it has avoided false positives:**\nhttps://github.com/dequelabs/axe-core",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-2",
+      "index": 2,
+      "raw": "# Microsoft's Accessibility Insights\n\n**Axe + Keyboard Tracking + Manual Testing**\n\nhttps://accessibilityinsights.io",
+      "body": "# Microsoft's Accessibility Insights\n\n**Axe + Keyboard Tracking + Manual Testing**\n\nhttps://accessibilityinsights.io",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-3",
+      "index": 3,
+      "raw": "# Just a keyboard\n\n**It is as easy as it sounds. Try just using Tab or Shift-tab to move between your content.**\n\nhttps://www.a11y-collective.com/blog/keyboard-navigation/",
+      "body": "# Just a keyboard\n\n**It is as easy as it sounds. Try just using Tab or Shift-tab to move between your content.**\n\nhttps://www.a11y-collective.com/blog/keyboard-navigation/",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-4",
+      "index": 4,
+      "raw": "# DPG: Oobee\n\n**Multi-page axe scans from Government Technology Agency of Singapore (GovTech Singapore)**\n\nhttps://github.com/GovTechSG/oobee",
+      "body": "# DPG: Oobee\n\n**Multi-page axe scans from Government Technology Agency of Singapore (GovTech Singapore)**\n\nhttps://github.com/GovTechSG/oobee",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-5",
+      "index": 5,
+      "raw": "# CI/CD Tools\n\n**@axe-core/playwright is a solid start**\n\nhttps://www.qamadness.com/a-you-oriented-guide-to-axe-core-playwright-accessibility-testing/",
+      "body": "# CI/CD Tools\n\n**@axe-core/playwright is a solid start**\n\nhttps://www.qamadness.com/a-you-oriented-guide-to-axe-core-playwright-accessibility-testing/",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-6",
+      "index": 6,
+      "raw": "# AI — ACCESSIBILITY.md\n\n**More code is produced with AI, and it is important for us to make it clear that accessibility matters.**\n\n- https://mgifford.github.io/ACCESSIBILITY.md\n- https://github.com/mgifford/accessibility-skills",
+      "body": "# AI — ACCESSIBILITY.md\n\n**More code is produced with AI, and it is important for us to make it clear that accessibility matters.**\n\n- https://mgifford.github.io/ACCESSIBILITY.md\n- https://github.com/mgifford/accessibility-skills",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-7",
+      "index": 7,
+      "raw": "# People with disabilities\n\n**Guidelines and best practices are nice, but what matters most is the users. Don't forget to involve people with disabilities in the process from the start.**  \n\nhttps://www.section508.gov/test/usability-testing-with-people-with-disabilities/",
+      "body": "# People with disabilities\n\n**Guidelines and best practices are nice, but what matters most is the users. Don't forget to involve people with disabilities in the process from the start.**  \n\nhttps://www.section508.gov/test/usability-testing-with-people-with-disabilities/",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-closing",
+      "index": 8,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "closing",
+      "title": "Questions?",
+      "prompt": "Thanks for following along. Here is how to keep the conversation going.",
+      "contactEmail": "",
+      "contactUrl": "https://ox.ca",
+      "socialLinks": "Mastodon @mgifford@mastodon.social; Bluesky @ox.ca",
+      "presentationUrl": "https://ox.ca/p/8"
+    }
+  ],
+  "source": "---\ntitle: Open Source and Accessibility\nlang: en\ntheme: default-high-contrast\ndurationMinutes: 30\nslideWidth: 1280\nslideHeight: 720\nthemeStylesheet:\ntitleSlide: true\nsubtitle: Contributing to a Common Solution\ndate: 2026-03-22\nlocation: NYC\nspeakers: Mike Gifford\nclosingSlide: true\nclosingTitle: Questions?\nclosingPrompt: Thanks for following along. Here is how to keep the conversation going.\ncontactUrl: https://ox.ca\nsocialLinks: Mastodon @mgifford@mastodon.social; Bluesky @ox.ca\npresentationUrl: https://ox.ca/p/8\n---\n\n# Deque's Axe Core\n\n**It is the default as it has avoided false positives:**\nhttps://github.com/dequelabs/axe-core\n\nNote:\n\n---\n\n# Microsoft's Accessibility Insights\n\n**Axe + Keyboard Tracking + Manual Testing**\n\nhttps://accessibilityinsights.io\n\n---\n\n# Just a keyboard\n\n**It is as easy as it sounds. Try just using Tab or Shift-tab to move between your content.**\n\nhttps://www.a11y-collective.com/blog/keyboard-navigation/\n\n---\n\n# DPG: Oobee\n\n**Multi-page axe scans from Government Technology Agency of Singapore (GovTech Singapore)**\n\nhttps://github.com/GovTechSG/oobee\n\n---\n\n# CI/CD Tools\n\n**@axe-core/playwright is a solid start**\n\nhttps://www.qamadness.com/a-you-oriented-guide-to-axe-core-playwright-accessibility-testing/\n\n---\n\n# AI — ACCESSIBILITY.md\n\n**More code is produced with AI, and it is important for us to make it clear that accessibility matters.**\n\n- https://mgifford.github.io/ACCESSIBILITY.md\n- https://github.com/mgifford/accessibility-skills\n\n---\n\n# People with disabilities\n\n**Guidelines and best practices are nice, but what matters most is the users. Don't forget to involve people with disabilities in the process from the start.**  \n\nhttps://www.section508.gov/test/usability-testing-with-people-with-disabilities/\n"
+}
