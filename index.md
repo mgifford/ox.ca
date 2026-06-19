@@ -4,7 +4,7 @@ layout: home
 
 # In Brief
 
-I'm passionate about sustainability, accessibility and open. Planet, people and collaboration to make our lives better. I work at [CivicActions](https://civicactions.com/) as the Open Standards and Practices Lead. I'm a [W3C Invited Expert](https://www.w3.org/invited-experts/list/?initial=g) and play a leadership role in an [accessibility community group](https://www.w3.org/community/arrm/) and a [web sustainability interest group](https://www.w3.org/groups/ig/sustainableweb/). 
+I’m passionate about sustainability, accessibility, and open culture—focusing on collaboration to build a better future for both people and the planet. Currently, I serve as the Open Standards and Practices Lead at [CivicActions](https://civicactions.com/) and a [Drupal](https://drupal.org/) Core Accessibility Maintainer. I am also a [W3C Invited Expert](https://www.w3.org/invited-experts/list/?initial=g), where I play leadership roles in web sustainability and digital inclusion initiatives. I have also served 4 years on the Board of Directors of the [Digital Services Coalition](https://digitalservicescoalition.org/). 
 
 <div class="two-col-grid" markdown="1">
 <div markdown="1">
