@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "# Friday, June 26 from 11": "10am - 12:10pm",
+    "title": "Scaling Accessibility Through Open Source",
+    "# Session 1": "From Dependency to Digital Sovereignty: Scaling Sustainable Digital Public Infrastructure through Open Source Ecosystems",
+    "# 13": "10 – 14:10",
+    "lang": "en",
+    "theme": "default-high-contrast",
+    "durationMinutes": "15",
+    "slideWidth": "1280",
+    "slideHeight": "720",
+    "themeStylesheet": "",
+    "titleSlide": true,
+    "subtitle": "",
+    "date": "2026-06-26",
+    "location": "NYC",
+    "speakers": "Mike Gifford",
+    "closingSlide": true,
+    "closingTitle": "Questions?",
+    "closingPrompt": "Thanks for following along. Here is how to keep the conversation going.",
+    "contactUrl": "https://example.com/slides",
+    "socialLinks": "Mastodon @example; Bluesky @example.com",
+    "presentationUrl": "https://example.com/slides/demo-deck"
+  },
+  "slides": [
+    {
+      "id": "slide-title",
+      "index": 0,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "title",
+      "title": "Scaling Accessibility Through Open Source",
+      "subtitle": "",
+      "date": "2026-06-26",
+      "location": "NYC",
+      "speakers": "Mike Gifford",
+      "qrUrl": ""
+    },
+    {
+      "id": "slide-1",
+      "index": 1,
+      "raw": "# How I got into Accessibility\n\n- 2009 - shifting from NGO to government\n- \"Drupal cares about open standards, how hard could it be?\"\n- I found a bug in Drupal 6, got it fixed in Drupal 7\n- I shifted 2-3% of the web & improved the experience for millions!\n- Scale can become a bit addictive",
+      "body": "# How I got into Accessibility\n\n- 2009 - shifting from NGO to government\n- \"Drupal cares about open standards, how hard could it be?\"\n- I found a bug in Drupal 6, got it fixed in Drupal 7\n- I shifted 2-3% of the web & improved the experience for millions!\n- Scale can become a bit addictive",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-2",
+      "index": 2,
+      "raw": "# Open source runs everything\n- 97% of the codebases Black Duck evaluated contain open source\n- Developers are Lazy (ok, we're all lazy) - **Defaults matter**\n- **Accessibility issues are bugs **(not feature requests)\n- Fixing a bug upstream has a huge multiplier (often millions of times)\n- Shift Left (upstream)",
+      "body": "# Open source runs everything\n- 97% of the codebases Black Duck evaluated contain open source\n- Developers are Lazy (ok, we're all lazy) - **Defaults matter**\n- **Accessibility issues are bugs **(not feature requests)\n- Fixing a bug upstream has a huge multiplier (often millions of times)\n- Shift Left (upstream)",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-3",
+      "index": 3,
+      "raw": "# Culture Eats Policy for Breakfast\n- It is bigger than the code, it is about being inclusive as a community\n- Seeing people with disabilities as people with expertise \n- People creating technology are creating our future\n- Disability a critical part of the human condition",
+      "body": "# Culture Eats Policy for Breakfast\n- It is bigger than the code, it is about being inclusive as a community\n- Seeing people with disabilities as people with expertise \n- People creating technology are creating our future\n- Disability a critical part of the human condition",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-4",
+      "index": 4,
+      "raw": "# Early and Often\n- Integrate accessibility training into your onboarding\n- Build it into your CI/CD processes\n- Ensure you have people with disabilities on your team\n- Have an ACCESSIBILITY.md or similar skill (I've built one if you want)",
+      "body": "# Early and Often\n- Integrate accessibility training into your onboarding\n- Build it into your CI/CD processes\n- Ensure you have people with disabilities on your team\n- Have an ACCESSIBILITY.md or similar skill (I've built one if you want)",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-5",
+      "index": 5,
+      "raw": "# Resources and follow-up\n\n- https://accessibilityinsights.io\n- https://www.oobee.tech.gov.sg\n- https://github.com/mgifford/pdf-crawler\n- https://github.com/mgifford/open-scans\n- https://github.com/mgifford/vital-core",
+      "body": "# Resources and follow-up\n\n- https://accessibilityinsights.io\n- https://www.oobee.tech.gov.sg\n- https://github.com/mgifford/pdf-crawler\n- https://github.com/mgifford/open-scans\n- https://github.com/mgifford/vital-core",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-closing",
+      "index": 6,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "closing",
+      "title": "Questions?",
+      "prompt": "Thanks for following along. Here is how to keep the conversation going.",
+      "contactEmail": "",
+      "contactUrl": "https://example.com/slides",
+      "socialLinks": "Mastodon @example; Bluesky @example.com",
+      "presentationUrl": "https://example.com/slides/demo-deck"
+    }
+  ],
+  "source": "---\n# Inclusion and Last Mile Design\n# Friday, June 26 from 11:10am - 12:10pm\ntitle: Scaling Accessibility Through Open Source\n# Scaling SDGs through Local Open Source Procurement\n# Session 1: From Dependency to Digital Sovereignty: Scaling Sustainable Digital Public Infrastructure through Open Source Ecosystems\n# 13:10 – 14:10\n# 1. Procurement & economic transformation Scaling SDGs through Local Open Source Procurement How can the public sector leverage procurement to grow national and local capabilities and vendor ecosystems? What’s missing?\nlang: en\ntheme: default-high-contrast\ndurationMinutes: 15\nslideWidth: 1280\nslideHeight: 720\nthemeStylesheet:\ntitleSlide: true\nsubtitle: \ndate: 2026-06-26\nlocation: NYC\nspeakers: Mike Gifford\nclosingSlide: true\nclosingTitle: Questions?\nclosingPrompt: Thanks for following along. Here is how to keep the conversation going.\ncontactUrl: https://example.com/slides\nsocialLinks: Mastodon @example; Bluesky @example.com\npresentationUrl: https://example.com/slides/demo-deck\n---\n\n# How I got into Accessibility\n\n- 2009 - shifting from NGO to government\n- \"Drupal cares about open standards, how hard could it be?\"\n- I found a bug in Drupal 6, got it fixed in Drupal 7\n- I shifted 2-3% of the web & improved the experience for millions!\n- Scale can become a bit addictive\n\n---\n\n# Open source runs everything\n- 97% of the codebases Black Duck evaluated contain open source\n- Developers are Lazy (ok, we're all lazy) - **Defaults matter**\n- **Accessibility issues are bugs **(not feature requests)\n- Fixing a bug upstream has a huge multiplier (often millions of times)\n- Shift Left (upstream)\n\n---\n\n# Culture Eats Policy for Breakfast\n- It is bigger than the code, it is about being inclusive as a community\n- Seeing people with disabilities as people with expertise \n- People creating technology are creating our future\n- Disability a critical part of the human condition\n\n---\n\n# Early and Often\n- Integrate accessibility training into your onboarding\n- Build it into your CI/CD processes\n- Ensure you have people with disabilities on your team\n- Have an ACCESSIBILITY.md or similar skill (I've built one if you want)\n\n---\n\n# Resources and follow-up\n\n- https://accessibilityinsights.io\n- https://www.oobee.tech.gov.sg\n- https://github.com/mgifford/pdf-crawler\n- https://github.com/mgifford/open-scans\n- https://github.com/mgifford/vital-core\n\n"
+}
