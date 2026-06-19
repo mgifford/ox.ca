@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "Scaling SDGs through Local Open Source Procurement",
+    "# Session 1": "From Dependency to Digital Sovereignty: Scaling Sustainable Digital Public Infrastructure through Open Source Ecosystems",
+    "# 13": "10 – 14:10",
+    "lang": "en",
+    "theme": "default-high-contrast",
+    "durationMinutes": "15",
+    "slideWidth": "1280",
+    "slideHeight": "720",
+    "themeStylesheet": "",
+    "titleSlide": true,
+    "subtitle": "Procurement How can the public sector leverage procurement to grow national and local capabilities and vendor ecosystems? What’s missing?",
+    "date": "2026-06-26",
+    "location": "UNHQ, NYC",
+    "speakers": "Mike Gifford",
+    "closingSlide": true,
+    "closingTitle": "Questions?",
+    "closingPrompt": "Thanks for following along. Here is how to keep the conversation going.",
+    "contactUrl": "https://ox.ca",
+    "socialLinks": "Bluesky @ox.ca",
+    "presentationUrl": "https://example.com/slides/demo-deck"
+  },
+  "slides": [
+    {
+      "id": "slide-title",
+      "index": 0,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "title",
+      "title": "Scaling SDGs through Local Open Source Procurement",
+      "subtitle": "Procurement How can the public sector leverage procurement to grow national and local capabilities and vendor ecosystems? What’s missing?",
+      "date": "2026-06-26",
+      "location": "UNHQ, NYC",
+      "speakers": "Mike Gifford",
+      "qrUrl": ""
+    },
+    {
+      "id": "slide-1",
+      "index": 1,
+      "raw": "# Procurement Matters\n\n\n**Governments are the biggest purchasers of goods & services.**\n\n- Stated policies and preferences impact vendor behavior\n- Procurement is a bigger leaver than grants or credits\n- Contract **management** & **evaluation** key to strategy\n- **Little understanding** of digital, let alone open source\n- **97% of the software** Black Duck surveyed in 2025 contained open source software",
+      "body": "# Procurement Matters\n\n\n**Governments are the biggest purchasers of goods & services.**\n\n- Stated policies and preferences impact vendor behavior\n- Procurement is a bigger leaver than grants or credits\n- Contract **management** & **evaluation** key to strategy\n- **Little understanding** of digital, let alone open source\n- **97% of the software** Black Duck surveyed in 2025 contained open source software",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-2",
+      "index": 2,
+      "raw": "# Shaping Incentives\n\n**This has worked before!**\n- **Accessibility** (Section 508) has driven vendors globally\n- GDPR has likewise **shifted** with regard to privacy\n- Self reporting (VPATS) are of limited use\n- **Vendor lock-in** costs more than the contract\n- Everyone is using open source, but few are contributing back",
+      "body": "# Shaping Incentives\n\n**This has worked before!**\n- **Accessibility** (Section 508) has driven vendors globally\n- GDPR has likewise **shifted** with regard to privacy\n- Self reporting (VPATS) are of limited use\n- **Vendor lock-in** costs more than the contract\n- Everyone is using open source, but few are contributing back",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-3",
+      "index": 3,
+      "raw": "# Supporting Local\n\n**Do small/medium countries have the expertise? **\n- Anyone can support open source, but who will\n- Typo3 model in Kenya\n  - Train an ecosystem of vendors and interested client\n- Allow for sub-contracting to build up local experience \n  - Digital Services Coalition",
+      "body": "# Supporting Local\n\n**Do small/medium countries have the expertise? **\n- Anyone can support open source, but who will\n- Typo3 model in Kenya\n  - Train an ecosystem of vendors and interested client\n- Allow for sub-contracting to build up local experience \n  - Digital Services Coalition",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-4",
+      "index": 4,
+      "raw": "# Readiness Engagement Ladder\n\n**We can incentivize firms to move up their contributions**.\n- Ad Hoc / Informal\n- Basic Compliance & Documentation\n- Adopted & Participating (Drupal Certified Partners)\n- Advanced Stewardship\n- Strategic Ecosystem Partner",
+      "body": "# Readiness Engagement Ladder\n\n**We can incentivize firms to move up their contributions**.\n- Ad Hoc / Informal\n- Basic Compliance & Documentation\n- Adopted & Participating (Drupal Certified Partners)\n- Advanced Stewardship\n- Strategic Ecosystem Partner",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-5",
+      "index": 5,
+      "raw": "# Resources and follow-up\n\n- https://www.blackduck.com/resources/analyst-reports/open-source-security-risk-analysis.html\n- https://new.drupal.org/association/become-a-drupal-certified-partner\n- https://news.typo3.com/article/typo3-grows-strong-in-africa",
+      "body": "# Resources and follow-up\n\n- https://www.blackduck.com/resources/analyst-reports/open-source-security-risk-analysis.html\n- https://new.drupal.org/association/become-a-drupal-certified-partner\n- https://news.typo3.com/article/typo3-grows-strong-in-africa",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-closing",
+      "index": 6,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "closing",
+      "title": "Questions?",
+      "prompt": "Thanks for following along. Here is how to keep the conversation going.",
+      "contactEmail": "",
+      "contactUrl": "https://ox.ca",
+      "socialLinks": "Bluesky @ox.ca",
+      "presentationUrl": "https://example.com/slides/demo-deck"
+    }
+  ],
+  "source": "---\ntitle: Scaling SDGs through Local Open Source Procurement\n# Session 1: From Dependency to Digital Sovereignty: Scaling Sustainable Digital Public Infrastructure through Open Source Ecosystems\n# 13:10 – 14:10\n# 1. Procurement & economic transformation Scaling SDGs through Local Open Source \nlang: en\ntheme: default-high-contrast\ndurationMinutes: 15\nslideWidth: 1280\nslideHeight: 720\nthemeStylesheet:\ntitleSlide: true\nsubtitle: Procurement How can the public sector leverage procurement to grow national and local capabilities and vendor ecosystems? What’s missing?\ndate: 2026-06-26\nlocation: UNHQ, NYC\nspeakers: Mike Gifford\nclosingSlide: true\nclosingTitle: Questions?\nclosingPrompt: Thanks for following along. Here is how to keep the conversation going.\ncontactUrl: https://ox.ca\nsocialLinks: Bluesky @ox.ca\npresentationUrl: https://example.com/slides/demo-deck\n---\n\n# Procurement Matters\n\n\n**Governments are the biggest purchasers of goods & services.**\n\n- Stated policies and preferences impact vendor behavior\n- Procurement is a bigger leaver than grants or credits\n- Contract **management** & **evaluation** key to strategy\n- **Little understanding** of digital, let alone open source\n- **97% of the software** Black Duck surveyed in 2025 contained open source software\n\n---\n\n# Shaping Incentives\n\n**This has worked before!**\n- **Accessibility** (Section 508) has driven vendors globally\n- GDPR has likewise **shifted** with regard to privacy\n- Self reporting (VPATS) are of limited use\n- **Vendor lock-in** costs more than the contract\n- Everyone is using open source, but few are contributing back\n\n---\n\n# Supporting Local\n\n**Do small/medium countries have the expertise? **\n- Anyone can support open source, but who will\n- Typo3 model in Kenya\n  - Train an ecosystem of vendors and interested client\n- Allow for sub-contracting to build up local experience \n  - Digital Services Coalition\n\n\n---\n\n# Readiness Engagement Ladder\n\n**We can incentivize firms to move up their contributions**.\n- Ad Hoc / Informal\n- Basic Compliance & Documentation\n- Adopted & Participating (Drupal Certified Partners)\n- Advanced Stewardship\n- Strategic Ecosystem Partner\n\n---\n\n# Resources and follow-up\n\n- https://www.blackduck.com/resources/analyst-reports/open-source-security-risk-analysis.html\n- https://new.drupal.org/association/become-a-drupal-certified-partner\n- https://news.typo3.com/article/typo3-grows-strong-in-africa\n\n"
+}
