@@ -61,3 +61,10 @@ presentationUrl: https://example.com/slides/demo-deck
 ---
 
 # Resources and follow-up
+
+- https://accessibilityinsights.io
+- https://www.oobee.tech.gov.sg
+- https://github.com/mgifford/pdf-crawler
+- https://github.com/mgifford/open-scans
+- https://github.com/mgifford/vital-core
+
