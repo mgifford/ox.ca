@@ -2,10 +2,6 @@
 # Inclusion and Last Mile Design
 # Friday, June 26 from 11:10am - 12:10pm
 title: Scaling Accessibility Through Open Source
-# Scaling SDGs through Local Open Source Procurement
-# Session 1: From Dependency to Digital Sovereignty: Scaling Sustainable Digital Public Infrastructure through Open Source Ecosystems
-# 13:10 – 14:10
-# 1. Procurement & economic transformation Scaling SDGs through Local Open Source Procurement How can the public sector leverage procurement to grow national and local capabilities and vendor ecosystems? What’s missing?
 lang: en
 theme: default-high-contrast
 durationMinutes: 15
@@ -15,14 +11,14 @@ themeStylesheet:
 titleSlide: true
 subtitle: 
 date: 2026-06-26
-location: NYC
+location: UNHQ, NYC
 speakers: Mike Gifford
 closingSlide: true
 closingTitle: Questions?
 closingPrompt: Thanks for following along. Here is how to keep the conversation going.
-contactUrl: https://example.com/slides
-socialLinks: Mastodon @example; Bluesky @example.com
-presentationUrl: https://example.com/slides/demo-deck
+contactUrl: https://ox.ca
+socialLinks: Bluesky @ox.ca
+presentationUrl: https://ox.ca/p/8
 ---
 
 # How I got into Accessibility

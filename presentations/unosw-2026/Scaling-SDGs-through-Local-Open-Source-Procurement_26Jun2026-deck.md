@@ -19,7 +19,7 @@ closingTitle: Questions?
 closingPrompt: Thanks for following along. Here is how to keep the conversation going.
 contactUrl: https://ox.ca
 socialLinks: Bluesky @ox.ca
-presentationUrl: https://example.com/slides/demo-deck
+presentationUrl: https://ox.ca/p/9
 ---
 
 # Procurement Matters
