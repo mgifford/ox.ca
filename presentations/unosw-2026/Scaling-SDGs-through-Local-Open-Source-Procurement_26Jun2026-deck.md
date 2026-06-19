@@ -2,7 +2,6 @@
 title: Scaling SDGs through Local Open Source Procurement
 # Session 1: From Dependency to Digital Sovereignty: Scaling Sustainable Digital Public Infrastructure through Open Source Ecosystems
 # 13:10 – 14:10
-# 1. Procurement & economic transformation Scaling SDGs through Local Open Source 
 lang: en
 theme: default-high-contrast
 durationMinutes: 15
@@ -73,5 +72,5 @@ presentationUrl: https://ox.ca/p/9
 
 - https://www.blackduck.com/resources/analyst-reports/open-source-security-risk-analysis.html
 - https://new.drupal.org/association/become-a-drupal-certified-partner
-- https://news.typo3.com/article/typo3-grows-strong-in-africa
+- https://news.typo3.com/article/report-on-typo3-based-government-websites-in-rwanda
 
