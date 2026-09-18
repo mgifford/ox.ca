@@ -5,6 +5,7 @@
     "unique-landmark": "error",
     "hidden-focusable": "error",
     "no-inline-style": "warn",
+    "long-title": ["error", { "maxlength": 120 }],
     "no-trailing-whitespace": "off",
     "void-style": "off"
   }
