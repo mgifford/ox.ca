@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "title": "AI-Augmented Accessibility",
+    "lang": "en",
+    "theme": "default-high-contrast",
+    "durationMinutes": "20",
+    "slideWidth": "1280",
+    "slideHeight": "720",
+    "themeStylesheet": "",
+    "titleSlide": true,
+    "subtitle": "From Automated Alt-Text to Governance Gates",
+    "date": "10:45–11:30 CEST, 2026-03-22",
+    "location": "DrupalCon Rotterdam 2026 (Leeuwen Room I&II)",
+    "speakers": "Mike Gifford",
+    "closingSlide": true,
+    "closingTitle": "Questions?",
+    "closingPrompt": "Thanks for following along. Here is how to keep the conversation going.",
+    "contactUrl": "https://ox.ca",
+    "socialLinks": "Mastodon.social: @mgifford Bluesky @ox.ca",
+    "presentationUrl": "https://ox.ca/p/10",
+    "conferenceURL": "https://events.drupal.org/rotterdam2026/session/ai-augmented-accessibility-automated-alt-text-governance-gates"
+  },
+  "slides": [
+    {
+      "id": "slide-title",
+      "index": 0,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "title",
+      "title": "AI-Augmented Accessibility",
+      "subtitle": "From Automated Alt-Text to Governance Gates",
+      "date": "10:45–11:30 CEST, 2026-03-22",
+      "location": "DrupalCon Rotterdam 2026 (Leeuwen Room I&II)",
+      "speakers": "Mike Gifford",
+      "qrUrl": ""
+    },
+    {
+      "id": "slide-1",
+      "index": 1,
+      "raw": "# 5 DrupalCon Accessibility Talks! (Yesterday)\n\n- **Christopher Torgalson (13:30)** \n    Baseline WebAIM failures & WCAG semantics.\n\n- **Junaid Masoodi (17:35)** \n    AI hallucinated ARIA, broken focus traps, false confidence.",
+      "body": "# 5 DrupalCon Accessibility Talks! (Yesterday)\n\n- **Christopher Torgalson (13:30)** \n    Baseline WebAIM failures & WCAG semantics.\n\n- **Junaid Masoodi (17:35)** \n    AI hallucinated ARIA, broken focus traps, false confidence.",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-2",
+      "index": 2,
+      "raw": "# \"Whack-a-Mole\" Fails, Over and Over Again\n\n- Organizations repeatedly fail basic automated testing\n- [>] ... the focus hasn't been on the system, but the page. \n- axe-core initial release 1.0 was in 2015\n- [>>]  ... which was over a decade ago. \n- Periodic automated scans catch issues \n- [>>] ... but *after* non-compliant code reaches production.\n\nNote:\nhttps://events.drupal.org/rotterdam2026/session/ai-augmented-accessibility-automated-alt-text-governance-gates\n\nStop reacting to accessibility errors and start automating inclusive governance. Learn how to use AI to find accessibility errors earlier and fix them faster. We’ll bridge the gaps between AI, code, and humans with clear guidance for everyone.\n\nPrerequisite\n\nIt would be useful to be familiar with some basics of accessibility. This is not a 101.\n\nTarget Audience\n\nAnyone working to meet accessibility targets.\n\nOutline\n\nAccessibility is often the last gate in a project. Like many bugs the longer they wait, the more difficult they are to fix. Learn how we can \"shift left\" by using AI not just to find errors, but to build better systems. This session provides a practical roadmap for integrating AI into the full Drupal lifecycle:\n\n* Content: Automating descriptive alt-text & transcripts using Drupal AI Core.\n* Infrastructure: Using LLMs to architect & configure CI/CD accessibility gates (Axe-core/Playwright).\n* Triage: Leveraging GitHub’s AI-powered accessibility toos to turn scans into Pull Requests.\n* Governance: Implementing ACCESSIBILITY.md or Claude skills to produce better results.\n* Hierarchy of Truth: Adding AI roles to that of other automated tools & humans—why the user remains the ultimate source of truth.\n\nJoin us to move beyond \"compliance checklists\" & toward a scalable, AI-assisted inclusive web.\n\nMike will also be tying this into the book he recently co-authored. Digital Accessibility Ethics: Disability Inclusion in All Things Tech,\n\nLearning Objectives\n\n* Automate Content Workflows: Set up the Drupal AI module for automated, human-verified media accessibility.\n* Architect Testing Gates: Use AI assistants to write configuration for robust CI/CD frameworks.\n* Implement Modern Standards: Learn to use ACCESSIBILITY.md & Claude Skills to keep projects transparent and compliant.\n* Validate Strategically: Understand the \"Hierarchy of Truth\" to know when to trust what.",
+      "body": "# \"Whack-a-Mole\" Fails, Over and Over Again\n\n- Organizations repeatedly fail basic automated testing\n- [>] ... the focus hasn't been on the system, but the page. \n- axe-core initial release 1.0 was in 2015\n- [>>]  ... which was over a decade ago. \n- Periodic automated scans catch issues \n- [>>] ... but *after* non-compliant code reaches production.",
+      "notes": "https://events.drupal.org/rotterdam2026/session/ai-augmented-accessibility-automated-alt-text-governance-gates\n\nStop reacting to accessibility errors and start automating inclusive governance. Learn how to use AI to find accessibility errors earlier and fix them faster. We’ll bridge the gaps between AI, code, and humans with clear guidance for everyone.\n\nPrerequisite\n\nIt would be useful to be familiar with some basics of accessibility. This is not a 101.\n\nTarget Audience\n\nAnyone working to meet accessibility targets.\n\nOutline\n\nAccessibility is often the last gate in a project. Like many bugs the longer they wait, the more difficult they are to fix. Learn how we can \"shift left\" by using AI not just to find errors, but to build better systems. This session provides a practical roadmap for integrating AI into the full Drupal lifecycle:\n\n* Content: Automating descriptive alt-text & transcripts using Drupal AI Core.\n* Infrastructure: Using LLMs to architect & configure CI/CD accessibility gates (Axe-core/Playwright).\n* Triage: Leveraging GitHub’s AI-powered accessibility toos to turn scans into Pull Requests.\n* Governance: Implementing ACCESSIBILITY.md or Claude skills to produce better results.\n* Hierarchy of Truth: Adding AI roles to that of other automated tools & humans—why the user remains the ultimate source of truth.\n\nJoin us to move beyond \"compliance checklists\" & toward a scalable, AI-assisted inclusive web.\n\nMike will also be tying this into the book he recently co-authored. Digital Accessibility Ethics: Disability Inclusion in All Things Tech,\n\nLearning Objectives\n\n* Automate Content Workflows: Set up the Drupal AI module for automated, human-verified media accessibility.\n* Architect Testing Gates: Use AI assistants to write configuration for robust CI/CD frameworks.\n* Implement Modern Standards: Learn to use ACCESSIBILITY.md & Claude Skills to keep projects transparent and compliant.\n* Validate Strategically: Understand the \"Hierarchy of Truth\" to know when to trust what.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-3",
+      "index": 3,
+      "raw": "::iframe title: Lighthouse Scores of European government sites\nhttps://mgifford.github.io/eu-plus-government-scans/lighthouse-results.html#lighthouse-scores-by-country\n::",
+      "body": "::iframe title: Lighthouse Scores of European government sites\nhttps://mgifford.github.io/eu-plus-government-scans/lighthouse-results.html#lighthouse-scores-by-country\n::",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-4",
+      "index": 4,
+      "raw": "::iframe title:CivicActions blog on automating tools accessibility CI/CD on GitHub\nhttps://accessibility.civicactions.com/posts/how-we-scale-inclusive-website-content-with-automated-testing-and-open-source-tools\n::\n\nNote:\n- **CI/CD - Continuous Integration / Continuous Development** \n    Moving from reactive post-launch fixes to continuous pipeline-level governance.",
+      "body": "::iframe title:CivicActions blog on automating tools accessibility CI/CD on GitHub\nhttps://accessibility.civicactions.com/posts/how-we-scale-inclusive-website-content-with-automated-testing-and-open-source-tools\n::",
+      "notes": "- **CI/CD - Continuous Integration / Continuous Development** \n    Moving from reactive post-launch fixes to continuous pipeline-level governance.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-5",
+      "index": 5,
+      "raw": "::iframe title:Guidepup Screen reader automation library\nhttps://www.guidepup.dev/\n::\n\nNote: \nAutomated site scanning tool.",
+      "body": "::iframe title:Guidepup Screen reader automation library\nhttps://www.guidepup.dev/\n::",
+      "notes": "Automated site scanning tool.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-6",
+      "index": 6,
+      "raw": "::iframe title:AI Generated Accessibility Reports\nhttps://mgifford.github.io/accessibility-sandbox/ai-report/\n::\n\nNote: \nWhat folks want.",
+      "body": "::iframe title:AI Generated Accessibility Reports\nhttps://mgifford.github.io/accessibility-sandbox/ai-report/\n::",
+      "notes": "What folks want.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-7",
+      "index": 7,
+      "raw": "# The Hierarchy of Truth\n\n1. **Disabled Users & Lived Experience**  <-- Highest Authority\n2. **Accessibility SME Manual Audits** backed by WCAG\n3. Deterministic DOM Scanners (axe-core)\n4. Synthetic AT Automation (GuidePup & GuidePup MCP)\n5. Probabilistic AI Proposals (LLM Candidates)  <-- Lowest Authority\n\n\nNote:\n- **Rule 1:** Don't use a LLM where a simpler algorithm will do.\n- **Rule 2:** Trust people over machines\n\n1. Accessibility Statements, Users with Disabilities\n2. Professionals\n3. Standard automated tools\n4. AI driven tools\n5. AI driven answers",
+      "body": "# The Hierarchy of Truth\n\n1. **Disabled Users & Lived Experience**  <-- Highest Authority\n2. **Accessibility SME Manual Audits** backed by WCAG\n3. Deterministic DOM Scanners (axe-core)\n4. Synthetic AT Automation (GuidePup & GuidePup MCP)\n5. Probabilistic AI Proposals (LLM Candidates)  <-- Lowest Authority",
+      "notes": "- **Rule 1:** Don't use a LLM where a simpler algorithm will do.\n- **Rule 2:** Trust people over machines\n\n1. Accessibility Statements, Users with Disabilities\n2. Professionals\n3. Standard automated tools\n4. AI driven tools\n5. AI driven answers",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-8",
+      "index": 8,
+      "raw": "# The AI Alt-Text Paradox: Capability vs. Context\n\n- **The FOSDEM 2025 Baseline:** Vision models consistently generate richer candidate descriptions than untrained human authors.\n- **The GitHub Engineering Trap:**\n  - **Passing automated checks doesn't mean your site is accessible.**\n  - Automated scanners confirm the rule works as defined, it does not mean it meets WCAG SC.\n- **The AI Blind Spot:** LLMs do not know context, editorial intent, or when an image requires alt text (vs declaring the image a decorative element  `alt=\"\"`).",
+      "body": "# The AI Alt-Text Paradox: Capability vs. Context\n\n- **The FOSDEM 2025 Baseline:** Vision models consistently generate richer candidate descriptions than untrained human authors.\n- **The GitHub Engineering Trap:**\n  - **Passing automated checks doesn't mean your site is accessible.**\n  - Automated scanners confirm the rule works as defined, it does not mean it meets WCAG SC.\n- **The AI Blind Spot:** LLMs do not know context, editorial intent, or when an image requires alt text (vs declaring the image a decorative element  `alt=\"\"`).",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-9",
+      "index": 9,
+      "raw": "::iframe title:ACCESSIBILITY.md Markdown Files\nhttps://mgifford.github.io/ACCESSIBILITY.md\n::\n\nNote:\n**Culture Dictates What Is Acceptable:** Compliance is an organizational.\n**Repo-Level Guardrails (`ACCESSIBILITY.md`):**\n- Commit standards directly into project roots alongside `README.md`.\n- Provide machine-readable instructions that both human developers and coding LLMs must obey.\n- accessibility-skills too",
+      "body": "::iframe title:ACCESSIBILITY.md Markdown Files\nhttps://mgifford.github.io/ACCESSIBILITY.md\n::",
+      "notes": "**Culture Dictates What Is Acceptable:** Compliance is an organizational.\n**Repo-Level Guardrails (`ACCESSIBILITY.md`):**\n- Commit standards directly into project roots alongside `README.md`.\n- Provide machine-readable instructions that both human developers and coding LLMs must obey.\n- accessibility-skills too",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-10",
+      "index": 10,
+      "raw": "::iframe title:ZivTech Cross-Model Accessibility Skills\nhttps://zivtech.github.io/accessibility-skills/\n::\n\nNote:",
+      "body": "::iframe title:ZivTech Cross-Model Accessibility Skills\nhttps://zivtech.github.io/accessibility-skills/\n::",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-11",
+      "index": 11,
+      "raw": "::iframe title:Alt Text Scans\nhttps://mgifford.github.io/alt-text-scan/reports.html\n::\n\nNote:\n- Alt text can be rated with an algorithm\n- A LLM can probably do it better than a person.",
+      "body": "::iframe title:Alt Text Scans\nhttps://mgifford.github.io/alt-text-scan/reports.html\n::",
+      "notes": "- Alt text can be rated with an algorithm\n- A LLM can probably do it better than a person.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-12",
+      "index": 12,
+      "raw": "::iframe title:Top Task Finder - Popular URLs\nhttps://mgifford.github.io/top-task-finder/\n::\n\nNote:\n- Scan a site that has already been scanned and demonstrate the LLM Prompt\n- Best experience is still with data and someone with User Researcher",
+      "body": "::iframe title:Top Task Finder - Popular URLs\nhttps://mgifford.github.io/top-task-finder/\n::",
+      "notes": "- Scan a site that has already been scanned and demonstrate the LLM Prompt\n- Best experience is still with data and someone with User Researcher",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-13",
+      "index": 13,
+      "raw": "::iframe title:Drupal MCP\nhttps://drupalmcp.io/en\n::\n\nNote:\n- Note this hasn't been tested to see if it works",
+      "body": "::iframe title:Drupal MCP\nhttps://drupalmcp.io/en\n::",
+      "notes": "- Note this hasn't been tested to see if it works",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-14",
+      "index": 14,
+      "raw": "::iframe title:WCAG MCP\nhttps://mcp.so/servers/accessibilitymcp\n::\n\nNote:\n- Note this hasn't been tested to see if it works",
+      "body": "::iframe title:WCAG MCP\nhttps://mcp.so/servers/accessibilitymcp\n::",
+      "notes": "- Note this hasn't been tested to see if it works",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-15",
+      "index": 15,
+      "raw": "::iframe title:WCAG WebMCP Community Group\nhttps://webmachinelearning.github.io/webmcp/\n::\n\nNote:\n- The W3C is working on this.",
+      "body": "::iframe title:WCAG WebMCP Community Group\nhttps://webmachinelearning.github.io/webmcp/\n::",
+      "notes": "- The W3C is working on this.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-16",
+      "index": 16,
+      "raw": "::iframe title:Playwright MCP\nhttps://playwright.dev/docs/getting-started-mcp\n::\n\nNote:\n- I am still working on this.",
+      "body": "::iframe title:Playwright MCP\nhttps://playwright.dev/docs/getting-started-mcp\n::",
+      "notes": "- I am still working on this.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-17",
+      "index": 17,
+      "raw": "::iframe title:Open Accessibility Workbench\nhttps://mgifford.github.io/open-accessibility-workbench/#/overview\n\n::\n\nNote:\n- Sample URLs: \n  - https://mgifford.github.io/open-scans/reports/issues/issue-353/2026-09-14T14-12-20-749Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-353/2026-09-14T14-12-20-749Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-350/2026-09-14T13-56-56-213Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-351/2026-09-14T14-44-51-809Z/report.csv",
+      "body": "::iframe title:Open Accessibility Workbench\nhttps://mgifford.github.io/open-accessibility-workbench/#/overview\n\n::",
+      "notes": "- Sample URLs: \n  - https://mgifford.github.io/open-scans/reports/issues/issue-353/2026-09-14T14-12-20-749Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-353/2026-09-14T14-12-20-749Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-350/2026-09-14T13-56-56-213Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-351/2026-09-14T14-44-51-809Z/report.csv",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-18",
+      "index": 18,
+      "raw": "# The 5-Step Operational Remediation Pipeline\n\n1. **Scan Site** \n  * Auto-scan (playwright + axe-core): Ingest raw DOM violations into Open Accessibility Workbench.\n  * Synthetic Pass (Guidepup + Playwright MCP): Execute programmatic VoiceOver/NVDA passes.\n3. **Review Results**\n  * Context Lookup (wcag-mcp + uswds-mcp): Pair violations with normative rules and token patterns.\n4. **Remediate Priorities**: \n  * Generate constrained patches using approved semantics where possible.\n5. **Validate Solutions** \n    * Scan page: Use a tool like Accessibility Insights to validate the page is fixed.\n    * Synthetic Pass2 Rescan to validate it has been fixed. Include updated \n6. **Human Audit:** SME reviews diffs, tests new UI, and approves PR.",
+      "body": "# The 5-Step Operational Remediation Pipeline\n\n1. **Scan Site** \n  * Auto-scan (playwright + axe-core): Ingest raw DOM violations into Open Accessibility Workbench.\n  * Synthetic Pass (Guidepup + Playwright MCP): Execute programmatic VoiceOver/NVDA passes.\n3. **Review Results**\n  * Context Lookup (wcag-mcp + uswds-mcp): Pair violations with normative rules and token patterns.\n4. **Remediate Priorities**: \n  * Generate constrained patches using approved semantics where possible.\n5. **Validate Solutions** \n    * Scan page: Use a tool like Accessibility Insights to validate the page is fixed.\n    * Synthetic Pass2 Rescan to validate it has been fixed. Include updated \n6. **Human Audit:** SME reviews diffs, tests new UI, and approves PR.",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-19",
+      "index": 19,
+      "raw": "# Human Driven\n- **Nothing About Us, Without Us**  \n  - We need to do much better at engaging PwD and hiring them.\n- **Accessibility Statements**\n  - These are a key feedback loop for any system. Actively listen to your users.\n- **Design Systems**\n  - Shift left. Yes, an ACCESSIBILITY.md may help, but not as much as a well supported design system.\n- **Accessibility Champions**\n  - Accessibility is a team sport. Build your champions. \n- **Training**\n  - Everyone needs to learn more about how others interact with the tools we build.",
+      "body": "# Human Driven\n- **Nothing About Us, Without Us**  \n  - We need to do much better at engaging PwD and hiring them.\n- **Accessibility Statements**\n  - These are a key feedback loop for any system. Actively listen to your users.\n- **Design Systems**\n  - Shift left. Yes, an ACCESSIBILITY.md may help, but not as much as a well supported design system.\n- **Accessibility Champions**\n  - Accessibility is a team sport. Build your champions. \n- **Training**\n  - Everyone needs to learn more about how others interact with the tools we build.",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-20",
+      "index": 20,
+      "raw": "# Next Accessibility Sessions\n\n- **14:05 (Room 2):** Daniel Angelov — *The Reality of Accessibility Automation*\n- **16:00 (Room 3):** John Jameson — *Getting the Most Out of Editoria11y v3*",
+      "body": "# Next Accessibility Sessions\n\n- **14:05 (Room 2):** Daniel Angelov — *The Reality of Accessibility Automation*\n- **16:00 (Room 3):** John Jameson — *Getting the Most Out of Editoria11y v3*",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-closing",
+      "index": 21,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "closing",
+      "title": "Questions?",
+      "prompt": "Thanks for following along. Here is how to keep the conversation going.",
+      "contactEmail": "",
+      "contactUrl": "https://ox.ca",
+      "socialLinks": "Mastodon.social: @mgifford Bluesky @ox.ca",
+      "presentationUrl": "https://ox.ca/p/10"
+    }
+  ],
+  "source": "---\ntitle: AI-Augmented Accessibility\nlang: en\ntheme: default-high-contrast\ndurationMinutes: 20\nslideWidth: 1280\nslideHeight: 720\nthemeStylesheet:\ntitleSlide: true\nsubtitle: From Automated Alt-Text to Governance Gates\ndate: 10:45–11:30 CEST, 2026-03-22\nlocation: DrupalCon Rotterdam 2026 (Leeuwen Room I&II)\nspeakers: Mike Gifford\nclosingSlide: true\nclosingTitle: Questions?\nclosingPrompt: Thanks for following along. Here is how to keep the conversation going.\ncontactUrl: https://ox.ca\nsocialLinks: Mastodon.social: @mgifford Bluesky @ox.ca\npresentationUrl: https://ox.ca/p/10\nconferenceURL: https://events.drupal.org/rotterdam2026/session/ai-augmented-accessibility-automated-alt-text-governance-gates\n\n---\n\n# 5 DrupalCon Accessibility Talks! (Yesterday)\n\n- **Christopher Torgalson (13:30)** \n    Baseline WebAIM failures & WCAG semantics.\n\n- **Junaid Masoodi (17:35)** \n    AI hallucinated ARIA, broken focus traps, false confidence.\n\n---\n\n# \"Whack-a-Mole\" Fails, Over and Over Again\n\n- Organizations repeatedly fail basic automated testing\n- [>] ... the focus hasn't been on the system, but the page. \n- axe-core initial release 1.0 was in 2015\n- [>>]  ... which was over a decade ago. \n- Periodic automated scans catch issues \n- [>>] ... but *after* non-compliant code reaches production.\n\nNote:\nhttps://events.drupal.org/rotterdam2026/session/ai-augmented-accessibility-automated-alt-text-governance-gates\n\nStop reacting to accessibility errors and start automating inclusive governance. Learn how to use AI to find accessibility errors earlier and fix them faster. We’ll bridge the gaps between AI, code, and humans with clear guidance for everyone.\n\nPrerequisite\n\nIt would be useful to be familiar with some basics of accessibility. This is not a 101.\n\nTarget Audience\n\nAnyone working to meet accessibility targets.\n\nOutline\n\nAccessibility is often the last gate in a project. Like many bugs the longer they wait, the more difficult they are to fix. Learn how we can \"shift left\" by using AI not just to find errors, but to build better systems. This session provides a practical roadmap for integrating AI into the full Drupal lifecycle:\n\n* Content: Automating descriptive alt-text & transcripts using Drupal AI Core.\n* Infrastructure: Using LLMs to architect & configure CI/CD accessibility gates (Axe-core/Playwright).\n* Triage: Leveraging GitHub’s AI-powered accessibility toos to turn scans into Pull Requests.\n* Governance: Implementing ACCESSIBILITY.md or Claude skills to produce better results.\n* Hierarchy of Truth: Adding AI roles to that of other automated tools & humans—why the user remains the ultimate source of truth.\n\nJoin us to move beyond \"compliance checklists\" & toward a scalable, AI-assisted inclusive web.\n\nMike will also be tying this into the book he recently co-authored. Digital Accessibility Ethics: Disability Inclusion in All Things Tech,\n\nLearning Objectives\n\n* Automate Content Workflows: Set up the Drupal AI module for automated, human-verified media accessibility.\n* Architect Testing Gates: Use AI assistants to write configuration for robust CI/CD frameworks.\n* Implement Modern Standards: Learn to use ACCESSIBILITY.md & Claude Skills to keep projects transparent and compliant.\n* Validate Strategically: Understand the \"Hierarchy of Truth\" to know when to trust what.\n\n---\n::iframe title: Lighthouse Scores of European government sites\nhttps://mgifford.github.io/eu-plus-government-scans/lighthouse-results.html#lighthouse-scores-by-country\n::\n\n---\n\n::iframe title:CivicActions blog on automating tools accessibility CI/CD on GitHub\nhttps://accessibility.civicactions.com/posts/how-we-scale-inclusive-website-content-with-automated-testing-and-open-source-tools\n::\n\nNote:\n- **CI/CD - Continuous Integration / Continuous Development** \n    Moving from reactive post-launch fixes to continuous pipeline-level governance.\n\n---\n\n::iframe title:Guidepup Screen reader automation library\nhttps://www.guidepup.dev/\n::\n\nNote: \nAutomated site scanning tool.\n\n---\n\n::iframe title:AI Generated Accessibility Reports\nhttps://mgifford.github.io/accessibility-sandbox/ai-report/\n::\n\nNote: \nWhat folks want.\n\n---\n\n# The Hierarchy of Truth\n\n1. **Disabled Users & Lived Experience**  <-- Highest Authority\n2. **Accessibility SME Manual Audits** backed by WCAG\n3. Deterministic DOM Scanners (axe-core)\n4. Synthetic AT Automation (GuidePup & GuidePup MCP)\n5. Probabilistic AI Proposals (LLM Candidates)  <-- Lowest Authority\n\n\nNote:\n- **Rule 1:** Don't use a LLM where a simpler algorithm will do.\n- **Rule 2:** Trust people over machines\n\n1. Accessibility Statements, Users with Disabilities\n2. Professionals\n3. Standard automated tools\n4. AI driven tools\n5. AI driven answers\n\n---\n\n# The AI Alt-Text Paradox: Capability vs. Context\n\n- **The FOSDEM 2025 Baseline:** Vision models consistently generate richer candidate descriptions than untrained human authors.\n- **The GitHub Engineering Trap:**\n  - **Passing automated checks doesn't mean your site is accessible.**\n  - Automated scanners confirm the rule works as defined, it does not mean it meets WCAG SC.\n- **The AI Blind Spot:** LLMs do not know context, editorial intent, or when an image requires alt text (vs declaring the image a decorative element  `alt=\"\"`).\n\n---\n::iframe title:ACCESSIBILITY.md Markdown Files\nhttps://mgifford.github.io/ACCESSIBILITY.md\n::\n\nNote:\n**Culture Dictates What Is Acceptable:** Compliance is an organizational.\n**Repo-Level Guardrails (`ACCESSIBILITY.md`):**\n- Commit standards directly into project roots alongside `README.md`.\n- Provide machine-readable instructions that both human developers and coding LLMs must obey.\n- accessibility-skills too\n\n---\n\n::iframe title:ZivTech Cross-Model Accessibility Skills\nhttps://zivtech.github.io/accessibility-skills/\n::\n\nNote:\n\n\n---\n\n::iframe title:Alt Text Scans\nhttps://mgifford.github.io/alt-text-scan/reports.html\n::\n\nNote:\n- Alt text can be rated with an algorithm\n- A LLM can probably do it better than a person.\n\n---\n\n::iframe title:Top Task Finder - Popular URLs\nhttps://mgifford.github.io/top-task-finder/\n::\n\nNote:\n- Scan a site that has already been scanned and demonstrate the LLM Prompt\n- Best experience is still with data and someone with User Researcher\n\n---\n\n::iframe title:Drupal MCP\nhttps://drupalmcp.io/en\n::\n\nNote:\n- Note this hasn't been tested to see if it works\n\n---\n\n::iframe title:WCAG MCP\nhttps://mcp.so/servers/accessibilitymcp\n::\n\nNote:\n- Note this hasn't been tested to see if it works\n\n\n---\n\n::iframe title:WCAG WebMCP Community Group\nhttps://webmachinelearning.github.io/webmcp/\n::\n\nNote:\n- The W3C is working on this.\n\n---\n\n::iframe title:Playwright MCP\nhttps://playwright.dev/docs/getting-started-mcp\n::\n\nNote:\n- I am still working on this.\n\n---\n\n::iframe title:Open Accessibility Workbench\nhttps://mgifford.github.io/open-accessibility-workbench/#/overview\n\n::\n\nNote:\n- Sample URLs: \n  - https://mgifford.github.io/open-scans/reports/issues/issue-353/2026-09-14T14-12-20-749Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-353/2026-09-14T14-12-20-749Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-350/2026-09-14T13-56-56-213Z/report.csv\n  - https://mgifford.github.io/open-scans/reports/issues/issue-351/2026-09-14T14-44-51-809Z/report.csv\n\n---\n\n# The 5-Step Operational Remediation Pipeline\n\n1. **Scan Site** \n  * Auto-scan (playwright + axe-core): Ingest raw DOM violations into Open Accessibility Workbench.\n  * Synthetic Pass (Guidepup + Playwright MCP): Execute programmatic VoiceOver/NVDA passes.\n3. **Review Results**\n  * Context Lookup (wcag-mcp + uswds-mcp): Pair violations with normative rules and token patterns.\n4. **Remediate Priorities**: \n  * Generate constrained patches using approved semantics where possible.\n5. **Validate Solutions** \n    * Scan page: Use a tool like Accessibility Insights to validate the page is fixed.\n    * Synthetic Pass2 Rescan to validate it has been fixed. Include updated \n6. **Human Audit:** SME reviews diffs, tests new UI, and approves PR.\n\n---\n\n# Human Driven\n- **Nothing About Us, Without Us**  \n  - We need to do much better at engaging PwD and hiring them.\n- **Accessibility Statements**\n  - These are a key feedback loop for any system. Actively listen to your users.\n- **Design Systems**\n  - Shift left. Yes, an ACCESSIBILITY.md may help, but not as much as a well supported design system.\n- **Accessibility Champions**\n  - Accessibility is a team sport. Build your champions. \n- **Training**\n  - Everyone needs to learn more about how others interact with the tools we build.\n\n---\n\n# Next Accessibility Sessions\n\n- **14:05 (Room 2):** Daniel Angelov — *The Reality of Accessibility Automation*\n- **16:00 (Room 3):** John Jameson — *Getting the Most Out of Editoria11y v3*\n"
+}
