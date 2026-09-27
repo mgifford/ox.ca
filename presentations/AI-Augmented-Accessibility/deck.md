@@ -14,7 +14,7 @@ closingSlide: true
 closingTitle: Questions?
 closingPrompt: Thanks for following along. Here is how to keep the conversation going.
 contactUrl: https://ox.ca
-socialLinks: Mastodon.social: @mgifford Bluesky @ox.ca
+socialLinks: "Mastodon.social: @mgifford Bluesky @ox.ca"
 presentationUrl: https://ox.ca/p/10
 conferenceURL: https://events.drupal.org/rotterdam2026/session/ai-augmented-accessibility-automated-alt-text-governance-gates
 
