@@ -5,7 +5,6 @@ theme: default-high-contrast
 durationMinutes: 20
 slideWidth: 1280
 slideHeight: 720
-themeStylesheet:
 titleSlide: true
 subtitle: From Automated Alt-Text to Governance Gates
 date: 10:45–11:30 CEST, 2026-09-30
