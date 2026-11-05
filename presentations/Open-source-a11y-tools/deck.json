@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "Open source a11y tools with Mike Gifford",
+    "lang": "en",
+    "theme": "default-high-contrast",
+    "durationMinutes": "30",
+    "slideWidth": "1280",
+    "slideHeight": "720",
+    "themeStylesheet": "",
+    "titleSlide": true,
+    "subtitle": "From Automated Alt-Text to Governance Gates",
+    "date": "9am ET November 5",
+    "location": "LocalGov Drupal - Accessibility Meetup",
+    "speakers": "Mike Gifford",
+    "closingSlide": true,
+    "closingTitle": "Questions?",
+    "closingPrompt": "Thanks for following along. Here is how to keep the conversation going.",
+    "contactUrl": "https://ox.ca",
+    "socialLinks": "Mastodon.social: @mgifford Bluesky @ox.ca",
+    "presentationUrl": "https://ox.ca/p/12",
+    "conferenceURL": "https://luma.com/an8uq8do?tk=FArMBa",
+    "Note": "",
+    "​Mike will show us how it works. Then we'll talk about": ""
+  },
+  "slides": [
+    {
+      "id": "slide-title",
+      "index": 0,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "title",
+      "title": "Open source a11y tools with Mike Gifford",
+      "subtitle": "From Automated Alt-Text to Governance Gates",
+      "date": "9am ET November 5",
+      "location": "LocalGov Drupal - Accessibility Meetup",
+      "speakers": "Mike Gifford",
+      "qrUrl": ""
+    },
+    {
+      "id": "slide-1",
+      "index": 1,
+      "raw": "# \"Whack-a-Mole\" Fails, Over and Over Again\n\n- Organizations repeatedly fail basic automated testing\n- [>] ... the focus hasn't been on the system, but the page. \n- axe-core initial release 1.0 was in 2015\n- [>>]  ... which was over a decade ago. \n- Periodic automated scans catch issues \n- [>>] ... but *after* non-compliant code reaches production.\n\nNote:",
+      "body": "# \"Whack-a-Mole\" Fails, Over and Over Again\n\n- Organizations repeatedly fail basic automated testing\n- [>] ... the focus hasn't been on the system, but the page. \n- axe-core initial release 1.0 was in 2015\n- [>>]  ... which was over a decade ago. \n- Periodic automated scans catch issues \n- [>>] ... but *after* non-compliant code reaches production.",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-2",
+      "index": 2,
+      "raw": "::iframe title: Lighthouse Scores of European government sites\nhttps://mgifford.github.io/eu-plus-government-scans/lighthouse-results.html#lighthouse-scores-by-country\n::",
+      "body": "::iframe title: Lighthouse Scores of European government sites\nhttps://mgifford.github.io/eu-plus-government-scans/lighthouse-results.html#lighthouse-scores-by-country\n::",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-3",
+      "index": 3,
+      "raw": "# The Hierarchy of Truth\n\n1. **Disabled Users & Lived Experience**  <-- Highest Authority\n2. **Accessibility SME Manual Audits** backed by WCAG\n3. Deterministic DOM Scanners (axe-core)\n4. Synthetic AT Automation (GuidePup & GuidePup MCP)\n5. Probabilistic AI Proposals (LLM Candidates)  <-- Lowest Authority\n\n\nNote:\n- **Rule 1:** Don't use a LLM where a simpler algorithm will do.\n- **Rule 2:** Trust people over machines\n\n1. Accessibility Statements, Users with Disabilities\n2. Professionals\n3. Standard automated tools\n4. AI driven tools\n5. AI driven answers",
+      "body": "# The Hierarchy of Truth\n\n1. **Disabled Users & Lived Experience**  <-- Highest Authority\n2. **Accessibility SME Manual Audits** backed by WCAG\n3. Deterministic DOM Scanners (axe-core)\n4. Synthetic AT Automation (GuidePup & GuidePup MCP)\n5. Probabilistic AI Proposals (LLM Candidates)  <-- Lowest Authority",
+      "notes": "- **Rule 1:** Don't use a LLM where a simpler algorithm will do.\n- **Rule 2:** Trust people over machines\n\n1. Accessibility Statements, Users with Disabilities\n2. Professionals\n3. Standard automated tools\n4. AI driven tools\n5. AI driven answers",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-4",
+      "index": 4,
+      "raw": "::iframe title:Alt Text Scans\nhttps://mgifford.github.io/alt-text-scan/reports.html\n::\n\nNote:\n- Alt text can be rated with an algorithm\n- A LLM can probably do it better than a person.",
+      "body": "::iframe title:Alt Text Scans\nhttps://mgifford.github.io/alt-text-scan/reports.html\n::",
+      "notes": "- Alt text can be rated with an algorithm\n- A LLM can probably do it better than a person.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-5",
+      "index": 5,
+      "raw": "::iframe title:Top Task Finder - Popular URLs\nhttps://mgifford.github.io/top-task-finder/\n::\n\nNote:\n- Scan a site that has already been scanned and demonstrate the LLM Prompt\n- Best experience is still with data and someone with User Researcher",
+      "body": "::iframe title:Top Task Finder - Popular URLs\nhttps://mgifford.github.io/top-task-finder/\n::",
+      "notes": "- Scan a site that has already been scanned and demonstrate the LLM Prompt\n- Best experience is still with data and someone with User Researcher",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-6",
+      "index": 6,
+      "raw": "# Human Driven\n- **Nothing About Us, Without Us**  \n  - We need to do much better at engaging PwD and hiring them.\n- **Accessibility Statements**\n  - These are a key feedback loop for any system. Actively listen to your users.\n- **Design Systems**\n  - Shift left. Yes, an ACCESSIBILITY.md may help, but not as much as a well supported design system.\n- **Accessibility Champions**\n  - Accessibility is a team sport. Build your champions. \n- **Training**\n  - Everyone needs to learn more about how others interact with the tools we build.",
+      "body": "# Human Driven\n- **Nothing About Us, Without Us**  \n  - We need to do much better at engaging PwD and hiring them.\n- **Accessibility Statements**\n  - These are a key feedback loop for any system. Actively listen to your users.\n- **Design Systems**\n  - Shift left. Yes, an ACCESSIBILITY.md may help, but not as much as a well supported design system.\n- **Accessibility Champions**\n  - Accessibility is a team sport. Build your champions. \n- **Training**\n  - Everyone needs to learn more about how others interact with the tools we build.",
+      "notes": "",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-7",
+      "index": 7,
+      "raw": "::iframe title:LocalGov Drupal Vital Core Scans\nhttps://mgifford.github.io/vital-core-lgd/\n::\n\nNote:\n- **CI/CD - Continuous Integration / Continuous Development** \n    Moving from reactive post-launch fixes to continuous pipeline-level governance.",
+      "body": "::iframe title:LocalGov Drupal Vital Core Scans\nhttps://mgifford.github.io/vital-core-lgd/\n::",
+      "notes": "- **CI/CD - Continuous Integration / Continuous Development** \n    Moving from reactive post-launch fixes to continuous pipeline-level governance.",
+      "resources": "",
+      "script": ""
+    },
+    {
+      "id": "slide-closing",
+      "index": 8,
+      "raw": "",
+      "body": "",
+      "notes": "",
+      "kind": "closing",
+      "title": "Questions?",
+      "prompt": "Thanks for following along. Here is how to keep the conversation going.",
+      "contactEmail": "",
+      "contactUrl": "https://ox.ca",
+      "socialLinks": "Mastodon.social: @mgifford Bluesky @ox.ca",
+      "presentationUrl": "https://ox.ca/p/12"
+    }
+  ],
+  "source": "---\ntitle: Open source a11y tools with Mike Gifford\nlang: en\ntheme: default-high-contrast\ndurationMinutes: 30\nslideWidth: 1280\nslideHeight: 720\nthemeStylesheet:\ntitleSlide: true\nsubtitle: From Automated Alt-Text to Governance Gates\ndate: 9am ET November 5\nlocation: LocalGov Drupal - Accessibility Meetup\nspeakers: Mike Gifford\nclosingSlide: true\nclosingTitle: Questions?\nclosingPrompt: Thanks for following along. Here is how to keep the conversation going.\ncontactUrl: https://ox.ca\nsocialLinks: Mastodon.social: @mgifford Bluesky @ox.ca\npresentationUrl: https://ox.ca/p/12\nconferenceURL: https://luma.com/an8uq8do?tk=FArMBa\n\nNote:\nMike Gifford from CivicActions has built Vital Core, a free, open source tool that scans websites for accessibility issues every week and tracks how they change over time.\n\n​He's kindly set up a proof of concept for LocalGov Drupal councils - thanks to Hackney, Luton and Walsall sfor volunteering.\n\n​Mike will show us how it works. Then we'll talk about:\n  -  ​whether we could use it to find and fix accessibility issues in LocalGov Drupal\n  -  ​whether councils would find it useful to track their own sites, or compare them with others\n  -  ​what's missing, and what would make it easier to use\n\n​It's an early version, so your feedback will help decide what happens next.\n\n​You don't need to be an accessibility specialist. If you work on a council website, come along.\n\n---\n\n# \"Whack-a-Mole\" Fails, Over and Over Again\n\n- Organizations repeatedly fail basic automated testing\n- [>] ... the focus hasn't been on the system, but the page. \n- axe-core initial release 1.0 was in 2015\n- [>>]  ... which was over a decade ago. \n- Periodic automated scans catch issues \n- [>>] ... but *after* non-compliant code reaches production.\n\nNote:\n\n---\n::iframe title: Lighthouse Scores of European government sites\nhttps://mgifford.github.io/eu-plus-government-scans/lighthouse-results.html#lighthouse-scores-by-country\n::\n\n---\n\n# The Hierarchy of Truth\n\n1. **Disabled Users & Lived Experience**  <-- Highest Authority\n2. **Accessibility SME Manual Audits** backed by WCAG\n3. Deterministic DOM Scanners (axe-core)\n4. Synthetic AT Automation (GuidePup & GuidePup MCP)\n5. Probabilistic AI Proposals (LLM Candidates)  <-- Lowest Authority\n\n\nNote:\n- **Rule 1:** Don't use a LLM where a simpler algorithm will do.\n- **Rule 2:** Trust people over machines\n\n1. Accessibility Statements, Users with Disabilities\n2. Professionals\n3. Standard automated tools\n4. AI driven tools\n5. AI driven answers\n\n---\n\n::iframe title:Alt Text Scans\nhttps://mgifford.github.io/alt-text-scan/reports.html\n::\n\nNote:\n- Alt text can be rated with an algorithm\n- A LLM can probably do it better than a person.\n\n---\n\n::iframe title:Top Task Finder - Popular URLs\nhttps://mgifford.github.io/top-task-finder/\n::\n\nNote:\n- Scan a site that has already been scanned and demonstrate the LLM Prompt\n- Best experience is still with data and someone with User Researcher\n\n---\n\n# Human Driven\n- **Nothing About Us, Without Us**  \n  - We need to do much better at engaging PwD and hiring them.\n- **Accessibility Statements**\n  - These are a key feedback loop for any system. Actively listen to your users.\n- **Design Systems**\n  - Shift left. Yes, an ACCESSIBILITY.md may help, but not as much as a well supported design system.\n- **Accessibility Champions**\n  - Accessibility is a team sport. Build your champions. \n- **Training**\n  - Everyone needs to learn more about how others interact with the tools we build.\n\n---\n\n\n\n::iframe title:LocalGov Drupal Vital Core Scans\nhttps://mgifford.github.io/vital-core-lgd/\n::\n\nNote:\n- **CI/CD - Continuous Integration / Continuous Development** \n    Moving from reactive post-launch fixes to continuous pipeline-level governance.\n\n---\n"
+}
